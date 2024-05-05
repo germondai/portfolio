@@ -8,7 +8,7 @@
       href="#"
     >
       <img
-        :src="`/_nuxt/public/img/flags/${locale.code}.svg`"
+        :src="`/img/flags/${locale.code}.svg`"
         class="w-12"
         :title="locale.name"
       />
