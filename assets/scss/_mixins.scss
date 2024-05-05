@@ -1,0 +1,44 @@
+@mixin flex($display: '', $align: '', $justify: '', $direction: '', $wrap: '') {
+  @if ($display != '') {
+    display: $display;
+  }
+  @if ($align != '') {
+    align-items: $align;
+  }
+  @if ($justify != '') {
+    justify-content: $justify;
+  }
+  @if ($direction != '') {
+    flex-direction: $direction;
+  }
+  @if ($wrap != '') {
+    flex-wrap: $wrap;
+  }
+}
+
+@mixin center($type: '') {
+  @if ($type == absolute OR $type == fixed) {
+    position: $type;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @if ($type == flex) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @if ($type == grid) {
+    display: grid;
+    place-items: center;
+  }
+}
+
+@mixin text-ellipsis {
+  text-overflow: ellipsis;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}

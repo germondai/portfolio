@@ -1,0 +1,89 @@
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap';
+
+/* --- ESSENTIALS --- */
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+html {
+  background: $base-background;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#__nuxt {
+  overflow-x: hidden;
+}
+
+body,
+#__nuxt {
+  overflow-y: hidden;
+}
+
+label,
+a,
+p,
+b,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-decoration: none;
+  color: $text-color;
+}
+
+h1 {
+  font-size: $fontSize-h1;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: $fontSize-h2;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: $fontSize-h3;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: $fontSize-h4;
+  font-weight: 600;
+}
+
+b {
+  font-size: $fontSize-b;
+}
+
+p {
+  font-size: $fontSize-p;
+}
+
+a {
+  font-size: $fontSize-a;
+}
+
+sub,
+sup {
+  bottom: auto;
+  line-height: normal;
+  font-size: smaller;
+}
+
+/* MOBILE ON TAP HIGHLIGHT */
+*:active,
+*:hover,
+*:focus {
+  -webkit-tap-highlight-color: #00000066;
+}
+
+img {
+  user-select: none;
+}
