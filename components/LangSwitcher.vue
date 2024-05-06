@@ -4,8 +4,8 @@
     <a
       v-for="locale in availableLocales"
       :key="locale.code"
-      @click.prevent.stop="setLocale(locale.code)"
       href="#"
+      @click.prevent.stop="setLocale(locale.code)"
     >
       <img
         :src="`/img/flags/${locale.code}.svg`"

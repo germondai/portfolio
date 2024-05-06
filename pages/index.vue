@@ -3,7 +3,7 @@
     <section id="welcome">
       <div class="w-4/5 h-full mx-auto flex items-center justify-center">
         <div class="w-3/5 flex flex-col anim-left">
-          <sub>{{ $t('welcome.sub') }}</sub>
+          <sub v-motion-roll-bottom>{{ $t('welcome.sub') }}</sub>
           <h1>
             {{ $t('welcome.title') }}
             <span class="text-gradient">Germond</span>
@@ -285,7 +285,7 @@
             libraries that were primarily used in their development.
           </p>
         </div>
-        <div class="col-2 demo-tabs" id="cards">
+        <div id="cards" class="col-2 demo-tabs">
           <div class="col-3 anim-left effect-holo card">
             <div class="links"></div>
             <a href="./chronitask/" target="_blank" class="card-content">
@@ -444,9 +444,9 @@
               <h1>Get In Touch</h1>
               <div class="field">
                 <input
+                  id="name"
                   type="text"
                   name="name"
-                  id="name"
                   maxlength="64"
                   required
                 />
@@ -454,9 +454,9 @@
               </div>
               <div class="field">
                 <input
+                  id="email"
                   type="email"
                   name="email"
-                  id="email"
                   maxlength="128"
                   required
                 />
@@ -464,9 +464,9 @@
               </div>
               <div class="field">
                 <textarea
+                  id="message"
                   type="text"
                   name="message"
-                  id="message"
                   maxlength="256"
                   required
                 ></textarea>

@@ -41,6 +41,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@vueuse/nuxt',
+    '@vueuse/motion/nuxt',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
     // '@nuxt/image',
@@ -101,6 +102,22 @@ export default defineNuxtConfig({
     compilation: {
       strictMessage: false,
       escapeHtml: true,
+    },
+  },
+  motion: {
+    directives: {
+      'pop-bottom': {
+        initial: {
+          scale: 0,
+          opacity: 0,
+          y: 100,
+        },
+        visible: {
+          scale: 1,
+          opacity: 1,
+          y: 0,
+        },
+      },
     },
   },
 })

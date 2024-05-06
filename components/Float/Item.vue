@@ -1,13 +1,5 @@
 <template>
-  <div
-    ref="parallaxEl"
-    class="absolute pointer-events-none FloatItem"
-    :style="{ transform: parallaxStyle }"
-  >
-    <!-- <div
-    class="absolute pointer-events-none FloatItem"
-    :style="{ '--v-e': velocity }"
-  > -->
+  <div class="absolute FloatItem" :style="{ transform: parallaxStyle }">
     <slot />
   </div>
 </template>
@@ -20,15 +12,22 @@ const { velocity } = defineProps({
   },
 })
 
-const parallaxEl = ref<HTMLElement>()
-
-const { width: w, height: h } = useWindowSize()
-const { x: clX, y: clY } = useMouseInElement(parallaxEl)
+const mouseX = ref(0)
+const mouseY = ref(0)
 
 const parallaxStyle = computed(() => {
-  const x = ((clX.value - w.value / 2) * velocity) / 150
-  const y = ((clY.value - h.value / 2) * velocity) / 150
+  const x = ((mouseX.value - window.innerWidth / 2) * velocity) / 150
+  const y = ((mouseY.value - window.innerHeight) * velocity) / 150
   return `translate(${x}px, ${y}px)`
+})
+
+const handleMouseMove = (event: any) => {
+  mouseX.value = event.clientX
+  mouseY.value = event.clientY
+}
+
+onMounted(() => {
+  window.addEventListener('mousemove', handleMouseMove)
 })
 </script>
 

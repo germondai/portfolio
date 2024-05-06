@@ -1,34 +1,34 @@
 {
-    "socials": [
-        {
-            "href": "https://www.instagram.com/germondai",
-            "src": "/img/instagram-light.webp",
-            "alt": "Instagram Logo",
-            "name": "Instagram"
-        },
-        {
-            "href": "https://discord.gg/6xU897X",
-            "src": "/img/discord-light.webp",
-            "alt": "Discord Logo",
-            "name": "Discord"
-        },
-        {
-            "href": "{'https://www.youtube.com/@germondai?sub_confirmation=1'}",
-            "src": "/img/youtube-light.webp",
-            "alt": "YouTube Logo",
-            "name": "YouTube"
-        },
-        {
-            "href": "https://www.twitch.tv/germondai",
-            "src": "/img/twitch-light.webp",
-            "alt": "Twitch Logo",
-            "name": "Twitch"
-        },
-        {
-            "href": "https://github.com/germondai",
-            "src": "/img/github-light.webp",
-            "alt": "GitHub Logo",
-            "name": "GitHub"
-        }
-    ]
+  "socials": [
+    {
+      "href": "https://www.instagram.com/germondai",
+      "src": "/img/instagram-light.webp",
+      "alt": "Instagram Logo",
+      "name": "Instagram"
+    },
+    {
+      "href": "https://discord.gg/6xU897X",
+      "src": "/img/discord-light.webp",
+      "alt": "Discord Logo",
+      "name": "Discord"
+    },
+    {
+      "href": "{'https://www.youtube.com/@germondai?sub_confirmation=1'}",
+      "src": "/img/youtube-light.webp",
+      "alt": "YouTube Logo",
+      "name": "YouTube"
+    },
+    {
+      "href": "https://www.twitch.tv/germondai",
+      "src": "/img/twitch-light.webp",
+      "alt": "Twitch Logo",
+      "name": "Twitch"
+    },
+    {
+      "href": "https://github.com/germondai",
+      "src": "/img/github-light.webp",
+      "alt": "GitHub Logo",
+      "name": "GitHub"
+    }
+  ]
 }

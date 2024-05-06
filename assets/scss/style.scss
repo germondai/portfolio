@@ -93,7 +93,7 @@ section#welcome,
 section#about,
 section#work,
 section#contact {
-  @apply py-24 min-h-screen
+  @apply py-24 min-h-screen;
 }
 
 #welcome svg,
@@ -125,7 +125,6 @@ section#contact {
 }
 
 @media (max-width: 768px) {
-
   #work svg,
   #work .svg {
     @apply -left-[65%];
