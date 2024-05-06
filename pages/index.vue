@@ -91,7 +91,7 @@
           class="w-full grid grid-cols-4 items-center justify-between gap-16"
         >
           <div
-            v-for="(skill, index) in <any>$tm('about.skills')"
+            v-for="(skill, index) in $tm('about.skills')"
             :key="index"
             class="col-4 anim-left"
             :style="`transition-delay: ${0.05 * index}s`"

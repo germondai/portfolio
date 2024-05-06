@@ -6,7 +6,7 @@
       class="xl:w-3/4 lg:w-[90%] w-[95%] h-14 px-8 flex items-center justify-between gap-8 rounded-[56px] bg-[#1f2023cc] backdrop-blur drop-shadow-md overflow-x-clip"
     >
       <ul class="w-full flex items-center justify-between gap-4">
-        <li v-for="(link, index) in <any>$tm('header')" :key="index">
+        <li v-for="(link, index) in $tm('header')" :key="index">
           <NuxtLink
             :href="$rt(link.href)"
             class="relative px-2 py-1 opacity-50 hover:opacity-100 transition-opacity"
@@ -26,7 +26,7 @@
         />
       </NuxtLink>
       <ul class="w-full flex items-center justify-between gap-8">
-        <li v-for="(social, index) in <any>$tm('socials')" :key="index">
+        <li v-for="(social, index) in $tm('socials')" :key="index">
           <NuxtLink
             :href="$rt(social.href)"
             target="blank"
