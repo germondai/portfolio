@@ -9,9 +9,6 @@
             <span class="text-gradient">Germond</span>
           </h1>
           <p>{{ $t('welcome.content') }}</p>
-          {{ $t('@common/socials.json') }}
-          <br />
-          {{ $tm('@common/socials.json') }}
           <LangSwitcher class="mt-12" />
         </div>
         <div
@@ -94,7 +91,7 @@
           class="w-full grid grid-cols-4 items-center justify-between gap-16"
         >
           <div
-            v-for="(skill, index) in $tm('about.skills')"
+            v-for="(skill, index) in <any>$tm('about.skills')"
             :key="index"
             class="col-4 anim-left"
             :style="`transition-delay: ${0.05 * index}s`"
