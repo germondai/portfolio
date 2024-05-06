@@ -1,10 +1,54 @@
 {
-    "header": {
-        "welcome": "Welcome",
-        "about": "About",
-        "work": "Work",
-        "contact": "Contact"
-    },
+    "socials": [
+        {
+            "href": "https://www.instagram.com/germondai",
+            "src": "/img/instagram-light.webp",
+            "alt": "Instagram Logo",
+            "name": "Instagram"
+        },
+        {
+            "href": "https://discord.gg/6xU897X",
+            "src": "/img/discord-light.webp",
+            "alt": "Discord Logo",
+            "name": "Discord"
+        },
+        {
+            "href": "{'https://www.youtube.com/@germondai?sub_confirmation=1'}",
+            "src": "/img/youtube-light.webp",
+            "alt": "YouTube Logo",
+            "name": "YouTube"
+        },
+        {
+            "href": "https://www.twitch.tv/germondai",
+            "src": "/img/twitch-light.webp",
+            "alt": "Twitch Logo",
+            "name": "Twitch"
+        },
+        {
+            "href": "https://github.com/germondai",
+            "src": "/img/github-light.webp",
+            "alt": "GitHub Logo",
+            "name": "GitHub"
+        }
+    ],
+    "header": [
+        {
+            "href": "#welcome",
+            "name": "Welcome"
+        },
+        {
+            "href": "#about",
+            "name": "About"
+        },
+        {
+            "href": "#work",
+            "name": "Work"
+        },
+        {
+            "href": "#contact",
+            "name": "Contact"
+        }
+    ],
     "welcome": {
         "sub": "Welcome",
         "title": "Hi, I'm",
@@ -17,42 +61,42 @@
         "content": "I'm a full-stack web developer with experience in PHP and MySQL. I also work with JavaScript or jQuery but it's not my main expertise. However, I'm always ready to expand my skill set and learn about new technologies. I'm a quick learner and I like to use my time effectively to seek innovative solutions. Let's work together to bring your ideas to life!",
         "skills": [
             {
-                "src": "assets/img/logo-php.webp",
+                "src": "/img/logo-php.webp",
                 "alt": "PHP Logo",
                 "name": "PHP"
             },
             {
-                "src": "assets/img/logo-mysql.webp",
+                "src": "/img/logo-mysql.webp",
                 "alt": "MySQL Logo",
                 "name": "MySQL"
             },
             {
-                "src": "assets/img/logo-js.webp",
+                "src": "/img/logo-js.webp",
                 "alt": "JavaScript Logo",
                 "name": "JavaScript"
             },
             {
-                "src": "assets/img/logo-jquery.webp",
+                "src": "/img/logo-jquery.webp",
                 "alt": "jQuery Logo",
                 "name": "jQuery"
             },
             {
-                "src": "assets/img/logo-ajax.webp",
+                "src": "/img/logo-ajax.webp",
                 "alt": "AJAX Logo",
                 "name": "AJAX"
             },
             {
-                "src": "assets/img/logo-sass.webp",
+                "src": "/img/logo-sass.webp",
                 "alt": "SASS Logo",
                 "name": "Sass"
             },
             {
-                "src": "assets/img/logo-css3.webp",
+                "src": "/img/logo-css3.webp",
                 "alt": "CSS3 Logo",
                 "name": "CSS3"
             },
             {
-                "src": "assets/img/logo-html5.webp",
+                "src": "/img/logo-html5.webp",
                 "alt": "HTML5 Logo",
                 "name": "HTML5"
             }

@@ -87,3 +87,62 @@ sup {
 img {
   user-select: none;
 }
+
+// additional scss
+section#welcome,
+section#about,
+section#work,
+section#contact {
+  @apply py-24 min-h-screen
+}
+
+#welcome svg,
+#about svg,
+#work svg,
+#contact svg,
+#welcome .svg,
+#about .svg,
+#work .svg,
+#contact .svg {
+  @apply absolute -left-[5%] w-[110%] h-full min-w-[1400px] aspect-[1400/810] -z-40 pointer-events-none;
+}
+
+#welcome svg,
+#welcome .svg {
+  @apply -top-[5%] rotate-180;
+}
+
+#about svg,
+#work svg,
+#about .svg,
+#work .svg {
+  @apply top-0;
+}
+
+#contact svg,
+#contact .svg {
+  @apply bottom-0;
+}
+
+@media (max-width: 768px) {
+
+  #work svg,
+  #work .svg {
+    @apply -left-[65%];
+  }
+}
+
+section {
+  @apply relative w-full flex;
+}
+
+#about,
+#work {
+  z-index: 1;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #915eff 0%, #ff006a 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}

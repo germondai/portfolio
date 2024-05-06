@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <main>
+    <section>Soemthing About Me!</section>
+  </main>
 </template>
 
 <script lang="ts" setup>

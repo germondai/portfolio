@@ -67,11 +67,11 @@ export default defineNuxtConfig({
     },
   },
 
-  image: {
-    quality: 85,
-    format: ['webp'],
-    dir: 'public/img/',
-  },
+  // image: {
+  //   quality: 85,
+  //   format: ['webp'],
+  //   dir: 'public/img/',
+  // },
 
   i18n: {
     lazy: true,
