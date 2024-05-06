@@ -1,5 +1,5 @@
 <template>
-  <div ref="lightEl" class="FlareItem relative" :style="lightStyle">
+  <div ref="lightEl" class="relative contents FlareItem" :style="lightStyle">
     <slot />
   </div>
 </template>

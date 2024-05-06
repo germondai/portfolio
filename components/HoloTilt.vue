@@ -1,9 +1,10 @@
 <template>
   <div
-    ref="HoloTiltTilt"
+    ref="HoloTilt"
     :style="{
-      transform: cardTransform,
-      transition: 'transform 0.25s ease-out',
+      // display: 'contents',
+      transform: transformStyle,
+      transition: 'transform 0.15s ease-out',
     }"
   >
     <slot />
@@ -11,33 +12,38 @@
 </template>
 
 <script lang="ts" setup>
-const HoloTiltTilt = ref()
+const { scale } = defineProps({
+  scale: Number,
+})
 
-const { elementX, elementY, isOutside, elementHeight, elementWidth } =
-  useMouseInElement(HoloTiltTilt)
+const HoloTilt = ref()
 
-const cardTransform = computed(() => {
-  const MAX_ROTATION = 10
+const {
+  elementX: elX,
+  elementY: elY,
+  isOutside: isO,
+  elementHeight: elH,
+  elementWidth: elW,
+} = useMouseInElement(HoloTilt)
 
-  const rX = (
-    MAX_ROTATION / 2 -
-    (elementY.value / elementHeight.value) * MAX_ROTATION
-  ).toFixed(2)
+const transformStyle = computed(() => {
+  const rMax = 10
 
-  const rY = (
-    (elementX.value / elementWidth.value) * MAX_ROTATION -
-    MAX_ROTATION / 1.5
-  ).toFixed(2)
+  const rX = (rMax / 2 - (elY.value / elH.value) * rMax).toFixed(2)
+  const rY = ((elX.value / elW.value) * rMax - rMax / 1.5).toFixed(2)
 
-  return isOutside.value
-    ? ''
-    : `perspective(${elementWidth.value}px) rotateX(${rX}deg) rotateY(${rY}deg)`
+  return !isO.value
+    ? `perspective(${elW.value}px)
+      rotateX(${rX}deg)
+      rotateY(${rY}deg)
+      ${scale ? `scale(${scale})` : ''}`
+    : ''
 })
 </script>
 
 <style lang="scss" scoped>
 /* .card {
-  transform: v-bind(cardTransform);
-  transition: transform 0.25s ease-out;
+  transform: v-bind(transformStyle);
+  transition: transform 0.15s ease-out;
 } */
 </style>
