@@ -19,7 +19,7 @@
           <a href="./chronitask/" target="_blank" class="card-content">
             <div>
               <img
-                src="/img/portfolio-chronitask.webp"
+                src="/public/img/portfolio-chronitask.webp"
                 alt="Chronitask Website Preview"
                 loading="lazy"
               />
@@ -44,7 +44,7 @@
           <a href="./eshop/" target="_blank" class="card-content">
             <div>
               <img
-                src="/img/portfolio-eshop.webp"
+                src="/public/img/portfolio-eshop.webp"
                 alt="Germond's E-Shop Website Preview"
                 loading="lazy"
               />
@@ -67,7 +67,7 @@
           <a href="./" target="_self" class="card-content">
             <div>
               <img
-                src="/img/portfolio-germondai.webp"
+                src="/public/img/portfolio-germondai.webp"
                 alt="Germond's Portfolio Website Preview"
                 loading="lazy"
               />
