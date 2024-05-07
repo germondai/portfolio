@@ -14,7 +14,7 @@
         <FlareItem
           v-for="(project, i) in $tm('work.projects')"
           :key="i"
-          class="w-full flex flex-col p-0.5 rounded-xl bg-[#ffffff1a] shadow-xl backdrop-blur-lg z-20"
+          class="w-full flex flex-col p-0.5 rounded-xl bg-[#ffffff1a] shadow-xl backdrop-blur-lg hover:scale-[1.025] transition-transform z-20"
         >
           <div
             class="absolute top-[18px] right-[18px] flex items-center justify-center gap-1.5 z-30"

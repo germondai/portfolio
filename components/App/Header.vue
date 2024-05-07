@@ -1,5 +1,6 @@
 <template>
   <header
+    v-motion-slide-visible-once-bottom
     class="fixed top-0 w-full h-[76px] flex items-end justify-center z-40"
   >
     <nav
