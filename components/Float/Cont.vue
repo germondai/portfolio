@@ -1,5 +1,5 @@
 <template>
-  <div class="FloatCont" :class="presetClass">
+  <div class="pointer-events-none FloatCont" :class="presetClass">
     <slot />
   </div>
 </template>

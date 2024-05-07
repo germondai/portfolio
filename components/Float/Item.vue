@@ -1,6 +1,6 @@
 <template>
   <div
-    class="absolute FloatItem"
+    class="absolute pointer-events-none FloatItem"
     :class="presetClass"
     :style="{ transform: parallaxStyle }"
   >
