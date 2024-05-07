@@ -107,7 +107,7 @@
           </div>
         </div>
       </div>
-      <FloatCont class="absolute top-0 w-full">
+      <FloatCont :preset="`bg`">
         <FloatItem :velocity="7" class="w-full h-full -z-30">
           <svg viewBox="0 0 1440 560" preserveAspectRatio="none">
             <path
@@ -163,7 +163,7 @@
             ></path>
           </svg>
         </FloatItem>
-        <FloatItem :velocity="-8" class="w-full h-full -z-20 top-[62.5%]">
+        <FloatItem :velocity="-8" class="w-full h-full -z-20 top-[52.5%]">
           <svg
             viewBox="0 0 1440 100"
             xmlns="http://www.w3.org/2000/svg"
@@ -180,45 +180,54 @@
         </FloatItem>
       </FloatCont>
     </section>
-    <section id="timeline" class="card-allow">
-      <ul>
-        <li v-for="(item, index) in $tm('timeline')" :key="index">
-          <div class="box">
-            <div class="box-wrapper card">
-              <div class="box-content">
-                <h3 class="title">
-                  <span
-                    v-if="$rt(item.year).includes('-')"
-                    class="year"
-                    title="'.$row['year'].'"
-                  >
+    <section id="timeline" class="flex flex-col">
+      <FlareCont>
+        <ul class="pt-[150px]">
+          <li
+            v-for="(item, index) in $tm('timeline')"
+            :key="index"
+            class="relative w-[7px] mx-auto bg-[#251e39] -z-20 pt-[50px] first:pt-[200px] first:-mt-[200px] first:rounded-tr-2xl last:pb-[200px] last:-mb-[200px] last:rounded-bl-2xl"
+          >
+            <div
+              v-motion-slide-visible-once-right
+              class="relative bottom-0 w-[450px] p-2 rounded-xl bg-[#ffffff1a] drop-shadow-md"
+            >
+              <FlareItem class="rounded-lg">
+                <div class="box-content">
+                  <h3 class="title">
                     <span
-                      class="anim-counter"
-                      data-count="'.trim(explode('-', $row['year'])[0]).'"
-                    ></span>
-                    -
+                      v-if="$rt(item.year).includes('-')"
+                      class="year"
+                      :title="$rt(item.year)"
+                    >
+                      <span
+                        class="anim-counter"
+                        data-count="'.trim(explode('-', $row['year'])[0]).'"
+                      ></span>
+                      -
+                      <span
+                        class="anim-counter"
+                        data-count="'.trim(explode('-', $row['year'])[1]).'"
+                      ></span>
+                    </span>
                     <span
-                      class="anim-counter"
-                      data-count="'.trim(explode('-', $row['year'])[1]).'"
+                      v-else
+                      class="year anim-counter"
+                      data-count="'.$row['year'].'"
+                      title="'.$row['year'].'"
                     ></span>
-                  </span>
-                  <span
-                    v-else
-                    class="year anim-counter"
-                    data-count="'.$row['year'].'"
-                    title="'.$row['year'].'"
-                  ></span>
-                  <span class="title-content">{{ $rt(item.title) }}</span>
-                </h3>
-                <p>{{ $rt(item.content) }}</p>
-                <button v-if="$rt(item.content_full)">
-                  {{ $rt(item.button) ? $rt(item.button) : '📖 👀' }}
-                </button>
-              </div>
+                    <span class="title-content">{{ $rt(item.title) }}</span>
+                  </h3>
+                  <p>{{ $rt(item.content) }}</p>
+                  <button v-if="$rt(item.content_full)">
+                    {{ $rt(item.button) ? $rt(item.button) : '📖 👀' }}
+                  </button>
+                </div>
+              </FlareItem>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </FlareCont>
     </section>
 
     <section id="work" class="card-allow">
