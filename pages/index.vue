@@ -180,56 +180,7 @@
         </FloatItem>
       </FloatCont>
     </section>
-    <section id="timeline" class="flex flex-col">
-      <FlareCont>
-        <ul class="pt-[150px]">
-          <li
-            v-for="(item, index) in $tm('timeline')"
-            :key="index"
-            class="relative w-[7px] mx-auto bg-[#251e39] -z-20 pt-[50px] first:pt-[200px] first:-mt-[200px] first:rounded-tr-2xl last:pb-[200px] last:-mb-[200px] last:rounded-bl-2xl"
-          >
-            <div
-              v-motion-slide-visible-once-right
-              class="relative bottom-0 w-[450px] p-2 rounded-xl bg-[#ffffff1a] drop-shadow-md"
-            >
-              <FlareItem class="rounded-lg">
-                <div class="box-content">
-                  <h3 class="title">
-                    <span
-                      v-if="$rt(item.year).includes('-')"
-                      class="year"
-                      :title="$rt(item.year)"
-                    >
-                      <span
-                        class="anim-counter"
-                        data-count="'.trim(explode('-', $row['year'])[0]).'"
-                      ></span>
-                      -
-                      <span
-                        class="anim-counter"
-                        data-count="'.trim(explode('-', $row['year'])[1]).'"
-                      ></span>
-                    </span>
-                    <span
-                      v-else
-                      class="year anim-counter"
-                      data-count="'.$row['year'].'"
-                      title="'.$row['year'].'"
-                    ></span>
-                    <span class="title-content">{{ $rt(item.title) }}</span>
-                  </h3>
-                  <p>{{ $rt(item.content) }}</p>
-                  <button v-if="$rt(item.content_full)">
-                    {{ $rt(item.button) ? $rt(item.button) : '📖 👀' }}
-                  </button>
-                </div>
-              </FlareItem>
-            </div>
-          </li>
-        </ul>
-      </FlareCont>
-    </section>
-
+    <SectionTimeline />
     <section id="work" class="card-allow">
       <div class="cont-1">
         <div class="col-2 anim-bottom">
