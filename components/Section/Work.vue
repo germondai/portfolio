@@ -28,7 +28,7 @@
           >
             <div>
               <img
-                :src="`/public/${$rt(project.src)}`"
+                :src="$rt(project.src)"
                 :alt="$rt(project.alt)"
                 loading="lazy"
               />

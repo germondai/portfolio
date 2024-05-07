@@ -1,224 +1,224 @@
 {
-  "socials": [
-    {
-      "href": "https://www.instagram.com/germondai",
-      "src": "/img/instagram-light.webp",
-      "alt": "Instagram Logo",
-      "name": "Instagram"
-    },
-    {
-      "href": "https://discord.gg/6xU897X",
-      "src": "/img/discord-light.webp",
-      "alt": "Discord Logo",
-      "name": "Discord"
-    },
-    {
-      "href": "{'https://www.youtube.com/@germondai?sub_confirmation=1'}",
-      "src": "/img/youtube-light.webp",
-      "alt": "YouTube Logo",
-      "name": "YouTube"
-    },
-    {
-      "href": "https://www.twitch.tv/germondai",
-      "src": "/img/twitch-light.webp",
-      "alt": "Twitch Logo",
-      "name": "Twitch"
-    },
-    {
-      "href": "https://github.com/germondai",
-      "src": "/img/github-light.webp",
-      "alt": "GitHub Logo",
-      "name": "GitHub"
-    }
-  ],
-  "header": [
-    {
-      "href": "#welcome",
-      "name": "Welcome"
-    },
-    {
-      "href": "#about",
-      "name": "About"
-    },
-    {
-      "href": "#work",
-      "name": "Work"
-    },
-    {
-      "href": "#contact",
-      "name": "Contact"
-    }
-  ],
-  "welcome": {
-    "sub": "Welcome",
-    "title": "Hi, I'm",
-    "content": "An Aspiring Web Development Student",
-    "select_language": "Select Language"
-  },
-  "about": {
-    "sub": "About",
-    "title": "Overview",
-    "content": "I'm a full-stack web developer with experience in PHP and MySQL. I also work with JavaScript or jQuery but it's not my main expertise. However, I'm always ready to expand my skill set and learn about new technologies. I'm a quick learner and I like to use my time effectively to seek innovative solutions. Let's work together to bring your ideas to life!",
-    "skills": [
-      {
-        "src": "/img/logo-php.webp",
-        "alt": "PHP Logo",
-        "name": "PHP"
-      },
-      {
-        "src": "/img/logo-mysql.webp",
-        "alt": "MySQL Logo",
-        "name": "MySQL"
-      },
-      {
-        "src": "/img/logo-js.webp",
-        "alt": "JavaScript Logo",
-        "name": "JavaScript"
-      },
-      {
-        "src": "/img/logo-jquery.webp",
-        "alt": "jQuery Logo",
-        "name": "jQuery"
-      },
-      {
-        "src": "/img/logo-ajax.webp",
-        "alt": "AJAX Logo",
-        "name": "AJAX"
-      },
-      {
-        "src": "/img/logo-sass.webp",
-        "alt": "SASS Logo",
-        "name": "Sass"
-      },
-      {
-        "src": "/img/logo-css3.webp",
-        "alt": "CSS3 Logo",
-        "name": "CSS3"
-      },
-      {
-        "src": "/img/logo-html5.webp",
-        "alt": "HTML5 Logo",
-        "name": "HTML5"
-      }
-    ]
-  },
-  "timeline": [
-    {
-      "year": "2021 - 2022",
-      "title": "HTML5 & CSS3",
-      "content": "Started learning the basics of <b>Web Development</b>, such as <b>HTML5</b> and <b>CSS3</b> front-end languages, got familiar with most of the common HTML tags and CSS features like <b>Flexbox</b>",
-      "content_full": "",
-      "button": "Read More"
-    },
-    {
-      "year": "2022",
-      "title": "PHP & MySQL",
-      "content": "Got interested in PHP back-end development, learned how Databases works, especially MySQL. Made an E-Commerce Online Shop with its own Content Management System",
-      "content_full": "",
-      "button": "Read More"
-    },
-    {
-      "year": "2023",
-      "title": "JavaScript & jQuery",
-      "content": "Started learning JavaScript language and its libraries like jQuery. Made my first Full-Stack Web Application with integrated AJAX fetch requests to MySQL queries which operated with database, so I can handle user actions without page refreshing or data loss",
-      "content_full": "",
-      "button": "Read More"
-    },
-    {
-      "year": "2024",
-      "title": "Who knows ?",
-      "content": "Big things might be coming...",
-      "content_full": "",
-      "button": "Read More"
-    }
-  ],
-  "work": {
-    "sub": "Work",
-    "title": "Projects",
-    "content": "Following projects showcase my skills and experiences in handling real projects. Each of the listed projects below includes a link to live demo example where you can take a detailed view. Additionally, each project is tagged with programming languages, frameworks or libraries that were primarily used in their development.",
-    "projects": [
-      {
-        "href": "./chronitask/",
-        "src": "assets/img/portfolio-chronitask.webp",
-        "alt": "Chronitask Website Preview",
-        "title": "Chronitask",
-        "content": "Fully integrated PHP & JavaScript Online to-do task-list website app with secure database connectivity protected against injection. User friendly and optimized interface.",
-        "links": {
-          "link": "",
-          "youtube": "",
-          "discord": "",
-          "facebook": "",
-          "github": ""
+    "socials": [
+        {
+            "href": "https://www.instagram.com/germondai",
+            "src": "/img/instagram-light.webp",
+            "alt": "Instagram Logo",
+            "name": "Instagram"
         },
-        "tags": {
-          "PHP": "1",
-          "MySQL": "1",
-          "JavaScript": "",
-          "jQuery": "1",
-          "AJAX": "1",
-          "Sass": "1",
-          "CSS3": "",
-          "HTML5": ""
-        }
-      },
-      {
-        "href": "./eshop/",
-        "src": "assets/img/portfolio-eshop.webp",
-        "alt": "Germond's E-Shop Website Preview",
-        "title": "Germond's E-Shop",
-        "content": "E-Commerce PHP Online Shop with database connectivity and its own Content Management System for editing not only products, but also pages and variations.",
-        "links": {
-          "link": "",
-          "youtube": "",
-          "discord": "",
-          "facebook": "",
-          "github": ""
+        {
+            "href": "https://discord.gg/6xU897X",
+            "src": "/img/discord-light.webp",
+            "alt": "Discord Logo",
+            "name": "Discord"
         },
-        "tags": {
-          "PHP": "1",
-          "MySQL": "1",
-          "JavaScript": "",
-          "jQuery": "1",
-          "AJAX": "",
-          "Sass": "",
-          "CSS3": "",
-          "HTML5": ""
-        }
-      },
-      {
-        "href": "./",
-        "src": "assets/img/portfolio-germondai.webp",
-        "alt": "Germond's Portfolio Website Preview",
-        "title": "Germond's Portfolio",
-        "content": "Professional user-friendly landing page. Elegant design of interface spiced up with clean Parallax effects and smooth animations. Fully working PHP contact system and language Localization.",
-        "links": {
-          "link": "",
-          "youtube": "",
-          "discord": "",
-          "facebook": "",
-          "github": ""
+        {
+            "href": "{'https://www.youtube.com/@germondai?sub_confirmation=1'}",
+            "src": "/img/youtube-light.webp",
+            "alt": "YouTube Logo",
+            "name": "YouTube"
         },
-        "tags": {
-          "PHP": "",
-          "MySQL": "",
-          "JavaScript": "1",
-          "jQuery": "1",
-          "AJAX": "",
-          "Sass": "",
-          "CSS3": "1",
-          "HTML5": ""
+        {
+            "href": "https://www.twitch.tv/germondai",
+            "src": "/img/twitch-light.webp",
+            "alt": "Twitch Logo",
+            "name": "Twitch"
+        },
+        {
+            "href": "https://github.com/germondai",
+            "src": "/img/github-light.webp",
+            "alt": "GitHub Logo",
+            "name": "GitHub"
         }
-      }
-    ]
-  },
-  "contact": {
-    "sub": "Contact",
-    "title": "Get In Touch",
-    "name": "Your Name",
-    "email": "Your Email",
-    "message": "Your Message",
-    "button": "Send",
-    "success": "Successfully sent!",
-    "fail": "Something went wrong!"
-  }
+    ],
+    "header": [
+        {
+            "href": "#welcome",
+            "name": "Welcome"
+        },
+        {
+            "href": "#about",
+            "name": "About"
+        },
+        {
+            "href": "#work",
+            "name": "Work"
+        },
+        {
+            "href": "#contact",
+            "name": "Contact"
+        }
+    ],
+    "welcome": {
+        "sub": "Welcome",
+        "title": "Hi, I'm",
+        "content": "An Aspiring Web Development Student",
+        "select_language": "Select Language"
+    },
+    "about": {
+        "sub": "About",
+        "title": "Overview",
+        "content": "I'm a full-stack web developer with experience in PHP and MySQL. I also work with JavaScript or jQuery but it's not my main expertise. However, I'm always ready to expand my skill set and learn about new technologies. I'm a quick learner and I like to use my time effectively to seek innovative solutions. Let's work together to bring your ideas to life!",
+        "skills": [
+            {
+                "src": "/img/logo-php.webp",
+                "alt": "PHP Logo",
+                "name": "PHP"
+            },
+            {
+                "src": "/img/logo-mysql.webp",
+                "alt": "MySQL Logo",
+                "name": "MySQL"
+            },
+            {
+                "src": "/img/logo-js.webp",
+                "alt": "JavaScript Logo",
+                "name": "JavaScript"
+            },
+            {
+                "src": "/img/logo-jquery.webp",
+                "alt": "jQuery Logo",
+                "name": "jQuery"
+            },
+            {
+                "src": "/img/logo-ajax.webp",
+                "alt": "AJAX Logo",
+                "name": "AJAX"
+            },
+            {
+                "src": "/img/logo-sass.webp",
+                "alt": "SASS Logo",
+                "name": "Sass"
+            },
+            {
+                "src": "/img/logo-css3.webp",
+                "alt": "CSS3 Logo",
+                "name": "CSS3"
+            },
+            {
+                "src": "/img/logo-html5.webp",
+                "alt": "HTML5 Logo",
+                "name": "HTML5"
+            }
+        ]
+    },
+    "timeline": [
+        {
+            "year": "2021 - 2022",
+            "title": "HTML5 & CSS3",
+            "content": "Started learning the basics of <b>Web Development</b>, such as <b>HTML5</b> and <b>CSS3</b> front-end languages, got familiar with most of the common HTML tags and CSS features like <b>Flexbox</b>",
+            "content_full": "",
+            "button": "Read More"
+        },
+        {
+            "year": "2022",
+            "title": "PHP & MySQL",
+            "content": "Got interested in PHP back-end development, learned how Databases works, especially MySQL. Made an E-Commerce Online Shop with its own Content Management System",
+            "content_full": "",
+            "button": "Read More"
+        },
+        {
+            "year": "2023",
+            "title": "JavaScript & jQuery",
+            "content": "Started learning JavaScript language and its libraries like jQuery. Made my first Full-Stack Web Application with integrated AJAX fetch requests to MySQL queries which operated with database, so I can handle user actions without page refreshing or data loss",
+            "content_full": "",
+            "button": "Read More"
+        },
+        {
+            "year": "2024",
+            "title": "Who knows ?",
+            "content": "Big things might be coming...",
+            "content_full": "",
+            "button": "Read More"
+        }
+    ],
+    "work": {
+        "sub": "Work",
+        "title": "Projects",
+        "content": "Following projects showcase my skills and experiences in handling real projects. Each of the listed projects below includes a link to live demo example where you can take a detailed view. Additionally, each project is tagged with programming languages, frameworks or libraries that were primarily used in their development.",
+        "projects": [
+            {
+                "href": "./chronitask/",
+                "src": "/img/portfolio-chronitask.webp",
+                "alt": "Chronitask Website Preview",
+                "title": "Chronitask",
+                "content": "Fully integrated PHP & JavaScript Online to-do task-list website app with secure database connectivity protected against injection. User friendly and optimized interface.",
+                "links": {
+                    "link": "",
+                    "youtube": "",
+                    "discord": "",
+                    "facebook": "",
+                    "github": ""
+                },
+                "tags": {
+                    "PHP": "1",
+                    "MySQL": "1",
+                    "JavaScript": "",
+                    "jQuery": "1",
+                    "AJAX": "1",
+                    "Sass": "1",
+                    "CSS3": "",
+                    "HTML5": ""
+                }
+            },
+            {
+                "href": "./eshop/",
+                "src": "/img/portfolio-eshop.webp",
+                "alt": "Germond's E-Shop Website Preview",
+                "title": "Germond's E-Shop",
+                "content": "E-Commerce PHP Online Shop with database connectivity and its own Content Management System for editing not only products, but also pages and variations.",
+                "links": {
+                    "link": "",
+                    "youtube": "",
+                    "discord": "",
+                    "facebook": "",
+                    "github": ""
+                },
+                "tags": {
+                    "PHP": "1",
+                    "MySQL": "1",
+                    "JavaScript": "",
+                    "jQuery": "1",
+                    "AJAX": "",
+                    "Sass": "",
+                    "CSS3": "",
+                    "HTML5": ""
+                }
+            },
+            {
+                "href": "./",
+                "src": "/img/portfolio-germondai.webp",
+                "alt": "Germond's Portfolio Website Preview",
+                "title": "Germond's Portfolio",
+                "content": "Professional user-friendly landing page. Elegant design of interface spiced up with clean Parallax effects and smooth animations. Fully working PHP contact system and language Localization.",
+                "links": {
+                    "link": "",
+                    "youtube": "",
+                    "discord": "",
+                    "facebook": "",
+                    "github": ""
+                },
+                "tags": {
+                    "PHP": "",
+                    "MySQL": "",
+                    "JavaScript": "1",
+                    "jQuery": "1",
+                    "AJAX": "",
+                    "Sass": "",
+                    "CSS3": "1",
+                    "HTML5": ""
+                }
+            }
+        ]
+    },
+    "contact": {
+        "sub": "Contact",
+        "title": "Get In Touch",
+        "name": "Your Name",
+        "email": "Your Email",
+        "message": "Your Message",
+        "button": "Send",
+        "success": "Successfully sent!",
+        "fail": "Something went wrong!"
+    }
 }
