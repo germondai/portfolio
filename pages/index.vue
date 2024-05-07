@@ -180,88 +180,38 @@
     </section>
     <section id="timeline" class="card-allow">
       <ul>
-        <li>
+        <li v-for="(item, index) in $tm('timeline')" :key="index">
           <div class="box">
             <div class="box-wrapper card">
               <div class="box-content">
                 <h3 class="title">
-                  <span class="year" title="2021 - 2022">
-                    <span class="anim-counter" data-count="2021"></span>
+                  <span
+                    v-if="$rt(item.year).includes('-')"
+                    class="year"
+                    title="'.$row['year'].'"
+                  >
+                    <span
+                      class="anim-counter"
+                      data-count="'.trim(explode('-', $row['year'])[0]).'"
+                    ></span>
                     -
-                    <span class="anim-counter" data-count="2022"></span>
+                    <span
+                      class="anim-counter"
+                      data-count="'.trim(explode('-', $row['year'])[1]).'"
+                    ></span>
                   </span>
-                  <span class="title-content">HTML5 & CSS3</span>
-                </h3>
-                <p>
-                  Started learning the basics of <b>Web Development</b>, such as
-                  <b>HTML5</b> and <b>CSS3</b> front-end languages, got familiar
-                  with most of the common HTML tags and CSS features like
-                  <b>Flexbox</b>
-                </p>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="box">
-            <div class="box-wrapper card">
-              <div class="box-content">
-                <h3 class="title">
                   <span
+                    v-else
                     class="year anim-counter"
-                    data-count="2022"
-                    title="2022"
+                    data-count="'.$row['year'].'"
+                    title="'.$row['year'].'"
                   ></span>
-                  <span class="title-content">PHP & MySQL</span>
+                  <span class="title-content">{{ $rt(item.title) }}</span>
                 </h3>
-                <p>
-                  Got interested in PHP back-end development, learned how
-                  Databases works, especially MySQL. Made an E-Commerce Online
-                  Shop with its own Content Management System
-                </p>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="box">
-            <div class="box-wrapper card">
-              <div class="box-content">
-                <h3 class="title">
-                  <span
-                    class="year anim-counter"
-                    data-count="2023"
-                    title="2023"
-                  ></span>
-                  <span class="title-content">JavaScript & jQuery</span>
-                </h3>
-                <p>
-                  Started learning JavaScript language and its libraries like
-                  jQuery. Made my first Full-Stack Web Application with
-                  integrated AJAX fetch requests to MySQL queries which operated
-                  with database, so I can handle user actions without page
-                  refreshing or data loss
-                </p>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li>
-          <div class="box">
-            <div class="box-wrapper card">
-              <div class="box-content">
-                <h3 class="title">
-                  <span
-                    class="year anim-counter"
-                    data-count="2024"
-                    title="2024"
-                  ></span>
-                  <span class="title-content">Who knows ?</span>
-                </h3>
-                <p>Big things might be coming...</p>
+                <p>{{ $rt(item.content) }}</p>
+                <button v-if="$rt(item.content_full)">
+                  {{ $rt(item.button) ? $rt(item.button) : '📖 👀' }}
+                </button>
               </div>
             </div>
           </div>
