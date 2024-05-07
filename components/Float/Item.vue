@@ -1,15 +1,28 @@
 <template>
-  <div class="absolute FloatItem" :style="{ transform: parallaxStyle }">
+  <div
+    class="absolute FloatItem"
+    :class="presetClass"
+    :style="{ transform: parallaxStyle }"
+  >
     <slot />
   </div>
 </template>
 
 <script lang="ts" setup>
-const { velocity } = defineProps({
+const { velocity, preset } = defineProps({
   velocity: {
     type: Number,
     default: 1,
   },
+  preset: {
+    type: String,
+    value: 'bg' || '...',
+    default: '',
+  },
+})
+
+const presetClass = computed(() => {
+  return preset === 'bg' ? `w-full h-full` : ''
 })
 
 const mouseX = ref(0)

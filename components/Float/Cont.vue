@@ -1,5 +1,5 @@
 <template>
-  <div class="FloatCont" :class="style">
+  <div class="FloatCont" :class="presetClass">
     <slot />
   </div>
 </template>
@@ -13,7 +13,7 @@ const { preset } = defineProps({
   },
 })
 
-const style = computed(() => {
+const presetClass = computed(() => {
   return preset === 'bg' ? `absolute top-0 w-full h-full` : ''
 })
 </script>
