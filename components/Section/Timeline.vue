@@ -1,5 +1,5 @@
 <template>
-  <FlareCont :tag="'section'" id="timeline" class="flex flex-col">
+  <FlareCont id="timeline" :tag="'section'" class="flex flex-col">
     <ul class="pt-[150px]">
       <li
         v-for="(item, index) in $tm('timeline')"

@@ -88,12 +88,25 @@ img {
   user-select: none;
 }
 
-// additional scss
+/* --- Additional scss --- */
 section#welcome,
 section#about,
 section#work,
 section#contact {
   @apply py-24 min-h-screen;
+}
+
+section {
+  @apply relative w-full flex items-center;
+}
+
+#about,
+#work {
+  z-index: 1;
+}
+
+section#contact {
+  @apply pt-24 pb-0;
 }
 
 #welcome svg,
@@ -132,21 +145,13 @@ section#contact {
   }
 }
 
-section {
-  @apply relative w-full flex items-center;
-}
-
-#about,
-#work {
-  z-index: 1;
-}
-
 .text-gradient {
   background: linear-gradient(90deg, #915eff 0%, #ff006a 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
+/* tags */
 .tag-html5 {
   color: #fd8458;
 }
@@ -178,4 +183,76 @@ section {
 
 .tag-ajax {
   color: #21b0f2;
+}
+
+/* pretty forms by @germondai */
+.form {
+  @apply relative flex flex-col rounded-2xl
+}
+
+.form .field {
+  @apply relative w-full my-2
+}
+
+.form .field.checkbox {
+  @apply flex items-center justify-center gap-2
+}
+
+.form .field.textarea {
+  @apply mb-0
+}
+
+.form .field label {
+  transition: font-size .3s, top .3s;
+  @apply absolute top-3.5 left-2 pr-2.5 w-[calc(100%-0.5rem)] inline-block truncate leading-none pointer-events-none
+}
+
+.form input:required~label,
+.form textarea:required~label,
+.form select:required~label {
+  @apply flex items-center before:content-['*'] before:text-red-600 before:ml-1 before:mt-0.5 before:order-2 before:text-xl before:leading-none
+}
+
+.form .field.checkbox label {
+  @apply relative order-first w-auto text-white
+}
+
+.form input:not([type="submit"]),
+.form textarea,
+.form select {
+  transition: padding-top .3s;
+  @apply relative w-full min-w-64 min-h-12 max-h-[164px] p-4 px-2 pb-0.5 rounded-lg
+}
+
+.form input[type="number"]::-webkit-outer-spin-button,
+.form input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.form input[type="checkbox"] {
+  @apply w-auto min-w-[42px] aspect-square
+}
+
+.form textarea {
+  @apply resize-y pt-[18px] min-h-[164px] max-h-[50vh]
+}
+
+.form input::placeholder,
+.form textarea::placeholder,
+.form select::placeholder {
+  @apply text-transparent
+}
+
+.form input:focus~label,
+.form input:not(:placeholder-shown)~label,
+.form textarea:focus~label,
+.form textarea:not(:placeholder-shown)~label,
+.form select:focus~label,
+.form select:not(:placeholder-shown)~label {
+  @apply text-xs top-0 opacity-60
+}
+
+.form input[type="submit"],
+.form button[type="submit"] {
+  @apply w-full flex items-center justify-center cursor-pointer border-0 my-2 p-1 rounded-2xl
 }
