@@ -1,32 +1,24 @@
 <template>
-  <button id="btnScrollToTop" title="Scroll To Top"></button>
+  <button
+    v-if="y > 500"
+    id="btnScrollToTop"
+    title="Scroll To Top"
+    @click="y = 0"
+  ></button>
 </template>
 
 <script lang="ts" setup>
-// $('#btnScrollToTop').click(scrollToTop)
-// function scrollToTop() {
-//   $('html, body').animate({ scrollTop: 0 }, 'smooth')
-// }
-
-// $(window).scroll(function () {
-//   let btnScrollToTop = $('#btnScrollToTop')
-
-//   if ($(this).scrollTop() > 500) {
-//     btnScrollToTop.show()
-//   } else {
-//     btnScrollToTop.hide()
-//   }
-// })
+const { y } = useWindowScroll({ behavior: 'smooth' })
 </script>
 
 <style lang="scss">
 #btnScrollToTop {
-  background-image: url(/public/assets/img/arrowTop-light.webp);
+  background-image: url(/img/arrowTop-light.webp);
   background-size: calc(100% - 8px);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #1f2023cc;
-  display: none;
+  display: flex;
   position: fixed;
   border-radius: 50%;
   outline: none;

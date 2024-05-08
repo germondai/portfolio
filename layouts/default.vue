@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section id="extras-fixed">
+    <section id="extras-fixed" class="z-[9999]">
       <BtnScrollToTop />
       <FlyingRocket />
     </section>
