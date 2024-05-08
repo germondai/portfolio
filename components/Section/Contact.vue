@@ -43,8 +43,12 @@
         </div>
       </div>
       <div class="col-2 anim-top">
-        <img src="/img/3D-envelope.webp" alt="Envelope Mail" loading="lazy" />
-        <img src="/img/3D-devices.webp" alt="Devices" loading="lazy" />
+        <img
+          src="/public/img/3D-envelope.webp"
+          alt="Envelope Mail"
+          loading="lazy"
+        />
+        <img src="/public/img/3D-devices.webp" alt="Devices" loading="lazy" />
       </div>
     </div>
     <ParallaxBgContact />

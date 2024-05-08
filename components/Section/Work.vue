@@ -1,92 +1,66 @@
 <template>
   <section id="work">
-    <div class="cont-1">
-      <div class="col-2 anim-bottom">
-        <sub>Work</sub>
-        <h1>Projects</h1>
-        <h2></h2>
-        <p>
-          Following projects showcase my skills and experiences in handling real
-          projects. Each of the listed projects below includes a link to live
-          demo example where you can take a detailed view. Additionally, each
-          project is tagged with programming languages, frameworks or libraries
-          that were primarily used in their development.
-        </p>
+    <div
+      class="w-4/5 h-full mx-auto flex flex-col items-center justify-center gap-6"
+    >
+      <div class="w-full flex flex-col">
+        <sub>{{ $t('work.sub') }}</sub>
+        <h1>{{ $t('work.title') }}</h1>
+        <p class="text-justify">{{ $t('work.content') }}</p>
       </div>
-      <div id="cards" class="col-2 demo-tabs">
-        <div class="col-3 anim-left effect-holo card">
-          <div class="links"></div>
-          <a href="./chronitask/" target="_blank" class="card-content">
+      <FlareCont
+        class="w-[98%] grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] xl:grid-cols-[repeat(auto-fill,minmax(370px,1fr)] gap-4"
+      >
+        <FlareItem
+          v-for="(project, i) in $tm('work.projects')"
+          :key="i"
+          class="w-full flex flex-col p-0.5 rounded-xl bg-[#ffffff1a] shadow-xl backdrop-blur-lg hover:scale-[1.025] transition-transform z-20"
+        >
+          <div
+            class="absolute top-[18px] right-[18px] flex items-center justify-center gap-1.5 z-30"
+          >
+            <template v-for="(lValue, lKey, j) in project.links" :key="j">
+              <a
+                v-if="$rt(lValue) != ''"
+                :href="$rt(lValue)"
+                class="size-8 bg-[#121316be] backdrop-blur flex items-center justify-center rounded-full overflow-hidden outline outline-1"
+              >
+                <img
+                  :src="`/img/${$rt(lKey)}-light.webp`"
+                  alt=""
+                  class="size-6"
+              /></a>
+            </template>
+          </div>
+          <a
+            :href="$rt(project.href)"
+            target="'.($row['href'] === './' ? '_self' : '_blank').'"
+            class="h-full flex flex-col bg-[#0d0d0faa] z-20 p-3 rounded-xl"
+          >
             <div>
               <img
-                src="/img/portfolio-chronitask.webp"
-                alt="Chronitask Website Preview"
+                :src="$rt(project.src)"
+                :alt="$rt(project.alt)"
                 loading="lazy"
+                class="w-full rounded-lg aspect-video"
               />
-              <h3>Chronitask</h3>
+              <h4 class="my-2">{{ $rt(project.title) }}</h4>
             </div>
-            <p>
-              Fully integrated PHP & JavaScript Online to-do task-list website
-              app with secure database connectivity protected against injection.
-              User friendly and optimized interface.
+            <p class="text-justify mb-2 line-clamp-5">
+              {{ $rt(project.content) }}
             </p>
-            <div class="tags">
-              <sub class="tag-php">#PHP</sub><sub class="tag-mysql">#MySQL</sub
-              ><sub class="tag-jquery">#jQuery</sub
-              ><sub class="tag-ajax">#AJAX</sub
-              ><sub class="tag-sass">#Sass</sub>
+            <div class="flex items-center flex-wrap gap-x-2">
+              <template v-for="(tValue, tKey, k) in project.tags" :key="k">
+                <sub
+                  v-if="$rt(tValue) == 1"
+                  :class="`tag-${$rt(tKey).toLocaleLowerCase()}`"
+                  >#{{ $rt(tKey) }}</sub
+                >
+              </template>
             </div>
           </a>
-        </div>
-
-        <div class="col-3 anim-left effect-holo card">
-          <div class="links"></div>
-          <a href="./eshop/" target="_blank" class="card-content">
-            <div>
-              <img
-                src="/img/portfolio-eshop.webp"
-                alt="Germond's E-Shop Website Preview"
-                loading="lazy"
-              />
-              <h3>Germond's E-Shop</h3>
-            </div>
-            <p>
-              E-Commerce PHP Online Shop with database connectivity and its own
-              Content Management System for editing not only products, but also
-              pages and variations.
-            </p>
-            <div class="tags">
-              <sub class="tag-php">#PHP</sub><sub class="tag-mysql">#MySQL</sub
-              ><sub class="tag-jquery">#jQuery</sub>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-3 anim-left effect-holo card">
-          <div class="links"></div>
-          <a href="./" target="_self" class="card-content">
-            <div>
-              <img
-                src="/img/portfolio-germondai.webp"
-                alt="Germond's Portfolio Website Preview"
-                loading="lazy"
-              />
-              <h3>Germond's Portfolio</h3>
-            </div>
-            <p>
-              Professional user-friendly landing page. Elegant design of
-              interface spiced up with clean Parallax effects and smooth
-              animations. Fully working PHP contact system and language
-              Localization.
-            </p>
-            <div class="tags">
-              <sub class="tag-javascript">#JavaScript</sub
-              ><sub class="tag-jquery">#jQuery</sub
-              ><sub class="tag-css3">#CSS3</sub>
-            </div>
-          </a>
-        </div>
-      </div>
+        </FlareItem>
+      </FlareCont>
     </div>
     <ParallaxBgWork />
   </section>
@@ -94,4 +68,37 @@
 
 <script lang="ts" setup></script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.tag-html5 {
+  color: #fd8458;
+}
+
+.tag-css3 {
+  color: #51abf6;
+}
+
+.tag-php {
+  color: #a4a4cc;
+}
+
+.tag-mysql {
+  color: #00b7db;
+}
+
+.tag-sass {
+  color: #cc6699;
+}
+
+.tag-js,
+.tag-javascript {
+  color: #ffdf00;
+}
+
+.tag-jquery {
+  color: #46adf6;
+}
+
+.tag-ajax {
+  color: #21b0f2;
+}
+</style>

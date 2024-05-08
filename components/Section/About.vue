@@ -12,8 +12,11 @@
         <div
           v-for="(skill, index) in $tm('about.skills')"
           :key="index"
+          v-motion
+          :initial="{ x: -100, opacity: 0 }"
+          :visible-once="{ x: 0, opacity: 1 }"
+          :delay="index * 50"
           class="flex flex-col items-center gap-2 anim-left"
-          :style="`transition-delay: ${0.05 * index}s`"
         >
           <HoloTilt :scale="1.1" class="size-32">
             <img
