@@ -1,9 +1,12 @@
 <template>
   <section id="welcome">
     <div class="w-4/5 h-full mx-auto flex items-center justify-center">
-      <div class="w-3/5 flex flex-col anim-left">
+      <div
+        v-motion-slide-visible-once-left
+        class="w-3/5 flex flex-col anim-left"
+      >
         <sub v-motion-roll-bottom>{{ $t('welcome.sub') }}</sub>
-        <h1 v-motion-slide-visible-once-right>
+        <h1>
           {{ $t('welcome.title') }}
           <span class="text-gradient">Germond</span>
         </h1>
@@ -11,6 +14,7 @@
         <LangSwitcher class="mt-12" />
       </div>
       <div
+        v-motion-slide-visible-once-top
         class="relative w-2/5 h-[90%] py-12 flex items-center justify-center anim-bottom"
       >
         <img

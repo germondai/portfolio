@@ -3,7 +3,10 @@
     <div
       class="w-4/5 h-full mx-auto flex max-md:flex-col-reverse items-center justify-center"
     >
-      <div class="relative w-3/5 h-auto flex flex-col justify-center">
+      <div
+        v-motion-slide-visible-once-left
+        class="relative w-3/5 h-auto flex flex-col justify-center"
+      >
         <FlareItem
           class="w-[70%] p-0.5 rounded-2xl bg-[#ffffff1a] shadow-lg backdrop-blur-lg"
         >
@@ -58,6 +61,7 @@
         </FlareItem>
       </div>
       <div
+        v-motion-slide-visible-once-top
         class="relative w-2/5 h-[90%] py-12 flex items-center justify-center"
       >
         <img

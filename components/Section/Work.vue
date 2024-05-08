@@ -3,7 +3,7 @@
     <div
       class="w-4/5 h-full mx-auto flex flex-col items-center justify-center gap-6"
     >
-      <div class="w-full flex flex-col">
+      <div v-motion-slide-visible-once-top class="w-full flex flex-col">
         <sub>{{ $t('work.sub') }}</sub>
         <h1>{{ $t('work.title') }}</h1>
         <p class="text-justify" v-html="$t('work.content')"></p>
@@ -14,6 +14,10 @@
         <HoloTilt
           v-for="(project, i) in $tm('work.projects')"
           :key="i"
+          v-motion
+          :initial="{ x: -100, opacity: 0 }"
+          :visible-once="{ x: 0, opacity: 1 }"
+          :delay="i * 100"
           :scale="1.025"
           class="w-full z-20"
         >

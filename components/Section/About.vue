@@ -3,7 +3,10 @@
     <div
       class="w-4/5 mx-auto h-full flex flex-col items-center justify-center gap-12"
     >
-      <div class="w-full flex flex-col anim-bottom">
+      <div
+        v-motion-slide-visible-once-top
+        class="w-full flex flex-col anim-bottom"
+      >
         <sub>{{ $t('about.sub') }}</sub>
         <h1>{{ $t('about.title') }}</h1>
         <p v-html="$t('about.content')"></p>
