@@ -125,6 +125,7 @@ section#contact {
 }
 
 @media (max-width: 768px) {
+
   #work svg,
   #work .svg {
     @apply -left-[65%];
@@ -132,7 +133,7 @@ section#contact {
 }
 
 section {
-  @apply relative w-full flex;
+  @apply relative w-full flex items-center;
 }
 
 #about,
@@ -144,4 +145,37 @@ section {
   background: linear-gradient(90deg, #915eff 0%, #ff006a 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+
+.tag-html5 {
+  color: #fd8458;
+}
+
+.tag-css3 {
+  color: #51abf6;
+}
+
+.tag-php {
+  color: #a4a4cc;
+}
+
+.tag-mysql {
+  color: #00b7db;
+}
+
+.tag-sass {
+  color: #cc6699;
+}
+
+.tag-js,
+.tag-javascript {
+  color: #ffdf00;
+}
+
+.tag-jquery {
+  color: #46adf6;
+}
+
+.tag-ajax {
+  color: #21b0f2;
 }

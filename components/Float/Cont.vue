@@ -1,11 +1,19 @@
 <template>
-  <div class="pointer-events-none FloatCont" :class="presetClass">
+  <component
+    :is="tag"
+    class="pointer-events-none FloatCont"
+    :class="presetClass"
+  >
     <slot />
-  </div>
+  </component>
 </template>
 
 <script lang="ts" setup>
-const { preset } = defineProps({
+const { tag, preset } = defineProps({
+  tag: {
+    type: String,
+    default: 'div',
+  },
   preset: {
     type: String,
     value: 'bg' || '...',

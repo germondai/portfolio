@@ -1,15 +1,20 @@
 <template>
-  <div
+  <component
+    :is="tag"
     class="absolute pointer-events-none FloatItem"
     :class="presetClass"
     :style="{ transform: parallaxStyle }"
   >
     <slot />
-  </div>
+  </component>
 </template>
 
 <script lang="ts" setup>
-const { velocity, preset } = defineProps({
+const { tag, velocity, preset } = defineProps({
+  tag: {
+    type: String,
+    default: 'div',
+  },
   velocity: {
     type: Number,
     default: 1,

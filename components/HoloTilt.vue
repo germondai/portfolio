@@ -1,5 +1,6 @@
 <template>
-  <div
+  <component
+    :is="tag"
     ref="HoloTilt"
     :style="{
       // display: 'contents',
@@ -8,11 +9,15 @@
     }"
   >
     <slot />
-  </div>
+  </component>
 </template>
 
 <script lang="ts" setup>
-const { scale } = defineProps({
+const { tag, scale } = defineProps({
+  tag: {
+    type: String,
+    default: 'div',
+  },
   scale: {
     type: Number,
     default: 1,
