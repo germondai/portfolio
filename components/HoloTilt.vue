@@ -13,7 +13,10 @@
 
 <script lang="ts" setup>
 const { scale } = defineProps({
-  scale: Number,
+  scale: {
+    type: Number,
+    default: 1,
+  },
 })
 
 const HoloTilt = ref()

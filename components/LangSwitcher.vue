@@ -2,15 +2,15 @@
   <div class="flex flex-col items-start gap-1">
     <sub class="font-bold">{{ $t('welcome.select_language') }}</sub>
     <a
-      v-for="locale in availableLocales"
-      :key="locale.code"
+      v-for="langLocale in availableLocales"
+      :key="langLocale.code"
       href="#"
-      @click.prevent.stop="setLocale(locale.code)"
+      @click.prevent.stop="setLocale(langLocale.code)"
     >
       <img
-        :src="`/img/flags/${locale.code}.svg`"
+        :src="`/img/flags/${langLocale.code}.svg`"
         class="w-12"
-        :title="locale.name"
+        :title="langLocale.name"
       />
     </a>
   </div>
