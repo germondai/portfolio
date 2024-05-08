@@ -21,7 +21,10 @@
               </span>
               <span class="truncate">{{ $rt(item.title) }}</span>
             </b>
-            <p class="px-4 py-2 text-justify" v-html="$rt(item.content)"></p>
+            <p
+              v-dompurify-html="$rt(item.content)"
+              class="px-4 py-2 text-justify"
+            ></p>
             <button v-if="$rt(item.content_full)">
               {{ $rt(item.button) ? $rt(item.button) : '📖 👀' }}
             </button>

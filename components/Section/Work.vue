@@ -6,7 +6,9 @@
       <div v-motion-slide-visible-once-top class="w-full flex flex-col">
         <sub>{{ $t('work.sub') }}</sub>
         <h1>{{ $t('work.title') }}</h1>
-        <p class="text-justify" v-html="$t('work.content')"></p>
+        <p v-dompurify-html="$t('work.content')" class="text-justify">
+          {{ $e }}
+        </p>
       </div>
       <div
         class="w-[98%] grid xl:grid-cols-[repeat(auto-fill,minmax(370px,1fr))] grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-4"
@@ -55,8 +57,8 @@
                 <h4 class="my-2">{{ $rt(project.title) }}</h4>
               </div>
               <p
+                v-dompurify-html="$rt(project.content)"
                 class="text-justify mb-2 line-clamp-5"
-                v-html="$rt(project.content)"
               ></p>
               <div class="flex items-center flex-wrap gap-x-2">
                 <template v-for="(tValue, tKey, k) in project.tags" :key="k">
