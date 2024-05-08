@@ -6,7 +6,7 @@
       <div class="w-full flex flex-col anim-bottom">
         <sub>{{ $t('about.sub') }}</sub>
         <h1>{{ $t('about.title') }}</h1>
-        <p>{{ $t('about.content') }}</p>
+        <p v-html="$t('about.content')"></p>
       </div>
       <div class="w-[90%] grid grid-cols-4 items-center justify-between gap-16">
         <div

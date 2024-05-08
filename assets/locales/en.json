@@ -52,13 +52,13 @@
   "welcome": {
     "sub": "Welcome",
     "title": "Hi, I'm",
-    "content": "An Aspiring Web Development Student",
+    "content": "An Aspiring <b>Web Development</b> Student",
     "select_language": "Select Language"
   },
   "about": {
     "sub": "About",
     "title": "Overview",
-    "content": "I'm a full-stack web developer with experience in PHP and MySQL. I also work with JavaScript or jQuery but it's not my main expertise. However, I'm always ready to expand my skill set and learn about new technologies. I'm a quick learner and I like to use my time effectively to seek innovative solutions. Let's work together to bring your ideas to life!",
+    "content": "I'm a <b>Full-Stack Web Developer</b> with experience in <b>PHP</b> and <b>MySQL</b>. I also work with <b>JavaScript</b> or <b>jQuery</b> but it's not my main <b>expertise</b>. However, I'm always ready to expand my <b>skill set</b> and <b>learn</b> about new <b>technologies</b>. I'm a <b>quick learner</b> and I like to use my time <b>effectively</b> to seek <b>innovative solutions</b>. Let's work together to <b>bring your ideas to life!</b>",
     "skills": [
       {
         "src": "/img/logo-php.webp",
@@ -106,28 +106,28 @@
     {
       "year": "2021 - 2022",
       "title": "HTML5 & CSS3",
-      "content": "Started learning the basics of <b>Web Development</b>, such as <b>HTML5</b> and <b>CSS3</b> front-end languages, got familiar with most of the common HTML tags and CSS features like <b>Flexbox</b>",
+      "content": "Started learning the basics of <b>Web Development</b>, such as <b>HTML5</b> and <b>CSS3</b> <b>front-end</b> languages, got familiar with most of the common <b>HTML</b> tags and <b>CSS</b> features like <b>Flexbox</b>",
       "content_full": "",
       "button": "Read More"
     },
     {
       "year": "2022",
       "title": "PHP & MySQL",
-      "content": "Got interested in PHP back-end development, learned how Databases works, especially MySQL. Made an E-Commerce Online Shop with its own Content Management System",
+      "content": "Got interested in <b>PHP</b> and <b>back-end</b> development overall, learned how <b>Databases</b> works, especially <b>MySQL</b>. Made an <b>E-Commerce Online Shop</b> with its own <b>Content Management System</b>",
       "content_full": "",
       "button": "Read More"
     },
     {
       "year": "2023",
       "title": "JavaScript & jQuery",
-      "content": "Started learning JavaScript language and its libraries like jQuery. Made my first Full-Stack Web Application with integrated AJAX fetch requests to MySQL queries which operated with database, so I can handle user actions without page refreshing or data loss",
+      "content": "Started learning <b>JavaScript</b> language and its libraries like <b>jQuery</b>. Made my first <b>Full-Stack</b> Web Application with integrated <b>AJAX</b> fetch requests to <b>MySQL</b> queries which operated with <b>database</b>, so I can handle user <b>actions</b> without page refreshing or <b>data loss</b>",
       "content_full": "",
       "button": "Read More"
     },
     {
       "year": "2024",
       "title": "Who knows ?",
-      "content": "Big things might be coming...",
+      "content": "<b>Big things</b> might be <b>coming</b>...",
       "content_full": "",
       "button": "Read More"
     }
@@ -135,20 +135,20 @@
   "work": {
     "sub": "Work",
     "title": "Projects",
-    "content": "Following projects showcase my skills and experiences in handling real projects. Each of the listed projects below includes a link to live demo example where you can take a detailed view. Additionally, each project is tagged with programming languages, frameworks or libraries that were primarily used in their development.",
+    "content": "Following projects <b>showcase</b> my <b>skills</b> and <b>experiences</b> in handling <b>real projects</b>. Each of the listed projects below <b>includes</b> a link to <b>live demo</b> example where you can take a <b>detailed view</b>. Additionally, each project is <b>tagged</b> with <b>programming languages</b>, <b>frameworks</b> or <b>libraries</b> that were primarily used in their <b>development</b>.",
     "projects": [
       {
         "href": "./chronitask/",
         "src": "/img/portfolio-chronitask.webp",
         "alt": "Chronitask Website Preview",
         "title": "Chronitask",
-        "content": "Fully integrated PHP & JavaScript Online to-do task-list website app with secure database connectivity protected against injection. User friendly and optimized interface.",
+        "content": "Fully integrated <b>PHP</b> & <b>JavaScript</b> Online <b>to-do task-list</b> website <b>app</b> with <b>secure database</b> connectivity <b>protected</b> against <b>injection</b> and <b>fetch requests</b> with <b>AJAX</b>. <b>User friendly</b> and <b>optimized interface</b>.",
         "links": {
-          "link": "w",
-          "youtube": "q",
+          "link": "https://germondai.rf.gd/chronitask/",
+          "youtube": "",
           "discord": "",
           "facebook": "",
-          "github": ""
+          "github": "https://github.com/germondai"
         },
         "tags": {
           "PHP": "1",
@@ -166,13 +166,13 @@
         "src": "/img/portfolio-eshop.webp",
         "alt": "Germond's E-Shop Website Preview",
         "title": "Germond's E-Shop",
-        "content": "E-Commerce PHP Online Shop with database connectivity and its own Content Management System for editing not only products, but also pages and variations.",
+        "content": "<b>E-Commerce Online Shop</b> made in <b>PHP</b> with <b>database</b> that <b>synchronizes</b> user's <b>cart</b> and <b>orders</b>. Includes <b>Content Management System</b> for <b>editing</b> not only <b>products</b>, but also <b>pages</b> and <b>variations</b>.",
         "links": {
-          "link": "",
+          "link": "https://germondai.rf.gd/eshop/",
           "youtube": "",
           "discord": "",
           "facebook": "",
-          "github": ""
+          "github": "https://github.com/germondai"
         },
         "tags": {
           "PHP": "1",
@@ -190,13 +190,13 @@
         "src": "/img/portfolio-germondai.webp",
         "alt": "Germond's Portfolio Website Preview",
         "title": "Germond's Portfolio",
-        "content": "Professional user-friendly landing page. Elegant design of interface spiced up with clean Parallax effects and smooth animations. Fully working PHP contact system and language Localization.",
+        "content": "<b>Professional user-friendly landing page</b>. <b>Elegant</b> design of <b>interface</b> spiced up with clean <b>Parallax effects</b> and <b>smooth animations</b>. Fully working <b>PHP</b> contact system and language <b>Localization</b>.",
         "links": {
-          "link": "",
+          "link": "https://germondai.rf.gd",
           "youtube": "",
           "discord": "",
           "facebook": "",
-          "github": ""
+          "github": "https://github.com/germondai"
         },
         "tags": {
           "PHP": "",

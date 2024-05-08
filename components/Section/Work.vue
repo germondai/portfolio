@@ -6,7 +6,7 @@
       <div class="w-full flex flex-col">
         <sub>{{ $t('work.sub') }}</sub>
         <h1>{{ $t('work.title') }}</h1>
-        <p class="text-justify">{{ $t('work.content') }}</p>
+        <p class="text-justify" v-html="$t('work.content')"></p>
       </div>
       <div
         class="w-[98%] grid xl:grid-cols-[repeat(auto-fill,minmax(370px,1fr))] grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-4"
@@ -15,9 +15,11 @@
           v-for="(project, i) in $tm('work.projects')"
           :key="i"
           :scale="1.025"
-          class="w-full shadow-xl backdrop-blur-lg z-20"
+          class="w-full z-20"
         >
-          <FlareItem class="flex flex-col p-0.5 rounded-xl bg-[#ffffff1a]">
+          <FlareItem
+            class="flex flex-col p-0.5 rounded-xl bg-[#ffffff1a] backdrop-blur-lg shadow-xl"
+          >
             <div
               class="absolute top-[18px] right-[18px] flex items-center justify-center gap-1.5 z-30"
             >
@@ -48,9 +50,10 @@
                 />
                 <h4 class="my-2">{{ $rt(project.title) }}</h4>
               </div>
-              <p class="text-justify mb-2 line-clamp-5">
-                {{ $rt(project.content) }}
-              </p>
+              <p
+                class="text-justify mb-2 line-clamp-5"
+                v-html="$rt(project.content)"
+              ></p>
               <div class="flex items-center flex-wrap gap-x-2">
                 <template v-for="(tValue, tKey, k) in project.tags" :key="k">
                   <sub

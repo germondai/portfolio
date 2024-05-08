@@ -7,7 +7,7 @@
           {{ $t('welcome.title') }}
           <span class="text-gradient">Germond</span>
         </h1>
-        <p v-motion-slide-visible-once-left>{{ $t('welcome.content') }}</p>
+        <p v-motion-slide-visible-once-left v-html="$t('welcome.content')"></p>
         <LangSwitcher class="mt-12" />
       </div>
       <div
