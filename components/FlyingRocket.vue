@@ -1,5 +1,5 @@
 <template>
-  <div id="flyingRocket">
+  <div id="flyingRocket" class="-z-[999]">
     <div class="wrapz">
       <img src="/public/img/3D-rocket.webp" alt="3D Rocket" loading="lazy" />
       <div class="flame"></div>

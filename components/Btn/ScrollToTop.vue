@@ -30,7 +30,7 @@ const { y } = useWindowScroll({ behavior: 'smooth' })
   padding: 4px;
   font-size: 24px;
   transition: background-color 0.5s;
-  z-index: 10;
+  z-index: 999;
   border: solid #fff 4px;
   box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.6);
 }
