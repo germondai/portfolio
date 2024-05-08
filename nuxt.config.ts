@@ -16,6 +16,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      link: [{ rel: 'icon', type: 'image/ico', href: '/img/skull.ico' }],
       meta: [
         {
           name: 'description',

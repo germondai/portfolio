@@ -21,7 +21,7 @@
         class="flex items-center justify-center h-[150%] z-20"
       >
         <img
-          src="/public/img/skull.ico"
+          src="/img/skull.ico"
           alt="Skull Icon"
           class="max-w-max h-full hover:animate-[shake_.3s] anim"
         />
