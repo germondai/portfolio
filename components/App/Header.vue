@@ -10,7 +10,7 @@
         <li v-for="(link, index) in $tm('header')" :key="index" class="flex">
           <NuxtLink
             :href="$rt(link.href)"
-            :class="mvSect == $rt(link.name).toLowerCase() ? 'active' : ''"
+            :class="`#${mvSect}` == $rt(link.href) ? 'active' : ''"
             class="relative px-2 py-1 opacity-50 hover:opacity-100 transition-opacity"
           >
             {{ $rt(link.name) }}
