@@ -47,6 +47,7 @@
                 as="textarea"
                 name="message"
                 :placeholder="$t('contact.message')"
+                required
               ></Field>
               <ErrorMessage name="message" />
               <label for="message">{{ $t('contact.message') }}</label>

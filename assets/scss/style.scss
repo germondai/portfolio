@@ -264,3 +264,7 @@ section#contact {
 .form button[type='submit'] {
   @apply w-full flex items-center justify-center cursor-pointer border-0 my-2 p-1 rounded-2xl;
 }
+
+.field span[role="alert"] {
+  @apply text-red-600
+}
