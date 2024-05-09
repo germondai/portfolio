@@ -10,44 +10,45 @@
         <FlareItem
           class="w-[70%] p-0.5 rounded-2xl bg-[#ffffff1a] box-shadow-custom backdrop-blur-lg"
         >
-          <form
-            action="actions/contact/save.php"
-            method="POST"
+          <Form
+            :validation-schema="schema"
+            method="post"
             class="form relative w-full h-full flex flex-col p-6 rounded-2xl bg-[#0d0d0faa] z-20"
+            @submit="onSubmit"
+            @invalid-submit="onInvalidSubmit"
           >
             <sub>{{ $t('contact.sub') }}</sub>
             <h1>{{ $t('contact.title') }}</h1>
             <div class="field">
-              <input
+              <Field
                 id="name"
                 type="text"
                 name="name"
-                maxlength="64"
                 :placeholder="$t('contact.name')"
                 required
               />
+              <ErrorMessage name="name" />
               <label for="name">{{ $t('contact.name') }}</label>
             </div>
             <div class="field">
-              <input
+              <Field
                 id="email"
                 type="email"
                 name="email"
-                maxlength="128"
                 :placeholder="$t('contact.email')"
                 required
               />
+              <ErrorMessage name="email" />
               <label for="email">{{ $t('contact.email') }}</label>
             </div>
             <div class="field textarea">
-              <textarea
+              <Field
                 id="message"
-                type="text"
+                as="textarea"
                 name="message"
-                maxlength="256"
                 :placeholder="$t('contact.message')"
-                required
-              ></textarea>
+              ></Field>
+              <ErrorMessage name="message" />
               <label for="message">{{ $t('contact.message') }}</label>
             </div>
             <button
@@ -57,7 +58,7 @@
             >
               {{ $t('contact.button') }}
             </button>
-          </form>
+          </Form>
         </FlareItem>
       </div>
       <div
@@ -77,11 +78,37 @@
           class="max-w-full max-h-[90%] drop-shadow-custom animate-[float_2s_infinite_ease-in-out]"
         />
       </div>
+      <span v-if="result && result.error">dw</span>
+      {{ result }}
     </div>
     <ParallaxBgContact />
   </FlareCont>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import * as Yup from 'yup'
+
+const schema = Yup.object({
+  name: Yup.string().max(64).required('Please enter your name'),
+  email: Yup.string().email().max(128).required('Please enter a valid email'),
+  message: Yup.string().min(4).max(256).required('Please enter a message'),
+})
+
+const result = ref()
+const onSubmit = async (values) => {
+  const { data, pending, error, refresh } = await useFetch('', {
+    method: 'post',
+    body: { values },
+  })
+
+  result.value = { data, pending, error, refresh }
+}
+
+function onInvalidSubmit({ values, errors, results }) {
+  // console.log(values)
+  // console.log(errors)
+  // console.log(results)
+}
+</script>
 
 <style lang="scss" scoped></style>

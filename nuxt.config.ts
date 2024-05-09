@@ -48,6 +48,7 @@ export default defineNuxtConfig({
     // '@nuxt/image',
     '@nuxtjs/seo',
     '@nuxtjs/google-fonts',
+    '@vee-validate/nuxt',
   ],
 
   googleFonts: {
@@ -115,6 +116,7 @@ export default defineNuxtConfig({
       escapeHtml: false,
     },
   },
+
   motion: {
     directives: {
       // 'pop-bottom': {
