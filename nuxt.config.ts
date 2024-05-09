@@ -1,12 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // because of static deployment (currently)
   ssr: false,
-
-  // nitro: {
-  //   prerender: {
-  //     routes: [],
-  //   },
-  // },
+  ogImage: { enabled: false },
+  schemaOrg: { enabled: false },
 
   devtools: { enabled: true },
 
