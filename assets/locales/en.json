@@ -53,7 +53,7 @@
     "sub": "Welcome",
     "title": "Hi, I'm",
     "content": "An Aspiring <b>Web Development</b> Student",
-    "select_language": "Select Language"
+    "swap_language": "Swap Language"
   },
   "about": {
     "sub": "About",
@@ -108,28 +108,28 @@
       "title": "HTML5 & CSS3",
       "content": "Started learning the basics of <b>Web Development</b>, such as <b>HTML5</b> and <b>CSS3</b> <b>front-end</b> languages, got familiar with most of the common <b>HTML</b> tags and <b>CSS</b> features like <b>Flexbox</b>",
       "content_full": "",
-      "button": "Read More"
+      "button": "Read More..."
     },
     {
       "year": "2022",
       "title": "PHP & MySQL",
       "content": "Got interested in <b>PHP</b> and <b>back-end</b> development overall, learned how <b>Databases</b> works, especially <b>MySQL</b>. Made an <b>E-Commerce Online Shop</b> with its own <b>Content Management System</b>",
       "content_full": "",
-      "button": "Read More"
+      "button": "Read More..."
     },
     {
       "year": "2023",
       "title": "JavaScript & jQuery",
       "content": "Started learning <b>JavaScript</b> language and its libraries like <b>jQuery</b>. Made my first <b>Full-Stack</b> Web Application with integrated <b>AJAX</b> fetch requests to <b>MySQL</b> queries which operated with <b>database</b>, so I can handle user <b>actions</b> without page refreshing or <b>data loss</b>",
       "content_full": "",
-      "button": "Read More"
+      "button": "Read More..."
     },
     {
       "year": "2024",
       "title": "Who knows ?",
       "content": "<b>Big things</b> might be <b>coming</b>...",
       "content_full": "",
-      "button": "Read More"
+      "button": "Read More..."
     }
   ],
   "work": {
@@ -142,7 +142,7 @@
         "src": "/img/portfolio-chronitask.webp",
         "alt": "Chronitask Website Preview",
         "title": "Chronitask",
-        "content": "Fully integrated <b>PHP</b> & <b>JavaScript</b> Online <b>to-do task-list</b> website <b>app</b> with <b>secure database</b> connectivity <b>protected</b> against <b>injection</b> and <b>fetch requests</b> with <b>AJAX</b>. <b>User friendly</b> and <b>optimized interface</b>.",
+        "content": "Fully integrated <b>PHP</b> & <b>JavaScript</b> Online <b>to-do task-list</b> website <b>app</b> with <b>secure database</b> connectivity <b>protected</b> against <b>injections</b> and <b>fetch requests</b> with <b>AJAX</b>. <b>User friendly</b> and <b>optimized interface</b>.",
         "links": {
           "link": "https://germondai.rf.gd/chronitask/",
           "youtube": "",
@@ -190,7 +190,7 @@
         "src": "/img/portfolio-germondai.webp",
         "alt": "Germond's Portfolio Website Preview",
         "title": "Germond's Portfolio",
-        "content": "<b>Professional user-friendly landing page</b>. <b>Elegant</b> design of <b>interface</b> spiced up with clean <b>Parallax effects</b> and <b>smooth animations</b>. Fully working <b>PHP</b> contact system and language <b>Localization</b>.",
+        "content": "<b>Professional user-friendly landing page</b>. <b>Elegant</b> design of <b>interface</b> spiced up with clean <b>Parallax effects</b> and <b>smooth animations</b>. Fully working <b>PHP</b> contact system and <b>language Localization</b>.",
         "links": {
           "link": "https://germondai.rf.gd",
           "youtube": "",
