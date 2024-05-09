@@ -30,7 +30,7 @@
           src="/public/img/germond-model.webp"
           alt="Germond Model"
           loading="lazy"
-          class="max-h-[90%] max-w-[40%] animate-[float_2s_infinite_ease-in-out] drop-shadow-md z-10"
+          class="max-h-[90%] max-w-[40%] animate-[float_2s_infinite_ease-in-out] drop-shadow-custom z-10"
         />
       </div>
     </div>

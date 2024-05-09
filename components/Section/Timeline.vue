@@ -10,7 +10,7 @@
           v-motion
           :initial="{ x: index % 2 ? -100 : 100, opacity: 0 }"
           :visible="{ x: 0, opacity: 1 }"
-          class="absolute bottom-0 group-odd:left-[50px] group-even:-left-[495px] w-[450px] p-0.5 rounded-xl bg-[#ffffff1a] drop-shadow-md before:absolute z-20"
+          class="absolute bottom-0 group-odd:left-[50px] group-even:-left-[495px] w-[450px] p-0.5 rounded-xl bg-[#ffffff1a] box-shadow-custom before:absolute z-20"
         >
           <div class="rounded-xl z-10 bg-[#0d0d0faa]">
             <b

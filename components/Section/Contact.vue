@@ -8,7 +8,7 @@
         class="relative w-3/5 h-auto flex flex-col justify-center"
       >
         <FlareItem
-          class="w-[70%] p-0.5 rounded-2xl bg-[#ffffff1a] shadow-lg backdrop-blur-lg"
+          class="w-[70%] p-0.5 rounded-2xl bg-[#ffffff1a] box-shadow-custom backdrop-blur-lg"
         >
           <form
             action="actions/contact/save.php"
@@ -74,7 +74,7 @@
           src="/public/img/3D-devices.webp"
           alt="Devices"
           loading="lazy"
-          class="max-w-full max-h-[90%] drop-shadow-lg animate-[float_2s_infinite_ease-in-out]"
+          class="max-w-full max-h-[90%] drop-shadow-custom animate-[float_2s_infinite_ease-in-out]"
         />
       </div>
     </div>

@@ -24,7 +24,7 @@
           class="w-full z-20"
         >
           <FlareItem
-            class="flex flex-col p-0.5 rounded-xl bg-[#ffffff1a] backdrop-blur-lg shadow-xl"
+            class="flex flex-col p-0.5 rounded-xl bg-[#ffffff1a] backdrop-blur-lg box-shadow-custom"
           >
             <div
               class="absolute top-[18px] right-[18px] flex items-center justify-center gap-1.5 z-30"
