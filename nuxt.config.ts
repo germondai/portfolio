@@ -47,7 +47,17 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     // '@nuxt/image',
     '@nuxtjs/seo',
+    '@nuxtjs/google-fonts',
   ],
+
+  googleFonts: {
+    display: 'swap',
+    families: {
+      Poppins: {
+        wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      },
+    },
+  },
 
   tailwindcss: {
     exposeConfig: true,

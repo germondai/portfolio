@@ -21,6 +21,7 @@
   "devDependencies": {
     "@nuxt/eslint-config": "^0.3.10",
     "@nuxt/image": "^1.7.0",
+    "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/i18n": "^8.3.1",
     "@nuxtjs/seo": "2.0.0-rc.10",
     "@nuxtjs/tailwindcss": "^6.12.0",
