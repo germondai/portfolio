@@ -214,9 +214,21 @@
   "contact": {
     "sub": "Kontakt",
     "title": "Spojme se!",
-    "name": "Vaše jméno",
-    "email": "Váš e-mail",
-    "message": "Vaše zpráva",
+    "name": {
+      "label": "Vaše jméno",
+      "required": "Prosím zadejte vaše jméno",
+      "error": "Prosím zadejte vaše jméno"
+    },
+    "email": {
+      "label": "Váš e-mail",
+      "required": "Prosím zadejte validní email",
+      "error": "Email musí obsahovat {'@'} a ."
+    },
+    "message": {
+      "label": "Vaše zpráva",
+      "required": "Prosím zadejte vaši zprávu",
+      "error": "Prosím zadejte vaši zprávu"
+    },
     "button": "Odeslat",
     "success": "Úspěšně odesláno!",
     "fail": "Něco se pokazilo!"

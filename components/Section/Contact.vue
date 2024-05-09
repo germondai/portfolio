@@ -24,33 +24,33 @@
                 id="name"
                 type="text"
                 name="name"
-                :placeholder="$t('contact.name')"
+                :placeholder="$t('contact.name.label')"
                 required
               />
               <ErrorMessage name="name" />
-              <label for="name">{{ $t('contact.name') }}</label>
+              <label for="name">{{ $t('contact.name.label') }}</label>
             </div>
             <div class="field">
               <Field
                 id="email"
                 type="email"
                 name="email"
-                :placeholder="$t('contact.email')"
+                :placeholder="$t('contact.email.label')"
                 required
               />
               <ErrorMessage name="email" />
-              <label for="email">{{ $t('contact.email') }}</label>
+              <label for="email">{{ $t('contact.email.label') }}</label>
             </div>
             <div class="field textarea">
               <Field
                 id="message"
                 as="textarea"
                 name="message"
-                :placeholder="$t('contact.message')"
+                :placeholder="$t('contact.message.label')"
                 required
               ></Field>
               <ErrorMessage name="message" />
-              <label for="message">{{ $t('contact.message') }}</label>
+              <label for="message">{{ $t('contact.message.label') }}</label>
             </div>
             <button
               type="submit"
@@ -89,10 +89,17 @@
 <script lang="ts" setup>
 import * as Yup from 'yup'
 
-const schema = Yup.object({
-  name: Yup.string().max(64).required('Please enter your name'),
-  email: Yup.string().email().max(128).required('Please enter a valid email'),
-  message: Yup.string().min(4).max(256).required('Please enter a message'),
+const { t } = useI18n()
+
+const schema = computed(() => {
+  return Yup.object({
+    name: Yup.string().max(64).required(t('contact.name.required')),
+    email: Yup.string()
+      .email(t('contact.email.error'))
+      .max(128)
+      .required(t('contact.email.required')),
+    message: Yup.string().min(4).max(256).required(t('contact.email.required')),
+  })
 })
 
 const result = ref()

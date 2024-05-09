@@ -214,9 +214,21 @@
   "contact": {
     "sub": "Contact",
     "title": "Get In Touch",
-    "name": "Your Name",
-    "email": "Your Email",
-    "message": "Your Message",
+    "name": {
+      "label": "Your Name",
+      "required": "Please enter your name",
+      "error": "Please enter your name"
+    },
+    "email": {
+      "label": "Your Email",
+      "required": "Please enter a valid email",
+      "error": "Email must contain {'@'} and ."
+    },
+    "message": {
+      "label": "Your Message",
+      "required": "Please enter your message",
+      "error": "Please enter your message"
+    },
     "button": "Send",
     "success": "Successfully sent!",
     "fail": "Something went wrong!"
