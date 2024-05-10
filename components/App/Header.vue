@@ -4,15 +4,18 @@
     class="fixed top-0 w-full h-[76px] flex items-end justify-center z-40"
   >
     <nav
-      class="xl:w-3/4 lg:w-[90%] sm:w-[95%] w-[98%] h-14 sm:px-8 px-2 flex items-center justify-between max-2xs:justify-around sm:gap-8 gap-2 rounded-[56px] bg-[#1f2023cc] backdrop-blur drop-shadow-md overflow-x-clip"
+      ref="menu"
+      :class="navStyles"
+      class="xl:w-3/4 lg:w-[90%] sm:w-[95%] w-[98%] h-14 sm:px-8 px-2 flex items-center justify-between max-2xs:justify-around sm:gap-8 gap-2 rounded-3xl bg-[#1f2023cc] backdrop-blur drop-shadow-md overflow-x-clip"
     >
       <ul
-        class="max-lg:order-2 max-sm:hidden w-full flex items-center justify-between gap-4"
+        :style="`display: ${dropdown.links ? 'flex' : 'none'}`"
+        class="max-lg:order-2 max-sm:hidden w-full flex items-center justify-between gap-4 max-sm:gap-2 max-sm:absolute top-14 left-0 max-sm:bg-[#1f2023cc] max-sm:h-14 max-sm:px-4"
       >
         <li
           v-for="(link, index) in $tm('header')"
           :key="index"
-          class="max-md:first:hidden flex"
+          class="max-xs:first:hidden max-sm:first:flex max-md:first:hidden flex"
         >
           <NuxtLink
             :href="$rt(link.href)"
@@ -25,7 +28,7 @@
       </ul>
       <NuxtLink
         href="./"
-        class="max-lg:order-1 flex items-center justify-center max-lg:h-[125%] h-[150%] z-20"
+        class="max-lg:order-1 flex items-center justify-center h-[76px] z-20"
       >
         <img
           src="/img/skull.ico"
@@ -33,7 +36,10 @@
           class="max-w-max h-full hover:animate-[shake_.3s] anim"
         />
       </NuxtLink>
-      <ul class="max-lg:hidden w-full flex items-center justify-between gap-8">
+      <ul
+        :style="`display: ${dropdown.icons ? 'flex' : 'none'}`"
+        class="max-lg:hidden w-full flex items-center justify-between gap-8 max-sm:gap-2 max-sm:top-28 max-lg:top-14 left-0 max-lg:bg-[#1f2023cc] max-lg:absolute max-lg:h-14 max-lg:px-4 max-lg:rounded-b-3xl"
+      >
         <li v-for="(social, index) in $tm('socials')" :key="index">
           <NuxtLink
             :href="$rt(social.href)"
@@ -52,6 +58,7 @@
       <button
         class="lg:hidden h-4/5 flex flex-col items-center justify-around mx-2 order-3 cursor-pointer bg-transparent"
         title="Menu"
+        @click.stop="menuToggle(true)"
       >
         <span
           v-for="index in 3"
@@ -64,14 +71,44 @@
 </template>
 
 <script lang="ts" setup>
-const { height } = useWindowSize()
-const mvSect = ref('')
+const { width, height } = useWindowSize()
 
+// dropdown links and icons
+const dropdown = ref({
+  links: false,
+  icons: false,
+})
+
+const navStyles = computed(() => {
+  return (width.value < 1024 && dropdown.value.icons) ||
+    (width.value < 640 && dropdown.value.links)
+    ? 'max-lg:rounded-b-none'
+    : ''
+})
+
+const menuToggle = (val: boolean) => {
+  dropdown.value.icons =
+    width.value < 1024 && dropdown.value.icons ? false : val
+  dropdown.value.links =
+    width.value < 640 ? dropdown.value.icons : dropdown.value.links
+}
+
+watchEffect(() => {
+  dropdown.value.links = width.value >= 640 ? true : dropdown.value.icons
+  dropdown.value.icons =
+    width.value >= 1024 || (width.value < 640 && dropdown.value.icons)
+})
+
+const menu = ref(null)
+onClickOutside(menu, () => menuToggle(dropdown.value.icons))
+
+// Highlight link by section
 onMounted(() => {
   calculateLargestSection()
   window.addEventListener('scroll', calculateLargestSection)
 })
 
+const mvSect = ref('')
 const calculateLargestSection = () => {
   const sections = document.querySelectorAll('main > section')
   const sectionsInfo: { y: number; id: string }[] = []
