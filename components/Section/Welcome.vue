@@ -1,12 +1,14 @@
 <template>
   <section id="welcome">
-    <div class="w-4/5 h-full mx-auto flex items-center justify-center">
+    <div
+      class="w-4/5 h-full mx-auto flex max-md:flex-col gap-8 items-center justify-center"
+    >
       <div
         v-motion-slide-visible-once-left
-        class="w-3/5 flex flex-col anim-left"
+        class="max-md:w-[98%] w-3/5 flex flex-col max-md:items-center max-md:gap-2 max-md:text-center anim-left"
       >
         <sub v-motion-roll-bottom>{{ $t('welcome.sub') }}</sub>
-        <h1>
+        <h1 class="max-md:leading-tight">
           {{ $t('welcome.title') }}
           <span class="text-gradient">Germond</span>
         </h1>
@@ -14,11 +16,13 @@
           v-motion-slide-visible-once-left
           v-dompurify-html="$t('welcome.content')"
         ></p>
-        <LangSwitcher class="mt-12" />
+        <LangSwitcher
+          class="max-md:mt-6 mt-12 max-md:items-center max-md:gap-2"
+        />
       </div>
       <div
         v-motion-slide-visible-once-top
-        class="relative w-2/5 h-[90%] py-12 flex items-center justify-center anim-bottom"
+        class="relative max-md:3/5 w-2/5 h-[90%] py-12 flex items-center justify-center anim-bottom"
       >
         <img
           src="/public/img/3D-rocket.webp"
