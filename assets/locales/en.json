@@ -52,7 +52,13 @@
   "welcome": {
     "sub": "Welcome",
     "title": "Hi, I'm",
-    "content": "An Aspiring <b>Web Development</b> Student",
+    "content": {
+      "base": "An Aspiring",
+      "typewriter": [
+        "Full-Stack Web Developer",
+        "Web Development Student"
+      ]
+    },
     "swap_language": "Swap Language"
   },
   "about": {

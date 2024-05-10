@@ -52,7 +52,13 @@
   "welcome": {
     "sub": "Úvod",
     "title": "Ahoj, já jsem",
-    "content": "Student zapálený do <b>vývoje webových stránek</b>",
+    "content": {
+      "base": "Nadějný",
+      "typewriter": [
+        "Full-Stack webový vývojář",
+        "Student webového vývoje"
+      ]
+    },
     "swap_language": "Vyberte jazyk"
   },
   "about": {

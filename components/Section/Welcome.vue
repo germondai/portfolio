@@ -12,10 +12,18 @@
           {{ $t('welcome.title') }}
           <span class="text-gradient">Germond</span>
         </h1>
-        <p
-          v-motion-slide-visible-once-left
-          v-dompurify-html="$t('welcome.content')"
-        ></p>
+        <div class="flex gap-1">
+          <p>{{ $t('welcome.content.base') }}</p>
+          <b>
+            <TypeWriter
+              v-motion-slide-visible-once-left
+              :type-array="[
+                $t('welcome.content.typewriter.0'),
+                $t('welcome.content.typewriter.1'),
+              ]"
+            />
+          </b>
+        </div>
         <LangSwitcher
           class="max-md:mt-6 mt-12 max-md:items-center max-md:gap-2"
         />
