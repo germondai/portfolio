@@ -1,7 +1,7 @@
 <template>
   <FlareCont id="work" :tag="'section'">
     <div
-      class="w-4/5 h-full mx-auto flex flex-col items-center justify-center gap-6"
+      class="max-lg:w-[95%] w-4/5 h-full mx-auto flex flex-col items-center justify-center gap-6"
     >
       <div v-motion-slide-visible-once-top class="w-full flex flex-col">
         <sub>{{ $t('work.sub') }}</sub>
@@ -11,7 +11,7 @@
         </p>
       </div>
       <div
-        class="w-[98%] grid xl:grid-cols-[repeat(auto-fill,minmax(370px,1fr))] grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-4"
+        class="w-full grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4"
       >
         <HoloTilt
           v-for="(project, i) in $tm('work.projects')"
@@ -60,11 +60,11 @@
                 v-dompurify-html="$rt(project.content)"
                 class="text-justify mb-2 line-clamp-5"
               ></p>
-              <div class="flex items-center flex-wrap gap-x-2">
+              <div class="flex items-center gap-x-2 truncate">
                 <template v-for="(tValue, tKey, k) in project.tags" :key="k">
                   <sub
                     v-if="$rt(tValue) == 1"
-                    :class="`tag-${$rt(tKey).toLocaleLowerCase()}`"
+                    :class="`tag-${$rt(tKey).toLocaleLowerCase()} last:truncate`"
                     >#{{ $rt(tKey) }}</sub
                   >
                 </template>
