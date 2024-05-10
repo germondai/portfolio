@@ -64,7 +64,7 @@
       </div>
       <div
         v-motion-slide-visible-once-top
-        class="relative max-md:w-3/5 w-2/5 max-lg:w-1/3 h-[90%] py-12 flex items-center justify-center"
+        class="relative w-2/5 max-lg:w-1/3 h-[90%] py-12 flex items-center justify-center"
       >
         <img
           src="/public/img/3D-envelope.webp"
