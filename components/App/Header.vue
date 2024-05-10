@@ -7,9 +7,13 @@
       class="xl:w-3/4 lg:w-[90%] sm:w-[95%] w-[98%] h-14 sm:px-8 px-2 flex items-center justify-between max-2xs:justify-around sm:gap-8 gap-2 rounded-[56px] bg-[#1f2023cc] backdrop-blur drop-shadow-md overflow-x-clip"
     >
       <ul
-        class="max-lg:order-2 max-md:hidden w-full flex items-center justify-between gap-4"
+        class="max-lg:order-2 max-sm:hidden w-full flex items-center justify-between gap-4"
       >
-        <li v-for="(link, index) in $tm('header')" :key="index" class="flex">
+        <li
+          v-for="(link, index) in $tm('header')"
+          :key="index"
+          class="max-md:first:hidden flex"
+        >
           <NuxtLink
             :href="$rt(link.href)"
             :class="`#${mvSect}` == $rt(link.href) ? 'active' : ''"
@@ -44,7 +48,7 @@
           </NuxtLink>
         </li>
       </ul>
-      <h3 class="max-2xs:hidden md:hidden flex order-2">Germond</h3>
+      <h3 class="max-2xs:hidden sm:hidden flex order-2">Germond</h3>
       <button
         class="lg:hidden h-4/5 flex flex-col items-center justify-around mx-2 order-3 cursor-pointer bg-transparent"
         title="Menu"
