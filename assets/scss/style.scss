@@ -242,7 +242,7 @@ section#contact {
 }
 
 .form textarea {
-  @apply resize-y pt-[18px] min-h-[164px] max-h-[50vh];
+  @apply resize-y pt-[18px] min-h-[164px] max-h-[40vh] max-xl:max-h-[30vh];
 }
 
 .form input::placeholder,

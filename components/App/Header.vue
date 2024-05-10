@@ -4,9 +4,11 @@
     class="fixed top-0 w-full h-[76px] flex items-end justify-center z-40"
   >
     <nav
-      class="xl:w-3/4 lg:w-[90%] w-[95%] h-14 px-8 flex items-center justify-between gap-8 rounded-[56px] bg-[#1f2023cc] backdrop-blur drop-shadow-md overflow-x-clip"
+      class="xl:w-3/4 lg:w-[90%] sm:w-[95%] w-[98%] h-14 sm:px-8 px-2 flex items-center justify-between max-2xs:justify-around sm:gap-8 gap-2 rounded-[56px] bg-[#1f2023cc] backdrop-blur drop-shadow-md overflow-x-clip"
     >
-      <ul class="w-full flex items-center justify-between gap-4">
+      <ul
+        class="max-lg:order-2 max-md:hidden w-full flex items-center justify-between gap-4"
+      >
         <li v-for="(link, index) in $tm('header')" :key="index" class="flex">
           <NuxtLink
             :href="$rt(link.href)"
@@ -19,7 +21,7 @@
       </ul>
       <NuxtLink
         href="./"
-        class="flex items-center justify-center h-[150%] z-20"
+        class="max-lg:order-1 flex items-center justify-center h-[150%] z-20"
       >
         <img
           src="/img/skull.ico"
@@ -27,7 +29,7 @@
           class="max-w-max h-full hover:animate-[shake_.3s] anim"
         />
       </NuxtLink>
-      <ul class="w-full flex items-center justify-between gap-8">
+      <ul class="max-lg:hidden w-full flex items-center justify-between gap-8">
         <li v-for="(social, index) in $tm('socials')" :key="index">
           <NuxtLink
             :href="$rt(social.href)"
@@ -42,9 +44,9 @@
           </NuxtLink>
         </li>
       </ul>
-      <h2 class="sm:hidden flex order-2">Germond</h2>
+      <h3 class="max-2xs:hidden md:hidden flex order-2">Germond</h3>
       <button
-        class="sm:hidden h-4/5 flex flex-col items-center justify-around mx-2 order-3 cursor-pointer bg-transparent"
+        class="lg:hidden h-4/5 flex flex-col items-center justify-around mx-2 order-3 cursor-pointer bg-transparent"
         title="Menu"
       >
         <span

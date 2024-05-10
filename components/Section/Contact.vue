@@ -5,10 +5,10 @@
     >
       <div
         v-motion-slide-visible-once-left
-        class="relative w-3/5 h-auto flex flex-col justify-center"
+        class="relative w-3/5 max-lg:w-2/3 h-auto flex flex-col justify-center"
       >
         <FlareItem
-          class="w-[70%] p-0.5 rounded-2xl bg-[#ffffff1a] box-shadow-custom backdrop-blur-lg"
+          class="w-[70%] max-xl:w-11/12 p-0.5 rounded-2xl bg-[#ffffff1a] box-shadow-custom backdrop-blur-lg"
         >
           <Form
             :validation-schema="schema"
@@ -64,7 +64,7 @@
       </div>
       <div
         v-motion-slide-visible-once-top
-        class="relative w-2/5 h-[90%] py-12 flex items-center justify-center"
+        class="relative w-2/5 max-lg:w-1/3 h-[90%] py-12 flex items-center justify-center"
       >
         <img
           src="/public/img/3D-envelope.webp"
