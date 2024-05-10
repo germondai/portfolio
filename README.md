@@ -1,6 +1,6 @@
 <h1 align="center">
   <a href="https://germondai.rf.gd" target="_blank">
-    <img align="center" src="https://skillicons.dev/icons?i=nuxt,vue,vite,ts,tailwind" /><br/><br/>
+    <img align="center" src="https://skillicons.dev/icons?i=nuxt,vue,vite,nodejs,tailwind,ts" /><br/><br/>
     <span>Germond's Portfolio</span>
   </a>
 </h1>
@@ -41,8 +41,9 @@ Additionally, there's a **contact form** connected to an **API**, that stores **
 - <a href="https://nuxt.com/" target="_blank">Nuxt 3</a>
 - <a href="https://vuejs.org/" target="_blank">Vue 3</a>
 - <a href="https://vitejs.dev/" target="_blank">Vite</a>
-- <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>
+- <a href="https://nodejs.org/" target="_blank">Node.js</a>
 - <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a>
+- <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a>
 
 **Modules**
 
