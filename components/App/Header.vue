@@ -25,7 +25,7 @@
       </ul>
       <NuxtLink
         href="./"
-        class="max-lg:order-1 flex items-center justify-center h-[150%] z-20"
+        class="max-lg:order-1 flex items-center justify-center max-lg:h-[125%] h-[150%] z-20"
       >
         <img
           src="/img/skull.ico"
