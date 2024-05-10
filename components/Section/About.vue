@@ -1,17 +1,19 @@
 <template>
   <section id="about">
     <div
-      class="w-4/5 mx-auto h-full flex flex-col items-center justify-center gap-12"
+      class="max-md:w-[95%] w-4/5 mx-auto h-full flex flex-col items-center justify-center gap-12"
     >
       <div
         v-motion-slide-visible-once-top
-        class="w-full flex flex-col anim-bottom"
+        class="w-full flex flex-col anim-bottom text-justify"
       >
         <sub>{{ $t('about.sub') }}</sub>
         <h1>{{ $t('about.title') }}</h1>
         <p v-dompurify-html="$t('about.content')"></p>
       </div>
-      <div class="w-[90%] grid grid-cols-4 items-center justify-between gap-16">
+      <div
+        class="w-[90%] grid max-xs:grid-cols-2 grid-cols-4 items-center justify-between max-md:gap-8 gap-16"
+      >
         <div
           v-for="(skill, index) in $tm('about.skills')"
           :key="index"
@@ -21,7 +23,7 @@
           :delay="index * 50"
           class="flex flex-col items-center gap-2 anim-left"
         >
-          <HoloTilt :scale="1.1" class="size-32">
+          <HoloTilt :scale="1.1" class="max-md:size-16 max-lg:size-24 size-32">
             <img
               :src="$rt(skill.src)"
               :alt="$rt(skill.alt)"
@@ -29,7 +31,7 @@
               class="max-w-full"
             />
           </HoloTilt>
-          <b class="text-2xl">{{ $rt(skill.name) }}</b>
+          <b class="max-md:text-lg text-2xl">{{ $rt(skill.name) }}</b>
         </div>
       </div>
     </div>
