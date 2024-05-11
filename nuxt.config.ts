@@ -46,6 +46,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxtjs/google-fonts',
     '@vee-validate/nuxt',
+    'nuxt-icon',
   ],
 
   googleFonts: {
@@ -103,12 +104,14 @@ export default defineNuxtConfig({
     strategy: 'no_prefix',
     locales: [
       {
+        icon: 'twemoji:flag-for-flag-united-kingdom',
         code: 'en',
         iso: 'en-US',
         name: 'English',
         file: 'en.json',
       },
       {
+        icon: 'twemoji:flag-czechia',
         code: 'cs',
         iso: 'cs-CZ',
         name: 'Česky',

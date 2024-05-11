@@ -35,11 +35,12 @@
                   :href="$rt(lValue)"
                   class="size-8 bg-[#121316be] backdrop-blur flex items-center justify-center rounded-full overflow-hidden outline outline-1"
                 >
-                  <img
-                    :src="`/img/${$rt(lKey)}-light.webp`"
-                    alt=""
+                  <Icon
+                    :name="`akar-icons:${$rt(lKey)}-${$rt(lKey) == 'link' ? 'chain' : 'fill'}`"
+                    color="white"
                     class="size-6"
-                /></a>
+                  />
+                </a>
               </template>
             </div>
             <a

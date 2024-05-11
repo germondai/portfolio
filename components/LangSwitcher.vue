@@ -7,11 +7,7 @@
       href="#"
       @click.prevent.stop="setLocale(langLocale.code)"
     >
-      <img
-        :src="`/img/flags/${langLocale.code}.svg`"
-        class="w-12"
-        :title="langLocale.name"
-      />
+      <Icon :name="langLocale.icon" class="size-12" />
     </a>
   </div>
 </template>

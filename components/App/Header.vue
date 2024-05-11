@@ -46,11 +46,7 @@
             target="blank"
             class="relative px-2 py-1 opacity-50 hover:opacity-100 transition-opacity"
           >
-            <img
-              :src="$rt(social.src)"
-              :alt="$rt(social.alt)"
-              class="size-9 max-w-max"
-            />
+            <Icon :name="$rt(social.icon)" color="white" class="size-9" />
           </NuxtLink>
         </li>
       </ul>

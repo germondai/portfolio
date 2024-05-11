@@ -115,37 +115,30 @@ section#contact {
   @apply pt-24 lg:pb-0 pb-8;
 }
 
-#welcome svg,
-#about svg,
-#work svg,
-#contact svg,
-#welcome .svg,
-#about .svg,
-#work .svg,
-#contact .svg {
+#welcome .FloatCont svg,
+#about .FloatCont svg,
+#work .FloatCont svg,
+#contact .FloatCont svg {
   @apply absolute -left-[5%] w-[110%] h-full min-w-[1400px] aspect-[1400/810] -z-40 pointer-events-none;
 }
 
-#welcome svg,
-#welcome .svg {
+#welcome .FloatCont svg {
   @apply -top-[5%] rotate-180;
 }
 
-#about svg,
-#work svg,
-#about .svg,
-#work .svg {
+#about .FloatCont svg,
+#work .FloatCont svg {
   @apply top-0;
 }
 
-#contact svg,
-#contact .svg {
+#contact .FloatCont svg {
   @apply bottom-0;
 }
 
 @media (max-width: 768px) {
-  #work svg,
-  #work .svg {
+
+  #work .FloatCont svg {
+
     @apply -left-[65%];
   }
 }
@@ -214,9 +207,9 @@ section#contact {
   @apply absolute top-3.5 left-4 pr-2.5 w-[calc(100%-0.5rem)] inline-block truncate leading-none pointer-events-none;
 }
 
-.form input:required ~ label,
-.form textarea:required ~ label,
-.form select:required ~ label {
+.form input:required~label,
+.form textarea:required~label,
+.form select:required~label {
   @apply flex items-center before:content-['*'] before:text-red-600 before:ml-1 before:mt-0.5 before:order-2 before:text-xl before:leading-none;
 }
 
@@ -250,12 +243,12 @@ section#contact {
   @apply text-transparent;
 }
 
-.form input:focus ~ label,
-.form input:not(:placeholder-shown) ~ label,
-.form textarea:focus ~ label,
-.form textarea:not(:placeholder-shown) ~ label,
-.form select:focus ~ label,
-.form select:not(:placeholder-shown) ~ label {
+.form input:focus~label,
+.form input:not(:placeholder-shown)~label,
+.form textarea:focus~label,
+.form textarea:not(:placeholder-shown)~label,
+.form select:focus~label,
+.form select:not(:placeholder-shown)~label {
   @apply text-xs top-0 left-2 opacity-60;
 }
 
