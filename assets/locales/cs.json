@@ -2,32 +2,27 @@
   "socials": [
     {
       "href": "https://www.instagram.com/germondai",
-      "src": "/img/instagram-light.webp",
-      "alt": "Instagram Logo",
+      "icon": "akar-icons:instagram-fill",
       "name": "Instagram"
     },
     {
       "href": "https://discord.gg/6xU897X",
-      "src": "/img/discord-light.webp",
-      "alt": "Discord Logo",
+      "icon": "akar-icons:discord-fill",
       "name": "Discord"
     },
     {
       "href": "{'https://www.youtube.com/@germondai?sub_confirmation=1'}",
-      "src": "/img/youtube-light.webp",
-      "alt": "YouTube Logo",
+      "icon": "akar-icons:youtube-fill",
       "name": "YouTube"
     },
     {
       "href": "https://www.twitch.tv/germondai",
-      "src": "/img/twitch-light.webp",
-      "alt": "Twitch Logo",
+      "icon": "akar-icons:twitch-fill",
       "name": "Twitch"
     },
     {
       "href": "https://github.com/germondai",
-      "src": "/img/github-light.webp",
-      "alt": "GitHub Logo",
+      "icon": "akar-icons:github-fill",
       "name": "GitHub"
     }
   ],
@@ -64,47 +59,79 @@
   "about": {
     "sub": "O mně",
     "title": "Přehled",
-    "content": "Jsem <b>Full-Stack</b> webový vývojář se zkušenostmi v <b>PHP</b> a <b>MySQL</b>. Pracuji také s <b>JavaScriptem</b> nebo <b>jQuery</b>, ale není to mé hlavní <b>zaměření</b>. Nicméně jsem vždy připraven rozšířit mé <b>dovednosti</b> a naučit se novým <b>technologiím</b>. <b>Rychle se učím</b> a rád využívám čas <b>efektivně</b> k hledání <b>inovativních řešení</b>. Pojďme se spojit a společně pracovat na tom, abychom <b>přivedli vaše nápady k životu!</b>",
+    "content": "Jsem <b>Full-Stack Web Developer</b> s zkušenostmi v <b>PHP</b> a jeho <b>frameworky</b>, <b>MySQL</b> a <b>Node.js</b> jako <b>backend</b> a <b>Nuxt.js</b>, <b>Vue.js</b> a <b>Tailwind CSS</b> jako <b>frontend</b>. Nicméně jsem vždy připraven rozšířit mé <b>dovednosti</b> a naučit se novým <b>technologiím</b>. <b>Rychle se učím</b> a rád využívám čas <b>efektivně</b> k hledání <b>inovativních řešení</b>. Pojďme se spojit a společně pracovat na tom, abychom <b>přivedli vaše nápady k životu!</b>",
     "skills": [
       {
-        "src": "/img/logo-php.webp",
-        "alt": "PHP Logo",
+        "icon": "skill-icons:php-dark",
         "name": "PHP"
       },
       {
-        "src": "/img/logo-mysql.webp",
-        "alt": "MySQL Logo",
+        "icon": "skill-icons:mysql-dark",
         "name": "MySQL"
       },
       {
-        "src": "/img/logo-js.webp",
-        "alt": "JavaScript Logo",
-        "name": "JavaScript"
+        "icon": "skill-icons:tailwindcss-dark",
+        "name": "Tailwind"
       },
       {
-        "src": "/img/logo-jquery.webp",
-        "alt": "jQuery Logo",
+        "icon": "skill-icons:nuxtjs-dark",
+        "name": "Nuxt"
+      },
+      {
+        "icon": "skill-icons:vuejs-dark",
+        "name": "Vue"
+      },
+      {
+        "icon": "skill-icons:nodejs-dark",
+        "name": "Node.js"
+      },
+      {
+        "icon": "skill-icons:jquery",
         "name": "jQuery"
       },
       {
-        "src": "/img/logo-ajax.webp",
-        "alt": "AJAX Logo",
-        "name": "AJAX"
+        "icon": "skill-icons:typescript",
+        "name": "TypeScript"
       },
       {
-        "src": "/img/logo-sass.webp",
-        "alt": "SASS Logo",
+        "icon": "skill-icons:javascript",
+        "name": "JavaScript"
+      },
+      {
+        "icon": "skill-icons:sass",
         "name": "Sass"
       },
       {
-        "src": "/img/logo-css3.webp",
-        "alt": "CSS3 Logo",
+        "icon": "skill-icons:css",
         "name": "CSS3"
       },
       {
-        "src": "/img/logo-html5.webp",
-        "alt": "HTML5 Logo",
+        "icon": "skill-icons:html",
         "name": "HTML5"
+      },
+      {
+        "icon": "skill-icons:git",
+        "name": "Git"
+      },
+      {
+        "icon": "skill-icons:vite-dark",
+        "name": "Vite"
+      },
+      {
+        "icon": "skill-icons:pnpm-dark",
+        "name": "pnpm"
+      },
+      {
+        "icon": "skill-icons:vscode-dark",
+        "name": "VS Code"
+      },
+      {
+        "icon": "skill-icons:windows-dark",
+        "name": "Windows"
+      },
+      {
+        "icon": "skill-icons:apple-dark",
+        "name": "MacOS"
       }
     ]
   },
@@ -132,8 +159,15 @@
     },
     {
       "year": "2024",
+      "title": "Frameworky",
+      "content": "Rozhodl jsem se začít využívat moderní <b>frameworky</b>, abych ušetřil <b>čas</b> a zvýšil <b>efektivitu</b>. Přešel jsem na <b>Tailwind CSS</b> a udělal <b>backend</b> projekt pomocí <b>Nette PHP</b>. Začalo mě bavit <b>Vue.js</b> s <b>Nuxt.js</b>. Tím jsem se také dostal k prostředí <b>Node.js</b>, které je, přece jen, neoddělitelnou součástí <b>Nuxt.js</b>, &nbsp; a dostal jsem se k <b>webovým automatizacím</b> pomocí nástrojů jako <b>Puppeteer</b> a dalších...",
+      "content_full": "",
+      "button": "Číst dál..."
+    },
+    {
+      "year": "2025",
       "title": "Kdo ví ?",
-      "content": "Možná přicházejí <b>velké věci</b>...",
+      "content": "Možná přijdou <b>velké věci</b>...",
       "content_full": "",
       "button": "Číst dál..."
     }

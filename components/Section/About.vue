@@ -12,7 +12,7 @@
         <p v-dompurify-html="$t('about.content')"></p>
       </div>
       <div
-        class="w-[90%] grid max-xs:grid-cols-2 grid-cols-4 items-center justify-between max-md:gap-8 gap-16"
+        class="w-[90%] grid max-xs:grid-cols-3 max-md:grid-cols-4 max-lg:grid-cols-5 grid-cols-6 items-center justify-between max-md:gap-8 gap-16"
       >
         <div
           v-for="(skill, index) in $tm('about.skills')"
@@ -23,15 +23,15 @@
           :delay="index * 50"
           class="flex flex-col items-center gap-2 anim-left"
         >
-          <HoloTilt :scale="1.1" class="max-md:size-16 max-lg:size-24 size-32">
-            <img
-              :src="$rt(skill.src)"
-              :alt="$rt(skill.alt)"
-              loading="lazy"
-              class="max-w-full"
+          <HoloTilt :scale="1.1">
+            <Icon
+              :name="$rt(skill.icon)"
+              class="max-md:size-12 max-lg:size-16 size-24"
             />
           </HoloTilt>
-          <b class="max-md:text-lg text-2xl">{{ $rt(skill.name) }}</b>
+          <b class="max-sm:text-md max-md:text-lg text-2xl truncate">
+            {{ $rt(skill.name) }}
+          </b>
         </div>
       </div>
     </div>
