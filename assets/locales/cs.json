@@ -54,10 +54,7 @@
     "title": "Ahoj, já jsem",
     "content": {
       "base": "Nadějný",
-      "typewriter": [
-        "Full-Stack webový vývojář",
-        "Student webového vývoje"
-      ]
+      "typewriter": ["Full-Stack webový vývojář", "Student webového vývoje"]
     },
     "swap_language": "Vyberte jazyk"
   },

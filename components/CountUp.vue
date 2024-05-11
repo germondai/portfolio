@@ -1,11 +1,9 @@
 <template>
-  <component :is="tag">
-    {{ count }}
-  </component>
+  <component :is="tag" ref="target">{{ count }}</component>
 </template>
 
-<script lang="ts" setup>
-const { tag, number } = defineProps({
+<script setup lang="ts">
+const { tag, number, duration } = defineProps({
   tag: {
     type: String,
     default: 'div',
@@ -14,19 +12,35 @@ const { tag, number } = defineProps({
     type: Number,
     default: 0,
   },
+  duration: {
+    type: Number,
+    default: 1000,
+  },
 })
 
 const count = ref(0)
+const animateCount = () => {
+  const startTime = performance.now()
 
-onMounted(() => {
-  const interval = setInterval(() => {
-    if (count.value < number) {
-      count.value++
-    } else {
-      clearInterval(interval)
+  const animate = (currentTime: number) => {
+    const progress = Math.min(1, (currentTime - startTime) / duration)
+    count.value = Math.floor(number * progress)
+
+    if (progress < 1) {
+      requestAnimationFrame(animate)
     }
-  }, 10)
+  }
+
+  requestAnimationFrame(animate)
+}
+
+const target = ref(null)
+const { stop } = useIntersectionObserver(target, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    animateCount()
+    stop()
+  }
 })
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped></style>
