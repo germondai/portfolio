@@ -70,28 +70,8 @@
         "name": "MySQL"
       },
       {
-        "icon": "skill-icons:javascript",
-        "name": "JavaScript"
-      },
-      {
-        "icon": "skill-icons:jquery",
-        "name": "jQuery"
-      },
-      {
         "icon": "skill-icons:tailwindcss-dark",
         "name": "Tailwind"
-      },
-      {
-        "icon": "skill-icons:sass",
-        "name": "Sass"
-      },
-      {
-        "icon": "skill-icons:css",
-        "name": "CSS3"
-      },
-      {
-        "icon": "skill-icons:html",
-        "name": "HTML5"
       },
       {
         "icon": "skill-icons:nuxtjs-dark",
@@ -106,20 +86,40 @@
         "name": "Node.js"
       },
       {
-        "icon": "skill-icons:vite-dark",
-        "name": "Vite"
-      },
-      {
-        "icon": "skill-icons:pnpm-dark",
-        "name": "pnpm"
+        "icon": "skill-icons:jquery",
+        "name": "jQuery"
       },
       {
         "icon": "skill-icons:typescript",
         "name": "TypeScript"
       },
       {
+        "icon": "skill-icons:javascript",
+        "name": "JavaScript"
+      },
+      {
+        "icon": "skill-icons:sass",
+        "name": "Sass"
+      },
+      {
+        "icon": "skill-icons:css",
+        "name": "CSS3"
+      },
+      {
+        "icon": "skill-icons:html",
+        "name": "HTML5"
+      },
+      {
         "icon": "skill-icons:git",
         "name": "Git"
+      },
+      {
+        "icon": "skill-icons:vite-dark",
+        "name": "Vite"
+      },
+      {
+        "icon": "skill-icons:pnpm-dark",
+        "name": "pnpm"
       },
       {
         "icon": "skill-icons:vscode-dark",
