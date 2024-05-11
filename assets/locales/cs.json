@@ -59,7 +59,7 @@
   "about": {
     "sub": "O mně",
     "title": "Přehled",
-    "content": "Jsem <b>Full-Stack</b> webový vývojář se zkušenostmi v <b>PHP</b> a <b>MySQL</b>. Pracuji také s <b>JavaScriptem</b> nebo <b>jQuery</b>, ale není to mé hlavní <b>zaměření</b>. Nicméně jsem vždy připraven rozšířit mé <b>dovednosti</b> a naučit se novým <b>technologiím</b>. <b>Rychle se učím</b> a rád využívám čas <b>efektivně</b> k hledání <b>inovativních řešení</b>. Pojďme se spojit a společně pracovat na tom, abychom <b>přivedli vaše nápady k životu!</b>",
+    "content": "Jsem <b>Full-Stack Web Developer</b> s zkušenostmi v <b>PHP</b> a jeho <b>frameworky</b>, <b>MySQL</b> a <b>Node.js</b> jako <b>backend</b> a <b>Nuxt.js</b>, <b>Vue.js</b> a <b>Tailwind CSS</b> jako <b>frontend</b>. Nicméně jsem vždy připraven rozšířit mé <b>dovednosti</b> a naučit se novým <b>technologiím</b>. <b>Rychle se učím</b> a rád využívám čas <b>efektivně</b> k hledání <b>inovativních řešení</b>. Pojďme se spojit a společně pracovat na tom, abychom <b>přivedli vaše nápady k životu!</b>",
     "skills": [
       {
         "icon": "skill-icons:php-dark",
