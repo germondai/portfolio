@@ -159,8 +159,15 @@
     },
     {
       "year": "2024",
+      "title": "Frameworky",
+      "content": "Rozhodl jsem se začít využívat moderní <b>frameworky</b>, abych ušetřil <b>čas</b> a zvýšil <b>efektivitu</b>. Přešel jsem na <b>Tailwind CSS</b> a udělal <b>backend</b> projekt pomocí <b>Nette PHP</b>. Začalo mě bavit <b>Vue.js</b> s <b>Nuxt.js</b>. Tím jsem se také dostal k prostředí <b>Node.js</b>, které je, přece jen, neoddělitelnou součástí <b>Nuxt.js</b>, &nbsp; a dostal jsem se k <b>webovým automatizacím</b> pomocí nástrojů jako <b>Puppeteer</b> a dalších...",
+      "content_full": "",
+      "button": "Číst dál..."
+    },
+    {
+      "year": "2025",
       "title": "Kdo ví ?",
-      "content": "Možná přicházejí <b>velké věci</b>...",
+      "content": "Možná přijdou <b>velké věci</b>...",
       "content_full": "",
       "button": "Číst dál..."
     }

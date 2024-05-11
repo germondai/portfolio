@@ -159,8 +159,15 @@
     },
     {
       "year": "2024",
+      "title": "Frameworks",
+      "content": "Decided to try modern <b>frameworks</b> to save <b>time</b> and increase <b>efficiency</b>. Switched to <b>Tailwind CSS</b> and made a <b>backend</b> project in <b>Nette PHP</b>. Began to enjoy <b>Vue.js</b> with <b>Nuxt.js</b>. This also led me to <b>Node.js environment</b>, which is, after all, an <b>inseparable</b> part of <b>Nuxt.js</b> and I got to <b>web automations</b> using tools like <b>Puppeteer</b> and others...",
+      "content_full": "",
+      "button": "Read More..."
+    },
+    {
+      "year": "2025",
       "title": "Who knows ?",
-      "content": "<b>Big things</b> might be <b>coming</b>...",
+      "content": "<b>Big things</b> may be <b>coming</b>...",
       "content_full": "",
       "button": "Read More..."
     }
