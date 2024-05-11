@@ -54,7 +54,10 @@
     "title": "Ahoj, já jsem",
     "content": {
       "base": "Nadějný",
-      "typewriter": ["Full-Stack webový vývojář", "Student webového vývoje"]
+      "typewriter": [
+        "Full-Stack webový vývojář",
+        "Student webového vývoje"
+      ]
     },
     "swap_language": "Vyberte jazyk"
   },
@@ -107,7 +110,7 @@
   },
   "timeline": [
     {
-      "year": "2021 - 2022",
+      "year": "2021",
       "title": "HTML5 & CSS3",
       "content": "Začal jsem se učit základy <b>vývoje webu</b>, jako jsou <b>HTML5</b> a <b>CSS3</b> <b>front-endové</b> jazyky, seznámil jsem se s většinou běžných <b>HTML</b> tagů a <b>CSS</b> vychytávkami jako <b>Flexbox</b>",
       "content_full": "",

@@ -54,7 +54,10 @@
     "title": "Hi, I'm",
     "content": {
       "base": "An Aspiring",
-      "typewriter": ["Full-Stack Web Developer", "Web Development Student"]
+      "typewriter": [
+        "Full-Stack Web Developer",
+        "Web Development Student"
+      ]
     },
     "swap_language": "Swap Language"
   },
@@ -107,7 +110,7 @@
   },
   "timeline": [
     {
-      "year": "2021 - 2022",
+      "year": "2021",
       "title": "HTML5 & CSS3",
       "content": "Started learning the basics of <b>Web Development</b>, such as <b>HTML5</b> and <b>CSS3</b> <b>front-end</b> languages, got familiar with most of the common <b>HTML</b> tags and <b>CSS</b> features like <b>Flexbox</b>",
       "content_full": "",
