@@ -1,31 +1,4 @@
 {
-  "socials": [
-    {
-      "href": "https://www.instagram.com/germondai",
-      "icon": "akar-icons:instagram-fill",
-      "name": "Instagram"
-    },
-    {
-      "href": "https://discord.gg/6xU897X",
-      "icon": "akar-icons:discord-fill",
-      "name": "Discord"
-    },
-    {
-      "href": "{'https://www.youtube.com/@germondai?sub_confirmation=1'}",
-      "icon": "akar-icons:youtube-fill",
-      "name": "YouTube"
-    },
-    {
-      "href": "https://www.twitch.tv/germondai",
-      "icon": "akar-icons:twitch-fill",
-      "name": "Twitch"
-    },
-    {
-      "href": "https://github.com/germondai",
-      "icon": "akar-icons:github-fill",
-      "name": "GitHub"
-    }
-  ],
   "header": [
     {
       "href": "#welcome",
@@ -59,81 +32,7 @@
   "about": {
     "sub": "O mně",
     "title": "Přehled",
-    "content": "Jsem <b>Full-Stack Web Developer</b> s zkušenostmi v <b>PHP</b> a jeho <b>frameworky</b>, <b>MySQL</b> a <b>Node.js</b> jako <b>backend</b> a <b>Nuxt.js</b>, <b>Vue.js</b> a <b>Tailwind CSS</b> jako <b>frontend</b>. Nicméně jsem vždy připraven rozšířit mé <b>dovednosti</b> a naučit se novým <b>technologiím</b>. <b>Rychle se učím</b> a rád využívám čas <b>efektivně</b> k hledání <b>inovativních řešení</b>. Pojďme se spojit a společně pracovat na tom, abychom <b>přivedli vaše nápady k životu!</b>",
-    "skills": [
-      {
-        "icon": "skill-icons:php-dark",
-        "name": "PHP"
-      },
-      {
-        "icon": "skill-icons:mysql-dark",
-        "name": "MySQL"
-      },
-      {
-        "icon": "skill-icons:tailwindcss-dark",
-        "name": "Tailwind"
-      },
-      {
-        "icon": "skill-icons:nuxtjs-dark",
-        "name": "Nuxt"
-      },
-      {
-        "icon": "skill-icons:vuejs-dark",
-        "name": "Vue"
-      },
-      {
-        "icon": "skill-icons:nodejs-dark",
-        "name": "Node.js"
-      },
-      {
-        "icon": "skill-icons:jquery",
-        "name": "jQuery"
-      },
-      {
-        "icon": "skill-icons:typescript",
-        "name": "TypeScript"
-      },
-      {
-        "icon": "skill-icons:javascript",
-        "name": "JavaScript"
-      },
-      {
-        "icon": "skill-icons:sass",
-        "name": "Sass"
-      },
-      {
-        "icon": "skill-icons:css",
-        "name": "CSS3"
-      },
-      {
-        "icon": "skill-icons:html",
-        "name": "HTML5"
-      },
-      {
-        "icon": "skill-icons:git",
-        "name": "Git"
-      },
-      {
-        "icon": "skill-icons:vite-dark",
-        "name": "Vite"
-      },
-      {
-        "icon": "skill-icons:pnpm-dark",
-        "name": "pnpm"
-      },
-      {
-        "icon": "skill-icons:vscode-dark",
-        "name": "VS Code"
-      },
-      {
-        "icon": "skill-icons:windows-dark",
-        "name": "Windows"
-      },
-      {
-        "icon": "skill-icons:apple-dark",
-        "name": "MacOS"
-      }
-    ]
+    "content": "Jsem <b>Full-Stack Web Developer</b> s zkušenostmi v <b>PHP</b> a jeho <b>frameworky</b>, <b>MySQL</b> a <b>Node.js</b> jako <b>backend</b> a <b>Nuxt.js</b>, <b>Vue.js</b> a <b>Tailwind CSS</b> jako <b>frontend</b>. Nicméně jsem vždy připraven rozšířit mé <b>dovednosti</b> a naučit se novým <b>technologiím</b>. <b>Rychle se učím</b> a rád využívám čas <b>efektivně</b> k hledání <b>inovativních řešení</b>. Pojďme se spojit a společně pracovat na tom, abychom <b>přivedli vaše nápady k životu!</b>"
   },
   "timeline": [
     {

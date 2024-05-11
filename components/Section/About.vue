@@ -15,7 +15,7 @@
         class="w-[90%] grid max-xs:grid-cols-3 max-md:grid-cols-4 max-lg:grid-cols-5 grid-cols-6 items-center justify-between max-md:gap-8 gap-16"
       >
         <div
-          v-for="(skill, index) in $tm('about.skills')"
+          v-for="(skill, index) in $tm('skills')"
           :key="index"
           v-motion
           :initial="{ x: -100, opacity: 0 }"

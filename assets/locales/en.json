@@ -1,31 +1,4 @@
 {
-  "socials": [
-    {
-      "href": "https://www.instagram.com/germondai",
-      "icon": "akar-icons:instagram-fill",
-      "name": "Instagram"
-    },
-    {
-      "href": "https://discord.gg/6xU897X",
-      "icon": "akar-icons:discord-fill",
-      "name": "Discord"
-    },
-    {
-      "href": "{'https://www.youtube.com/@germondai?sub_confirmation=1'}",
-      "icon": "akar-icons:youtube-fill",
-      "name": "YouTube"
-    },
-    {
-      "href": "https://www.twitch.tv/germondai",
-      "icon": "akar-icons:twitch-fill",
-      "name": "Twitch"
-    },
-    {
-      "href": "https://github.com/germondai",
-      "icon": "akar-icons:github-fill",
-      "name": "GitHub"
-    }
-  ],
   "header": [
     {
       "href": "#welcome",
@@ -60,80 +33,6 @@
     "sub": "About",
     "title": "Overview",
     "content": "I'm a <b>Full-Stack Web Developer</b> with experience in <b>PHP</b> and its <b>frameworks</b>, <b>MySQL</b> and <b>Node.js</b> as <b>backend</b> and <b>Nuxt.js</b>, <b>Vue.js</b> and <b>Tailwind CSS</b> as <b>frontend</b>. However, I'm always ready to expand my <b>skill set</b> and <b>learn</b> about new <b>technologies</b>. I'm a <b>quick learner</b> and I like to use my time <b>effectively</b> to seek <b>innovative solutions</b>. Let's work together to <b>bring your ideas to life!</b>",
-    "skills": [
-      {
-        "icon": "skill-icons:php-dark",
-        "name": "PHP"
-      },
-      {
-        "icon": "skill-icons:mysql-dark",
-        "name": "MySQL"
-      },
-      {
-        "icon": "skill-icons:tailwindcss-dark",
-        "name": "Tailwind"
-      },
-      {
-        "icon": "skill-icons:nuxtjs-dark",
-        "name": "Nuxt"
-      },
-      {
-        "icon": "skill-icons:vuejs-dark",
-        "name": "Vue"
-      },
-      {
-        "icon": "skill-icons:nodejs-dark",
-        "name": "Node.js"
-      },
-      {
-        "icon": "skill-icons:jquery",
-        "name": "jQuery"
-      },
-      {
-        "icon": "skill-icons:typescript",
-        "name": "TypeScript"
-      },
-      {
-        "icon": "skill-icons:javascript",
-        "name": "JavaScript"
-      },
-      {
-        "icon": "skill-icons:sass",
-        "name": "Sass"
-      },
-      {
-        "icon": "skill-icons:css",
-        "name": "CSS3"
-      },
-      {
-        "icon": "skill-icons:html",
-        "name": "HTML5"
-      },
-      {
-        "icon": "skill-icons:git",
-        "name": "Git"
-      },
-      {
-        "icon": "skill-icons:vite-dark",
-        "name": "Vite"
-      },
-      {
-        "icon": "skill-icons:pnpm-dark",
-        "name": "pnpm"
-      },
-      {
-        "icon": "skill-icons:vscode-dark",
-        "name": "VS Code"
-      },
-      {
-        "icon": "skill-icons:windows-dark",
-        "name": "Windows"
-      },
-      {
-        "icon": "skill-icons:apple-dark",
-        "name": "MacOS"
-      }
-    ]
   },
   "timeline": [
     {
