@@ -1,12 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // because of static deployment (currently)
   ssr: false,
-
-  // nitro: {
-  //   prerender: {
-  //     routes: [],
-  //   },
-  // },
+  ogImage: { enabled: false },
+  schemaOrg: { enabled: false },
 
   devtools: { enabled: true },
 
@@ -16,6 +13,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      link: [{ rel: 'icon', type: 'image/ico', href: '/img/skull.ico' }],
       meta: [
         {
           name: 'description',
@@ -41,14 +39,40 @@ export default defineNuxtConfig({
 
   modules: [
     '@vueuse/nuxt',
+    '@vueuse/motion/nuxt',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
     // '@nuxt/image',
     '@nuxtjs/seo',
+    '@nuxtjs/google-fonts',
+    '@vee-validate/nuxt',
+    'nuxt-icon',
   ],
+
+  googleFonts: {
+    display: 'swap',
+    families: {
+      Poppins: {
+        wght: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      },
+    },
+  },
 
   tailwindcss: {
     exposeConfig: true,
+    config: {
+      theme: {
+        screens: {
+          '2xs': '320px',
+          xs: '480px',
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1280px',
+          '2xl': '1536px',
+        },
+      },
+    },
   },
 
   css: ['~/assets/scss/style.scss'],
@@ -80,16 +104,18 @@ export default defineNuxtConfig({
     strategy: 'no_prefix',
     locales: [
       {
+        icon: 'twemoji:flag-for-flag-united-kingdom',
         code: 'en',
         iso: 'en-US',
         name: 'English',
-        file: 'en.json',
+        files: ['en.json', 'common.json'],
       },
       {
+        icon: 'twemoji:flag-czechia',
         code: 'cs',
         iso: 'cs-CZ',
         name: 'Česky',
-        file: 'cs.json',
+        files: ['cs.json', 'common.json'],
       },
     ],
     defaultLocale: 'en',
@@ -100,7 +126,24 @@ export default defineNuxtConfig({
     },
     compilation: {
       strictMessage: false,
-      escapeHtml: true,
+      escapeHtml: false,
+    },
+  },
+
+  motion: {
+    directives: {
+      // 'pop-bottom': {
+      //   initial: {
+      //     scale: 0,
+      //     opacity: 0,
+      //     y: 100,
+      //   },
+      //   visible: {
+      //     scale: 1,
+      //     opacity: 1,
+      //     y: 0,
+      //   },
+      // },
     },
   },
 })

@@ -1,10 +1,17 @@
 <template>
-  <div class="FlareCont">
+  <component :is="tag" class="FlareCont">
     <slot />
-  </div>
+  </component>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const { tag } = defineProps({
+  tag: {
+    type: String,
+    default: 'div',
+  },
+})
+</script>
 
 <style lang="scss">
 .FlareCont:hover .FlareItem::before,

@@ -1,180 +1,185 @@
 {
-    "header": {
-        "welcome": "Úvod",
-        "about": "O mně",
-        "work": "Práce",
-        "contact": "Kontakt"
+  "header": [
+    {
+      "href": "#welcome",
+      "name": "Úvod"
     },
-    "welcome": {
-        "sub": "Úvod",
-        "title": "Ahoj, já jsem",
-        "content": "Student zapálený do vývoje webových stránek",
-        "select_language": "Vyberte jazyk"
+    {
+      "href": "#about",
+      "name": "O mně"
     },
-    "about": {
-        "sub": "O mně",
-        "title": "Přehled",
-        "content": "Jsem full-stack webový vývojář se zkušenostmi v PHP a MySQL. Pracuji také s JavaScriptem nebo jQuery, ale není to mé hlavní zaměření. Nicméně jsem vždy připraven rozšířit mé dovednosti a naučit se novým technologiím. Rychle se učím a rád využívám čas efektivně k hledání inovativních řešení. Pojďme se spojit a společně pracovat na tom, abychom přivedli vaše nápady k životu!",
-        "skills": [
-            {
-                "src": "assets/img/logo-php.webp",
-                "alt": "PHP Logo",
-                "name": "PHP"
-            },
-            {
-                "src": "assets/img/logo-mysql.webp",
-                "alt": "MySQL Logo",
-                "name": "MySQL"
-            },
-            {
-                "src": "assets/img/logo-js.webp",
-                "alt": "JavaScript Logo",
-                "name": "JavaScript"
-            },
-            {
-                "src": "assets/img/logo-jquery.webp",
-                "alt": "jQuery Logo",
-                "name": "jQuery"
-            },
-            {
-                "src": "assets/img/logo-ajax.webp",
-                "alt": "AJAX Logo",
-                "name": "AJAX"
-            },
-            {
-                "src": "assets/img/logo-sass.webp",
-                "alt": "SASS Logo",
-                "name": "Sass"
-            },
-            {
-                "src": "assets/img/logo-css3.webp",
-                "alt": "CSS3 Logo",
-                "name": "CSS3"
-            },
-            {
-                "src": "assets/img/logo-html5.webp",
-                "alt": "HTML5 Logo",
-                "name": "HTML5"
-            }
-        ]
+    {
+      "href": "#work",
+      "name": "Práce"
     },
-    "timeline": [
-        {
-            "year": "2021 - 2022",
-            "title": "HTML5 & CSS3",
-            "content": "Začal jsem se učit základy vývoje webu, jako jsou HTML5 a CSS3 front-endové jazyky, seznámil jsem se s většinou běžných HTML tagů a CSS vychytávkami jako Flexbox",
-            "content_full": "",
-            "button": "Číst dál..."
-        },
-        {
-            "year": "2022",
-            "title": "PHP & MySQL",
-            "content": "Zaujal mě PHP back-end development, naučil jsem se jak fungují databáze, zejména MySQL. Vytvořil jsem Online E-Shop s jeho vlastním redakčním systémem",
-            "content_full": "",
-            "button": "Číst dál..."
-        },
-        {
-            "year": "2023",
-            "title": "JavaScript & jQuery",
-            "content": "Začal jsem se učit JavaScript a práci s jeho knihovnami jako je například jQuery. Udělal jsem moji první full-stack webovou aplikaci s integrovanými AJAX fetch requesty k MySQL queries, které operují s databází, abych mohl zpracovávat uživatelské akce bez obnovování stránky nebo ztráty dat",
-            "content_full": "",
-            "button": "Číst dál..."
-        },
-        {
-            "year": "2024",
-            "title": "Kdo ví ?",
-            "content": "Možná přicházejí velké věci...",
-            "content_full": "",
-            "button": "Číst dál..."
-        }
-    ],
-    "work": {
-        "sub": "Práce",
-        "title": "Projekty",
-        "content": "Následující projekty ukazují mé dovednosti a zkušenosti ve zpracovávání skutečných projektů. Každý z níže uvedených projektů obsahuje odkaz na živou demo ukázku, kde si je můžete detailněji prohlédnout. Navíc jsou označeny programovacími jazyky, frameworky, nebo knihovnami, které byly primárně použity při jejich vývoji.",
-        "projects": [
-            {
-                "href": "./chronitask/",
-                "src": "assets/img/portfolio-chronitask.webp",
-                "alt": "Náhled stránky - Chronitask",
-                "title": "Chronitask",
-                "content": "Webová aplikace na plánování dne a záznam úkolů v PHP a JavaScriptu s plně integrovaným zabezpečeným připojením k databázi chráněným proti injekcím. Optimalizované a přívětivé.",
-                "links": {
-                    "link": "",
-                    "youtube": "",
-                    "discord": "",
-                    "facebook": "",
-                    "github": ""
-                },
-                "tags": {
-                    "PHP": "1",
-                    "MySQL": "1",
-                    "JavaScript": "",
-                    "jQuery": "1",
-                    "AJAX": "1",
-                    "Sass": "1",
-                    "CSS3": "",
-                    "HTML5": ""
-                }
-            },
-            {
-                "href": "./eshop/",
-                "src": "assets/img/portfolio-eshop.webp",
-                "alt": "Náhled stránky - Germond's E-Shop",
-                "title": "Germond's E-Shop",
-                "content": "PHP Online E-Shop s databázovým připojením a vlastním redakčním systémem pro úpravu nejen produktů, ale i stránek a variací. Funkční košík s možností slev na vybrané produkty.",
-                "links": {
-                    "link": "",
-                    "youtube": "",
-                    "discord": "",
-                    "facebook": "",
-                    "github": ""
-                },
-                "tags": {
-                    "PHP": "1",
-                    "MySQL": "1",
-                    "JavaScript": "",
-                    "jQuery": "1",
-                    "AJAX": "",
-                    "Sass": "",
-                    "CSS3": "",
-                    "HTML5": ""
-                }
-            },
-            {
-                "href": "./",
-                "src": "assets/img/portfolio-germondai.webp",
-                "alt": "Náhled stránky - Germond's Portfolio",
-                "title": "Germond's Portfolio",
-                "content": "Profesionální uživatelsky přívětivé portfolio. Elegantní design prosdtředí okořeněné čistými Parralax efekty a plynulými animacemi. Plně funkční PHP kontakt systém a jazyková loaklizace.",
-                "links": {
-                    "link": "",
-                    "youtube": "",
-                    "discord": "",
-                    "facebook": "",
-                    "github": ""
-                },
-                "tags": {
-                    "PHP": "",
-                    "MySQL": "",
-                    "JavaScript": "1",
-                    "jQuery": "1",
-                    "AJAX": "",
-                    "Sass": "",
-                    "CSS3": "1",
-                    "HTML5": ""
-                }
-            }
-        ]
-    },
-    "contact": {
-        "sub": "Kontakt",
-        "title": "Spojme se!",
-        "name": "Vaše jméno",
-        "email": "Váš e-mail",
-        "message": "Vaše zpráva",
-        "button": "Odeslat",
-        "success": "Úspěšně odesláno!",
-        "fail": "Něco se pokazilo!"
+    {
+      "href": "#contact",
+      "name": "Kontakt"
     }
+  ],
+  "welcome": {
+    "sub": "Úvod",
+    "title": "Ahoj, já jsem",
+    "content": {
+      "base": "Nadějný",
+      "typewriter": [
+        "Full-Stack webový vývojář",
+        "Student webového vývoje"
+      ]
+    },
+    "swap_language": "Vyberte jazyk"
+  },
+  "about": {
+    "sub": "O mně",
+    "title": "Přehled",
+    "content": "Jsem <b>Full-Stack Web Developer</b> s zkušenostmi v <b>PHP</b> a jeho <b>frameworky</b>, <b>MySQL</b> a <b>Node.js</b> jako <b>backend</b> a <b>Nuxt.js</b>, <b>Vue.js</b> a <b>Tailwind CSS</b> jako <b>frontend</b>. Nicméně jsem vždy připraven rozšířit mé <b>dovednosti</b> a naučit se novým <b>technologiím</b>. <b>Rychle se učím</b> a rád využívám čas <b>efektivně</b> k hledání <b>inovativních řešení</b>. Pojďme se spojit a společně pracovat na tom, abychom <b>přivedli vaše nápady k životu!</b>"
+  },
+  "timeline": [
+    {
+      "year": "2021",
+      "title": "HTML5 & CSS3",
+      "content": "Začal jsem se učit základy <b>vývoje webu</b>, jako jsou <b>HTML5</b> a <b>CSS3</b> <b>front-endové</b> jazyky, seznámil jsem se s většinou běžných <b>HTML</b> tagů a <b>CSS</b> vychytávkami jako <b>Flexbox</b>",
+      "content_full": "",
+      "button": "Číst dál..."
+    },
+    {
+      "year": "2022",
+      "title": "PHP & MySQL",
+      "content": "Zaujalo mě <b>PHP</b> a <b>back-end</b> development celkově, naučil jsem se jak fungují <b>databáze</b>, zejména <b>MySQL</b>. Vytvořil jsem <b>Online E-Shop</b> s jeho vlastním <b>redakčním systémem</b>",
+      "content_full": "",
+      "button": "Číst dál..."
+    },
+    {
+      "year": "2023",
+      "title": "JavaScript & jQuery",
+      "content": "Začal jsem se učit <b>JavaScript</b> a práci s jeho knihovnami jako je například <b>jQuery</b>. Udělal jsem moji první <b>Full-Stack</b> webovou aplikaci s integrovanými <b>AJAX</b> fetch requesty k <b>MySQL</b> queries, které operují s <b>databází</b>, abych mohl zpracovávat uživatelské <b>akce</b> bez obnovování stránky nebo <b>ztráty dat</b>",
+      "content_full": "",
+      "button": "Číst dál..."
+    },
+    {
+      "year": "2024",
+      "title": "Frameworky",
+      "content": "Rozhodl jsem se začít využívat moderní <b>frameworky</b>, abych ušetřil <b>čas</b> a zvýšil <b>efektivitu</b>. Přešel jsem na <b>Tailwind CSS</b> a udělal <b>backend</b> projekt pomocí <b>Nette PHP</b>. Začalo mě bavit <b>Vue.js</b> s <b>Nuxt.js</b>. Tím jsem se také dostal k prostředí <b>Node.js</b>, které je, přece jen, neoddělitelnou součástí <b>Nuxt.js</b>, &nbsp; a dostal jsem se k <b>webovým automatizacím</b> pomocí nástrojů jako <b>Puppeteer</b> a dalších...",
+      "content_full": "",
+      "button": "Číst dál..."
+    },
+    {
+      "year": "2025",
+      "title": "Kdo ví ?",
+      "content": "Možná přijdou <b>velké věci</b>...",
+      "content_full": "",
+      "button": "Číst dál..."
+    }
+  ],
+  "work": {
+    "sub": "Práce",
+    "title": "Projekty",
+    "content": "Následující projekty ukazují mé <b>dovednosti</b> a <b>zkušenosti</b> ve zpracovávání <b>skutečných projektů</b>. Každý z níže uvedených projektů <b>obsahuje</b> odkaz na <b>živou demo<b> ukázku, kde si je můžete <b>detailněji</b> prohlédnout. Navíc jsou <b>označeny</b> <b>programovacími jazyky</b>, <b>frameworky</b>, nebo <b>knihovnami</b>, které byly primárně použity při jejich vývoji.",
+    "projects": [
+      {
+        "href": "./chronitask/",
+        "src": "/img/portfolio-chronitask.webp",
+        "alt": "Náhled stránky - Chronitask",
+        "title": "Chronitask",
+        "content": "<b>Webová aplikace</b> na <b>plánování dne</b> a <b>záznam úkolů</b> v <b>PHP</b> a <b>JavaScriptu</b> s plně integrovaným <b>zabezpečeným připojením</b> k <b>databázi</b> chráněným proti <b>vniknutím</b> a <b>AJAX</b> fetch requesty. <b>Optimalizované</b> a <b>uživatelsky přívětivé rozhraní</b>.",
+        "links": {
+          "link": "https://germondai.rf.gd/chronitask/",
+          "youtube": "",
+          "discord": "",
+          "facebook": "",
+          "github": "https://github.com/germondai"
+        },
+        "tags": {
+          "PHP": "1",
+          "MySQL": "1",
+          "jQuery": "1",
+          "AJAX": "1",
+          "Sass": "1"
+        }
+      },
+      {
+        "href": "./",
+        "src": "/img/portfolio-germondai.webp",
+        "alt": "Náhled stránky - Germond's Portfolio",
+        "title": "Germond's Portfolio",
+        "content": "<b>Profesionální portfolio</b>. Vytvořeno v <b>Nuxt.js</b> a <b>Vue.js</b>, nastylováné pomocí <b>TailwindCSS</b>. <b>Animované rozhraní</b> s vlastními <b>komponenty</b>. Kontakt systém propojený s <b>PHP API</b> a <b>MySQL</b>. <b>Jazyková loaklizace</b>.",
+        "links": {
+          "link": "https://germondai.rf.gd",
+          "youtube": "",
+          "discord": "",
+          "facebook": "",
+          "github": "https://github.com/germondai/portfolio"
+        },
+        "tags": {
+          "Nuxt": "1",
+          "Vue": "1",
+          "TailwindCSS": "1",
+          "TypeScript": "1"
+        }
+      },
+      {
+        "href": "https://github.com/germondai/php-starter",
+        "src": "/img/portfolio-php-starter.webp",
+        "alt": "PHP Starter Website Preview",
+        "title": "PHP Starter",
+        "content": "Jednoduchý <b>PHP Starter</b> s vlastním, ready to go, <b>API</b> a <b>frontendovým</b> systémem. Dobře <b>strukturované</b>, <b>zabezpečené</b> a <b>škálovatelné</b> prostředí s funkcemi jako <b>Nette Database Explorer</b>, <b>TailwindCSS</b>, <b>jQuery</b>, apod.",
+        "links": {
+          "link": "https://germondai.rf.gd",
+          "youtube": "",
+          "discord": "",
+          "facebook": "",
+          "github": "https://github.com/germondai/php-starter"
+        },
+        "tags": {
+          "PHP": "1",
+          "MySQL": "1",
+          "jQuery": "1",
+          "TailwindCSS": "1"
+        }
+      },
+      {
+        "href": "./eshop/",
+        "src": "/img/portfolio-eshop.webp",
+        "alt": "Náhled stránky - Germond's E-Shop",
+        "title": "Germond's E-Shop",
+        "content": "<b>Online E-Shop</b> vytvořený v <b>PHP</b> s <b>databázovým připojením</b> které <b>synchronizuje</b> uživatelský <b>košík</b>, který má možnost <b>slev</b> a <b>objednávky</b>. Obsahuje i vlastní <b>redakční systém</b> pro <b>úpravu</b> nejen <b>produktů</b>, ale i <b>stránek</b> a <b>variací</b>.",
+        "links": {
+          "link": "https://germondai.rf.gd/eshop/",
+          "youtube": "",
+          "discord": "",
+          "facebook": "",
+          "github": "https://github.com/germondai"
+        },
+        "tags": {
+          "PHP": "1",
+          "MySQL": "1",
+          "jQuery": "1"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "sub": "Kontakt",
+    "title": "Spojme se!",
+    "name": {
+      "label": "Vaše jméno",
+      "required": "Prosím zadejte vaše jméno",
+      "error": "Prosím zadejte vaše jméno"
+    },
+    "email": {
+      "label": "Váš e-mail",
+      "required": "Prosím zadejte validní email",
+      "error": "Email musí obsahovat {'@'} a ."
+    },
+    "message": {
+      "label": "Vaše zpráva",
+      "required": "Prosím zadejte vaši zprávu",
+      "error": "Prosím zadejte vaši zprávu"
+    },
+    "button": "Odeslat",
+    "success": "Úspěšně odesláno!",
+    "fail": "Něco se pokazilo!",
+    "retry": "Zkusit znovu",
+    "cancel": "Zrušit"
+  }
 }

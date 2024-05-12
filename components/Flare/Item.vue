@@ -1,24 +1,43 @@
 <template>
-  <div ref="lightEl" class="FlareItem relative" :style="lightStyle">
+  <component
+    :is="tag"
+    ref="lightEl"
+    class="relative FlareItem"
+    :style="lightStyle"
+  >
     <slot />
-  </div>
+  </component>
 </template>
 
 <script lang="ts" setup>
-interface BeforeAfterProps {
-  before?: {
-    disabled?: boolean
-    color?: string
-    size?: number
-  }
-  after?: {
-    disabled?: boolean
-    color?: string
-    size?: number
-  }
-}
-
-const { before, after } = defineProps<BeforeAfterProps>()
+const { tag, before, after } = defineProps({
+  tag: {
+    type: String,
+    default: 'div',
+  },
+  before: {
+    type: Object as () => {
+      disabled?: boolean
+      color: string
+      size: number
+    },
+    default: () => ({
+      color: '#ffffffaa',
+      size: 600,
+    }),
+  },
+  after: {
+    type: Object as () => {
+      disabled?: boolean
+      color: string
+      size: number
+    },
+    default: () => ({
+      color: '#ffffff22',
+      size: 400,
+    }),
+  },
+})
 
 const lightEl = ref<HTMLElement>()
 
@@ -30,14 +49,14 @@ const lightStyle = computed<Record<string, string | number>>(() => {
     '--mouse-y': `${y.value}px`,
   }
 
-  if (!before?.disabled) {
-    styles['--flare-before-color'] = before?.color || '#ffffffaa'
-    styles['--flare-before-size'] = before?.size || 600
+  if (!before.disabled) {
+    styles['--flare-before-color'] = before.color
+    styles['--flare-before-size'] = before.size
   }
 
-  if (!after?.disabled) {
-    styles['--flare-after-color'] = after?.color || '#ffffff22'
-    styles['--flare-after-size'] = after?.size || 400
+  if (!after.disabled) {
+    styles['--flare-after-color'] = after.color
+    styles['--flare-after-size'] = after.size
   }
 
   return styles
@@ -47,21 +66,12 @@ const lightStyle = computed<Record<string, string | number>>(() => {
 <style lang="scss" scoped>
 .FlareItem:hover::before,
 .FlareItem:hover::after {
-  opacity: 1;
+  @apply opacity-100;
 }
 
 .FlareItem::before,
 .FlareItem::after {
-  border-radius: inherit;
-  content: '';
-  height: 100%;
-  left: 0px;
-  opacity: 0;
-  position: absolute;
-  top: 0px;
-  transition: opacity 500ms;
-  width: 100%;
-  pointer-events: none;
+  @apply content-[''] absolute top-0 left-0 w-full h-full opacity-0 rounded-[inherit] pointer-events-none duration-500 transition-opacity;
 }
 
 .FlareItem::before {

@@ -1,7 +1,7 @@
 <template>
-  <div id="flyingRocket">
+  <div id="flyingRocket" class="-z-[999]">
     <div class="wrapz">
-      <img src="/img/3D-rocket.webp" alt="3D Rocket" loading="lazy" />
+      <img src="/public/img/3D-rocket.webp" alt="3D Rocket" loading="lazy" />
       <div class="flame"></div>
     </div>
   </div>

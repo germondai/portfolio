@@ -1,5 +1,3 @@
-@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap';
-
 /* --- ESSENTIALS --- */
 * {
   box-sizing: border-box;
@@ -88,52 +86,24 @@ img {
   user-select: none;
 }
 
-// additional scss
+.drop-shadow-custom {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+}
+
+.box-shadow-custom {
+  box-shadow: 2px 2px 16px #000;
+}
+
+/* --- Additional scss --- */
 section#welcome,
 section#about,
 section#work,
 section#contact {
-  @apply py-24 min-h-screen
-}
-
-#welcome svg,
-#about svg,
-#work svg,
-#contact svg,
-#welcome .svg,
-#about .svg,
-#work .svg,
-#contact .svg {
-  @apply absolute -left-[5%] w-[110%] h-full min-w-[1400px] aspect-[1400/810] -z-40 pointer-events-none;
-}
-
-#welcome svg,
-#welcome .svg {
-  @apply -top-[5%] rotate-180;
-}
-
-#about svg,
-#work svg,
-#about .svg,
-#work .svg {
-  @apply top-0;
-}
-
-#contact svg,
-#contact .svg {
-  @apply bottom-0;
-}
-
-@media (max-width: 768px) {
-
-  #work svg,
-  #work .svg {
-    @apply -left-[65%];
-  }
+  @apply py-24 min-h-screen;
 }
 
 section {
-  @apply relative w-full flex;
+  @apply relative w-full flex items-center;
 }
 
 #about,
@@ -141,8 +111,168 @@ section {
   z-index: 1;
 }
 
+section#contact {
+  @apply pt-24 lg:pb-0 pb-8;
+}
+
+#welcome .FloatCont svg,
+#about .FloatCont svg,
+#work .FloatCont svg,
+#contact .FloatCont svg {
+  @apply absolute -left-[5%] w-[110%] h-full min-w-[1400px] aspect-[1400/810] -z-40 pointer-events-none;
+}
+
+#welcome .FloatCont svg {
+  @apply -top-[5%] rotate-180;
+}
+
+#about .FloatCont svg,
+#work .FloatCont svg {
+  @apply top-0;
+}
+
+#contact .FloatCont svg {
+  @apply bottom-0;
+}
+
+@media (max-width: 768px) {
+
+  #work .FloatCont svg {
+
+    @apply -left-[65%];
+  }
+}
+
 .text-gradient {
   background: linear-gradient(90deg, #915eff 0%, #ff006a 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+
+/* tags */
+.tag-html5 {
+  color: #fd8458;
+}
+
+.tag-css3 {
+  color: #51abf6;
+}
+
+.tag-php {
+  color: #a4a4cc;
+}
+
+.tag-mysql {
+  color: #00b7db;
+}
+
+.tag-sass {
+  color: #cc6699;
+}
+
+.tag-js,
+.tag-javascript {
+  color: #ffdf00;
+}
+
+.tag-jquery {
+  color: #46adf6;
+}
+
+.tag-tailwindcss {
+  color: #36BCF9;
+}
+
+.tag-ajax {
+  color: #21b0f2;
+}
+
+.tag-typescript {
+  color: #2E72BF;
+}
+
+.tag-vue {
+  color: #3EB27F;
+}
+
+.tag-nuxt {
+  color: #00DC81;
+}
+
+/* pretty forms by @germondai */
+.form {
+  @apply relative flex flex-col rounded-2xl;
+}
+
+.form .field {
+  @apply relative w-full my-2;
+}
+
+.form .field.checkbox {
+  @apply flex items-center justify-center gap-2;
+}
+
+.form .field.textarea {
+  @apply mb-0;
+}
+
+.form .field label {
+  transition:
+    font-size 0.3s,
+    top 0.3s;
+  @apply absolute top-3.5 left-4 pr-2.5 w-[calc(100%-0.5rem)] inline-block truncate leading-none pointer-events-none;
+}
+
+.form input:required~label,
+.form textarea:required~label,
+.form select:required~label {
+  @apply flex items-center before:content-['*'] before:text-red-600 before:ml-1 before:mt-0.5 before:order-2 before:text-xl before:leading-none;
+}
+
+.form .field.checkbox label {
+  @apply relative order-first w-auto text-white;
+}
+
+.form input:not([type='submit']),
+.form textarea,
+.form select {
+  transition: padding-top 0.3s;
+  @apply relative w-full min-w-64 min-h-12 max-h-[164px] p-4 px-2 pb-0.5 rounded-lg;
+}
+
+.form input[type='number']::-webkit-outer-spin-button,
+.form input[type='number']::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.form input[type='checkbox'] {
+  @apply w-auto min-w-[42px] aspect-square;
+}
+
+.form textarea {
+  @apply resize-y pt-[18px] min-h-[164px] max-h-[40vh] max-xl:max-h-[30vh];
+}
+
+.form input::placeholder,
+.form textarea::placeholder,
+.form select::placeholder {
+  @apply text-transparent;
+}
+
+.form input:focus~label,
+.form input:not(:placeholder-shown)~label,
+.form textarea:focus~label,
+.form textarea:not(:placeholder-shown)~label,
+.form select:focus~label,
+.form select:not(:placeholder-shown)~label {
+  @apply text-xs top-0 left-2 opacity-60;
+}
+
+.form input[type='submit'],
+.form button[type='submit'] {
+  @apply w-full flex items-center justify-center cursor-pointer border-0 my-2 p-1 rounded-2xl;
+}
+
+.field span[role='alert'] {
+  @apply text-red-600;
 }
