@@ -49,6 +49,7 @@
               }}</b>
               <button
                 v-if="
+                  (!result?.pending && result?.status == 'error') ||
                   result?.data?.insert == false ||
                   (canCancel && !result?.data?.insert)
                 "
@@ -66,7 +67,7 @@
                     ? $t('contact.retry')
                     : canCancel
                       ? $t('contact.cancel')
-                      : ''
+                      : 'f'
                 }}
               </button>
             </div>
@@ -168,6 +169,7 @@ const onSubmit = getSubmitFn(schema.value, async (values) => {
 
 const retry = () => {
   canCancel.value = false
+  result.value.data.insert = undefined
   result.value?.refresh()
   setTimeout(() => (canCancel.value = true), 5000)
 }
