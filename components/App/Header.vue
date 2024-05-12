@@ -38,7 +38,7 @@
       </NuxtLink>
       <ul
         :style="`display: ${dropdown.icons ? 'flex' : 'none'}`"
-        class="max-lg:hidden w-full flex items-center justify-between gap-8 max-sm:gap-2 max-sm:top-28 max-lg:top-14 left-0 max-lg:bg-[#1f2023cc] max-lg:absolute max-lg:h-14 max-lg:px-4 max-lg:rounded-b-3xl"
+        class="max-lg:hidden w-full flex items-center justify-between gap-4 max-sm:gap-2 max-sm:top-28 max-lg:top-14 left-0 max-lg:bg-[#1f2023cc] max-lg:absolute max-lg:h-14 max-lg:px-4 max-lg:rounded-b-3xl"
       >
         <li v-for="(social, index) in $tm('socials')" :key="index">
           <NuxtLink
