@@ -92,12 +92,49 @@
         "tags": {
           "PHP": "1",
           "MySQL": "1",
-          "JavaScript": "",
           "jQuery": "1",
           "AJAX": "1",
-          "Sass": "1",
-          "CSS3": "",
-          "HTML5": ""
+          "Sass": "1"
+        }
+      },
+      {
+        "href": "./",
+        "src": "/img/portfolio-germondai.webp",
+        "alt": "Germond's Portfolio Website Preview",
+        "title": "Germond's Portfolio",
+        "content": "<b>Professional landing page</b>. Built in <b>Nuxt.js</b> and <b>Vue.js</b>, styled with <b>TailwindCSS</b>. <b>Animated interface</b> with <b>custom components</b>. Contact system linked to <b>PHP API</b> and <b>MySQL</b>. <b>Language Localization</b>.",
+        "links": {
+          "link": "https://germondai.rf.gd",
+          "youtube": "",
+          "discord": "",
+          "facebook": "",
+          "github": "https://github.com/germondai/portfolio"
+        },
+        "tags": {
+          "Nuxt": "1",
+          "Vue": "1",
+          "TailwindCSS": "1",
+          "TypeScript": "1"
+        }
+      },
+      {
+        "href": "https://github.com/germondai/php-starter",
+        "src": "/img/portfolio-php-starter.webp",
+        "alt": "PHP Starter Website Preview",
+        "title": "PHP Starter",
+        "content": "Simple <b>PHP Starter</b>, with its own, ready to go, <b>API</b> and <b>frontend</b> system. Well <b>structured</b>, <b>secured</b> and <b>scalable</b> environment with features like <b>Nette Database Explorer</b>, <b>TailwindCSS</b>, <b>jQuery</b>, etc.",
+        "links": {
+          "link": "https://germondai.rf.gd",
+          "youtube": "",
+          "discord": "",
+          "facebook": "",
+          "github": "https://github.com/germondai/php-starter"
+        },
+        "tags": {
+          "PHP": "1",
+          "MySQL": "1",
+          "jQuery": "1",
+          "TailwindCSS": "1"
         }
       },
       {
@@ -116,36 +153,7 @@
         "tags": {
           "PHP": "1",
           "MySQL": "1",
-          "JavaScript": "",
-          "jQuery": "1",
-          "AJAX": "",
-          "Sass": "",
-          "CSS3": "",
-          "HTML5": ""
-        }
-      },
-      {
-        "href": "./",
-        "src": "/img/portfolio-germondai.webp",
-        "alt": "Germond's Portfolio Website Preview",
-        "title": "Germond's Portfolio",
-        "content": "<b>Professional user-friendly landing page</b>. <b>Elegant</b> design of <b>interface</b> spiced up with clean <b>Parallax effects</b> and <b>smooth animations</b>. Fully working <b>PHP</b> contact system and <b>language Localization</b>.",
-        "links": {
-          "link": "https://germondai.rf.gd",
-          "youtube": "",
-          "discord": "",
-          "facebook": "",
-          "github": "https://github.com/germondai"
-        },
-        "tags": {
-          "PHP": "",
-          "MySQL": "",
-          "JavaScript": "1",
-          "jQuery": "1",
-          "AJAX": "",
-          "Sass": "",
-          "CSS3": "1",
-          "HTML5": ""
+          "jQuery": "1"
         }
       }
     ]

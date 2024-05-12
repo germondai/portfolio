@@ -12,7 +12,7 @@
         <p v-dompurify-html="$t('about.content')"></p>
       </div>
       <div
-        class="w-[90%] grid max-xs:grid-cols-3 max-md:grid-cols-4 max-lg:grid-cols-5 grid-cols-6 items-center justify-between max-md:gap-8 gap-16"
+        class="w-full max-sm:w-[95%] grid max-xs:grid-cols-3 max-md:grid-cols-4 max-lg:grid-cols-5 grid-cols-6 items-center justify-between max-md:gap-8 gap-16"
       >
         <div
           v-for="(skill, index) in $tm('skills')"

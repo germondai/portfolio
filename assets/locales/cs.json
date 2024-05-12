@@ -92,12 +92,49 @@
         "tags": {
           "PHP": "1",
           "MySQL": "1",
-          "JavaScript": "",
           "jQuery": "1",
           "AJAX": "1",
-          "Sass": "1",
-          "CSS3": "",
-          "HTML5": ""
+          "Sass": "1"
+        }
+      },
+      {
+        "href": "./",
+        "src": "/img/portfolio-germondai.webp",
+        "alt": "Náhled stránky - Germond's Portfolio",
+        "title": "Germond's Portfolio",
+        "content": "<b>Profesionální portfolio</b>. Vytvořeno v <b>Nuxt.js</b> a <b>Vue.js</b>, nastylováné pomocí <b>TailwindCSS</b>. <b>Animované rozhraní</b> s vlastními <b>komponenty</b>. Kontakt systém propojený s <b>PHP API</b> a <b>MySQL</b>. <b>Jazyková loaklizace</b>.",
+        "links": {
+          "link": "https://germondai.rf.gd",
+          "youtube": "",
+          "discord": "",
+          "facebook": "",
+          "github": "https://github.com/germondai/portfolio"
+        },
+        "tags": {
+          "Nuxt": "1",
+          "Vue": "1",
+          "TailwindCSS": "1",
+          "TypeScript": "1"
+        }
+      },
+      {
+        "href": "https://github.com/germondai/php-starter",
+        "src": "/img/portfolio-php-starter.webp",
+        "alt": "PHP Starter Website Preview",
+        "title": "PHP Starter",
+        "content": "Jednoduchý <b>PHP Starter</b> s vlastním, ready to go, <b>API</b> a <b>frontendovým</b> systémem. Dobře <b>strukturované</b>, <b>zabezpečené</b> a <b>škálovatelné</b> prostředí s funkcemi jako <b>Nette Database Explorer</b>, <b>TailwindCSS</b>, <b>jQuery</b>, apod.",
+        "links": {
+          "link": "https://germondai.rf.gd",
+          "youtube": "",
+          "discord": "",
+          "facebook": "",
+          "github": "https://github.com/germondai/php-starter"
+        },
+        "tags": {
+          "PHP": "1",
+          "MySQL": "1",
+          "jQuery": "1",
+          "TailwindCSS": "1"
         }
       },
       {
@@ -116,36 +153,7 @@
         "tags": {
           "PHP": "1",
           "MySQL": "1",
-          "JavaScript": "",
-          "jQuery": "1",
-          "AJAX": "",
-          "Sass": "",
-          "CSS3": "",
-          "HTML5": ""
-        }
-      },
-      {
-        "href": "./",
-        "src": "/img/portfolio-germondai.webp",
-        "alt": "Náhled stránky - Germond's Portfolio",
-        "title": "Germond's Portfolio",
-        "content": "<b>Profesionální uživatelsky přívětivé portfolio</b>. <b>Elegantní</b> design <b>prosdtředí</b> okořeněné čistými <b>Parralax efekty</b> a <b>plynulými animacemi</b>. Plně funkční <b>PHP</b> kontakt systém a <b>jazyková loaklizace</b>.",
-        "links": {
-          "link": "https://germondai.rf.gd",
-          "youtube": "",
-          "discord": "",
-          "facebook": "",
-          "github": "https://github.com/germondai"
-        },
-        "tags": {
-          "PHP": "",
-          "MySQL": "",
-          "JavaScript": "1",
-          "jQuery": "1",
-          "AJAX": "",
-          "Sass": "",
-          "CSS3": "1",
-          "HTML5": ""
+          "jQuery": "1"
         }
       }
     ]
