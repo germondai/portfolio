@@ -49,8 +49,8 @@
               }}</b>
               <button
                 v-if="
-                  (!result?.data?.insert ||
-                    !result?.data?.insert == undefined) &&
+                  !result?.data?.insert ||
+                  result?.data?.insert !== undefined ||
                   canCancel
                 "
                 class="px-8 py-2 rounded-2xl text-center text-inherit bg-[#3B3B3B] hover:bg-[#26272ccc] shadow-2xl transition-colors"
