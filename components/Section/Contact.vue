@@ -15,50 +15,104 @@
             method="post"
             class="form relative w-full h-full flex flex-col p-6 rounded-2xl bg-[#0d0d0faa] z-20"
             @submit="onSubmit"
-            @invalid-submit="onInvalidSubmit"
           >
             <sub>{{ $t('contact.sub') }}</sub>
             <h1>{{ $t('contact.title') }}</h1>
-            <div class="field">
-              <Field
-                id="name"
-                type="text"
-                name="name"
-                :placeholder="$t('contact.name.label')"
-                required
-              />
-              <ErrorMessage name="name" />
-              <label for="name">{{ $t('contact.name.label') }}</label>
-            </div>
-            <div class="field">
-              <Field
-                id="email"
-                type="email"
-                name="email"
-                :placeholder="$t('contact.email.label')"
-                required
-              />
-              <ErrorMessage name="email" />
-              <label for="email">{{ $t('contact.email.label') }}</label>
-            </div>
-            <div class="field textarea">
-              <Field
-                id="message"
-                as="textarea"
-                name="message"
-                :placeholder="$t('contact.message.label')"
-                required
-              ></Field>
-              <ErrorMessage name="message" />
-              <label for="message">{{ $t('contact.message.label') }}</label>
-            </div>
-            <button
-              type="submit"
-              name="saveContact"
-              class="w-full h-10 my-2 p-1 rounded-2xl text-center text-inherit bg-[#3B3B3B] hover:bg-[#26272ccc] shadow-2xl transition-colors"
+
+            <div
+              v-if="result"
+              class="w-full h-full p-8 mt-2 flex flex-col items-center justify-center gap-4"
             >
-              {{ $t('contact.button') }}
-            </button>
+              <Icon
+                :name="
+                  result?.pending
+                    ? 'eos-icons:three-dots-loading'
+                    : result?.data?.insert
+                      ? 'ooui:success'
+                      : 'ooui:error'
+                "
+                :color="
+                  result?.pending
+                    ? ''
+                    : result?.data?.insert
+                      ? 'limegreen'
+                      : 'red'
+                "
+                class="size-24"
+              />
+              <b>{{
+                result?.pending
+                  ? ''
+                  : result?.data?.insert
+                    ? $t('contact.success')
+                    : $t('contact.fail')
+              }}</b>
+              <button
+                v-if="
+                  (!result?.data?.insert ||
+                    !result?.data?.insert == undefined) &&
+                  canCancel
+                "
+                class="px-8 py-2 rounded-2xl text-center text-inherit bg-[#3B3B3B] hover:bg-[#26272ccc] shadow-2xl transition-colors"
+                @click="
+                  !result?.pending && !result?.data?.insert
+                    ? retry()
+                    : canCancel
+                      ? cancel()
+                      : ''
+                "
+              >
+                {{
+                  !result?.pending && !result?.data?.insert
+                    ? $t('contact.retry')
+                    : canCancel
+                      ? $t('contact.cancel')
+                      : ''
+                }}
+              </button>
+            </div>
+            <template v-else>
+              <div class="field">
+                <Field
+                  id="name"
+                  type="text"
+                  name="name"
+                  :placeholder="$t('contact.name.label')"
+                  required
+                />
+                <ErrorMessage name="name" />
+                <label for="name">{{ $t('contact.name.label') }}</label>
+              </div>
+              <div class="field">
+                <Field
+                  id="email"
+                  type="email"
+                  name="email"
+                  :placeholder="$t('contact.email.label')"
+                  required
+                />
+                <ErrorMessage name="email" />
+                <label for="email">{{ $t('contact.email.label') }}</label>
+              </div>
+              <div class="field textarea">
+                <Field
+                  id="message"
+                  as="textarea"
+                  name="message"
+                  :placeholder="$t('contact.message.label')"
+                  required
+                ></Field>
+                <ErrorMessage name="message" />
+                <label for="message">{{ $t('contact.message.label') }}</label>
+              </div>
+              <button
+                type="submit"
+                name="saveContact"
+                class="w-full h-10 my-2 p-1 rounded-2xl text-center text-inherit bg-[#3B3B3B] hover:bg-[#26272ccc] shadow-2xl transition-colors"
+              >
+                {{ $t('contact.button') }}
+              </button>
+            </template>
           </Form>
         </FlareItem>
       </div>
@@ -79,8 +133,6 @@
           class="max-w-full max-h-[90%] drop-shadow-custom animate-[float_2s_infinite_ease-in-out]"
         />
       </div>
-      <span v-if="result && result.error">dw</span>
-      {{ result }}
     </div>
     <ParallaxBgContact />
   </FlareCont>
@@ -103,19 +155,38 @@ const schema = computed(() => {
 })
 
 const result = ref()
-const onSubmit = async (values) => {
-  const { data, pending, error, refresh } = await useFetch('', {
-    method: 'post',
-    body: { values },
-  })
+const canCancel = ref(false)
 
-  result.value = { data, pending, error, refresh }
+const onSubmit = getSubmitFn(schema.value, async (values) => {
+  setTimeout(() => (canCancel.value = true), 5000)
+  result.value = {
+    ...useFetch('https://germondai.rf.gd/api/contact', {
+      method: 'POST',
+      body: { values },
+    }),
+  }
+})
+
+const retry = () => {
+  canCancel.value = false
+  result.value?.refresh()
+  setTimeout(() => (canCancel.value = true), 5000)
 }
 
-function onInvalidSubmit({ values, errors, results }) {
-  // console.log(values)
-  // console.log(errors)
-  // console.log(results)
+const cancel = () => {
+  result.value = undefined
+  canCancel.value = false
+  result.value?.clear()
+}
+
+// https://github.com/logaretm/vee-validate/issues/3521
+function getSubmitFn<Schema extends Yup.ObjectSchema<Record<string, any>>>(
+  _: Schema,
+  callback: (values: Yup.InferType<Schema>) => void,
+) {
+  return (values: Record<string, any>) => {
+    return callback(values)
+  }
 }
 </script>
 

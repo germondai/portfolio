@@ -170,6 +170,8 @@
     },
     "button": "Odeslat",
     "success": "Úspěšně odesláno!",
-    "fail": "Něco se pokazilo!"
+    "fail": "Něco se pokazilo!",
+    "retry": "Zkusit znovu",
+    "cancel": "Zrušit"
   }
 }

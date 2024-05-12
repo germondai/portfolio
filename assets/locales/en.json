@@ -32,7 +32,7 @@
   "about": {
     "sub": "About",
     "title": "Overview",
-    "content": "I'm a <b>Full-Stack Web Developer</b> with experience in <b>PHP</b> and its <b>frameworks</b>, <b>MySQL</b> and <b>Node.js</b> as <b>backend</b> and <b>Nuxt.js</b>, <b>Vue.js</b> and <b>Tailwind CSS</b> as <b>frontend</b>. However, I'm always ready to expand my <b>skill set</b> and <b>learn</b> about new <b>technologies</b>. I'm a <b>quick learner</b> and I like to use my time <b>effectively</b> to seek <b>innovative solutions</b>. Let's work together to <b>bring your ideas to life!</b>",
+    "content": "I'm a <b>Full-Stack Web Developer</b> with experience in <b>PHP</b> and its <b>frameworks</b>, <b>MySQL</b> and <b>Node.js</b> as <b>backend</b> and <b>Nuxt.js</b>, <b>Vue.js</b> and <b>Tailwind CSS</b> as <b>frontend</b>. However, I'm always ready to expand my <b>skill set</b> and <b>learn</b> about new <b>technologies</b>. I'm a <b>quick learner</b> and I like to use my time <b>effectively</b> to seek <b>innovative solutions</b>. Let's work together to <b>bring your ideas to life!</b>"
   },
   "timeline": [
     {
@@ -170,6 +170,8 @@
     },
     "button": "Send",
     "success": "Successfully sent!",
-    "fail": "Something went wrong!"
+    "fail": "Something went wrong!",
+    "retry": "Try Again",
+    "cancel": "Cancel"
   }
 }
