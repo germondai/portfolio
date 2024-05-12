@@ -50,24 +50,18 @@
               <button
                 v-if="
                   (!result?.pending && result?.status == 'error') ||
-                  result?.data?.insert == false ||
-                  (canCancel && !result?.data?.insert)
+                  (!result?.pending && result?.data?.insert == false) ||
+                  (result.pending && canCancel && !result?.data?.insert)
                 "
                 class="px-8 py-2 rounded-2xl text-center text-inherit bg-[#3B3B3B] hover:bg-[#26272ccc] shadow-2xl transition-colors"
-                @click="
-                  !result?.pending && !result?.data?.insert
-                    ? retry()
-                    : canCancel
-                      ? cancel()
-                      : ''
-                "
+                @click="result.pending && canCancel ? cancel() : retry()"
               >
                 {{
                   !result?.pending && !result?.data?.insert
                     ? $t('contact.retry')
                     : canCancel
                       ? $t('contact.cancel')
-                      : 'f'
+                      : ''
                 }}
               </button>
             </div>
@@ -168,16 +162,16 @@ const onSubmit = getSubmitFn(schema.value, async (values) => {
 })
 
 const retry = () => {
+  result.value?.refresh()
   canCancel.value = false
   result.value.data.insert = undefined
-  result.value?.refresh()
   setTimeout(() => (canCancel.value = true), 5000)
 }
 
 const cancel = () => {
-  result.value = undefined
   canCancel.value = false
   result.value?.clear()
+  result.value = undefined
 }
 
 // https://github.com/logaretm/vee-validate/issues/3521
