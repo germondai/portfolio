@@ -78,7 +78,7 @@
     "projects": [
       {
         "href": "https://germondai.rf.gd/chronitask/",
-        "src": "/img/portfolio-chronitask.webp",
+        "src": "portfolio-chronitask.webp",
         "alt": "Náhled stránky - Chronitask",
         "title": "Chronitask",
         "content": "<b>Webová aplikace</b> na <b>plánování dne</b> a <b>záznam úkolů</b> v <b>PHP</b> a <b>JavaScriptu</b> s plně integrovaným <b>zabezpečeným připojením</b> k <b>databázi</b> chráněným proti <b>vniknutím</b> a <b>AJAX</b> fetch requesty. <b>Optimalizované</b> a <b>uživatelsky přívětivé rozhraní</b>.",
@@ -99,7 +99,7 @@
       },
       {
         "href": "./",
-        "src": "/img/portfolio-germondai.webp",
+        "src": "portfolio-germondai.webp",
         "alt": "Náhled stránky - Germond's Portfolio",
         "title": "Germond's Portfolio",
         "content": "<b>Profesionální portfolio</b>. Vytvořeno v <b>Nuxt.js</b> a <b>Vue.js</b>, nastylováné pomocí <b>TailwindCSS</b>. <b>Animované rozhraní</b> s vlastními <b>komponenty</b>. Kontakt systém propojený s <b>PHP API</b> a <b>MySQL</b>. <b>Jazyková loaklizace</b>.",
@@ -119,7 +119,7 @@
       },
       {
         "href": "https://github.com/germondai/php-starter",
-        "src": "/img/portfolio-php-starter.webp",
+        "src": "portfolio-php-starter.webp",
         "alt": "PHP Starter Website Preview",
         "title": "PHP Starter",
         "content": "Jednoduchý <b>PHP Starter</b> s vlastním, ready to go, <b>API</b> a <b>frontendovým</b> systémem. Dobře <b>strukturované</b>, <b>zabezpečené</b> a <b>škálovatelné</b> prostředí s funkcemi jako <b>Nette Database Explorer</b>, <b>TailwindCSS</b>, <b>jQuery</b>, apod.",
@@ -139,7 +139,7 @@
       },
       {
         "href": "https://germondai.rf.gd/eshop/",
-        "src": "/img/portfolio-eshop.webp",
+        "src": "portfolio-eshop.webp",
         "alt": "Náhled stránky - Germond's E-Shop",
         "title": "Germond's E-Shop",
         "content": "<b>Online E-Shop</b> vytvořený v <b>PHP</b> s <b>databázovým připojením</b> které <b>synchronizuje</b> uživatelský <b>košík</b>, který má možnost <b>slev</b> a <b>objednávky</b>. Obsahuje i vlastní <b>redakční systém</b> pro <b>úpravu</b> nejen <b>produktů</b>, ale i <b>stránek</b> a <b>variací</b>.",

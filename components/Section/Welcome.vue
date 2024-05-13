@@ -32,14 +32,14 @@
         v-motion-slide-visible-once-top
         class="relative max-md:3/5 w-2/5 h-[90%] py-12 flex items-center justify-center anim-bottom"
       >
-        <img
-          src="/public/img/3D-rocket.webp"
+        <NuxtImg
+          src="3D-rocket.webp"
           alt="3D Rocket"
           loading="lazy"
           class="absolute max-h-[90%] max-w-[528px] flex py-4 blur-[8px] opacity-30 animate-[float_2s_infinite_ease-in-out]"
         />
-        <img
-          src="/public/img/germond-model.webp"
+        <NuxtImg
+          src="germond-model.webp"
           alt="Germond Model"
           loading="lazy"
           class="max-h-[90%] max-w-[40%] animate-[float_2s_infinite_ease-in-out] drop-shadow-custom z-10"

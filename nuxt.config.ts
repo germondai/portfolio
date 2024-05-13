@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     '@vueuse/motion/nuxt',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
-    // '@nuxt/image',
+    '@nuxt/image',
     '@nuxtjs/seo',
     '@nuxtjs/google-fonts',
     '@vee-validate/nuxt',
@@ -89,11 +89,11 @@ export default defineNuxtConfig({
     },
   },
 
-  // image: {
-  //   quality: 85,
-  //   format: ['webp'],
-  //   dir: 'public/img/',
-  // },
+  image: {
+    quality: 85,
+    format: ['webp'],
+    dir: 'public/img/',
+  },
 
   i18n: {
     lazy: true,

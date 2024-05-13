@@ -30,8 +30,8 @@
         href="./"
         class="max-lg:order-1 flex items-center justify-center h-[76px] z-20"
       >
-        <img
-          src="/img/skull.ico"
+        <NuxtImg
+          src="skull.ico"
           alt="Skull Icon"
           class="max-w-max h-full hover:animate-[shake_.3s] anim"
         />

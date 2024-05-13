@@ -117,14 +117,14 @@
         v-motion-slide-visible-once-top
         class="relative w-2/5 max-lg:w-1/3 h-[90%] py-12 flex items-center justify-center"
       >
-        <img
-          src="/public/img/3D-envelope.webp"
+        <NuxtImg
+          src="3D-envelope.webp"
           alt="Envelope Mail"
           loading="lazy"
           class="absolute max-w-[528px] max-h-[90%] flex py-4 opacity-30 blur animate-[float_2s_infinite_ease-in-out]"
         />
-        <img
-          src="/public/img/3D-devices.webp"
+        <NuxtImg
+          src="3D-devices.webp"
           alt="Devices"
           loading="lazy"
           class="max-w-full max-h-[90%] drop-shadow-custom animate-[float_2s_infinite_ease-in-out]"

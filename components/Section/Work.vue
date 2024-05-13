@@ -50,7 +50,7 @@
                 class="h-full flex flex-col bg-[#0d0d0faa] z-20 p-3 rounded-xl"
               >
                 <div class="flex flex-col gap-2">
-                  <img
+                  <NuxtImg
                     :src="$rt(project.src)"
                     :alt="$rt(project.alt)"
                     loading="lazy"
