@@ -29,7 +29,7 @@
                 class="absolute top-[18px] right-[18px] flex items-center justify-center gap-1.5 z-30"
               >
                 <template v-for="(lValue, lKey, j) in project.links" :key="j">
-                  <a
+                  <NuxtLink
                     v-if="$rt(lValue) != ''"
                     :href="$rt(lValue)"
                     target="_blank"
@@ -41,10 +41,10 @@
                       color="white"
                       class="size-6"
                     />
-                  </a>
+                  </NuxtLink>
                 </template>
               </div>
-              <a
+              <NuxtLink
                 :href="$rt(project.href)"
                 :target="$rt(project.href) == './' ? '_self' : '_blank'"
                 class="h-full flex flex-col bg-[#0d0d0faa] z-20 p-3 rounded-xl"
@@ -71,7 +71,7 @@
                     >
                   </template>
                 </div>
-              </a>
+              </NuxtLink>
             </FlareItem>
           </HoloTilt>
         </div>
