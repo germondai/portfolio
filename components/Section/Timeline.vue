@@ -19,7 +19,7 @@
               class="rounded-t-xl flex items-center gap-4 py-4 px-2.5 bg-[#251E39aa] whitespace-nowrap"
             >
               <span class="px-4 py-1 bg-white text-black rounded-xl">
-                <CountUp :number="$rt(item.year)" />
+                <CountUp :number="item.year" />
               </span>
               <span class="truncate">{{ $rt(item.title) }}</span>
             </b>

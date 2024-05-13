@@ -36,35 +36,35 @@
   },
   "timeline": [
     {
-      "year": "2021",
+      "year": 2021,
       "title": "HTML5 & CSS3",
       "content": "Začal jsem se učit základy <b>vývoje webu</b>, jako jsou <b>HTML5</b> a <b>CSS3</b> <b>front-endové</b> jazyky, seznámil jsem se s většinou běžných <b>HTML</b> tagů a <b>CSS</b> vychytávkami jako <b>Flexbox</b>",
       "content_full": "",
       "button": "Číst dál..."
     },
     {
-      "year": "2022",
+      "year": 2022,
       "title": "PHP & MySQL",
       "content": "Zaujalo mě <b>PHP</b> a <b>back-end</b> development celkově, naučil jsem se jak fungují <b>databáze</b>, zejména <b>MySQL</b>. Vytvořil jsem <b>Online E-Shop</b> s jeho vlastním <b>redakčním systémem</b>",
       "content_full": "",
       "button": "Číst dál..."
     },
     {
-      "year": "2023",
+      "year": 2023,
       "title": "JavaScript & jQuery",
       "content": "Začal jsem se učit <b>JavaScript</b> a práci s jeho knihovnami jako je například <b>jQuery</b>. Udělal jsem moji první <b>Full-Stack</b> webovou aplikaci s integrovanými <b>AJAX</b> fetch requesty k <b>MySQL</b> queries, které operují s <b>databází</b>, abych mohl zpracovávat uživatelské <b>akce</b> bez obnovování stránky nebo <b>ztráty dat</b>",
       "content_full": "",
       "button": "Číst dál..."
     },
     {
-      "year": "2024",
+      "year": 2024,
       "title": "Frameworky",
       "content": "Rozhodl jsem se začít využívat moderní <b>frameworky</b>, abych ušetřil <b>čas</b> a zvýšil <b>efektivitu</b>. Přešel jsem na <b>Tailwind CSS</b> a udělal <b>backend</b> projekt pomocí <b>Nette PHP</b>. Začalo mě bavit <b>Vue.js</b> s <b>Nuxt.js</b>. Tím jsem se také dostal k prostředí <b>Node.js</b>, které je, přece jen, neoddělitelnou součástí <b>Nuxt.js</b>, &nbsp; a dostal jsem se k <b>webovým automatizacím</b> pomocí nástrojů jako <b>Puppeteer</b> a dalších...",
       "content_full": "",
       "button": "Číst dál..."
     },
     {
-      "year": "2025",
+      "year": 2025,
       "title": "Kdo ví ?",
       "content": "Možná přijdou <b>velké věci</b>...",
       "content_full": "",

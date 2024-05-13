@@ -36,35 +36,35 @@
   },
   "timeline": [
     {
-      "year": "2021",
+      "year": 2021,
       "title": "HTML5 & CSS3",
       "content": "Started learning the basics of <b>Web Development</b>, such as <b>HTML5</b> and <b>CSS3</b> <b>front-end</b> languages, got familiar with most of the common <b>HTML</b> tags and <b>CSS</b> features like <b>Flexbox</b>",
       "content_full": "",
       "button": "Read More..."
     },
     {
-      "year": "2022",
+      "year": 2022,
       "title": "PHP & MySQL",
       "content": "Got interested in <b>PHP</b> and <b>back-end</b> development overall, learned how <b>Databases</b> works, especially <b>MySQL</b>. Made an <b>E-Commerce Online Shop</b> with its own <b>Content Management System</b>",
       "content_full": "",
       "button": "Read More..."
     },
     {
-      "year": "2023",
+      "year": 2023,
       "title": "JavaScript & jQuery",
       "content": "Started learning <b>JavaScript</b> language and its libraries like <b>jQuery</b>. Made my first <b>Full-Stack</b> Web Application with integrated <b>AJAX</b> fetch requests to <b>MySQL</b> queries which operated with <b>database</b>, so I can handle user <b>actions</b> without page refreshing or <b>data loss</b>",
       "content_full": "",
       "button": "Read More..."
     },
     {
-      "year": "2024",
+      "year": 2024,
       "title": "Frameworks",
       "content": "Decided to try modern <b>frameworks</b> to save <b>time</b> and increase <b>efficiency</b>. Switched to <b>Tailwind CSS</b> and made a <b>backend</b> project in <b>Nette PHP</b>. Began to enjoy <b>Vue.js</b> with <b>Nuxt.js</b>. This also led me to <b>Node.js environment</b>, which is, after all, an <b>inseparable</b> part of <b>Nuxt.js</b> and I got to <b>web automations</b> using tools like <b>Puppeteer</b> and others...",
       "content_full": "",
       "button": "Read More..."
     },
     {
-      "year": "2025",
+      "year": 2025,
       "title": "Who knows ?",
       "content": "<b>Big things</b> may be <b>coming</b>...",
       "content_full": "",

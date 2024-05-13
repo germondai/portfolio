@@ -1,8 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   ssr: true,
-  ogImage: { enabled: false },
-  schemaOrg: { enabled: false },
 
   devtools: { enabled: true },
 

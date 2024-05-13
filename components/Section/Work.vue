@@ -6,9 +6,7 @@
       <div v-motion-slide-visible-once-top class="w-full flex flex-col">
         <sub>{{ $t('work.sub') }}</sub>
         <h1>{{ $t('work.title') }}</h1>
-        <p v-dompurify-html="$t('work.content')" class="text-justify">
-          {{ $e }}
-        </p>
+        <p v-dompurify-html="$t('work.content')" class="text-justify"></p>
       </div>
       <div
         class="w-full grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4"
