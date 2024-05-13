@@ -9,8 +9,8 @@
       class="xl:w-3/4 lg:w-[90%] sm:w-[95%] w-[98%] h-14 sm:px-8 px-2 flex items-center justify-between max-2xs:justify-around sm:gap-8 gap-2 rounded-3xl bg-[#1f2023cc] backdrop-blur drop-shadow-md overflow-x-clip"
     >
       <ul
-        :style="`display: ${dropdown.links ? 'flex' : 'none'}`"
-        class="max-lg:order-2 max-sm:hidden w-full flex items-center justify-between gap-4 max-sm:gap-2 max-sm:absolute top-14 left-0 max-sm:bg-[#1f2023cc] max-sm:h-14 max-sm:px-4"
+        v-if="dropdown.links"
+        class="max-lg:order-2 w-full flex items-center justify-between gap-4 max-sm:gap-2 max-sm:absolute top-14 left-0 max-sm:bg-[#1f2023cc] max-sm:h-14 max-sm:px-4"
       >
         <li
           v-for="(link, index) in $tm('header')"
@@ -37,8 +37,8 @@
         />
       </NuxtLink>
       <ul
-        :style="`display: ${dropdown.icons ? 'flex' : 'none'}`"
-        class="max-lg:hidden w-full flex items-center justify-between gap-4 max-sm:gap-2 max-sm:top-28 max-lg:top-14 left-0 max-lg:bg-[#1f2023cc] max-lg:absolute max-lg:h-14 max-lg:px-4 max-lg:rounded-b-3xl"
+        v-if="dropdown.icons"
+        class="w-full flex items-center justify-between gap-4 max-sm:gap-2 max-sm:top-28 max-lg:top-14 left-0 max-lg:bg-[#1f2023cc] max-lg:absolute max-lg:h-14 max-lg:px-4 max-lg:rounded-b-3xl"
       >
         <li v-for="(social, index) in $tm('socials')" :key="index">
           <NuxtLink

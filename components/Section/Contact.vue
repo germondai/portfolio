@@ -71,6 +71,7 @@
                   id="name"
                   type="text"
                   name="name"
+                  autocomplete="name"
                   :placeholder="$t('contact.name.label')"
                   required
                 />
@@ -82,6 +83,7 @@
                   id="email"
                   type="email"
                   name="email"
+                  autocomplete="email"
                   :placeholder="$t('contact.email.label')"
                   required
                 />
@@ -93,6 +95,7 @@
                   id="message"
                   as="textarea"
                   name="message"
+                  autocomplete="false"
                   :placeholder="$t('contact.message.label')"
                   required
                 ></Field>
