@@ -5,7 +5,6 @@
     :class="presetClass"
     :style="parallaxStyle"
   >
-    {{ parallaxStyle }}
     <slot />
   </component>
 </template>
