@@ -26,28 +26,15 @@ const { tag, velocity, preset } = defineProps({
   },
 })
 
-const { width, height } = useWindowSize()
+const presetClass = preset === 'bg' ? `w-full h-full` : ''
 
-const presetClass = computed(() => {
-  return preset === 'bg' ? `w-full h-full` : ''
-})
-
-const mouseX = ref(0)
-const mouseY = ref(0)
+const { width: wW, height: wH } = useWindowSize()
+const { x: cX, y: cY } = useMouse({ type: 'client' })
 
 const parallaxStyle = computed(() => {
-  const x = ((mouseX.value - width.value / 2) * velocity) / 150
-  const y = ((mouseY.value - height.value) * velocity) / 150
+  const x = ((cX.value - wW.value / 2) * velocity) / 150
+  const y = ((cY.value - wH.value) * velocity) / 150
   return `transform: translate(${x.toFixed(2)}px, ${y.toFixed(2)}px)`
-})
-
-const handleMouseMove = (event: any) => {
-  mouseX.value = event.clientX
-  mouseY.value = event.clientY
-}
-
-onMounted(() => {
-  window.addEventListener('mousemove', handleMouseMove)
 })
 </script>
 

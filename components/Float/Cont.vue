@@ -21,9 +21,7 @@ const { tag, preset } = defineProps({
   },
 })
 
-const presetClass = computed(() => {
-  return preset === 'bg' ? `absolute top-0 w-full h-full` : ''
-})
+const presetClass = preset === 'bg' ? `absolute top-0 w-full h-full` : ''
 </script>
 
 <style lang="scss">
