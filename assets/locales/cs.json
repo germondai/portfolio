@@ -74,7 +74,7 @@
   "work": {
     "sub": "Práce",
     "title": "Projekty",
-    "content": "Následující projekty ukazují mé <b>dovednosti</b> a <b>zkušenosti</b> ve zpracovávání <b>skutečných projektů</b>. Každý z níže uvedených projektů <b>obsahuje</b> odkaz na <b>živou demo<b> ukázku, kde si je můžete <b>detailněji</b> prohlédnout. Navíc jsou <b>označeny</b> <b>programovacími jazyky</b>, <b>frameworky</b>, nebo <b>knihovnami</b>, které byly primárně použity při jejich vývoji.",
+    "content": "Následující projekty ukazují mé <b>dovednosti</b> a <b>zkušenosti</b> ve zpracovávání <b>skutečných projektů</b>. Každý z níže uvedených projektů <b>obsahuje</b> odkaz na <b>živou demo</b> ukázku, kde si je můžete <b>detailněji</b> prohlédnout. Navíc jsou <b>označeny</b> <b>programovacími jazyky</b>, <b>frameworky</b>, nebo <b>knihovnami</b>, které byly primárně použity při jejich vývoji.",
     "projects": [
       {
         "href": "./chronitask/",
