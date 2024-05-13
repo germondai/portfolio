@@ -77,7 +77,7 @@
     "content": "Following projects <b>showcase</b> my <b>skills</b> and <b>experiences</b> in handling <b>real projects</b>. Each of the listed projects below <b>includes</b> a link to <b>live demo</b> example where you can take a <b>detailed view</b>. Additionally, each project is <b>tagged</b> with <b>programming languages</b>, <b>frameworks</b> or <b>libraries</b> that were primarily used in their <b>development</b>.",
     "projects": [
       {
-        "href": "./chronitask/",
+        "href": "https://germondai.rf.gd/chronitask/",
         "src": "/img/portfolio-chronitask.webp",
         "alt": "Chronitask Website Preview",
         "title": "Chronitask",
@@ -138,7 +138,7 @@
         }
       },
       {
-        "href": "./eshop/",
+        "href": "https://germondai.rf.gd/eshop/",
         "src": "/img/portfolio-eshop.webp",
         "alt": "Germond's E-Shop Website Preview",
         "title": "Germond's E-Shop",

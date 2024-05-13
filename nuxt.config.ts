@@ -1,7 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // because of static deployment (currently)
-  ssr: false,
+  ssr: true,
   ogImage: { enabled: false },
   schemaOrg: { enabled: false },
 
@@ -9,6 +8,7 @@ export default defineNuxtConfig({
 
   site: {
     name: "Germond's Portfolio",
+    url: 'https://germondai.rf.gd/',
   },
 
   app: {
