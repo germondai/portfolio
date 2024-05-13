@@ -12,9 +12,9 @@
           {{ $t('welcome.title') }}
           <span class="text-gradient">Germond</span>
         </h1>
-        <div class="flex gap-1">
-          <p>{{ $t('welcome.content.base') }}</p>
-          <b>
+        <div class="flex items-center max-sm:flex-col gap-1">
+          <p class="whitespace-nowrap">{{ $t('welcome.content.base') }}</p>
+          <b class="truncate">
             <TypeWriter
               v-motion-slide-visible-once-left
               :type-array="[
