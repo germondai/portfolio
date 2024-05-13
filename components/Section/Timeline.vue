@@ -10,9 +10,10 @@
           v-motion
           :initial="{ x: index % 2 ? -100 : 100, opacity: 0 }"
           :visible="{ x: 0, opacity: 1 }"
-          class="relative max-lg:w-[85vw] max-lg:left-8 bottom-0 lg:group-odd:left-[50px] lg:group-even:-left-[495px] w-[450px] p-0.5 rounded-xl bg-[#ffffff1a] box-shadow-custom z-20"
         >
-          <FlareItem>
+          <FlareItem
+            class="relative max-lg:w-[85vw] max-lg:left-8 bottom-0 lg:group-odd:left-[50px] lg:group-even:-left-[495px] w-[450px] p-0.5 rounded-xl bg-[#ffffff1a] box-shadow-custom z-20"
+          >
             <div
               class="max-lg:before:-left-4 max-lg:before:border-r-[16px] lg:group-odd:before:-left-4 lg:group-odd:before:border-r-[16px] lg:group-even:before:-right-4 lg:group-even:before:border-l-[16px] before:absolute before:top-2.5 before:border-y-8 before:border-[transparent_#ffffff1a] box rounded-xl z-10 bg-[#0d0d0faa]"
             >
