@@ -33,6 +33,7 @@
                     v-if="$rt(lValue) != ''"
                     :href="$rt(lValue)"
                     target="_blank"
+                    :title="$rt(lKey)"
                     class="size-8 bg-[#121316be] backdrop-blur flex items-center justify-center rounded-full overflow-hidden outline outline-1"
                   >
                     <Icon
@@ -48,18 +49,18 @@
                 :target="$rt(project.href) == './' ? '_self' : '_blank'"
                 class="h-full flex flex-col bg-[#0d0d0faa] z-20 p-3 rounded-xl"
               >
-                <div>
+                <div class="flex flex-col gap-2">
                   <img
                     :src="$rt(project.src)"
                     :alt="$rt(project.alt)"
                     loading="lazy"
                     class="w-full rounded-lg aspect-video"
                   />
-                  <h4 class="my-2">{{ $rt(project.title) }}</h4>
+                  <b class="text-2xl">{{ $rt(project.title) }}</b>
                 </div>
                 <p
                   v-dompurify-html="$rt(project.content)"
-                  class="text-justify mb-2 line-clamp-6"
+                  class="text-justify my-2 line-clamp-6"
                 ></p>
                 <div class="flex items-center gap-x-2 truncate">
                   <template v-for="(tValue, tKey, k) in project.tags" :key="k">

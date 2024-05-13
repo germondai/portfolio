@@ -44,6 +44,7 @@
           <NuxtLink
             :href="$rt(social.href)"
             target="blank"
+            :title="$rt(social.name)"
             class="relative px-2 py-1 opacity-50 hover:opacity-100 transition-opacity"
           >
             <Icon :name="$rt(social.icon)" color="white" class="size-9" />

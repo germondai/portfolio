@@ -1,14 +1,14 @@
 <template>
   <div class="flex flex-col items-start gap-1">
     <sub class="font-bold">{{ $t('welcome.swap_language') }}</sub>
-    <a
+    <button
       v-for="langLocale in availableLocales"
       :key="langLocale.code"
-      href="#"
+      :title="langLocale.name"
       @click.prevent.stop="setLocale(langLocale.code)"
     >
       <Icon :name="langLocale.icon" class="size-12" />
-    </a>
+    </button>
   </div>
 </template>
 
