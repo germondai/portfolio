@@ -136,9 +136,7 @@ section#contact {
 }
 
 @media (max-width: 768px) {
-
   #work .FloatCont svg {
-
     @apply -left-[65%];
   }
 }
@@ -180,7 +178,7 @@ section#contact {
 }
 
 .tag-tailwindcss {
-  color: #36BCF9;
+  color: #36bcf9;
 }
 
 .tag-ajax {
@@ -188,15 +186,15 @@ section#contact {
 }
 
 .tag-typescript {
-  color: #2E72BF;
+  color: #2e72bf;
 }
 
 .tag-vue {
-  color: #3EB27F;
+  color: #3eb27f;
 }
 
 .tag-nuxt {
-  color: #00DC81;
+  color: #00dc81;
 }
 
 /* pretty forms by @germondai */
@@ -223,9 +221,9 @@ section#contact {
   @apply absolute top-3.5 left-4 pr-2.5 w-[calc(100%-0.5rem)] inline-block truncate leading-none pointer-events-none;
 }
 
-.form input:required~label,
-.form textarea:required~label,
-.form select:required~label {
+.form input:required ~ label,
+.form textarea:required ~ label,
+.form select:required ~ label {
   @apply flex items-center before:content-['*'] before:text-red-600 before:ml-1 before:mt-0.5 before:order-2 before:text-xl before:leading-none;
 }
 
@@ -259,12 +257,12 @@ section#contact {
   @apply text-transparent;
 }
 
-.form input:focus~label,
-.form input:not(:placeholder-shown)~label,
-.form textarea:focus~label,
-.form textarea:not(:placeholder-shown)~label,
-.form select:focus~label,
-.form select:not(:placeholder-shown)~label {
+.form input:focus ~ label,
+.form input:not(:placeholder-shown) ~ label,
+.form textarea:focus ~ label,
+.form textarea:not(:placeholder-shown) ~ label,
+.form select:focus ~ label,
+.form select:not(:placeholder-shown) ~ label {
   @apply text-xs top-0 left-2 opacity-60;
 }
 
