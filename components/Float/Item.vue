@@ -32,8 +32,8 @@ const { width: wW, height: wH } = useWindowSize()
 const { x: cX, y: cY } = useMouse({ type: 'client' })
 
 const parallaxStyle = computed(() => {
-  const x = ((cX.value ?? 1 - wW.value / 2) * velocity) / 150
-  const y = ((cY.value ?? 1 - wH.value) * velocity) / 150
+  const x = (((cX.value ?? 1) - wW.value / 2) * velocity) / 150
+  const y = (((cY.value ?? 1) - wH.value) * velocity) / 150
   return `transform: translate(${x.toFixed(2)}px, ${y.toFixed(2)}px)`
 })
 </script>
