@@ -3,7 +3,14 @@
     :is="tag"
     ref="lightEl"
     class="relative FlareItem"
-    :style="lightStyle"
+    :style="{
+      '--x': `${!$isMobile ? elementX.toFixed() : -9999}px`,
+      '--y': `${!$isMobile ? elementY.toFixed() : -9999}px`,
+      '--fbc': before.color,
+      '--fbs': `${before.size}px`,
+      '--fac': after.color,
+      '--fas': `${after.size}px`,
+    }"
   >
     <slot />
   </component>
@@ -17,7 +24,6 @@ const { tag, before, after } = defineProps({
   },
   before: {
     type: Object as () => {
-      disabled?: boolean
       color: string
       size: number
     },
@@ -28,47 +34,25 @@ const { tag, before, after } = defineProps({
   },
   after: {
     type: Object as () => {
-      disabled?: boolean
       color: string
       size: number
     },
     default: () => ({
-      color: '#ffffff22',
+      color: '#ffffff11',
       size: 400,
     }),
   },
 })
 
 const lightEl = ref<HTMLElement>()
-const { $isMobile } = useNuxtApp()
-const { elementX: x, elementY: y } = useMouseInElement(lightEl)
-
-const lightStyle = !$isMobile
-  ? computed<Record<string, string | number>>(() => {
-      const styles: Record<string, string | number> = {
-        '--mouse-x': `${x.value}px`,
-        '--mouse-y': `${y.value}px`,
-      }
-
-      if (!before.disabled) {
-        styles['--flare-before-color'] = before.color
-        styles['--flare-before-size'] = before.size
-      }
-
-      if (!after.disabled) {
-        styles['--flare-after-color'] = after.color
-        styles['--flare-after-size'] = after.size
-      }
-
-      return styles
-    })
-  : ''
+const { elementX, elementY, elementWidth, elementHeight } =
+  useSharedMouseInElement(lightEl)
 </script>
 
 <style lang="scss" scoped>
 .FlareItem:hover::before,
 .FlareItem:hover::after {
-  @apply opacity-100;
+  @apply opacity-100 will-change-[background];
 }
 
 .FlareItem::before,
@@ -78,8 +62,8 @@ const lightStyle = !$isMobile
 
 .FlareItem::before {
   background: radial-gradient(
-    calc(var(--flare-before-size) * 1px) circle at var(--mouse-x) var(--mouse-y),
-    var(--flare-before-color),
+    var(--fbs) circle at var(--x) var(--y),
+    var(--fbc),
     transparent 40%
   );
   z-index: -1;
@@ -87,8 +71,8 @@ const lightStyle = !$isMobile
 
 .FlareItem::after {
   background: radial-gradient(
-    calc(var(--flare-after-size) * 1px) circle at var(--mouse-x) var(--mouse-y),
-    var(--flare-after-color),
+    var(--fas) circle at var(--x) var(--y),
+    var(--fac),
     transparent 40%
   );
   z-index: 1;

@@ -40,7 +40,7 @@
         ></path>
       </svg>
     </FloatItem>
-    <FloatItem :velocity="-8" :preset="`bg`" class="-z-20 top-[51%]">
+    <FloatItem :velocity="-3" :preset="`bg`" class="-z-20 top-[52.5%]">
       <svg
         viewBox="0 0 1440 100"
         xmlns="http://www.w3.org/2000/svg"

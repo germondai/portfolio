@@ -6,6 +6,7 @@
       // display: 'contents',
       transform: transformStyle,
       transition: 'transform 0.15s ease-out',
+      'will-change': 'transform',
     }"
   >
     <slot />
@@ -34,7 +35,7 @@ const {
   isOutside: isO,
   elementHeight: elH,
   elementWidth: elW,
-} = useMouseInElement(HoloTilt)
+} = useMouseInElement(HoloTilt, { type: 'client', touch: false })
 
 const transformStyle = !$isMobile
   ? computed(() => {
@@ -44,11 +45,11 @@ const transformStyle = !$isMobile
       const rY = ((elX.value / elW.value) * rMax - rMax / 1.5).toFixed(2)
 
       return !isO.value
-        ? `perspective(${elW.value}px)
+        ? `perspective(${elW.value.toFixed()}px)
         rotateX(${rX}deg)
         rotateY(${rY}deg)
         ${scale ? `scale(${scale})` : ''}`
-        : ''
+        : 'none'
     })
   : 'none'
 </script>
