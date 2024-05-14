@@ -45,8 +45,7 @@ const { tag, before, after } = defineProps({
 })
 
 const lightEl = ref<HTMLElement>()
-const { elementX, elementY, elementWidth, elementHeight } =
-  useSharedMouseInElement(lightEl)
+const { elementX, elementY } = useSharedMouseInElement(lightEl)
 </script>
 
 <style lang="scss" scoped>

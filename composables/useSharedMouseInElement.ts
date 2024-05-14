@@ -12,6 +12,7 @@ export function useSharedMouseInElement(
   const elementY = ref(0)
   const elementWidth = ref(0)
   const elementHeight = ref(0)
+  const isOutside = ref<boolean>()
 
   if (defaultWindow) {
     watchThrottled(
@@ -22,12 +23,11 @@ export function useSharedMouseInElement(
           return
         }
 
-        const { left, top } = el.getBoundingClientRect()
+        const { top, right, bottom, left } = el.getBoundingClientRect()
 
         const eX = x.value - (left + defaultWindow!.scrollX)
         const eY = y.value - (top + defaultWindow!.scrollY)
 
-        // We don't update the value when the mouse to too far away
         if (
           Math.abs(eX) > 1500 ||
           Math.abs(eY) > 1500 ||
@@ -40,6 +40,11 @@ export function useSharedMouseInElement(
         elementY.value = eY
         elementWidth.value = el.clientWidth
         elementHeight.value = el.clientHeight
+        isOutside.value =
+          elementX.value < left ||
+          elementX.value > right ||
+          elementY.value < top ||
+          elementY.value > bottom
       },
       { immediate: true, throttle: 50 },
     )
@@ -52,5 +57,6 @@ export function useSharedMouseInElement(
     elementY,
     elementWidth,
     elementHeight,
+    isOutside,
   }
 }

@@ -1,14 +1,5 @@
 <template>
-  <component
-    :is="tag"
-    ref="HoloTilt"
-    :style="{
-      // display: 'contents',
-      transform: transformStyle,
-      transition: 'transform 0.15s ease-out',
-      'will-change': 'transform',
-    }"
-  >
+  <component :is="tag" ref="HoloTilt" class="HoloTilt" :style="transformStyle">
     <slot />
   </component>
 </template>
@@ -25,38 +16,36 @@ const { tag, scale } = defineProps({
   },
 })
 
-const { $isMobile } = useNuxtApp()
-
 const HoloTilt = ref()
 
 const {
   elementX: elX,
   elementY: elY,
-  isOutside: isO,
-  elementHeight: elH,
   elementWidth: elW,
-} = useMouseInElement(HoloTilt, { type: 'client', touch: false })
+  elementHeight: elH,
+  isOutside: isO,
+} = useMouseInElement(HoloTilt)
 
-const transformStyle = !$isMobile
-  ? computed(() => {
-      const rMax = 10
+const transformStyle = computed(() => {
+  const rMax = 10
 
-      const rX = (rMax / 2 - (elY.value / elH.value) * rMax).toFixed(2)
-      const rY = ((elX.value / elW.value) * rMax - rMax / 1.5).toFixed(2)
+  const rX = (rMax / 2 - (elY.value / elH.value) * rMax).toFixed()
+  const rY = ((elX.value / elW.value) * rMax - rMax / 1.5).toFixed()
 
-      return !isO.value
-        ? `perspective(${elW.value.toFixed()}px)
+  return !isO.value
+    ? `transform: perspective(${elW.value.toFixed()}px)
         rotateX(${rX}deg)
         rotateY(${rY}deg)
-        ${scale ? `scale(${scale})` : ''}`
-        : 'none'
-    })
-  : 'none'
+        ${scale ? `scale(${scale})` : ''};`
+    : ''
+})
 </script>
 
 <style lang="scss" scoped>
-/* .card {
-  transform: v-bind(transformStyle);
-  transition: transform 0.15s ease-out;
-} */
+.HoloTilt {
+  transform-style: preserve-3d;
+  transition: 150ms linear all;
+  transform-origin: center;
+  @apply will-change-transform transform-gpu;
+}
 </style>
