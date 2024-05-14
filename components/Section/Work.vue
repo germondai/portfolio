@@ -3,7 +3,12 @@
     <div
       class="max-lg:w-[95%] w-4/5 h-full mx-auto flex flex-col items-center justify-center gap-6"
     >
-      <div v-motion-slide-visible-once-top class="w-full flex flex-col">
+      <div
+        v-motion
+        :initial="{ y: $isMobile() ? 0 : -50, opacity: 0 }"
+        :visible-once="{ y: 0, opacity: 1 }"
+        class="w-full flex flex-col"
+      >
         <sub>{{ $t('work.sub') }}</sub>
         <h1>{{ $t('work.title') }}</h1>
         <p v-dompurify-html="$t('work.content')" class="text-justify"></p>
@@ -15,9 +20,9 @@
           v-for="(project, i) in $tm('work.projects')"
           :key="i"
           v-motion
-          :initial="{ x: -100, opacity: 0 }"
+          :initial="{ x: $isMobile() ? 0 : -100, opacity: 0 }"
           :visible-once="{ x: 0, opacity: 1 }"
-          :delay="i * 100"
+          :delay="i * ($isMobile() ? 0 : 100)"
           :scale="1.025"
           class="w-full h-full z-20"
         >

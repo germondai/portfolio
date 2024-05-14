@@ -8,7 +8,7 @@
       >
         <div
           v-motion
-          :initial="{ x: index % 2 ? -100 : 100, opacity: 0 }"
+          :initial="{ x: $isMobile() ? 0 : index % 2 ? -100 : 100, opacity: 0 }"
           :visible-once="{ x: 0, opacity: 1 }"
           class="relative max-lg:w-[85vw] max-lg:left-8 bottom-0 lg:group-odd:left-[50px] lg:group-even:-left-[495px] w-[450px] rounded-xl bg-[#ffffff1a] box-shadow-custom z-20"
         >

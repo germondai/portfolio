@@ -4,7 +4,9 @@
       class="max-md:w-[95%] w-4/5 h-full mx-auto flex max-md:flex-col-reverse items-center justify-center"
     >
       <div
-        v-motion-slide-visible-once-left
+        v-motion
+        :initial="{ x: $isMobile() ? 0 : -100, opacity: 0 }"
+        :visible-once="{ x: 0, opacity: 1 }"
         class="relative max-md:w-full max-lg:w-2/3 w-3/5 h-auto flex flex-col justify-center"
       >
         <FlareItem
@@ -114,7 +116,9 @@
         </FlareItem>
       </div>
       <div
-        v-motion-slide-visible-once-top
+        v-motion
+        :initial="{ y: $isMobile() ? 0 : -50, opacity: 0 }"
+        :visible-once="{ y: 0, opacity: 1 }"
         class="relative w-2/5 max-lg:w-1/3 h-[90%] py-12 flex items-center justify-center"
       >
         <NuxtImg

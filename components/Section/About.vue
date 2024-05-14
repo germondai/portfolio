@@ -4,7 +4,9 @@
       class="max-md:w-[95%] w-4/5 mx-auto h-full flex flex-col items-center justify-center gap-12"
     >
       <div
-        v-motion-slide-visible-once-top
+        v-motion
+        :initial="{ y: $isMobile() ? 0 : -100, opacity: 0 }"
+        :visible-once="{ y: 0, opacity: 1 }"
         class="w-full flex flex-col anim-bottom text-justify"
       >
         <sub>{{ $t('about.sub') }}</sub>
@@ -18,9 +20,9 @@
           v-for="(skill, index) in $tm('skills')"
           :key="index"
           v-motion
-          :initial="{ x: -100, opacity: 0 }"
+          :initial="{ x: $isMobile() ? 0 : -100, opacity: 0 }"
           :visible-once="{ x: 0, opacity: 1 }"
-          :delay="index * 50"
+          :delay="index * ($isMobile() ? 0 : 50)"
           class="flex flex-col items-center gap-2 anim-left"
         >
           <HoloTilt :scale="1.1">

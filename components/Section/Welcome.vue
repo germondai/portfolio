@@ -4,10 +4,12 @@
       class="w-4/5 h-full mx-auto flex max-md:flex-col gap-8 items-center justify-center"
     >
       <div
-        v-motion-slide-visible-once-left
+        v-motion
+        :initial="{ x: $isMobile() ? 0 : -100, opacity: 0 }"
+        :visible-once="{ x: 0, opacity: 1 }"
         class="max-md:w-[98%] w-3/5 flex flex-col max-md:items-center max-md:gap-2 max-md:text-center anim-left"
       >
-        <sub v-motion-roll-bottom>{{ $t('welcome.sub') }}</sub>
+        <sub>{{ $t('welcome.sub') }}</sub>
         <h1 class="max-md:leading-tight">
           {{ $t('welcome.title') }}
           <span class="text-gradient">Germond</span>
@@ -16,7 +18,6 @@
           <p class="whitespace-nowrap">{{ $t('welcome.content.base') }}</p>
           <b class="truncate">
             <TypeWriter
-              v-motion-slide-visible-once-left
               :type-array="[
                 $t('welcome.content.typewriter.0'),
                 $t('welcome.content.typewriter.1'),
@@ -29,7 +30,9 @@
         />
       </div>
       <div
-        v-motion-slide-visible-once-top
+        v-motion
+        :initial="{ y: $isMobile() ? 0 : -50, opacity: 0 }"
+        :visible-once="{ y: 0, opacity: 1 }"
         class="relative max-md:3/5 w-2/5 h-[90%] py-12 flex items-center justify-center anim-bottom"
       >
         <NuxtImg
