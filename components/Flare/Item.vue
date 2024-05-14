@@ -40,27 +40,29 @@ const { tag, before, after } = defineProps({
 })
 
 const lightEl = ref<HTMLElement>()
-
+const { $isMobile } = useNuxtApp()
 const { elementX: x, elementY: y } = useMouseInElement(lightEl)
 
-const lightStyle = computed<Record<string, string | number>>(() => {
-  const styles: Record<string, string | number> = {
-    '--mouse-x': `${x.value}px`,
-    '--mouse-y': `${y.value}px`,
-  }
+const lightStyle = !$isMobile()
+  ? computed<Record<string, string | number>>(() => {
+      const styles: Record<string, string | number> = {
+        '--mouse-x': `${x.value}px`,
+        '--mouse-y': `${y.value}px`,
+      }
 
-  if (!before.disabled) {
-    styles['--flare-before-color'] = before.color
-    styles['--flare-before-size'] = before.size
-  }
+      if (!before.disabled) {
+        styles['--flare-before-color'] = before.color
+        styles['--flare-before-size'] = before.size
+      }
 
-  if (!after.disabled) {
-    styles['--flare-after-color'] = after.color
-    styles['--flare-after-size'] = after.size
-  }
+      if (!after.disabled) {
+        styles['--flare-after-color'] = after.color
+        styles['--flare-after-size'] = after.size
+      }
 
-  return styles
-})
+      return styles
+    })
+  : ''
 </script>
 
 <style lang="scss" scoped>

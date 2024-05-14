@@ -24,6 +24,8 @@ const { tag, scale } = defineProps({
   },
 })
 
+const { $isMobile } = useNuxtApp()
+
 const HoloTilt = ref()
 
 const {
@@ -34,19 +36,21 @@ const {
   elementWidth: elW,
 } = useMouseInElement(HoloTilt)
 
-const transformStyle = computed(() => {
-  const rMax = 10
+const transformStyle = !$isMobile()
+  ? computed(() => {
+      const rMax = 10
 
-  const rX = (rMax / 2 - (elY.value / elH.value) * rMax).toFixed(2)
-  const rY = ((elX.value / elW.value) * rMax - rMax / 1.5).toFixed(2)
+      const rX = (rMax / 2 - (elY.value / elH.value) * rMax).toFixed(2)
+      const rY = ((elX.value / elW.value) * rMax - rMax / 1.5).toFixed(2)
 
-  return !isO.value
-    ? `perspective(${elW.value}px)
-      rotateX(${rX}deg)
-      rotateY(${rY}deg)
-      ${scale ? `scale(${scale})` : ''}`
-    : ''
-})
+      return !isO.value
+        ? `perspective(${elW.value}px)
+        rotateX(${rX}deg)
+        rotateY(${rY}deg)
+        ${scale ? `scale(${scale})` : ''}`
+        : ''
+    })
+  : 'none'
 </script>
 
 <style lang="scss" scoped>
