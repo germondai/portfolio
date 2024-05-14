@@ -36,7 +36,7 @@ const {
   elementWidth: elW,
 } = useMouseInElement(HoloTilt)
 
-const transformStyle = !$isMobile()
+const transformStyle = !$isMobile
   ? computed(() => {
       const rMax = 10
 

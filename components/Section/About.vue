@@ -5,7 +5,7 @@
     >
       <div
         v-motion
-        :initial="{ opacity: 0, y: $isMobile() ? 0 : -100 }"
+        :initial="{ opacity: 0, y: $isMobile ? 0 : -100 }"
         :visible-once="{ y: 0, opacity: 1 }"
         class="w-full flex flex-col anim-bottom text-justify"
       >
@@ -20,9 +20,9 @@
           v-for="(skill, index) in $tm('skills')"
           :key="index"
           v-motion
-          :initial="{ opacity: 0, x: $isMobile() ? 0 : -100 }"
+          :initial="{ opacity: 0, x: $isMobile ? 0 : -100 }"
           :visible-once="{ x: 0, opacity: 1 }"
-          :delay="index * ($isMobile() ? 0 : 50)"
+          :delay="index * ($isMobile ? 0 : 50)"
           class="flex flex-col items-center gap-2 anim-left"
         >
           <HoloTilt :scale="1.1">

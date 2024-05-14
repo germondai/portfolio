@@ -43,7 +43,7 @@ const lightEl = ref<HTMLElement>()
 const { $isMobile } = useNuxtApp()
 const { elementX: x, elementY: y } = useMouseInElement(lightEl)
 
-const lightStyle = !$isMobile()
+const lightStyle = !$isMobile
   ? computed<Record<string, string | number>>(() => {
       const styles: Record<string, string | number> = {
         '--mouse-x': `${x.value}px`,
