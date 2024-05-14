@@ -5,7 +5,7 @@
     >
       <div
         v-motion
-        :initial="{ x: $isMobile() ? 0 : -100, opacity: 0 }"
+        :initial="{ opacity: 0, x: $isMobile() ? 0 : -100 }"
         :visible-once="{ x: 0, opacity: 1 }"
         class="max-md:w-[98%] w-3/5 flex flex-col max-md:items-center max-md:gap-2 max-md:text-center anim-left"
       >
@@ -31,7 +31,7 @@
       </div>
       <div
         v-motion
-        :initial="{ y: $isMobile() ? 0 : -50, opacity: 0 }"
+        :initial="{ opacity: 0, y: $isMobile() ? 0 : -50 }"
         :visible-once="{ y: 0, opacity: 1 }"
         class="relative max-md:3/5 w-2/5 h-[90%] py-12 flex items-center justify-center anim-bottom"
       >

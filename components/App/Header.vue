@@ -1,7 +1,7 @@
 <template>
   <header
     v-motion
-    :initial="{ y: $isMobile() ? 0 : -50, opacity: 0 }"
+    :initial="{ opacity: 0, y: $isMobile() ? 0 : -50 }"
     :visible-once="{ y: 0, opacity: 1 }"
     class="fixed top-0 w-full h-[76px] flex items-end justify-center z-40"
   >

@@ -5,7 +5,7 @@
     >
       <div
         v-motion
-        :initial="{ y: $isMobile() ? 0 : -50, opacity: 0 }"
+        :initial="{ opacity: 0, y: $isMobile() ? 0 : -50 }"
         :visible-once="{ y: 0, opacity: 1 }"
         class="w-full flex flex-col"
       >
@@ -20,7 +20,7 @@
           v-for="(project, i) in $tm('work.projects')"
           :key="i"
           v-motion
-          :initial="{ x: $isMobile() ? 0 : -100, opacity: 0 }"
+          :initial="{ opacity: 0, x: $isMobile() ? 0 : -100 }"
           :visible-once="{ x: 0, opacity: 1 }"
           :delay="i * ($isMobile() ? 0 : 100)"
           :scale="1.025"
