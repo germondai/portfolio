@@ -64,6 +64,7 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@vee-validate/nuxt',
     'nuxt-icon',
+    'nuxt-booster',
   ],
 
   googleFonts: {
