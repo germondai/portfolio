@@ -4,9 +4,6 @@
       class="w-4/5 h-full mx-auto flex max-md:flex-col gap-8 items-center justify-center"
     >
       <div
-        v-motion
-        :initial="{ opacity: 0, x: $isMobile ? 0 : -100 }"
-        :visible-once="{ x: 0, opacity: 1 }"
         class="max-md:w-[98%] w-3/5 flex flex-col max-md:items-center max-md:gap-2 max-md:text-center anim-left"
       >
         <sub>{{ $t('welcome.sub') }}</sub>
@@ -30,22 +27,19 @@
         />
       </div>
       <div
-        v-motion
-        :initial="{ opacity: 0, y: $isMobile ? 0 : -50 }"
-        :visible-once="{ y: 0, opacity: 1 }"
-        class="relative max-md:3/5 w-2/5 h-[90%] py-12 flex items-center justify-center anim-bottom"
+        class="relative max-md:3/5 w-2/5 h-[90%] py-12 flex items-center justify-center anim-bottom animate-[float_2s_infinite_ease-in-out]"
       >
         <NuxtImg
           src="3D-rocket.webp"
           alt="3D Rocket"
-          loading="lazy"
-          class="absolute max-h-[90%] max-w-[528px] flex py-4 blur-[8px] opacity-30 animate-[float_2s_infinite_ease-in-out]"
+          class="absolute max-h-[90%] max-w-[528px] flex py-4 blur-[8px] opacity-30"
+          sizes="xs:112px sm:128px md:144px lg:160px xl:176px"
         />
         <NuxtImg
           src="germond-model.webp"
           alt="Germond Model"
-          loading="lazy"
-          class="max-h-[90%] max-w-[40%] animate-[float_2s_infinite_ease-in-out] drop-shadow-custom z-10"
+          class="max-h-[90%] max-w-[40%] drop-shadow-custom z-10"
+          sizes="sm:96px md:112px lg:128px xl:144px"
         />
       </div>
     </div>

@@ -126,12 +126,14 @@
           alt="Envelope Mail"
           loading="lazy"
           class="absolute max-w-[528px] max-h-[90%] flex py-4 opacity-30 blur animate-[float_2s_infinite_ease-in-out]"
+          sizes="sm:128px md:144px lg:160px xl:176px"
         />
         <NuxtImg
           src="3D-devices.webp"
           alt="Devices"
           loading="lazy"
           class="max-w-full max-h-[90%] drop-shadow-custom animate-[float_2s_infinite_ease-in-out]"
+          sizes="sm:128px md:144px lg:160px xl:176px"
         />
       </div>
     </div>

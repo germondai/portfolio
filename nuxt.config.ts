@@ -1,6 +1,25 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // ssr - when true, html loads before js so the header is open on load (faster but buggy first sec on load)
+  // ssr - when false, html and js loads at the same time, header is closed, anims go instant (longer load)
   ssr: true,
+
+  nitro: {
+    prerender: {
+      routes: [
+        '/',
+        // '/_ipx/q_85/skull.ico',
+        // '/_ipx/q_85/3D-rocket.webp',
+        // '/_ipx/q_85/germond-model.webp',
+        // '/_ipx/q_85/portfolio-chronitask.webp',
+        // '/_ipx/q_85/portfolio-germondai.webp',
+        // '/_ipx/q_85/portfolio-php-starter.webp',
+        // '/_ipx/q_85/portfolio-eshop.webp',
+        // '/_ipx/q_85/3D-envelope.webp',
+        // '/_ipx/q_85/3D-devices.webp',
+      ],
+    },
+  },
 
   devtools: { enabled: true },
 
@@ -90,8 +109,8 @@ export default defineNuxtConfig({
   },
 
   image: {
-    quality: 85,
-    format: ['webp'],
+    // quality: 85,
+    // format: ['webp'],
     dir: 'public/img/',
   },
 

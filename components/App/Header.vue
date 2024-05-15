@@ -1,17 +1,14 @@
 <template>
   <header
-    v-motion
-    :initial="{ opacity: 0, y: $isMobile ? 0 : -50 }"
-    :visible-once="{ y: 0, opacity: 1 }"
     class="fixed top-0 w-full h-[76px] flex items-end justify-center z-40"
   >
     <nav
       ref="menu"
-      :class="navStyles"
+      :class="navStyles ? 'max-lg:rounded-b-none' : ''"
       class="xl:w-3/4 lg:w-[90%] sm:w-[95%] w-[98%] h-14 sm:px-8 px-2 flex items-center justify-between max-2xs:justify-around sm:gap-8 gap-2 rounded-3xl bg-[#1f2023cc] backdrop-blur drop-shadow-md overflow-x-clip"
     >
       <ul
-        v-if="dropdown.links"
+        :class="links ? '' : 'max-sm:hidden'"
         class="max-lg:order-2 w-full flex items-center justify-between gap-4 max-sm:gap-2 max-sm:absolute top-14 left-0 max-sm:bg-[#1f2023cc] max-sm:h-14 max-sm:px-4"
       >
         <li
@@ -23,6 +20,7 @@
             :href="$rt(link.href)"
             :class="`#${mvSect}` == $rt(link.href) ? 'active' : ''"
             class="relative px-2 py-1 opacity-50 hover:opacity-100 transition-opacity"
+            @click="toggleUls(false)"
           >
             {{ $rt(link.name) }}
           </NuxtLink>
@@ -36,10 +34,13 @@
           src="skull.ico"
           alt="Skull Icon"
           class="max-w-max h-full hover:animate-[shake_.3s] anim"
+          width="76px"
+          height="76px"
+          @click="toggleUls(false)"
         />
       </NuxtLink>
       <ul
-        v-if="dropdown.icons"
+        :class="[icons ? '' : 'max-lg:hidden']"
         class="w-full flex items-center justify-between max-sm:justify-between max-lg:justify-around gap-4 max-sm:gap-2 max-sm:top-28 max-lg:top-14 left-0 max-lg:bg-[#1f2023cc] max-lg:absolute max-lg:h-14 max-lg:px-4 max-lg:rounded-b-3xl"
       >
         <li v-for="(social, index) in $tm('socials')" :key="index" class="flex">
@@ -48,6 +49,7 @@
             target="blank"
             :title="$rt(social.name)"
             class="relative px-2 py-1 opacity-50 hover:opacity-100 transition-opacity"
+            @click="toggleUls(false)"
           >
             <Icon :name="$rt(social.icon)" color="white" class="size-9" />
           </NuxtLink>
@@ -57,7 +59,7 @@
       <button
         class="lg:hidden h-4/5 flex flex-col items-center justify-around mx-2 order-3 cursor-pointer bg-transparent"
         title="Menu"
-        @click.stop="menuToggle(true)"
+        @click="toggleUls()"
       >
         <span
           v-for="index in 3"
@@ -72,50 +74,42 @@
 <script lang="ts" setup>
 const { width, height } = useWindowSize()
 
-// dropdown links and icons
-const dropdown = ref({
-  links: false,
-  icons: false,
-})
+const menu = ref()
+const links = ref(false)
+const icons = ref(false)
 
 const navStyles = computed(() => {
-  return (width.value < 1024 && dropdown.value.icons) ||
-    (width.value < 640 && dropdown.value.links)
+  return (width.value < 1024 && icons.value) ||
+    (width.value < 640 && links.value)
     ? 'max-lg:rounded-b-none'
     : ''
 })
 
-const menuToggle = (val: boolean) => {
-  dropdown.value.icons =
-    width.value < 1024 && dropdown.value.icons ? false : val
-  dropdown.value.links =
-    width.value < 640 ? dropdown.value.icons : dropdown.value.links
+const toggleUls = (val?: boolean) => {
+  if (width.value >= 640 && width.value < 1024) {
+    icons.value = val ?? !icons.value
+  } else if (width.value < 640) {
+    links.value = icons.value = val ?? !links.value
+  }
 }
 
-watchEffect(() => {
-  dropdown.value.links = width.value >= 640 ? true : dropdown.value.icons
-  dropdown.value.icons =
-    width.value >= 1024 || (width.value < 640 && dropdown.value.icons)
-})
+const handleResize = () => {
+  links.value = width.value >= 640
+  icons.value = width.value >= 1024
+}
 
-const menu = ref(null)
-onClickOutside(menu, () => menuToggle(dropdown.value.icons))
+onClickOutside(menu, () => toggleUls(false))
+useEventListener(window, 'resize', handleResize)
 
 // Highlight link by section
-onMounted(() => {
-  calculateLargestSection()
-  window.addEventListener('scroll', calculateLargestSection)
-})
-
 const mvSect = ref('')
 const calculateLargestSection = () => {
   const sections = document.querySelectorAll('main > section')
   const sectionsInfo: { y: number; id: string }[] = []
 
   sections.forEach((section) => {
-    const { top, bottom } = useElementBounding(section as HTMLElement)
-    const elementPartHeight =
-      Math.min(bottom.value, height.value) - Math.max(top.value, 0)
+    const { top, bottom } = section.getBoundingClientRect()
+    const elementPartHeight = Math.min(bottom, height.value) - Math.max(top, 0)
     sectionsInfo.push({
       y: elementPartHeight,
       id: section.id == 'timeline' ? 'about' : section.id,
@@ -124,6 +118,9 @@ const calculateLargestSection = () => {
 
   mvSect.value = sectionsInfo.sort((a, b) => b.y - a.y)[0].id
 }
+
+onMounted(calculateLargestSection)
+useEventListener('scroll', calculateLargestSection)
 </script>
 
 <style lang="scss" scoped>

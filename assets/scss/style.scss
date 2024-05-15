@@ -99,7 +99,7 @@ section#welcome,
 section#about,
 section#work,
 section#contact {
-  @apply py-24 min-h-screen;
+  @apply py-24 min-h-dvh;
 }
 
 section {
@@ -119,26 +119,20 @@ section#contact {
 #about .FloatCont svg,
 #work .FloatCont svg,
 #contact .FloatCont svg {
-  @apply absolute -left-[5%] w-[110%] h-full min-w-[1400px] aspect-[1400/810] -z-40 pointer-events-none;
+  @apply absolute -left-[5%] max-w-[inherit] w-[110%] min-h-[60dvh] max-h-full -z-40 pointer-events-none;
 }
 
 #welcome .FloatCont svg {
-  @apply -top-[5%] rotate-180;
+  @apply -top-[5%] min-h-dvh rotate-180;
 }
 
 #about .FloatCont svg,
 #work .FloatCont svg {
-  @apply top-0;
+  @apply top-0 h-full;
 }
 
 #contact .FloatCont svg {
   @apply bottom-0;
-}
-
-@media (max-width: 768px) {
-  #work .FloatCont svg {
-    @apply -left-[65%];
-  }
 }
 
 .text-gradient {
@@ -221,9 +215,9 @@ section#contact {
   @apply absolute top-3.5 left-4 pr-2.5 w-[calc(100%-0.5rem)] inline-block truncate leading-none pointer-events-none;
 }
 
-.form input:required ~ label,
-.form textarea:required ~ label,
-.form select:required ~ label {
+.form input:required~label,
+.form textarea:required~label,
+.form select:required~label {
   @apply flex items-center before:content-['*'] before:text-red-600 before:ml-1 before:mt-0.5 before:order-2 before:text-xl before:leading-none;
 }
 
@@ -257,12 +251,12 @@ section#contact {
   @apply text-transparent;
 }
 
-.form input:focus ~ label,
-.form input:not(:placeholder-shown) ~ label,
-.form textarea:focus ~ label,
-.form textarea:not(:placeholder-shown) ~ label,
-.form select:focus ~ label,
-.form select:not(:placeholder-shown) ~ label {
+.form input:focus~label,
+.form input:not(:placeholder-shown)~label,
+.form textarea:focus~label,
+.form textarea:not(:placeholder-shown)~label,
+.form select:focus~label,
+.form select:not(:placeholder-shown)~label {
   @apply text-xs top-0 left-2 opacity-60;
 }
 
