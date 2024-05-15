@@ -5,7 +5,7 @@
     <nav
       ref="menu"
       :class="navStyles ? 'max-lg:rounded-b-none' : ''"
-      class="xl:w-3/4 lg:w-[90%] sm:w-[95%] w-[98%] h-14 sm:px-8 px-2 flex items-center justify-between max-2xs:justify-around sm:gap-8 gap-2 rounded-3xl bg-[#1f2023cc] backdrop-blur drop-shadow-md overflow-x-clip"
+      class="xl:w-3/4 lg:w-[90%] sm:w-[95%] w-[98%] h-14 sm:px-8 px-2 flex items-center justify-between max-2xs:justify-around sm:gap-8 gap-2 rounded-3xl bg-[#1f2023cc] backdrop-blur drop-shadow-md"
     >
       <ul
         :class="links ? '' : 'max-sm:hidden'"
@@ -41,7 +41,7 @@
       </NuxtLink>
       <ul
         :class="[icons ? '' : 'max-lg:hidden']"
-        class="w-full flex items-center justify-between max-sm:justify-between max-lg:justify-around gap-4 max-sm:gap-2 max-sm:top-28 max-lg:top-14 left-0 max-lg:bg-[#1f2023cc] max-lg:absolute max-lg:h-14 max-lg:px-4 max-lg:rounded-b-3xl"
+        class="w-full flex items-center justify-between max-sm:justify-between max-lg:justify-around gap-4 max-sm:gap-2 max-sm:top-28 max-lg:top-14 left-0 max-lg:bg-[#1f2023cc] max-lg:absolute max-lg:h-14 max-lg:px-4 max-lg:rounded-b-3xl backdrop-blur"
       >
         <li v-for="(social, index) in $tm('socials')" :key="index" class="flex">
           <NuxtLink
