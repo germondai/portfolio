@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */
 export default defineNuxtPlugin((nuxtApp) => {
   function isMobile() {
     if (process.client) {

@@ -16,8 +16,6 @@ const { tag, preset } = defineProps({
     default: '',
   },
 })
-
-const presetClass = preset === 'bg' ? `` : ''
 </script>
 
 <style lang="scss">
