@@ -1,7 +1,7 @@
 <template>
   <section id="welcome">
     <div
-      class="w-4/5 h-full mx-auto flex max-md:flex-col gap-8 items-center justify-center"
+      class="w-4/5 h-full mx-auto flex max-md:flex-col max-md:gap-4 gap-8 items-center justify-center"
     >
       <div
         class="max-md:w-[98%] w-3/5 flex flex-col max-md:items-center max-md:gap-2 max-md:text-center anim-left"
