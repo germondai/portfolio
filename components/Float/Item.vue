@@ -2,8 +2,8 @@
   <component
     :is="tag"
     ref="float"
-    class="absolute pointer-events-none FloatItem will-change-transform"
-    :class="presetClass"
+    class="FloatItem"
+    :class="preset ?? ''"
     :style="{
       transform: `translate(${!$isMobile ? parallaxStyle.x : 0}px, ${!$isMobile ? parallaxStyle.y : 0}px)`,
     }"
@@ -29,8 +29,6 @@ const { tag, velocity, preset } = defineProps({
   },
 })
 
-const { $isMobile } = useNuxtApp()
-const presetClass = preset === 'bg' ? `w-full h-full -z-[999]` : ''
 const float = ref()
 const {
   elementX: x,
@@ -47,4 +45,11 @@ const parallaxStyle = computed(() => {
 })
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.FloatItem {
+  @apply absolute pointer-events-none will-change-transform;
+  &.bg {
+    @apply w-full h-full -z-[999];
+  }
+}
+</style>

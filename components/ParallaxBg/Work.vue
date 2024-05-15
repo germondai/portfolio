@@ -1,6 +1,6 @@
 <template>
   <FloatCont :preset="`bg`">
-    <FloatItem :velocity="8" :preset="`bg`" class="-z-30">
+    <FloatItem :velocity="8" :preset="`bg`">
       <svg viewBox="0 0 1440 560" preserveAspectRatio="none">
         <path
           d="M 0,75 C 96,68.6 288,40.8 480,43 C 672,45.2 768,93 960,86 C 1152,79 1344,23.6 1440,8L1440 560L0 560z"
@@ -8,7 +8,7 @@
         ></path>
       </svg>
     </FloatItem>
-    <FloatItem :velocity="5" :preset="`bg`" class="-z-30">
+    <FloatItem :velocity="5" :preset="`bg`">
       <svg viewBox="0 0 1440 560" preserveAspectRatio="none">
         <path
           d="M 0,106 C 96,120.8 288,174.4 480,180 C 672,185.6 768,132.8 960,134 C 1152,135.2 1344,175.6 1440,186L1440 560L0 560z"
@@ -16,7 +16,7 @@
         ></path>
       </svg>
     </FloatItem>
-    <FloatItem :velocity="2" :preset="`bg`" class="-z-30">
+    <FloatItem :velocity="2" :preset="`bg`">
       <svg viewBox="0 0 1440 560" preserveAspectRatio="none">
         <path
           d="M 0,269 C 96,258.4 288,217.4 480,216 C 672,214.6 768,267.6 960,262 C 1152,256.4 1344,202.8 1440,188L1440 560L0 560z"
@@ -24,7 +24,7 @@
         ></path>
       </svg>
     </FloatItem>
-    <FloatItem :velocity="-0.5" :preset="`bg`" class="-z-30">
+    <FloatItem :velocity="-0.5" :preset="`bg`">
       <svg viewBox="0 0 1440 560" preserveAspectRatio="none">
         <path
           d="M 0,294 C 96,303.6 288,337 480,342 C 672,347 768,321.4 960,319 C 1152,316.6 1344,327.8 1440,330L1440 560L0 560z"
@@ -32,7 +32,7 @@
         ></path>
       </svg>
     </FloatItem>
-    <FloatItem :velocity="-3" :preset="`bg`" class="-z-30">
+    <FloatItem :velocity="-3" :preset="`bg`">
       <svg viewBox="0 0 1440 560" preserveAspectRatio="none">
         <path
           d="M 0,434 C 96,425.2 288,387 480,390 C 672,393 768,446.8 960,449 C 1152,451.2 1344,410.6 1440,401L1440 560L0 560z"
@@ -43,7 +43,7 @@
     <FloatItem
       :velocity="-3"
       :preset="`bg`"
-      class="-z-20 max-lg:top-[50%] top-[52.5%]"
+      class="max-lg:top-[50%] top-[52.5%]"
     >
       <svg
         viewBox="0 0 1440 100"

@@ -2,7 +2,7 @@
   <component
     :is="tag"
     ref="lightEl"
-    class="relative FlareItem"
+    class="FlareItem"
     :style="{
       '--x': `${!$isMobile ? elementX.toFixed() : -9999}px`,
       '--y': `${!$isMobile ? elementY.toFixed() : -9999}px`,
@@ -49,6 +49,10 @@ const { elementX, elementY } = useSharedMouseInElement(lightEl)
 </script>
 
 <style lang="scss" scoped>
+.FlareItem {
+  @apply relative;
+}
+
 .FlareItem:hover::before,
 .FlareItem:hover::after {
   @apply opacity-100 will-change-[background];

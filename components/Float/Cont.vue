@@ -1,9 +1,5 @@
 <template>
-  <component
-    :is="tag"
-    class="pointer-events-none FloatCont"
-    :class="presetClass"
-  >
+  <component :is="tag" class="FloatCont" :class="preset ?? ''">
     <slot />
   </component>
 </template>
@@ -21,12 +17,14 @@ const { tag, preset } = defineProps({
   },
 })
 
-const presetClass =
-  preset === 'bg' ? `absolute top-0 w-full h-full -z-[999]` : ''
+const presetClass = preset === 'bg' ? `` : ''
 </script>
 
 <style lang="scss">
-// .FloatCont:hover .FloatItem {
-//   transform: none;
-// }
+.FloatCont {
+  @apply pointer-events-none;
+  &.bg {
+    @apply absolute top-0 w-full h-full -z-[999];
+  }
+}
 </style>

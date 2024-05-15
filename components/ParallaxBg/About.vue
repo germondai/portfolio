@@ -1,6 +1,6 @@
 <template>
   <FloatCont :preset="`bg`">
-    <FloatItem :velocity="7" :preset="`bg`" class="-z-30">
+    <FloatItem :velocity="7" :preset="`bg`">
       <svg viewBox="0 0 1440 560" preserveAspectRatio="none">
         <path
           d="M 0,26 C 96,34.8 288,68.2 480,70 C 672,71.8 768,33.6 960,35 C 1152,36.4 1344,68.6 1440,77L1440 560L0 560z"
@@ -8,7 +8,7 @@
         ></path>
       </svg>
     </FloatItem>
-    <FloatItem :velocity="5" :preset="`bg`" class="-z-30">
+    <FloatItem :velocity="5" :preset="`bg`">
       <svg viewBox="0 0 1440 560" preserveAspectRatio="none">
         <path
           d="M 0,100 C 96,115.8 288,171.2 480,179 C 672,186.8 768,142 960,139 C 1152,136 1344,159 1440,164L1440 560L0 560z"
@@ -16,7 +16,7 @@
         ></path>
       </svg>
     </FloatItem>
-    <FloatItem :velocity="2" :preset="`bg`" class="-z-30">
+    <FloatItem :velocity="2" :preset="`bg`">
       <svg
         class="float"
         data-value="2"
@@ -29,7 +29,7 @@
         ></path>
       </svg>
     </FloatItem>
-    <FloatItem :velocity="-0.5" :preset="`bg`" class="-z-30">
+    <FloatItem :velocity="-0.5" :preset="`bg`">
       <svg
         class="float"
         data-value="-0.5"
@@ -42,7 +42,7 @@
         ></path>
       </svg>
     </FloatItem>
-    <FloatItem :velocity="-4" :preset="`bg`" class="-z-30">
+    <FloatItem :velocity="-4" :preset="`bg`">
       <svg
         class="float"
         data-value="-4"
@@ -58,7 +58,7 @@
     <FloatItem
       :velocity="-4"
       :preset="`bg`"
-      class="-z-20 max-xs:top-[50%] max-lg:top-[51.5%] top-[53.5%]"
+      class="max-xs:top-[50%] max-lg:top-[51.5%] top-[53.5%]"
     >
       <svg
         viewBox="0 0 1440 100"
