@@ -123,7 +123,7 @@ section#contact {
 
     svg,
     img {
-      @apply absolute -left-[5%] max-w-[inherit] w-[110%] min-h-[60vh] max-h-full -z-40 pointer-events-none;
+      @apply absolute -left-[5%] max-w-[inherit] w-[110%] min-h-[60vh] max-h-screen -z-40 pointer-events-none;
     }
   }
 }
