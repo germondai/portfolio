@@ -14,8 +14,10 @@ const { tag } = defineProps({
 </script>
 
 <style lang="scss">
-.FlareCont:hover .FlareItem::before,
-.FlareCont:hover .FlareItem::after {
-  opacity: 1;
+.FlareCont:hover .FlareItem {
+  &::after,
+  &::before {
+    opacity: 1;
+  }
 }
 </style>

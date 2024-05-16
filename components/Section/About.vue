@@ -37,7 +37,8 @@
         </div>
       </div>
     </div>
-    <ParallaxBgAbout />
+    <BgBlob color="#251E3966" class="top-[40%] w-2/5" />
+    <BgBlob color="#251E39aa" class="top-[80%] left-[80%] w-1/3" />
   </section>
 </template>
 

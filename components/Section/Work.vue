@@ -23,7 +23,7 @@
           :initial="{ opacity: 0, x: $device.isMobile ? 0 : -100 }"
           :visible-once="{ x: 0, opacity: 1 }"
           :delay="i * ($device.isMobile ? 0 : 100)"
-          :scale="1.025"
+          :hover="{ scale: 1.025 }"
           class="w-full h-full z-20"
         >
           <HoloTilt>
@@ -82,7 +82,9 @@
         </div>
       </div>
     </div>
-    <ParallaxBgWork />
+    <BgBlob color="#251E3933" class="left-0 top-[25%] w-2/5" />
+    <BgBlob color="#251E3988" class="left-[75%] top-[75%] w-1/4" />
+    <BgBlob color="#251E3955" class="left-[25%] top-[105%] w-1/5" />
   </FlareCont>
 </template>
 

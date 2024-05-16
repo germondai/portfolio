@@ -22,7 +22,7 @@ const { tag, preset } = defineProps({
 .FloatCont {
   @apply pointer-events-none;
   &.bg {
-    @apply absolute top-0 w-full h-full -z-[999];
+    @apply absolute top-0 w-full h-full -z-[150];
   }
 }
 </style>

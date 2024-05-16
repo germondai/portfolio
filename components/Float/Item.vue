@@ -47,6 +47,9 @@ const parallaxStyle = computed(() => {
 
 <style lang="scss" scoped>
 .FloatItem {
+  transform-style: preserve-3d;
+  transition: 150ms linear all;
+  transform-origin: center;
   @apply absolute pointer-events-none will-change-transform;
   &.bg {
     @apply w-full h-full -z-[999];

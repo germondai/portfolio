@@ -4,6 +4,10 @@ export default defineNuxtConfig({
   // ssr - when false, html and js loads at the same time, header is closed, anims go instant (longer load)
   ssr: true,
 
+  booster: {
+    disableNuxtFontaine: true,
+  },
+
   nitro: {
     prerender: {
       routes: [

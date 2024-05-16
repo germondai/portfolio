@@ -4,7 +4,7 @@
       <li
         v-for="(item, index) in $tm('timeline')"
         :key="index"
-        class="group relative w-[7px] mx-auto bg-[#251e39] max-lg:pt-6 pt-12 first:pt-[200px] first:-mt-[200px] first:rounded-t-2xl last:pb-[200px] last:-mb-[200px] last:rounded-b-2xl max-lg:ml-2.5"
+        class="group relative w-[7px] mx-auto bg-[#251e39] max-lg:pt-6 pt-12 first:rounded-t-2xl last:rounded-b-2xl max-lg:ml-2.5"
       >
         <div
           v-motion
@@ -39,6 +39,8 @@
         </div>
       </li>
     </ul>
+    <BgBlob color="#251E3933" class="left-0 top-[25%] w-2/5" />
+    <BgBlob color="#251E3966" class="left-full top-[75%] w-3/5" />
   </FlareCont>
 </template>
 

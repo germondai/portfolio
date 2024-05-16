@@ -44,6 +44,7 @@
       </div>
     </div>
     <ParallaxBgWelcome />
+    <BgBlob color="#251E3944" class="left-full top-[90%] w-2/5" />
   </section>
 </template>
 
