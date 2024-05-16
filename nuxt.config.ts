@@ -65,6 +65,7 @@ export default defineNuxtConfig({
     '@vee-validate/nuxt',
     'nuxt-icon',
     'nuxt-booster',
+    '@nuxtjs/device',
   ],
 
   googleFonts: {

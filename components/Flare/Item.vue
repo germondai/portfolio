@@ -4,8 +4,8 @@
     ref="lightEl"
     class="FlareItem"
     :style="{
-      '--x': `${!$isMobile ? elementX.toFixed() : -9999}px`,
-      '--y': `${!$isMobile ? elementY.toFixed() : -9999}px`,
+      '--x': `${!$device.isMobile ? elementX.toFixed() : -9999}px`,
+      '--y': `${!$device.isMobile ? elementY.toFixed() : -9999}px`,
       '--fbc': before.color,
       '--fbs': `${before.size}px`,
       '--fac': after.color,

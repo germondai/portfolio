@@ -16,7 +16,7 @@ const { tag, scale } = defineProps({
   },
 })
 
-const { $isMobile } = useNuxtApp()
+const { $device.isMobile } = useNuxtApp()
 const HoloTilt = ref()
 
 const {
@@ -33,7 +33,7 @@ const transformStyle = computed(() => {
   const rX = (rMax / 2 - (elY.value / elH.value) * rMax).toFixed()
   const rY = ((elX.value / elW.value) * rMax - rMax / 1.5).toFixed()
 
-  return !isO.value && !$isMobile
+  return !isO.value && !$device.isMobile
     ? `transform: perspective(${elW.value.toFixed()}px)
         rotateX(${rX}deg)
         rotateY(${rY}deg)

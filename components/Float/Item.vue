@@ -5,7 +5,7 @@
     class="FloatItem"
     :class="preset ?? ''"
     :style="{
-      transform: `translate(${!$isMobile ? parallaxStyle.x : 0}px, ${!$isMobile ? parallaxStyle.y : 0}px)`,
+      transform: `translate(${!$device.isMobile ? parallaxStyle.x : 0}px, ${!$device.isMobile ? parallaxStyle.y : 0}px)`,
     }"
   >
     <slot />
