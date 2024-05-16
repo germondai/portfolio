@@ -5,7 +5,16 @@ export default defineNuxtConfig({
   ssr: true,
 
   booster: {
+    detection: {
+      // ! when true doesnt work on android phones (low/mid ones)
+      performance: false,
+      browserSupport: true,
+      battery: true,
+    },
+    // ! when false error - punycode deprecated
     disableNuxtFontaine: true,
+    // ! when true erro - cant embed css
+    optimizePreloads: true,
   },
 
   nitro: {
