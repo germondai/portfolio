@@ -107,16 +107,19 @@ const calculateLargestSection = () => {
   const sections = document.querySelectorAll('main > section')
   const sectionsInfo: { y: number; id: string }[] = []
 
-  sections.forEach((section) => {
-    const { top, bottom } = section.getBoundingClientRect()
-    const elementPartHeight = Math.min(bottom, height.value) - Math.max(top, 0)
-    sectionsInfo.push({
-      y: elementPartHeight,
-      id: section.id == 'timeline' ? 'about' : section.id,
+  if (sections.length > 0) {
+    sections.forEach((section) => {
+      const { top, bottom } = section.getBoundingClientRect()
+      const elementPartHeight =
+        Math.min(bottom, height.value) - Math.max(top, 0)
+      sectionsInfo.push({
+        y: elementPartHeight,
+        id: section.id == 'timeline' ? 'about' : section.id,
+      })
     })
-  })
 
-  mvSect.value = sectionsInfo.sort((a, b) => b.y - a.y)[0].id
+    mvSect.value = sectionsInfo.sort((a, b) => b.y - a.y)[0].id
+  }
 }
 
 onMounted(calculateLargestSection)
