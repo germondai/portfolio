@@ -18,7 +18,12 @@
         >
           <NuxtLink
             :href="$rt(link.href)"
-            :class="`#${mvSect}` == $rt(link.href) ? 'active' : ''"
+            :class="
+              `#${largestSection == 'timeline' ? 'about' : largestSection}` ==
+              $rt(link.href)
+                ? 'active'
+                : ''
+            "
             class="relative px-2 py-1 opacity-50 hover:opacity-100 transition-opacity"
             @click="toggleUls(false)"
           >
@@ -72,7 +77,8 @@
 </template>
 
 <script lang="ts" setup>
-const { width, height } = useWindowSize()
+const { largestSection } = usePageSections()
+const { width } = useWindowSize()
 
 const menu = ref()
 const links = ref(false)
@@ -100,30 +106,6 @@ const handleResize = () => {
 
 onClickOutside(menu, () => toggleUls(false))
 useEventListener(window, 'resize', handleResize)
-
-// Highlight link by section
-const mvSect = ref('')
-const calculateLargestSection = () => {
-  const sections = document.querySelectorAll('main > section')
-  const sectionsInfo: { y: number; id: string }[] = []
-
-  if (sections.length > 0) {
-    sections.forEach((section) => {
-      const { top, bottom } = section.getBoundingClientRect()
-      const elementPartHeight =
-        Math.min(bottom, height.value) - Math.max(top, 0)
-      sectionsInfo.push({
-        y: elementPartHeight,
-        id: section.id == 'timeline' ? 'about' : section.id,
-      })
-    })
-
-    mvSect.value = sectionsInfo.sort((a, b) => b.y - a.y)[0].id
-  }
-}
-
-onMounted(calculateLargestSection)
-useEventListener('scroll', calculateLargestSection)
 </script>
 
 <style lang="scss" scoped>
