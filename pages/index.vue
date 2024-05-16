@@ -3,7 +3,7 @@
     <SectionWelcome />
     <SectionAbout />
     <SectionTimeline />
-    <LazySectionWork />
+    <SectionWork />
     <SectionContact />
   </main>
 </template>
