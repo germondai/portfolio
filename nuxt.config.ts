@@ -114,6 +114,13 @@ export default defineNuxtConfig({
     // quality: 85,
     // format: ['webp'],
     dir: 'public/img/',
+
+    // for nuxt-booster
+    domains: ['img.youtube.com', 'i.vimeocdn.com'],
+    alias: {
+      youtube: 'https://img.youtube.com',
+      vimeo: 'https://i.vimeocdn.com',
+    },
   },
 
   i18n: {
