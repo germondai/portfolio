@@ -60,7 +60,7 @@ const { elementX, elementY } = useSharedMouseInElement(lightEl)
 
 .FlareItem::before,
 .FlareItem::after {
-  @apply content-[''] absolute top-0 left-0 w-full h-full opacity-0 rounded-[inherit] pointer-events-none duration-500 transition-opacity;
+  @apply content-[''] absolute top-0 left-0 w-full h-full rounded-[inherit] pointer-events-none duration-500 transition-opacity;
 }
 
 .FlareItem::before {

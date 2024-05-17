@@ -11,13 +11,25 @@ const { tag } = defineProps({
     default: 'div',
   },
 })
+
+// use this component only if you want to light up the item only on cont hover
+// otherwise its useless
 </script>
 
 <style lang="scss">
-.FlareCont:hover .FlareItem {
-  &::after,
-  &::before {
-    opacity: 1;
+.FlareCont {
+  .FlareItem {
+    &::after,
+    &::before {
+      opacity: 0;
+    }
+  }
+
+  &:hover .FlareItem {
+    &::after,
+    &::before {
+      opacity: 1;
+    }
   }
 }
 </style>

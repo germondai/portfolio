@@ -18,12 +18,6 @@
         >
           <NuxtLink
             :href="$rt(link.href)"
-            :class="
-              `#${largestSection == 'timeline' ? 'about' : largestSection}` ==
-              $rt(link.href)
-                ? 'active'
-                : ''
-            "
             class="relative px-2 py-1 opacity-50 hover:opacity-100 transition-opacity"
             @click="toggleUls(false)"
           >
@@ -77,7 +71,7 @@
 </template>
 
 <script lang="ts" setup>
-const { largestSection } = usePageSections()
+// const { largestSection } = usePageSections()
 const { width } = useWindowSize()
 
 const menu = ref()
@@ -113,7 +107,7 @@ header nav a::after {
   @apply content-[''] absolute left-0 bottom-1 w-full h-0.5 rounded-2xl bg-white opacity-0 duration-300 transition-opacity;
 }
 
-header nav a.active::after {
-  @apply opacity-70 hover:opacity-100;
-}
+// header nav a.active::after {
+//   @apply opacity-70 hover:opacity-100;
+// }
 </style>
