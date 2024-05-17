@@ -6,6 +6,9 @@ export const usePageSections = () => {
 
   if (process.client) {
     const calculateLargestSection = () => {
+      let largestHeight = 0
+      let largestSectionId = ''
+
       const allSections = document.querySelectorAll('main > section')
 
       if (allSections.length > 0) {
@@ -19,6 +22,11 @@ export const usePageSections = () => {
             (info) => info.id === section.id,
           )
 
+          if (elementPartHeight > largestHeight) {
+            largestHeight = elementPartHeight
+            largestSectionId = section.id
+          }
+
           if (existingIndex !== -1) {
             sections.value[existingIndex].y = elementPartHeight
           } else {
@@ -29,7 +37,7 @@ export const usePageSections = () => {
           }
         })
 
-        largestSection.value = sections.value.sort((a, b) => b.y - a.y)[0].id
+        largestSection.value = largestSectionId
       }
     }
 
