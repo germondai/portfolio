@@ -1,9 +1,7 @@
 <template>
   <div>
-    <section id="extras-fixed">
-      <BtnScrollToTop />
-      <FlyingRocket />
-    </section>
+    <BtnScrollToTop />
+    <FlyingRocket />
     <AppHeader />
     <slot />
     <AppFooter />
