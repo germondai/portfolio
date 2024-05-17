@@ -1,5 +1,5 @@
 <template>
-  <FlareCont id="work" :tag="'section'">
+  <section id="work">
     <div
       class="max-lg:w-[95%] w-4/5 h-full mx-auto flex flex-col items-center justify-center gap-6"
     >
@@ -85,7 +85,7 @@
     <BgBlob color="#251E3933" class="left-0 top-[25%] w-2/5" />
     <BgBlob color="#251E3988" class="left-[75%] top-[75%] w-1/4" />
     <BgBlob color="#251E3955" class="left-[25%] top-[105%] w-1/5" />
-  </FlareCont>
+  </section>
 </template>
 
 <script lang="ts" setup></script>

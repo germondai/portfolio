@@ -1,5 +1,5 @@
 <template>
-  <FlareCont id="timeline" :tag="'section'" class="flex flex-col">
+  <section id="timeline" class="flex flex-col">
     <ul class="pt-[150px] w-full">
       <li
         v-for="(item, index) in $tm('timeline')"
@@ -41,7 +41,7 @@
     </ul>
     <BgBlob color="#251E3933" class="left-0 top-[25%] w-2/5" />
     <BgBlob color="#251E3966" class="left-full top-[75%] w-3/5" />
-  </FlareCont>
+  </section>
 </template>
 
 <script lang="ts" setup></script>

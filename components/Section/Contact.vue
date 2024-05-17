@@ -1,5 +1,5 @@
 <template>
-  <FlareCont id="contact" :tag="'section'">
+  <section id="contact">
     <div
       class="max-md:w-[95%] w-4/5 h-full mx-auto flex max-md:flex-col-reverse items-center justify-center"
     >
@@ -138,7 +138,7 @@
       </div>
     </div>
     <ParallaxBgContact />
-  </FlareCont>
+  </section>
 </template>
 
 <script lang="ts" setup>
