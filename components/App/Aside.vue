@@ -1,7 +1,7 @@
 <template>
   <DevOnly>
     <aside
-      class="fixed lg:top-1/2 max-lg:bottom-0 xl:right-4 lg:right-2 max-lg:left-1/2 z-30"
+      class="fixed lg:top-1/2 xs:top-[90%] max-xs:top-[94%] lg:left-[95%] max-lg:left-1/2 z-30"
     >
       <FlareItem
         class="p-0.5 rounded-2xl"
