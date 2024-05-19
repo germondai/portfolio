@@ -12,7 +12,7 @@ export default defineNuxtConfig({
       battery: true,
     },
     // ! when false error - punycode deprecated
-    disableNuxtFontaine: true,
+    disableNuxtFontaine: false,
     // ! when true erro - cant embed css
     optimizePreloads: true,
   },
