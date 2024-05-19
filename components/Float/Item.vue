@@ -5,7 +5,7 @@
     class="FloatItem"
     :class="preset ?? ''"
     :style="{
-      transform: `translate(${!$device.isMobile ? parallaxStyle.x : 0}px, ${!$device.isMobile ? parallaxStyle.y : 0}px)`,
+      transform: `translate(${parallaxStyle.x}px, ${parallaxStyle.y}px)`,
     }"
   >
     <slot />
@@ -29,6 +29,8 @@ const { tag, velocity, preset } = defineProps({
   },
 })
 
+const { isMobile } = useDevice()
+
 const float = ref()
 const {
   elementX: x,
@@ -39,8 +41,10 @@ const {
 
 const parallaxStyle = computed(() => {
   return {
-    x: (((x.value - elW.value / 2) * velocity) / 100).toFixed(),
-    y: (((y.value - elH.value / 10) * velocity) / 200).toFixed(),
+    x: !isMobile ? (((x.value - elW.value / 2) * velocity) / 100).toFixed() : 0,
+    y: !isMobile
+      ? (((y.value - elH.value / 10) * velocity) / 200).toFixed()
+      : 0,
   }
 })
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <FloatCont :preset="`bg`">
+  <FloatCont v-if="!$device.isMobile" :preset="`bg`">
     <FloatItem :velocity="8" :preset="`bg`">
       <svg viewBox="0 0 1440 560" preserveAspectRatio="none">
         <path
