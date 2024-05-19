@@ -1,44 +1,6 @@
 <template>
   <section id="timeline" class="flex flex-col">
-    <ul class="pt-[150px] w-full">
-      <li
-        v-for="(item, index) in $tm('timeline')"
-        :key="index"
-        class="group relative w-[7px] mx-auto bg-[#251e39] max-lg:pt-6 pt-12 first:rounded-t-2xl last:rounded-b-2xl max-lg:ml-2.5"
-      >
-        <div
-          v-motion
-          :initial="{
-            opacity: 0,
-            x: $device.isMobile ? 0 : index % 2 ? -100 : 100,
-          }"
-          :visible-once="{ x: 0, opacity: 1 }"
-          class="relative max-lg:w-[85vw] max-lg:left-8 bottom-0 lg:group-odd:left-[50px] lg:group-even:-left-[495px] w-[450px] rounded-xl bg-[#ffffff1a] box-shadow-custom z-20"
-        >
-          <FlareItem class="rounded-xl p-0.5">
-            <div
-              class="max-lg:before:-left-4 max-lg:before:border-r-[16px] lg:group-odd:before:-left-4 lg:group-odd:before:border-r-[16px] lg:group-even:before:-right-4 lg:group-even:before:border-l-[16px] before:absolute before:top-2.5 before:border-y-8 before:border-[transparent_#ffffff1a] box rounded-xl z-10 bg-[#0d0d0faa]"
-            >
-              <b
-                class="rounded-t-xl flex items-center gap-4 py-4 px-2.5 bg-[#251E39aa] whitespace-nowrap"
-              >
-                <span class="px-4 py-1 bg-white text-black rounded-xl">
-                  <CountUp :number="item.year" />
-                </span>
-                <span class="truncate">{{ $rt(item.title) }}</span>
-              </b>
-              <p
-                v-dompurify-html="$rt(item.content)"
-                class="px-4 py-2 text-justify"
-              ></p>
-              <button v-if="$rt(item.content_full)">
-                {{ $rt(item.button) ? $rt(item.button) : '📖 👀' }}
-              </button>
-            </div>
-          </FlareItem>
-        </div>
-      </li>
-    </ul>
+    <TimeLine :timeline="$tm('timeline')" class="w-full" />
     <BgBlob color="#251E3933" class="left-0 top-[25%] w-2/5" />
     <BgBlob color="#251E3966" class="left-full top-[75%] w-3/5" />
   </section>
@@ -46,55 +8,6 @@
 
 <script lang="ts" setup></script>
 
-<style lang="scss">
-// @media (max-width: 1024px) {
-//   #timeline ul li .box {
-//     width: 375px;
-//   }
-
-//   #timeline ul li:nth-child(even) .box {
-//     left: -425px;
-//   }
-// }
-
-// @media (max-width: 900px) {
-//   #timeline ul li .box {
-//     width: 42.5vw;
-//   }
-
-//   #timeline ul li:nth-child(even) .box:beofre {
-//     left: -16px;
-//     border-width: 8px 16px 8px 0px;
-//   }
-
-//   /* right side */
-//   #timeline ul li:nth-child(odd) .box {
-//     left: 30px;
-//   }
-
-//   /* left side */
-//   #timeline ul li:nth-child(even) .box {
-//     left: -45.5vw;
-//   }
-// }
-
-// @media (max-width: 768px) {
-//   #timeline ul li {
-//     margin-left: 10px;
-//   }
-
-//   #timeline ul li .box {
-//     width: 85vw;
-//   }
-
-//   /* left side conte */
-//   #timeline ul li:nth-child(even) .box {
-//     left: 30px;
-//   }
-
-//   #timeline ul li:nth-child(even) .box:before {
-//     left: -16px;
-//     border-width: 8px 16px 8px 0px;
-//   }
-// }
+<style lang="scss" scoped>
+//
 </style>
