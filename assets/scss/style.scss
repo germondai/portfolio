@@ -97,15 +97,8 @@ img {
 }
 
 /* --- Additional scss --- */
-section#welcome,
-section#about,
-section#work,
-section#contact {
-  @apply py-24 min-h-screen;
-}
-
 section {
-  @apply relative w-full flex items-center;
+  @apply relative w-full min-h-screen py-24 flex items-center;
 }
 
 #about,

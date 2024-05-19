@@ -1,19 +1,19 @@
 {
   "header": [
     {
-      "href": "#welcome",
+      "href": "./",
       "name": "Welcome"
     },
     {
-      "href": "#about",
+      "href": "about",
       "name": "About"
     },
     {
-      "href": "#work",
+      "href": "work",
       "name": "Work"
     },
     {
-      "href": "#contact",
+      "href": "contact",
       "name": "Contact"
     }
   ],
@@ -22,7 +22,10 @@
     "title": "Hi, I'm",
     "content": {
       "base": "An Aspiring",
-      "typewriter": ["Full-Stack Web Developer", "Web Development Student"]
+      "typewriter": [
+        "Full-Stack Web Developer",
+        "Web Development Student"
+      ]
     },
     "swap_language": "Swap Language"
   },

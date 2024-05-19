@@ -2,47 +2,47 @@ export const usePageSections = () => {
   const { height } = useWindowSize()
 
   const largestSection = ref<string>('')
-  const sections = ref<{ y: number; id: string }[]>([])
+  const sections = ref<{ id: string; y: number }[]>([])
 
   if (process.client) {
-    const calculateLargestSection = () => {
+    const updateSectionsArray = () => {
       let largestHeight = 0
       let largestSectionId = ''
 
-      const allSections = document.querySelectorAll('main > section')
+      const sectionElements = document.querySelectorAll('section')
+      const newSections: { y: number; id: string }[] = []
 
-      if (allSections.length > 0) {
-        allSections.forEach((section) => {
+      if (sectionElements.length > 0) {
+        sectionElements.forEach((section) => {
           const { top, bottom } = section.getBoundingClientRect()
 
           const elementPartHeight =
             Math.min(bottom, height.value) - Math.max(top, 0)
-
-          const existingIndex = sections.value.findIndex(
-            (info) => info.id === section.id,
-          )
 
           if (elementPartHeight > largestHeight) {
             largestHeight = elementPartHeight
             largestSectionId = section.id
           }
 
-          if (existingIndex !== -1) {
-            sections.value[existingIndex].y = elementPartHeight
-          } else {
-            sections.value.push({
-              id: section.id,
-              y: elementPartHeight,
-            })
-          }
+          newSections.push({ id: section.id, y: elementPartHeight })
         })
-
-        largestSection.value = largestSectionId
       }
+
+      sections.value = newSections
+      largestSection.value = largestSectionId
     }
 
-    onMounted(calculateLargestSection)
-    useEventListener('scroll', calculateLargestSection)
+    onMounted(() => {
+      updateSectionsArray()
+      useEventListener('scroll', updateSectionsArray)
+
+      const observer = new MutationObserver(updateSectionsArray)
+      observer.observe(document.body, {
+        subtree: true,
+        childList: true,
+        attributes: true,
+      })
+    })
   }
 
   return {

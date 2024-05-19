@@ -1,19 +1,19 @@
 {
   "header": [
     {
-      "href": "#welcome",
+      "href": "./",
       "name": "Úvod"
     },
     {
-      "href": "#about",
+      "href": "about",
       "name": "O mně"
     },
     {
-      "href": "#work",
+      "href": "work",
       "name": "Práce"
     },
     {
-      "href": "#contact",
+      "href": "contact",
       "name": "Kontakt"
     }
   ],
@@ -22,7 +22,10 @@
     "title": "Ahoj, já jsem",
     "content": {
       "base": "Nadějný",
-      "typewriter": ["Full-Stack webový vývojář", "Student webového vývoje"]
+      "typewriter": [
+        "Full-Stack webový vývojář",
+        "Student webového vývoje"
+      ]
     },
     "swap_language": "Vyberte jazyk"
   },
