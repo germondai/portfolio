@@ -1,5 +1,5 @@
 <template>
-  <FloatCont v-if="!$device.isMobile" :preset="`bg`">
+  <FloatCont v-if="!$device.isMobile" :preset="`bg`" class="max-md:hidden">
     <FloatItem :velocity="-2" :preset="`bg`">
       <svg
         viewBox="0 0 1440 810"
