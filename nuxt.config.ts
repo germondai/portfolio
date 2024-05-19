@@ -17,6 +17,10 @@ export default defineNuxtConfig({
     optimizePreloads: true,
   },
 
+  delayHydration: {
+    mode: 'mount',
+  },
+
   nitro: {
     prerender: {
       routes: [
@@ -79,6 +83,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     'nuxt-booster',
     '@nuxtjs/device',
+    'nuxt-delay-hydration',
   ],
 
   googleFonts: {

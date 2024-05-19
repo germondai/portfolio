@@ -1,10 +1,10 @@
 <template>
   <main>
     <SectionWelcome />
-    <SectionAbout />
-    <SectionTimeline />
-    <SectionWork />
-    <SectionContact />
+    <LazySectionAbout />
+    <LazySectionTimeline />
+    <LazySectionWork />
+    <LazySectionContact />
   </main>
 </template>
 

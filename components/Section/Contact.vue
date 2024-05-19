@@ -133,7 +133,7 @@
           alt="Devices"
           loading="lazy"
           class="max-w-full max-h-[90%] drop-shadow-custom animate-[float_2s_infinite_ease-in-out]"
-          sizes="sm:128px md:144px lg:160px xl:176px"
+          sizes="xs:96px sm:128px md:144px lg:160px xl:176px"
         />
       </div>
     </div>

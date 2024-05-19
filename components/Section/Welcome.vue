@@ -39,7 +39,7 @@
           src="germond-model.webp"
           alt="Germond Model"
           class="max-h-[90%] max-w-[40%] drop-shadow-custom z-10"
-          sizes="sm:96px md:112px lg:128px xl:144px"
+          sizes="xs:40px sm:56px md:64px lg:112px xl:128px"
         />
       </div>
     </div>
