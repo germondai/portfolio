@@ -1,35 +1,30 @@
 <template>
   <DevOnly>
-    {{ sections }}
     <aside
       class="fixed lg:top-1/2 xs:top-[90%] max-xs:top-[94%] lg:left-[95%] max-lg:left-1/2 z-30"
     >
-      <!-- <FlareItem
+      <FlareItem
         class="p-0.5 rounded-2xl"
         :after="{ color: '#ffffff11', size: 128 }"
         :before="{ color: '#ffffff44', size: 512 }"
-      > -->
-      <ul
-        class="flex lg:flex-col items-center justify-center gap-2 p-2 bg-[#1d1c30cc] rounded-2xl"
       >
-        <li
-          v-for="(section, index) in sections"
-          :key="index"
-          :style="section.id == largestSection ? 'background: #45307f' : ''"
+        <ul
+          class="flex lg:flex-col items-center justify-center gap-2 p-2 bg-[#1d1c30cc] rounded-2xl"
         >
-          <NuxtLink
-            :href="`#${section.id}`"
-            :title="section.id"
-            class="group w-full h-full grid place-items-center"
+          <li
+            v-for="(section, index) in sections"
+            :key="index"
+            :style="section.id == largestSection ? 'background: #45307f' : ''"
           >
-            <Icon
-              :name="icons[section.id] ?? 'line-md:question-circle'"
-              class="size-8 opacity-80 group-hover:opacity-100 transition-opacity"
-            />
-          </NuxtLink>
-        </li>
-      </ul>
-      <!-- </FlareItem> -->
+            <NuxtLink :href="`#${section.id}`" :title="section.id">
+              <Icon
+                :name="icons[section.id] ?? 'line-md:question-circle'"
+                class="size-8 opacity-80 hover:opacity-100"
+              />
+            </NuxtLink>
+          </li>
+        </ul>
+      </FlareItem>
     </aside>
   </DevOnly>
 </template>

@@ -36,11 +36,11 @@ export const usePageSections = () => {
       updateSectionsArray()
       useEventListener('scroll', updateSectionsArray)
 
-      const observer = new MutationObserver(updateSectionsArray)
-      observer.observe(document.body, {
+      useMutationObserver(document.body, updateSectionsArray, {
         subtree: true,
         childList: true,
         attributes: true,
+        attributeFilter: ['id'],
       })
     })
   }
