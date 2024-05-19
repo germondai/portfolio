@@ -1,13 +1,9 @@
 <template>
-  <div>
-    
-  </div>
+  <main>
+    <SectionContact />
+  </main>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup></script>
 
-</script>
-
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

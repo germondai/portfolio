@@ -1,6 +1,7 @@
 <template>
   <DevOnly>
     <aside
+      v-if="sections"
       class="fixed lg:top-1/2 xs:top-[90%] max-xs:top-[94%] lg:left-[95%] max-lg:left-1/2 z-30"
     >
       <FlareItem

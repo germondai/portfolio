@@ -1,10 +1,8 @@
 <template>
-  <DevOnly>
-    <main>
-      <section id="test">test of section</section>
-      <section id="trest">test of section</section>
-    </main>
-  </DevOnly>
+  <main>
+    <SectionAbout />
+    <SectionTimeline />
+  </main>
 </template>
 
 <script lang="ts" setup></script>
