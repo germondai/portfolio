@@ -11,7 +11,7 @@
       <ul
         class="flex lg:flex-col items-center justify-center gap-2 p-2 bg-[#1d1c30cc] rounded-2xl"
       >
-        <ul class="flex lg:flex-col items-center gap-2 overflow-x-scroll">
+        <ul class="flex lg:flex-col items-center gap-2 overflow-x-auto">
           <li
             v-for="(section, index) in sections"
             :key="index"
@@ -31,9 +31,7 @@
         </ul>
         <template v-if="y > 500">
           <li class="divider"></li>
-          <li>
-            <BtnScrollToTop />
-          </li>
+          <li><BtnScrollToTop /></li>
         </template>
       </ul>
     </FlareItem>
@@ -48,6 +46,8 @@ const { largestSection, sections } = usePageSections()
 <style lang="scss" scoped>
 aside {
   transform: translate(-50%, -50%);
+  > ul {
+  }
 
   ul li {
     &:not(.divider) {
