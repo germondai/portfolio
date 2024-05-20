@@ -19,7 +19,6 @@ export default defineNuxtConfig({
 
   delayHydration: {
     mode: 'mount',
-    exclude: ['/plugins/dompurify-html.ts'],
   },
 
   nitro: {

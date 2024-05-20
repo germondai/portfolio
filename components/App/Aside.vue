@@ -8,10 +8,8 @@
       :after="{ color: '#ffffff11', size: 128 }"
       :before="{ color: '#ffffff44', size: 512 }"
     >
-      <ul
-        class="flex lg:flex-col items-center justify-center gap-2 p-2 bg-[#1d1c30cc] rounded-2xl"
-      >
-        <ul class="flex lg:flex-col items-center gap-2 overflow-x-auto">
+      <ul class="justify-center p-2 bg-[#1d1c30cc] rounded-2xl">
+        <ul class="overflow-x-auto">
           <li
             v-for="(section, index) in sections"
             :key="index"
@@ -29,10 +27,8 @@
             </NuxtLink>
           </li>
         </ul>
-        <template v-if="y > 500">
-          <li class="divider"></li>
-          <li><BtnScrollToTop /></li>
-        </template>
+        <li v-if="y > 500" class="divider"></li>
+        <li v-if="y > 500"><BtnScrollToTop /></li>
       </ul>
     </FlareItem>
   </aside>
@@ -46,16 +42,17 @@ const { largestSection, sections } = usePageSections()
 <style lang="scss" scoped>
 aside {
   transform: translate(-50%, -50%);
-  > ul {
-  }
+  ul {
+    @apply flex lg:flex-col items-center gap-2;
 
-  ul li {
-    &:not(.divider) {
-      @apply grid place-items-center rounded-xl aspect-square size-12 min-w-12 overflow-hidden shadow-xl bg-[#2b2242] hover:bg-[#36275e] transition-colors;
-    }
+    li {
+      &:not(.divider) {
+        @apply grid place-items-center rounded-xl aspect-square size-12 min-w-12 overflow-hidden shadow-xl bg-[#2b2242] hover:bg-[#36275e] transition-colors;
+      }
 
-    &.divider {
-      @apply w-8 h-px max-lg:w-px max-lg:h-8 bg-[#ffffff44];
+      &.divider {
+        @apply w-8 h-px max-lg:w-px max-lg:h-8 bg-[#ffffff44];
+      }
     }
   }
 }
