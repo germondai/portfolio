@@ -18,7 +18,7 @@ const { tag, number, duration } = defineProps({
   },
 })
 
-const count = ref(0)
+const count = ref(number)
 const animateCount = () => {
   const startTime = performance.now()
 
