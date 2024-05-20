@@ -25,10 +25,10 @@
             </NuxtLink>
           </template>
         </div>
-        <component
-          :is="project.href ? 'NuxtLink' : 'div'"
-          :href="project.href === './' ? $rt(project.href) : null"
-          :target="project.href === './' ? '_self' : '_blank'"
+        <NuxtLink
+          :is="$rt(project.href) ? 'NuxtLink' : 'div'"
+          :href="$rt(project.href)"
+          :target="$rt(project.href) === './' ? '_self' : '_blank'"
           class="h-full flex flex-col bg-[#0d0d0faa] z-20 p-3 rounded-xl gap-2"
         >
           <div class="flex flex-col gap-2">
@@ -54,7 +54,7 @@
               >
             </template>
           </div>
-        </component>
+        </NuxtLink>
       </FlareItem>
     </HoloTilt>
   </div>
