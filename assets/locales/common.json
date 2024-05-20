@@ -1,4 +1,11 @@
 {
+  "sections": {
+    "welcome": "mdi:hand-wave-outline",
+    "about": "material-symbols:account-circle-outline",
+    "timeline": "mdi:timeline-clock-outline",
+    "work": "material-symbols:work-outline",
+    "contact": "material-symbols:call-log"
+  },
   "socials": [
     {
       "href": "https://www.instagram.com/germondai",

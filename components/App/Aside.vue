@@ -19,7 +19,11 @@
           >
             <NuxtLink :href="`#${section.id}`" :title="section.id">
               <Icon
-                :name="icons[section.id] ?? 'line-md:question-circle'"
+                :name="
+                  $t(`sections.${section.id}`).includes(':')
+                    ? $t(`sections.${section.id}`)
+                    : 'line-md:question-circle'
+                "
                 class="size-8 opacity-80 hover:opacity-100"
               />
             </NuxtLink>
@@ -39,13 +43,6 @@
 <script lang="ts" setup>
 const { y } = useWindowScroll({ behavior: 'smooth' })
 const { largestSection, sections } = usePageSections()
-const icons: Record<string, string> = {
-  welcome: 'mdi:hand-wave-outline',
-  about: 'material-symbols:account-circle-outline',
-  timeline: 'mdi:timeline-clock-outline',
-  work: 'material-symbols:work-outline',
-  contact: 'material-symbols:call-log',
-}
 </script>
 
 <style lang="scss" scoped>
