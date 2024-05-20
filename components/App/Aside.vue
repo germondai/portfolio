@@ -27,8 +27,10 @@
             </NuxtLink>
           </li>
         </ul>
-        <li v-if="y > 500" class="divider"></li>
-        <li v-if="y > 500"><BtnScrollToTop /></li>
+        <template v-if="y > 500">
+          <li class="divider"></li>
+          <li><BtnScrollToTop /></li>
+        </template>
       </ul>
     </FlareItem>
   </aside>
@@ -42,6 +44,7 @@ const { largestSection, sections } = usePageSections()
 <style lang="scss" scoped>
 aside {
   transform: translate(-50%, -50%);
+
   ul {
     @apply flex lg:flex-col items-center gap-2;
 
