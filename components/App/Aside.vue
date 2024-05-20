@@ -24,6 +24,12 @@
               />
             </NuxtLink>
           </li>
+          <template v-if="y > 500">
+            <li class="divider"></li>
+            <li>
+              <BtnScrollToTop />
+            </li>
+          </template>
         </ul>
       </FlareItem>
     </aside>
@@ -46,7 +52,13 @@ aside {
   transform: translate(-50%, -50%);
 
   ul li {
-    @apply grid place-items-center rounded-xl aspect-square size-12 overflow-hidden shadow-xl bg-[#2b2242] hover:bg-[#36275e] transition-colors;
+    &:not(.divider) {
+      @apply grid place-items-center rounded-xl aspect-square size-12 overflow-hidden shadow-xl bg-[#2b2242] hover:bg-[#36275e] transition-colors;
+    }
+
+    &.divider {
+      @apply w-11/12 h-px  bg-[#ffffff44];
+    }
   }
 }
 </style>
