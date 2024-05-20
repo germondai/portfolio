@@ -37,6 +37,7 @@
 </template>
 
 <script lang="ts" setup>
+const { y } = useWindowScroll({ behavior: 'smooth' })
 const { largestSection, sections } = usePageSections()
 const icons: Record<string, string> = {
   welcome: 'mdi:hand-wave-outline',
