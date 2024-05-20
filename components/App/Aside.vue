@@ -58,7 +58,7 @@ aside {
     }
 
     &.divider {
-      @apply w-11/12 h-px  bg-[#ffffff44];
+      @apply w-8 h-px max-lg:w-px max-lg:h-8 bg-[#ffffff44];
     }
   }
 }
