@@ -11,7 +11,7 @@
       >
         <sub>{{ $t('work.sub') }}</sub>
         <h1>{{ $t('work.title') }}</h1>
-        <p v-dompurify-html="$t('work.content')" class="text-justify"></p>
+        <p class="text-justify" v-html="$t('work.content')"></p>
       </div>
       <div
         class="w-full grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4"

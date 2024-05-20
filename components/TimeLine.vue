@@ -27,7 +27,7 @@
               <span class="truncate">{{ $rt(item.title) }}</span>
             </b>
             <div class="flex flex-col gap-2 px-4 py-2">
-              <p v-dompurify-html="$rt(item.content)" class="text-justify"></p>
+              <p class="text-justify" v-html="$rt(item.content)"></p>
               <button
                 v-if="$rt(item.content_full)"
                 class="p-2 rounded-xl shadow bg-[#2B2242] hover:bg-[#36275e] transition-colors"

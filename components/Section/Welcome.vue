@@ -4,6 +4,9 @@
       class="w-4/5 h-full mx-auto flex max-md:flex-col max-md:gap-4 gap-8 items-center justify-center"
     >
       <div
+        v-motion
+        :initial="{ opacity: 0, x: $device.isMobile ? 0 : -100 }"
+        :visible-once="{ x: 0, opacity: 1 }"
         class="max-md:w-[98%] w-3/5 flex flex-col max-md:items-center max-md:gap-2 max-md:text-center anim-left"
       >
         <sub>{{ $t('welcome.sub') }}</sub>
@@ -27,6 +30,9 @@
         />
       </div>
       <div
+        v-motion
+        :initial="{ opacity: 0, y: $device.isMobile ? 0 : -100 }"
+        :visible-once="{ y: 0, opacity: 1 }"
         class="relative max-md:3/5 w-2/5 h-[90%] py-12 flex items-center justify-center anim-bottom animate-[float_2s_infinite_ease-in-out]"
       >
         <NuxtImg

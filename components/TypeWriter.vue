@@ -1,6 +1,6 @@
 <template>
   <span>
-    <span v-dompurify-html="typeValue" :class="writerClass"></span>
+    <span :class="writerClass" v-html="typeValue"></span>
     <span class="cursor" :class="{ typing: typeStatus }">&nbsp;</span>
   </span>
 </template>

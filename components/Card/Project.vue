@@ -42,8 +42,8 @@
             <b class="text-2xl">{{ $rt(project.title) }}</b>
           </div>
           <p
-            v-dompurify-html="$rt(project.content)"
             class="text-justify line-clamp-6"
+            v-html="$rt(project.content)"
           ></p>
           <div v-if="project.tags" class="flex items-center gap-x-2 truncate">
             <template v-for="(tag, tKey, k) in project.tags" :key="k">
