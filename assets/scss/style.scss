@@ -109,6 +109,7 @@ section {
 #welcome,
 #contact {
   .FloatCont.bg {
+
     svg,
     img {
       @apply absolute -left-[5%] max-w-[inherit] w-[110%] -z-40 pointer-events-none;
@@ -131,129 +132,101 @@ section {
 }
 
 /* tags */
-.tag-html5 {
-  color: #fd8458;
-}
+$tag-colors: (
+  html5: #fd8458,
+  css3: #51abf6,
+  php: #a4a4cc,
+  mysql: #00b7db,
+  sass: #cc6699,
+  js: #ffdf00,
+  javascript: #ffdf00,
+  jquery: #46adf6,
+  tailwindcss: #36bcf9,
+  ajax: #21b0f2,
+  typescript: #2e72bf,
+  vue: #3eb27f,
+  nuxt: #00dc81
+);
 
-.tag-css3 {
-  color: #51abf6;
-}
-
-.tag-php {
-  color: #a4a4cc;
-}
-
-.tag-mysql {
-  color: #00b7db;
-}
-
-.tag-sass {
-  color: #cc6699;
-}
-
-.tag-js,
-.tag-javascript {
-  color: #ffdf00;
-}
-
-.tag-jquery {
-  color: #46adf6;
-}
-
-.tag-tailwindcss {
-  color: #36bcf9;
-}
-
-.tag-ajax {
-  color: #21b0f2;
-}
-
-.tag-typescript {
-  color: #2e72bf;
-}
-
-.tag-vue {
-  color: #3eb27f;
-}
-
-.tag-nuxt {
-  color: #00dc81;
+@each $tag, $color in $tag-colors {
+  .tag-#{$tag} {
+    color: $color;
+  }
 }
 
 /* pretty forms by @germondai */
 .form {
   @apply relative flex flex-col rounded-2xl;
-}
 
-.form .field {
-  @apply relative w-full my-2;
-}
+  .field {
+    @apply relative w-full my-2;
 
-.form .field.checkbox {
-  @apply flex items-center justify-center gap-2;
-}
+    &.checkbox {
+      @apply flex items-center justify-center gap-2;
 
-.form .field.textarea {
-  @apply mb-0;
-}
+      label {
+        @apply relative order-first w-auto text-white;
+      }
+    }
 
-.form .field label {
-  transition:
-    font-size 0.3s,
-    top 0.3s;
-  @apply absolute top-3.5 left-4 pr-2.5 w-[calc(100%-0.5rem)] inline-block truncate leading-none pointer-events-none;
-}
+    &.textarea {
+      @apply mb-0;
+    }
 
-.form input:required ~ label,
-.form textarea:required ~ label,
-.form select:required ~ label {
-  @apply flex items-center before:content-['*'] before:text-red-600 before:ml-1 before:mt-0.5 before:order-2 before:text-xl before:leading-none;
-}
+    label {
+      transition: font-size 0.3s, top 0.3s;
+      @apply absolute top-3.5 left-4 pr-2.5 w-[calc(100%-0.5rem)] inline-block truncate leading-none pointer-events-none;
+    }
+  }
 
-.form .field.checkbox label {
-  @apply relative order-first w-auto text-white;
-}
+  input,
+  textarea,
+  select {
+    &:required~label {
+      @apply flex items-center before:content-['*'] before:text-red-600 before:ml-1 before:mt-0.5 before:order-2 before:text-xl before:leading-none;
+    }
 
-.form input:not([type='submit']),
-.form textarea,
-.form select {
-  transition: padding-top 0.3s;
-  @apply relative w-full min-w-64 min-h-12 max-h-[164px] p-4 px-2 pb-0.5 rounded-lg;
-}
+    &::placeholder {
+      @apply text-transparent;
+    }
 
-.form input[type='number']::-webkit-outer-spin-button,
-.form input[type='number']::-webkit-inner-spin-button {
-  appearance: none;
-}
+    &:focus~label,
+    &:not(:placeholder-shown)~label {
+      @apply text-xs top-0 left-2 opacity-60;
+    }
+  }
 
-.form input[type='checkbox'] {
-  @apply w-auto min-w-[42px] aspect-square;
-}
+  input:not([type='submit']),
+  textarea,
+  select {
+    transition: padding-top 0.3s;
+    @apply relative w-full min-w-64 min-h-12 max-h-[164px] p-4 px-2 pb-0.5 rounded-lg;
+  }
 
-.form textarea {
-  @apply resize-y pt-[18px] min-h-[164px] max-h-[40vh] max-xl:max-h-[30vh];
-}
+  input,
+  button {
+    &[type='number'] {
 
-.form input::placeholder,
-.form textarea::placeholder,
-.form select::placeholder {
-  @apply text-transparent;
-}
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        appearance: none;
+      }
+    }
 
-.form input:focus ~ label,
-.form input:not(:placeholder-shown) ~ label,
-.form textarea:focus ~ label,
-.form textarea:not(:placeholder-shown) ~ label,
-.form select:focus ~ label,
-.form select:not(:placeholder-shown) ~ label {
-  @apply text-xs top-0 left-2 opacity-60;
-}
+    &[type='checkbox'] {
+      @apply w-auto min-w-[42px] aspect-square;
+    }
 
-.form input[type='submit'],
-.form button[type='submit'] {
-  @apply w-full flex items-center justify-center cursor-pointer border-0 my-2 p-1 rounded-2xl;
-}
+    &[type='submit'] {
+      @apply w-full flex items-center justify-center cursor-pointer border-0 my-2 p-1 rounded-2xl;
+    }
+  }
 
-.field span[role='alert'] {
-  @apply text-red-600;
+  textarea {
+    @apply resize-y pt-[18px] min-h-[164px] max-h-[40vh] max-xl:max-h-[30vh];
+  }
+
+  span[role='alert'] {
+    @apply text-red-600;
+  }
 }

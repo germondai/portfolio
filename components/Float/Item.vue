@@ -53,8 +53,8 @@ const parallaxStyle = computed(() => {
 .FloatItem {
   transform-style: preserve-3d;
   transition: 150ms linear all;
-  transform-origin: center;
-  @apply absolute pointer-events-none will-change-transform;
+  @apply absolute pointer-events-none will-change-transform origin-center;
+
   &.bg {
     @apply w-full h-full -z-[999];
   }

@@ -46,7 +46,6 @@ const transformStyle = computed(() => {
 .HoloTilt {
   transform-style: preserve-3d;
   transition: 150ms linear all;
-  transform-origin: center;
-  @apply will-change-transform transform-gpu;
+  @apply will-change-transform transform-gpu origin-center;
 }
 </style>

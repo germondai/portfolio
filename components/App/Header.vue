@@ -106,8 +106,4 @@ useEventListener(window, 'resize', handleResize)
 header nav a::after {
   @apply content-[''] absolute left-0 bottom-1 w-full h-0.5 rounded-2xl bg-white opacity-0 duration-300 transition-opacity;
 }
-
-// header nav a.active::after {
-//   @apply opacity-70 hover:opacity-100;
-// }
 </style>

@@ -51,33 +51,35 @@ const { elementX, elementY } = useSharedMouseInElement(lightEl)
 <style lang="scss" scoped>
 .FlareItem {
   @apply relative;
-}
 
-.FlareItem:hover::before,
-.FlareItem:hover::after {
-  @apply opacity-100 will-change-[background];
-}
+  &:hover {
+    &::before,
+    &::after {
+      @apply opacity-100 will-change-[background];
+    }
+  }
 
-.FlareItem::before,
-.FlareItem::after {
-  @apply content-[''] absolute top-0 left-0 w-full h-full rounded-[inherit] pointer-events-none duration-500 transition-opacity;
-}
+  &::before,
+  &::after {
+    @apply content-[''] absolute top-0 left-0 w-full h-full rounded-[inherit] pointer-events-none duration-500 transition-opacity;
+  }
 
-.FlareItem::before {
-  background: radial-gradient(
-    var(--fbs) circle at var(--x) var(--y),
-    var(--fbc),
-    transparent 40%
-  );
-  z-index: -1;
-}
+  &::before {
+    background: radial-gradient(
+      var(--fbs) circle at var(--x) var(--y),
+      var(--fbc),
+      transparent 40%
+    );
+    z-index: -1;
+  }
 
-.FlareItem::after {
-  background: radial-gradient(
-    var(--fas) circle at var(--x) var(--y),
-    var(--fac),
-    transparent 40%
-  );
-  z-index: 1;
+  &::after {
+    background: radial-gradient(
+      var(--fas) circle at var(--x) var(--y),
+      var(--fac),
+      transparent 40%
+    );
+    z-index: 1;
+  }
 }
 </style>

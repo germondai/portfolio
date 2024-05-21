@@ -21,6 +21,7 @@ const { tag, preset } = defineProps({
 <style lang="scss">
 .FloatCont {
   @apply pointer-events-none;
+
   &.bg {
     @apply absolute top-0 w-full h-full -z-[150];
   }
