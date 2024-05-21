@@ -9,24 +9,26 @@
       :before="{ color: '#ffffff44', size: 512 }"
     >
       <ul class="justify-center p-2 bg-[#1d1c30cc] rounded-2xl">
-        <ul class="overflow-x-auto">
-          <li
-            v-for="(section, index) in sections"
-            :key="index"
-            :style="section.id == largestSection ? 'background: #45307f' : ''"
-          >
-            <NuxtLink :href="`#${section.id}`" :title="section.id">
-              <Icon
-                :name="
-                  $t(`sections.${section.id}`).includes(':')
-                    ? $t(`sections.${section.id}`)
-                    : 'line-md:question-circle'
-                "
-                class="size-8 opacity-80 hover:opacity-100"
-              />
-            </NuxtLink>
-          </li>
-        </ul>
+        <li class="list overflow-x-auto">
+          <ul>
+            <li
+              v-for="(section, index) in sections"
+              :key="index"
+              :style="section.id == largestSection ? 'background: #45307f' : ''"
+            >
+              <NuxtLink :href="`#${section.id}`" :title="section.id">
+                <Icon
+                  :name="
+                    $t(`sections.${section.id}`).includes(':')
+                      ? $t(`sections.${section.id}`)
+                      : 'line-md:question-circle'
+                  "
+                  class="size-8 opacity-80 hover:opacity-100"
+                />
+              </NuxtLink>
+            </li>
+          </ul>
+        </li>
         <template v-if="y > 500">
           <li class="divider"></li>
           <li><BtnScrollToTop /></li>
@@ -49,7 +51,7 @@ aside {
     @apply flex lg:flex-col items-center gap-2;
 
     li {
-      &:not(.divider) {
+      &:not(.divider):not(.list) {
         @apply grid place-items-center rounded-xl aspect-square size-12 min-w-12 overflow-hidden shadow-xl bg-[#2b2242] hover:bg-[#36275e] transition-colors;
       }
 
