@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts" setup>
-const { writerClass, typeArray } = defineProps({
+const props = defineProps({
   writerClass: {
     type: String,
     default: '',
@@ -18,6 +18,7 @@ const { writerClass, typeArray } = defineProps({
   },
 })
 
+const { typeArray, writerClass } = toRefs(props)
 const typeValue = ref('')
 const typeStatus = ref(false)
 const typingSpeed = 200
@@ -25,18 +26,19 @@ const erasingSpeed = 100
 const newTextDelay = 2000
 let typeArrayIndex = 0
 let charIndex = 0
+let typingTimeout: ReturnType<typeof setTimeout>
 
 const typeText = () => {
-  if (charIndex < typeArray[typeArrayIndex].length) {
+  if (charIndex < typeArray.value[typeArrayIndex].length) {
     if (!typeStatus.value) typeStatus.value = true
 
-    typeValue.value += typeArray[typeArrayIndex].charAt(charIndex)
+    typeValue.value += typeArray.value[typeArrayIndex].charAt(charIndex)
     charIndex += 1
 
-    setTimeout(typeText, typingSpeed)
+    typingTimeout = setTimeout(typeText, typingSpeed)
   } else {
     typeStatus.value = false
-    setTimeout(eraseText, newTextDelay)
+    typingTimeout = setTimeout(eraseText, newTextDelay)
   }
 }
 
@@ -44,41 +46,45 @@ const eraseText = () => {
   if (charIndex > 0) {
     if (!typeStatus.value) typeStatus.value = true
 
-    typeValue.value = typeArray[typeArrayIndex].substring(0, charIndex - 1)
+    typeValue.value = typeArray.value[typeArrayIndex].substring(
+      0,
+      charIndex - 1,
+    )
     charIndex -= 1
-    setTimeout(eraseText, erasingSpeed)
+    typingTimeout = setTimeout(eraseText, erasingSpeed)
   } else {
     typeStatus.value = false
     typeArrayIndex += 1
-    if (typeArrayIndex >= typeArray.length) typeArrayIndex = 0
+    if (typeArrayIndex >= typeArray.value.length) typeArrayIndex = 0
 
-    setTimeout(typeText, typingSpeed + 1000)
+    typingTimeout = setTimeout(typeText, typingSpeed + 1000)
   }
 }
+const resetTyping = () => {
+  typeArrayIndex = 0
+  charIndex = 0
+  typeValue.value = ''
+  clearTimeout(typingTimeout)
+  typeText()
+}
 
-onMounted(() => {
-  setTimeout(typeText, newTextDelay + 200)
-})
+watch(
+  typeArray,
+  () => {
+    resetTyping()
+  },
+  { deep: true },
+)
+
+onMounted(() => typeText())
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .cursor {
   @apply inline-block w-1 ml-1 bg-white animate-[cursorBlink_1s_infinite];
-}
 
-.cursor.typing {
-  @apply animate-none;
-}
-
-@keyframes cursorBlink {
-  0% {
-    background-color: transparent;
-  }
-  50% {
-    background-color: #fff;
-  }
-  100% {
-    background-color: transparent;
+  &.typing {
+    @apply animate-none;
   }
 }
 </style>
