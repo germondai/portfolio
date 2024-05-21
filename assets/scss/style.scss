@@ -109,7 +109,6 @@ section {
 #welcome,
 #contact {
   .FloatCont.bg {
-
     svg,
     img {
       @apply absolute -left-[5%] max-w-[inherit] w-[110%] -z-40 pointer-events-none;
@@ -145,7 +144,7 @@ $tag-colors: (
   ajax: #21b0f2,
   typescript: #2e72bf,
   vue: #3eb27f,
-  nuxt: #00dc81
+  nuxt: #00dc81,
 );
 
 @each $tag, $color in $tag-colors {
@@ -174,7 +173,9 @@ $tag-colors: (
     }
 
     label {
-      transition: font-size 0.3s, top 0.3s;
+      transition:
+        font-size 0.3s,
+        top 0.3s;
       @apply absolute top-3.5 left-4 pr-2.5 w-[calc(100%-0.5rem)] inline-block truncate leading-none pointer-events-none;
     }
   }
@@ -182,7 +183,7 @@ $tag-colors: (
   input,
   textarea,
   select {
-    &:required~label {
+    &:required ~ label {
       @apply flex items-center before:content-['*'] before:text-red-600 before:ml-1 before:mt-0.5 before:order-2 before:text-xl before:leading-none;
     }
 
@@ -190,8 +191,8 @@ $tag-colors: (
       @apply text-transparent;
     }
 
-    &:focus~label,
-    &:not(:placeholder-shown)~label {
+    &:focus ~ label,
+    &:not(:placeholder-shown) ~ label {
       @apply text-xs top-0 left-2 opacity-60;
     }
   }
@@ -206,7 +207,6 @@ $tag-colors: (
   input,
   button {
     &[type='number'] {
-
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button {
         appearance: none;
