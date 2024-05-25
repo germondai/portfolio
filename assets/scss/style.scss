@@ -1,3 +1,7 @@
+@use "@/assets/scss/_variables.scss" as *;
+@use "@/assets/scss/_mixins.scss" as *;
+@use "@/assets/scss/_animations.scss" as *;
+
 /* --- ESSENTIALS --- */
 * {
   margin: 0;
@@ -109,6 +113,7 @@ section {
 #welcome,
 #contact {
   .FloatCont.bg {
+
     svg,
     img {
       @apply absolute -left-[5%] max-w-[inherit] w-[110%] -z-40 pointer-events-none;
@@ -183,7 +188,7 @@ $tag-colors: (
   input,
   textarea,
   select {
-    &:required ~ label {
+    &:required~label {
       @apply flex items-center before:content-['*'] before:text-red-600 before:ml-1 before:mt-0.5 before:order-2 before:text-xl before:leading-none;
     }
 
@@ -191,8 +196,8 @@ $tag-colors: (
       @apply text-transparent;
     }
 
-    &:focus ~ label,
-    &:not(:placeholder-shown) ~ label {
+    &:focus~label,
+    &:not(:placeholder-shown)~label {
       @apply text-xs top-0 left-2 opacity-60;
     }
   }
@@ -207,6 +212,7 @@ $tag-colors: (
   input,
   button {
     &[type='number'] {
+
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button {
         appearance: none;

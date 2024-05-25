@@ -114,20 +114,6 @@ export default defineNuxtConfig({
 
   css: ['~/assets/scss/style.scss'],
 
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: `
-            @use "@/assets/scss/_variables.scss" as *;
-            @use "@/assets/scss/_mixins.scss" as *;
-            @use "@/assets/scss/_animations.scss" as *;
-          `,
-        },
-      },
-    },
-  },
-
   image: {
     // quality: 85,
     // format: ['webp'],
