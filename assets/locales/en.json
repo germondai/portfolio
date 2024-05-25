@@ -74,13 +74,13 @@
     "content": "Following projects <b>showcase</b> my <b>skills</b> and <b>experiences</b> in handling <b>real projects</b>. Each of the listed projects below <b>includes</b> a link to <b>live demo</b> example where you can take a <b>detailed view</b>. Additionally, each project is <b>tagged</b> with <b>programming languages</b>, <b>frameworks</b> or <b>libraries</b> that were primarily used in their <b>development</b>.",
     "projects": [
       {
-        "href": "https://germondai.rf.gd/chronitask/",
+        "href": "https://chronitask.germondai.com",
         "src": "portfolio-chronitask.webp",
         "alt": "Chronitask Website Preview",
         "title": "Chronitask",
         "content": "Fully integrated <b>PHP</b> & <b>JavaScript</b> Online <b>to-do task-list</b> website <b>app</b> with <b>secure database</b> connectivity <b>protected</b> against <b>injections</b> and <b>fetch requests</b> with <b>AJAX</b>. <b>User friendly</b> and <b>optimized interface</b>.",
         "links": {
-          "link": "https://germondai.rf.gd/chronitask/",
+          "link": "https://chronitask.germondai.com",
           "youtube": "",
           "discord": "",
           "facebook": "",
@@ -101,7 +101,7 @@
         "title": "Germond's Portfolio",
         "content": "<b>Professional landing page</b>. Built in <b>Nuxt.js</b> and <b>Vue.js</b>, styled with <b>TailwindCSS</b>. <b>Animated interface</b> with <b>custom components</b>. Contact system linked to <b>PHP API</b> and <b>MySQL</b>. <b>Language Localization</b>.",
         "links": {
-          "link": "https://germondai.rf.gd",
+          "link": "https://germondai.com",
           "youtube": "",
           "discord": "",
           "facebook": "",
@@ -121,7 +121,7 @@
         "title": "PHP Starter",
         "content": "Simple <b>PHP Starter</b>, with its own, ready to go, <b>API</b> and <b>frontend</b> system. Well <b>structured</b>, <b>secured</b> and <b>scalable</b> environment with features like <b>Nette Database Explorer</b>, <b>TailwindCSS</b>, <b>jQuery</b>, etc.",
         "links": {
-          "link": "https://germondai.rf.gd",
+          "link": "https://germondai.com",
           "youtube": "",
           "discord": "",
           "facebook": "",
@@ -135,13 +135,13 @@
         }
       },
       {
-        "href": "https://germondai.rf.gd/eshop/",
+        "href": "https://eshop.germondai.com",
         "src": "portfolio-eshop.webp",
         "alt": "Germond's E-Shop Website Preview",
         "title": "Germond's E-Shop",
         "content": "<b>E-Commerce Online Shop</b> made in <b>PHP</b> with <b>database</b> that <b>synchronizes</b> user's <b>cart</b> and <b>orders</b>. Includes <b>Content Management System</b> for <b>editing</b> not only <b>products</b>, but also <b>pages</b> and <b>variations</b>.",
         "links": {
-          "link": "https://germondai.rf.gd/eshop/",
+          "link": "https://eshop.germondai.com",
           "youtube": "",
           "discord": "",
           "facebook": "",

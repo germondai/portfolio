@@ -1,11 +1,11 @@
 <h1 align="center">
-  <a href="https://germondai.rf.gd" target="_blank">
+  <a href="https://germondai.com" target="_blank">
     <img align="center" src="https://skillicons.dev/icons?i=nuxt,vue,vite,nodejs,tailwind,ts" /><br/><br/>
     <span>Germond's Portfolio</span>
   </a>
 </h1>
 
-### **Welcome** to my <a href="https://germondai.rf.gd" target="_blank">**Personal Portfolio**</a>! 👋
+### **Welcome** to my <a href="https://germondai.com" target="_blank">**Personal Portfolio**</a>! 👋
 
 Here, you'll find a **showcase** of my **skills**, **experiences**, and the **technologies** I use, presented across multiple sections including **About**, **Timeline**, and **Work**
 

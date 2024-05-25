@@ -5,6 +5,10 @@
   </NuxtLayout>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useSeoMeta({
+  ogImage: '/img/portfolio-germondai.webp',
+})
+</script>
 
 <style lang="scss" scoped></style>

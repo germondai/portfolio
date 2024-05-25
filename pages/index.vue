@@ -9,11 +9,12 @@
 </template>
 
 <script lang="ts" setup>
+const desc =
+  'An Aspiring Full-Stack Web Developer. Make sure to check out my creations!'
+
 useSeoMeta({
-  ogImage: '/img/portfolio-germondai.webp',
-  ogTitle: "Germond's Portfolio",
-  ogDescription:
-    'An Aspiring Full-Stack Web Developer. Make sure to check out my creations!',
+  description: desc,
+  ogDescription: desc,
 })
 </script>
 

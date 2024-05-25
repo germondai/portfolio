@@ -42,7 +42,7 @@ export default defineNuxtConfig({
 
   site: {
     name: "Germond's Portfolio",
-    url: 'https://germondai.rf.gd/',
+    url: 'https://germondai.com/',
   },
 
   app: {

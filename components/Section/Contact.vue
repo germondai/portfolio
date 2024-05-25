@@ -164,7 +164,7 @@ const onSubmit = getSubmitFn(schema.value, async (values) => {
   setTimeout(() => (canCancel.value = true), 5000)
   result.value = await {
     ...useAsyncData('contact', () =>
-      $fetch('https://germondai.rf.gd/api/contact/insert', {
+      $fetch('https://api.germondai.com/contact/insert', {
         method: 'post',
         body: values,
       }),
