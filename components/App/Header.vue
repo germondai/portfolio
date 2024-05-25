@@ -28,6 +28,7 @@
       <NuxtLink
         href="./"
         class="max-lg:order-1 flex items-center justify-center h-[76px] z-20"
+        :title="$t('mainpagelink')"
       >
         <NuxtImg
           src="skull.ico"
