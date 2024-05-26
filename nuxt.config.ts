@@ -84,7 +84,60 @@ export default defineNuxtConfig({
     'nuxt-booster',
     '@nuxtjs/device',
     'nuxt-delay-hydration',
+    '@vite-pwa/nuxt',
   ],
+
+  pwa: {
+    registerType: 'autoUpdate',
+    workbox: {
+      navigateFallback: '/',
+      globPatterns: [
+        '**/*.{js,css,html}',
+        '_nuxt/**/*.{js,css,woff2}',
+        '_ipx/**/*.{webp,ico}',
+      ],
+    },
+    devOptions: {
+      enabled: true,
+      type: 'module',
+    },
+    manifest: {
+      name: "Germond's Portfolio",
+      short_name: 'Germond',
+      description:
+        'An Aspiring Full-Stack Web Developer. Make sure to check out my creations!',
+      display: 'standalone',
+      theme_color: '#121316',
+      background_color: '#121316',
+      start_url: '/',
+      icons: [
+        {
+          src: 'img/pwa/manifest-icon-192.maskable.png',
+          sizes: '192x192',
+          type: 'image/png',
+          purpose: 'any',
+        },
+        {
+          src: 'img/pwa/manifest-icon-192.maskable.png',
+          sizes: '192x192',
+          type: 'image/png',
+          purpose: 'maskable',
+        },
+        {
+          src: 'img/pwa/manifest-icon-512.maskable.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any',
+        },
+        {
+          src: 'img/pwa/manifest-icon-512.maskable.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'maskable',
+        },
+      ],
+    },
+  },
 
   googleFonts: {
     display: 'swap',
