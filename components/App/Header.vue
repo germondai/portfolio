@@ -4,12 +4,14 @@
   >
     <nav
       ref="menu"
-      :class="navStyles ? 'max-lg:rounded-b-none' : ''"
-      class="xl:w-3/4 lg:w-[90%] sm:w-[95%] w-[98%] h-14 sm:px-8 px-2 flex items-center justify-between max-2xs:justify-around sm:gap-8 gap-2 rounded-3xl bg-[#1f2023cc] backdrop-blur drop-shadow-md"
+      :class="
+        navStyles ? 'max-lg:rounded-b-none max-lg:before:rounded-b-none' : ''
+      "
+      class="xl:w-3/4 lg:w-[90%] sm:w-[95%] w-[98%] h-14 sm:px-8 px-2 before:rounded-3xl flex items-center justify-between max-2xs:justify-around sm:gap-8 gap-2 rounded-3xl bg-[#1f2023cc]"
     >
       <ul
         :class="links ? '' : 'max-sm:hidden'"
-        class="max-lg:order-2 w-full flex items-center justify-between gap-4 max-sm:gap-2 max-sm:absolute top-14 left-0 max-sm:bg-[#1f2023cc] max-sm:h-14 max-sm:px-4"
+        class="max-lg:order-2 w-full flex items-center justify-between gap-4 max-sm:gap-2 max-sm:absolute top-14 left-0 max-sm:bg-[#1f2023cc] max-sm:h-14 max-sm:px-4 backdrop-blur"
       >
         <li
           v-for="(link, index) in $tm('header')"
@@ -41,7 +43,7 @@
       </NuxtLink>
       <ul
         :class="[icons ? '' : 'max-lg:hidden']"
-        class="w-full flex items-center justify-between max-sm:justify-between max-lg:justify-around gap-4 max-sm:gap-2 max-sm:top-28 max-lg:top-14 left-0 max-lg:bg-[#1f2023cc] max-lg:absolute max-lg:h-14 max-lg:px-4 max-lg:rounded-b-3xl"
+        class="w-full flex items-center justify-between max-sm:justify-between max-lg:justify-around gap-4 max-sm:gap-2 max-sm:top-28 max-lg:top-14 left-0 max-lg:bg-[#1f2023cc] max-lg:absolute max-lg:h-14 max-lg:px-4 max-lg:rounded-b-3xl backdrop-blur"
       >
         <li v-for="(social, index) in $tm('socials')" :key="index" class="flex">
           <NuxtLink
@@ -104,7 +106,15 @@ useEventListener(window, 'resize', handleResize)
 </script>
 
 <style lang="scss" scoped>
-header nav a::after {
-  @apply content-[''] absolute left-0 bottom-1 w-full h-0.5 rounded-2xl bg-white opacity-0 duration-300 transition-opacity;
+header nav {
+  @apply relative;
+
+  &::before {
+    @apply content-[''] absolute block w-full h-full -z-10 backdrop-blur left-0;
+  }
+
+  a::after {
+    @apply content-[''] absolute left-0 bottom-1 w-full h-0.5 rounded-2xl bg-white opacity-0 duration-300 transition-opacity;
+  }
 }
 </style>
