@@ -4,7 +4,7 @@
     class="flex max-md:w-[98%] fixed lg:top-1/2 xs:top-[90%] max-xs:top-[94%] lg:left-[95%] max-lg:left-1/2 z-30"
   >
     <FlareItem
-      class="max-w-full mx-auto p-0.5 rounded-2xl"
+      class="max-w-full mx-auto p-0.5 rounded-2xl backdrop-blur"
       :after="{ color: '#ffffff11', size: 128 }"
       :before="{ color: '#ffffff44', size: 512 }"
     >
