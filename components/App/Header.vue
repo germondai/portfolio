@@ -5,7 +5,9 @@
     <nav
       ref="menu"
       :class="
-        navStyles ? 'max-lg:rounded-b-none max-lg:before:rounded-b-none' : ''
+        navStyles
+          ? 'max-lg:rounded-b-none max-lg:before:rounded-b-none'
+          : 'shdw'
       "
       class="xl:w-3/4 lg:w-[90%] sm:w-[95%] w-[98%] h-14 sm:px-8 px-2 before:rounded-3xl flex items-center justify-between max-2xs:justify-around sm:gap-8 gap-2 rounded-3xl bg-[#1f2023cc]"
     >
