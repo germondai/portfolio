@@ -86,6 +86,8 @@ pnpm lint
 pnpm lintfix
 ```
 
+---
+
 <p align="center">
     <span>Made with ❤️ by</span>
     <a href="https://github.com/germondai" target="_blank">@germondai</a>
