@@ -8,7 +8,7 @@
       :after="{ color: '#ffffff11', size: 128 }"
       :before="{ color: '#ffffff44', size: 512 }"
     >
-      <ul class="justify-center p-2 bg-[#1d1c30cc] rounded-2xl">
+      <ul class="shdw justify-center p-2 bg-[#1d1c30cc] rounded-2xl">
         <li class="list overflow-x-auto">
           <ul>
             <li
