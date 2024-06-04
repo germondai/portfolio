@@ -23,7 +23,10 @@
     "title": "Hi, I'm",
     "content": {
       "base": "An Aspiring",
-      "typewriter": ["Full-Stack Web Developer", "Web Development Student"]
+      "typewriter": [
+        "Full-Stack Web Developer",
+        "Web Development Student"
+      ]
     },
     "swap_language": "Swap Language"
   },
@@ -120,7 +123,7 @@
         "src": "portfolio-php-starter.webp",
         "alt": "PHP Starter Website Preview",
         "title": "PHP Starter",
-        "content": "Simple <b>PHP Starter</b>, with its own, ready to go, <b>API</b> and <b>frontend</b> system. Well <b>structured</b>, <b>secured</b> and <b>scalable</b> environment with features like <b>Nette Database Explorer</b>, <b>TailwindCSS</b>, <b>jQuery</b>, etc.",
+        "content": "Simple <b>PHP Starter</b>, with its own, ready to go, <b>RESTful API</b> and <b>frontend</b> system. Well <b>structured</b>, <b>secured</b> and <b>scalable</b> environment with features like <b>Doctrine</b>, <b>Nette DB Explorer</b>, <b>TailwindCSS</b>, <b>jQuery</b>, etc.",
         "links": {
           "link": "https://germondai.com",
           "youtube": "",
