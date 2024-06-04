@@ -11,7 +11,7 @@
     >
       <ul
         :class="links ? '' : 'max-sm:hidden'"
-        class="max-lg:order-2 w-full flex items-center justify-between gap-4 max-sm:gap-2 max-sm:absolute top-14 left-0 max-sm:bg-[#1f2023cc] max-sm:h-14 max-sm:px-4 backdrop-blur"
+        class="max-lg:order-2 w-full flex items-center justify-between gap-4 max-sm:gap-2 max-sm:absolute top-14 left-0 max-sm:bg-[#1f2023cc] max-sm:h-14 max-sm:px-4 backdrop-blur-sm"
       >
         <li
           v-for="(link, index) in $tm('header')"
@@ -43,7 +43,7 @@
       </NuxtLink>
       <ul
         :class="[icons ? '' : 'max-lg:hidden']"
-        class="w-full flex items-center justify-between max-sm:justify-between max-lg:justify-around gap-4 max-sm:gap-2 max-sm:top-28 max-lg:top-14 left-0 max-lg:bg-[#1f2023cc] max-lg:absolute max-lg:h-14 max-lg:px-4 max-lg:rounded-b-3xl backdrop-blur"
+        class="w-full flex items-center justify-between max-sm:justify-between max-lg:justify-around gap-4 max-sm:gap-2 max-sm:top-28 max-lg:top-14 left-0 max-lg:bg-[#1f2023cc] max-lg:absolute max-lg:h-14 max-lg:px-4 max-lg:rounded-b-3xl backdrop-blur-sm"
       >
         <li v-for="(social, index) in $tm('socials')" :key="index" class="flex">
           <NuxtLink
