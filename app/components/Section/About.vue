@@ -25,7 +25,7 @@
           :delay="index * ($device.isMobile ? 0 : 50)"
           class="flex flex-col items-center gap-2 anim-left"
         >
-          <HoloTilt :scale="1.1">
+          <HoloTilt :scale="1.1" class="flex items-center justify-center">
             <Icon
               :name="rt(skill.icon)"
               class="max-md:size-12 max-lg:size-16 size-24"

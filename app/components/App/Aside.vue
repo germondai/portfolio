@@ -16,14 +16,18 @@
               :key="index"
               :style="section.id == largestSection ? 'background: #45307f' : ''"
             >
-              <NuxtLink :href="`#${section.id}`" :title="section.id">
+              <NuxtLink
+                :href="`#${section.id}`"
+                :title="section.id"
+                class="flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity"
+              >
                 <Icon
                   :name="
                     t(`sections.${section.id}`).includes(':')
                       ? t(`sections.${section.id}`)
                       : 'line-md:question-circle'
                   "
-                  class="size-8 opacity-80 hover:opacity-100"
+                  class="size-8"
                 />
               </NuxtLink>
             </li>
