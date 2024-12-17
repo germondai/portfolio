@@ -1,15 +1,17 @@
 <template>
   <main>
     <SectionWork />
+    <LangSwitcher />
   </main>
 </template>
 
 <script lang="ts" setup>
-const desc =
-  'Showcase of my skills and experiences in handling real projects, including links to live demos.'
+const { t } = useI18n()
 
 useSeoMeta({
-  description: desc,
-  ogDescription: desc,
+  title: () => t('work.sub'),
+  ogTitle: () => t('work.sub'),
+  description: () => t('work.description'),
+  ogDescription: () => t('work.description'),
 })
 </script>

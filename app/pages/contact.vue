@@ -5,11 +5,12 @@
 </template>
 
 <script lang="ts" setup>
-const desc =
-  'Reach out for collaboration where we can bring your ideas to life or just ping me with interesting business concepts.'
+const { t } = useI18n()
 
 useSeoMeta({
-  description: desc,
-  ogDescription: desc,
+  title: () => t('contact.sub'),
+  ogTitle: () => t('contact.sub'),
+  description: () => t('contact.description'),
+  ogDescription: () => t('contact.description'),
 })
 </script>

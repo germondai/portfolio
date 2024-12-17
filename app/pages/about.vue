@@ -6,11 +6,12 @@
 </template>
 
 <script lang="ts" setup>
-const desc =
-  'Overview about me, my skills, technologies I use and timeline of my programming career.'
+const { t } = useI18n()
 
 useSeoMeta({
-  description: desc,
-  ogDescription: desc,
+  title: () => t('about.sub'),
+  ogTitle: () => t('about.sub'),
+  description: () => t('about.description'),
+  ogDescription: () => t('about.description'),
 })
 </script>

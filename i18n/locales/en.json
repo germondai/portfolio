@@ -21,6 +21,7 @@
   "welcome": {
     "sub": "Welcome",
     "title": "Hi, I'm",
+    "description": "An Aspiring Full-Stack Web Developer. Make sure to check out my creations!",
     "content": {
       "base": "An Aspiring",
       "typewriter": ["Full-Stack Web Developer", "Web Development Student"]
@@ -30,6 +31,7 @@
   "about": {
     "sub": "About",
     "title": "Overview",
+    "description": "Overview about me, my skills, technologies I use and timeline of my programming career.",
     "content": "I'm a <b>Full-Stack Web Developer</b> with experience in <b>PHP</b> and its <b>frameworks</b>, <b>MySQL</b> and <b>Node.js</b> as <b>backend</b> and <b>Nuxt.js</b>, <b>Vue.js</b> and <b>Tailwind CSS</b> as <b>frontend</b>. However, I'm always ready to expand my <b>skill set</b> and <b>learn</b> about new <b>technologies</b>. I'm a <b>quick learner</b> and I like to use my time <b>effectively</b> to seek <b>innovative solutions</b>. Let's work together to <b>bring your ideas to life!</b>"
   },
   "timeline": [
@@ -72,6 +74,7 @@
   "work": {
     "sub": "Work",
     "title": "Projects",
+    "description": "Showcase of my skills and experiences in handling real projects, including links to live demos.",
     "content": "Following projects <b>showcase</b> my <b>skills</b> and <b>experiences</b> in handling <b>real projects</b>. Each of the listed projects below <b>includes</b> a link to <b>live demo</b> example where you can take a <b>detailed view</b>. Additionally, each project is <b>tagged</b> with <b>programming languages</b>, <b>frameworks</b> or <b>libraries</b> that were primarily used in their <b>development</b>.",
     "projects": [
       {
@@ -159,6 +162,7 @@
   "contact": {
     "sub": "Contact",
     "title": "Get In Touch",
+    "description": "Reach out for collaboration where we can bring your ideas to life or just ping me with interesting business concepts.",
     "name": {
       "label": "Your Name",
       "required": "Please enter your name",

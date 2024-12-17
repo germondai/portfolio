@@ -9,11 +9,10 @@
 </template>
 
 <script lang="ts" setup>
-const desc =
-  'An Aspiring Full-Stack Web Developer. Make sure to check out my creations!'
+const { t } = useI18n()
 
 useSeoMeta({
-  description: desc,
-  ogDescription: desc,
+  description: () => t('welcome.description'),
+  ogDescription: () => t('welcome.description'),
 })
 </script>
