@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2024-12-17',
+  devtools: { enabled: true },
+  future: { compatibilityVersion: 4 },
+  vue: { propsDestructure: true },
+
   // ssr - when true, html loads before js so the header is open on load (faster but buggy first sec on load)
   // ssr - when false, html and js loads at the same time, header is closed, anims go instant (longer load)
   ssr: true,
@@ -37,8 +42,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-
-  devtools: { enabled: true },
 
   site: {
     name: "Germond's Portfolio",
