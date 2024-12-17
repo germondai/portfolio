@@ -13,5 +13,3 @@ useSeoMeta({
   ogDescription: desc,
 })
 </script>
-
-<style lang="scss"></style>

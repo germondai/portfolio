@@ -1,62 +1,87 @@
-import { defaultWindow, watchThrottled, unrefElement } from '@vueuse/core'
-import type { MaybeElementRef, MouseInElementOptions } from '@vueuse/core'
+import {
+  type MaybeElementRef,
+  type MouseInElementOptions,
+  defaultWindow,
+} from '@vueuse/core'
 
-export function useSharedMouseInElement(
-  target?: MaybeElementRef,
-  options: MouseInElementOptions = {},
-) {
-  const { x, y } = useMouse(options)
+export interface useSharedMouseInElementProps {
+  target: MaybeElementRef
+  options?: MouseInElementOptions
+}
 
-  const targetRef = ref(target ?? window?.document.body)
-  const elementX = ref(0)
-  const elementY = ref(0)
-  const elementWidth = ref(0)
-  const elementHeight = ref(0)
-  const isOutside = ref<boolean>()
+export const useSharedMouseInElement = ({
+  target,
+  options: { handleOutside, window, ...options } = {
+    handleOutside: true,
+    window: defaultWindow,
+  },
+}: useSharedMouseInElementProps) => {
+  const type = options.type || 'page'
 
-  if (defaultWindow) {
-    watchThrottled(
+  const { x, y, sourceType } = useMouse(options)
+
+  const targetRef = ref(
+    target != null ? target : window == null ? void 0 : window.document.body,
+  )
+
+  const elementX = ref<number>(0)
+  const elementY = ref<number>(0)
+  const elementPositionX = ref<number>(0)
+  const elementPositionY = ref<number>(0)
+  const elementHeight = ref<number>(0)
+  const elementWidth = ref<number>(0)
+  const isOutside = ref<boolean>(true)
+
+  let stop = () => {}
+
+  if (window) {
+    stop = watchThrottled(
       [targetRef, x, y],
       () => {
         const el = unrefElement(targetRef)
-        if (!el) {
-          return
-        }
+        if (!el || !(el instanceof Element)) return
 
-        const { top, right, bottom, left } = el.getBoundingClientRect()
+        const { left, top, width, height } = el.getBoundingClientRect()
 
-        const eX = x.value - (left + defaultWindow!.scrollX)
-        const eY = y.value - (top + defaultWindow!.scrollY)
+        elementPositionX.value = left + (type === 'page' ? window.scrollX : 0)
+        elementPositionY.value = top + (type === 'page' ? window.scrollY : 0)
 
-        if (
-          Math.abs(eX) > 1500 ||
-          Math.abs(eY) > 1500 ||
-          defaultWindow!.screen.width <= 768
-        ) {
-          return
-        }
+        elementHeight.value = height
+        elementWidth.value = width
 
-        elementX.value = eX
-        elementY.value = eY
-        elementWidth.value = el.clientWidth
-        elementHeight.value = el.clientHeight
+        const elX = x.value - elementPositionX.value
+        const elY = y.value - elementPositionY.value
+
         isOutside.value =
-          elementX.value < left ||
-          elementX.value > right ||
-          elementY.value < top ||
-          elementY.value > bottom
+          width === 0 ||
+          height === 0 ||
+          elX < 0 ||
+          elY < 0 ||
+          elX > width ||
+          elY > height
+
+        if (handleOutside || !isOutside.value) {
+          elementX.value = elX
+          elementY.value = elY
+        }
       },
       { immediate: true, throttle: 50 },
     )
+
+    useEventListener(document, 'mouseleave', () => (isOutside.value = true))
   }
 
   return {
     x,
     y,
+    sourceType,
     elementX,
     elementY,
-    elementWidth,
+    elementPositionX,
+    elementPositionY,
     elementHeight,
+    elementWidth,
     isOutside,
+    stop,
   }
 }

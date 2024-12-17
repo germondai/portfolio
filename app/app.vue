@@ -11,5 +11,3 @@ useSeoMeta({
   ogImage: '/img/portfolio-germondai.webp',
 })
 </script>
-
-<style lang="scss" scoped></style>
