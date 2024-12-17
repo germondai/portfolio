@@ -33,12 +33,12 @@
                       ? 'ooui:success'
                       : 'ooui:error'
                 "
-                :color="
+                :class="
                   result?.pending
                     ? ''
                     : result?.data?.insert
-                      ? 'limegreen'
-                      : 'red'
+                      ? 'text-green-600'
+                      : 'text-red-600'
                 "
                 class="size-24"
               />

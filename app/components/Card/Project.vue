@@ -19,7 +19,6 @@
             >
               <Icon
                 :name="`akar-icons:${rt(lKey)}-${rt(lKey) == 'link' ? 'chain' : 'fill'}`"
-                color="white"
                 class="size-6"
               />
             </NuxtLink>

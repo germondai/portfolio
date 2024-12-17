@@ -7,9 +7,14 @@ const {
   tag = 'div',
   number = 0,
   duration = 1000,
-} = defineProps<{ tag?: string; number?: number; duration?: number }>()
+} = defineProps<{
+  tag?: string
+  number?: number
+  duration?: number
+}>()
 
-const count = ref(number)
+const count = ref<number>(0)
+
 const animateCount = () => {
   const startTime = performance.now()
 
@@ -23,11 +28,11 @@ const animateCount = () => {
   requestAnimationFrame(animate)
 }
 
-const target = ref(null)
+const target = ref<HTMLElement>()
 
-const { stop } = useIntersectionObserver(target, ({ isIntersecting }) => {
-  if (!isIntersecting) return
-
+const { stop } = useIntersectionObserver(target, (entries) => {
+  const entry = entries[0]
+  if (!entry?.isIntersecting) return
   animateCount()
   stop()
 })

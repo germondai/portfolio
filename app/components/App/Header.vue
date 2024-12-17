@@ -55,7 +55,7 @@
             class="relative px-2 py-1 flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity"
             @click="toggleUls(false)"
           >
-            <Icon :name="rt(social.icon)" color="white" class="size-9" />
+            <Icon :name="rt(social.icon)" class="size-9" />
           </NuxtLink>
         </li>
       </ul>
