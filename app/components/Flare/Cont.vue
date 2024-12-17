@@ -5,12 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-const { tag } = defineProps({
-  tag: {
-    type: String,
-    default: 'div',
-  },
-})
+const { tag = 'div' } = defineProps<{ tag?: string }>()
 
 // use this component only if you want to light up the item only on cont hover
 // otherwise its useless

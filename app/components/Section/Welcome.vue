@@ -9,18 +9,18 @@
         :visible-once="{ x: 0, opacity: 1 }"
         class="max-md:w-[98%] w-3/5 flex flex-col max-md:items-center max-md:gap-2 max-md:text-center anim-left"
       >
-        <sub>{{ $t('welcome.sub') }}</sub>
+        <sub>{{ t('welcome.sub') }}</sub>
         <h1 class="max-md:leading-tight">
-          {{ $t('welcome.title') }}
+          {{ t('welcome.title') }}
           <span class="text-gradient">Germond</span>
         </h1>
         <div class="flex items-center max-sm:flex-col gap-1">
-          <p class="whitespace-nowrap">{{ $t('welcome.content.base') }}</p>
+          <p class="whitespace-nowrap">{{ t('welcome.content.base') }}</p>
           <b class="truncate">
             <TypeWriter
               :type-array="[
-                $t('welcome.content.typewriter.0'),
-                $t('welcome.content.typewriter.1'),
+                t('welcome.content.typewriter.0'),
+                t('welcome.content.typewriter.1'),
               ]"
             />
           </b>
@@ -54,6 +54,6 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
-
-<style lang="scss"></style>
+<script lang="ts" setup>
+const { t } = useI18n()
+</script>

@@ -1,11 +1,11 @@
 <template>
   <component
     :is="tag"
-    ref="lightEl"
+    ref="target"
     class="FlareItem"
     :style="{
-      '--x': `${!$device.isMobile && elementX !== 0 ? elementX.toFixed() : -9999}px`,
-      '--y': `${!$device.isMobile && elementY !== 0 ? elementY.toFixed() : -9999}px`,
+      '--x': `${Math.round(elementX)}px`,
+      '--y': `${Math.round(elementY)}px`,
       '--fbc': before.color,
       '--fbs': `${before.size}px`,
       '--fac': after.color,
@@ -17,35 +17,20 @@
 </template>
 
 <script lang="ts" setup>
-const { tag, before, after } = defineProps({
-  tag: {
-    type: String,
-    default: 'div',
-  },
-  before: {
-    type: Object as () => {
-      color: string
-      size: number
-    },
-    default: () => ({
-      color: '#ffffffaa',
-      size: 600,
-    }),
-  },
-  after: {
-    type: Object as () => {
-      color: string
-      size: number
-    },
-    default: () => ({
-      color: '#ffffff11',
-      size: 400,
-    }),
-  },
-})
+import type { Flare } from './types'
 
-const lightEl = ref<HTMLElement>()
-const { elementX, elementY } = useSharedMouseInElement(lightEl)
+const {
+  tag = 'div',
+  before = { color: '#ffffffaa', size: 600 },
+  after = { color: '#ffffff11', size: 400 },
+} = defineProps<{
+  tag?: Component
+  before?: Flare
+  after?: Flare
+}>()
+
+const target = templateRef<HTMLElement>('target')
+const { elementX, elementY } = useSharedMouseInElement({ target })
 </script>
 
 <style lang="scss" scoped>

@@ -3,49 +3,39 @@
     :is="tag"
     ref="float"
     class="FloatItem"
-    :class="preset ?? ''"
-    :style="{
-      transform: `translate(${parallaxStyle.x}px, ${parallaxStyle.y}px)`,
-    }"
+    :class="preset"
+    :style="parallaxStyle"
   >
     <slot />
   </component>
 </template>
 
 <script lang="ts" setup>
-const { tag, velocity, preset } = defineProps({
-  tag: {
-    type: String,
-    default: 'div',
-  },
-  velocity: {
-    type: Number,
-    default: 1,
-  },
-  preset: {
-    type: String,
-    value: 'bg' || '...',
-    default: '',
-  },
-})
+const {
+  tag = 'div',
+  velocity = 1,
+  preset = 'bg',
+} = defineProps<{ tag?: string; velocity?: number; preset?: 'bg' }>()
 
 const { isMobile } = useDevice()
 
 const float = ref()
 const {
-  elementX: x,
-  elementY: y,
+  elementX: elX,
+  elementY: elY,
   elementWidth: elW,
   elementHeight: elH,
-} = useSharedMouseInElement(undefined, { type: 'client' })
+} = useSharedMouseInElement({ options: { type: 'client' } })
 
 const parallaxStyle = computed(() => {
-  return {
-    x: !isMobile ? (((x.value - elW.value / 2) * velocity) / 100).toFixed() : 0,
-    y: !isMobile
-      ? (((y.value - elH.value / 10) * velocity) / 200).toFixed()
-      : 0,
-  }
+  const x = !isMobile
+    ? Math.round((elX.value - elW.value / 2) * velocity) / 100
+    : 0
+  const y = !isMobile
+    ? Math.round(((elY.value - elH.value / 10) * velocity) / 200)
+    : 0
+
+  return `translate(${x}px, ${y}px)`
 })
 </script>
 

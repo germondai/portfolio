@@ -5,16 +5,10 @@
 </template>
 
 <script lang="ts" setup>
-const { tag, scale } = defineProps({
-  tag: {
-    type: String,
-    default: 'div',
-  },
-  scale: {
-    type: Number,
-    default: 1,
-  },
-})
+const { tag = 'div', scale = 1 } = defineProps<{
+  tag?: string
+  scale?: number
+}>()
 
 const { isMobile } = useDevice()
 const HoloTilt = ref()

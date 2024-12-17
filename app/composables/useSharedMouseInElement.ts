@@ -5,7 +5,7 @@ import {
 } from '@vueuse/core'
 
 export interface useSharedMouseInElementProps {
-  target: MaybeElementRef
+  target?: MaybeElementRef
   options?: MouseInElementOptions
 }
 

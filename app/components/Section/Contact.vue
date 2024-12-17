@@ -18,8 +18,8 @@
             class="form relative w-full h-full flex flex-col p-6 rounded-2xl bg-[#0d0d0faa] z-20"
             @submit="onSubmit"
           >
-            <sub>{{ $t('contact.sub') }}</sub>
-            <h1>{{ $t('contact.title') }}</h1>
+            <sub>{{ t('contact.sub') }}</sub>
+            <h1>{{ t('contact.title') }}</h1>
 
             <div
               v-if="result"
@@ -46,8 +46,8 @@
                 result?.pending
                   ? ''
                   : result?.data?.insert
-                    ? $t('contact.success')
-                    : $t('contact.fail')
+                    ? t('contact.success')
+                    : t('contact.fail')
               }}</b>
               <button
                 v-if="
@@ -60,9 +60,9 @@
               >
                 {{
                   !result?.pending && !result?.data?.insert
-                    ? $t('contact.retry')
+                    ? t('contact.retry')
                     : canCancel
-                      ? $t('contact.cancel')
+                      ? t('contact.cancel')
                       : ''
                 }}
               </button>
@@ -74,11 +74,11 @@
                   type="text"
                   name="name"
                   autocomplete="name"
-                  :placeholder="$t('contact.name.label')"
+                  :placeholder="t('contact.name.label')"
                   required
                 />
                 <ErrorMessage name="name" />
-                <label for="name">{{ $t('contact.name.label') }}</label>
+                <label for="name">{{ t('contact.name.label') }}</label>
               </div>
               <div class="field">
                 <Field
@@ -86,11 +86,11 @@
                   type="email"
                   name="email"
                   autocomplete="email"
-                  :placeholder="$t('contact.email.label')"
+                  :placeholder="t('contact.email.label')"
                   required
                 />
                 <ErrorMessage name="email" />
-                <label for="email">{{ $t('contact.email.label') }}</label>
+                <label for="email">{{ t('contact.email.label') }}</label>
               </div>
               <div class="field textarea">
                 <Field
@@ -98,18 +98,18 @@
                   as="textarea"
                   name="message"
                   autocomplete="false"
-                  :placeholder="$t('contact.message.label')"
+                  :placeholder="t('contact.message.label')"
                   required
                 ></Field>
                 <ErrorMessage name="message" />
-                <label for="message">{{ $t('contact.message.label') }}</label>
+                <label for="message">{{ t('contact.message.label') }}</label>
               </div>
               <button
                 type="submit"
                 name="saveContact"
                 class="w-full h-10 my-2 p-1 rounded-2xl text-center text-inherit bg-[#3B3B3B] hover:bg-[#26272ccc] shadow-2xl transition-colors"
               >
-                {{ $t('contact.button') }}
+                {{ t('contact.button') }}
               </button>
             </template>
           </Form>
@@ -184,16 +184,4 @@ const cancel = () => {
   result.value?.clear()
   result.value = undefined
 }
-
-// https://github.com/logaretm/vee-validate/issues/3521
-function getSubmitFn<Schema extends Yup.ObjectSchema<Record<string, any>>>(
-  _: Schema,
-  callback: (values: Yup.InferType<Schema>) => void,
-) {
-  return (values: Record<string, any>) => {
-    return callback(values)
-  }
-}
 </script>
-
-<style lang="scss" scoped></style>

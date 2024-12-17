@@ -52,6 +52,8 @@ export default defineNuxtConfig({
     '@vite-pwa/nuxt',
   ],
 
+  vite: { css: { preprocessorOptions: { scss: { api: 'modern' } } } },
+
   css: ['~/assets/scss/style.scss'],
 
   tailwindcss: {

@@ -3,20 +3,11 @@
 </template>
 
 <script setup lang="ts">
-const { tag, number, duration } = defineProps({
-  tag: {
-    type: String,
-    default: 'div',
-  },
-  number: {
-    type: Number,
-    default: 0,
-  },
-  duration: {
-    type: Number,
-    default: 1000,
-  },
-})
+const {
+  tag = 'div',
+  number = 0,
+  duration = 1000,
+} = defineProps<{ tag?: string; number?: number; duration?: number }>()
 
 const count = ref(number)
 const animateCount = () => {
@@ -26,21 +17,18 @@ const animateCount = () => {
     const progress = Math.min(1, (currentTime - startTime) / duration)
     count.value = Math.floor(number * progress)
 
-    if (progress < 1) {
-      requestAnimationFrame(animate)
-    }
+    if (progress < 1) requestAnimationFrame(animate)
   }
 
   requestAnimationFrame(animate)
 }
 
 const target = ref(null)
-const { stop } = useIntersectionObserver(target, ([{ isIntersecting }]) => {
-  if (isIntersecting) {
-    animateCount()
-    stop()
-  }
+
+const { stop } = useIntersectionObserver(target, ({ isIntersecting }) => {
+  if (!isIntersecting) return
+
+  animateCount()
+  stop()
 })
 </script>
-
-<style lang="scss" scoped></style>

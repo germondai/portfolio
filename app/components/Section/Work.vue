@@ -9,15 +9,15 @@
         :visible-once="{ y: 0, opacity: 1 }"
         class="w-full flex flex-col"
       >
-        <sub>{{ $t('work.sub') }}</sub>
-        <h1>{{ $t('work.title') }}</h1>
-        <p class="text-justify" v-html="$t('work.content')"></p>
+        <sub>{{ t('work.sub') }}</sub>
+        <h1>{{ t('work.title') }}</h1>
+        <p class="text-justify" v-html="t('work.content')"></p>
       </div>
       <div
         class="w-full grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4"
       >
         <CardProject
-          v-for="(project, i) in $tm('work.projects')"
+          v-for="(project, i) in tm('work.projects')"
           :key="i"
           v-motion
           :initial="{ opacity: 0, x: $device.isMobile ? 0 : -100 }"
@@ -25,7 +25,7 @@
           :delay="i * ($device.isMobile ? 0 : 100)"
           :hover="{ scale: 1.025 }"
           class="w-full h-full z-20"
-          :project="project"
+          :project
         />
       </div>
     </div>
@@ -35,6 +35,6 @@
   </section>
 </template>
 
-<script lang="ts" setup></script>
-
-<style lang="scss"></style>
+<script lang="ts" setup>
+const { t, tm } = useI18n()
+</script>

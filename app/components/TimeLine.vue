@@ -24,15 +24,15 @@
               <span class="px-4 py-1 bg-white text-black rounded-xl">
                 <CountUp :number="item.year" />
               </span>
-              <span class="truncate">{{ $rt(item.title) }}</span>
+              <span class="truncate">{{ rt(item.title) }}</span>
             </b>
             <div class="flex flex-col gap-2 px-4 py-2">
-              <p class="text-justify" v-html="$rt(item.content)"></p>
+              <p class="text-justify" v-html="rt(item.content)"></p>
               <button
-                v-if="$rt(item.content_full)"
+                v-if="rt(item.content_full)"
                 class="p-2 rounded-xl shadow bg-[#2B2242] hover:bg-[#36275e] transition-colors"
               >
-                {{ $rt(item.button) ? $rt(item.button) : '📖 👀' }}
+                {{ rt(item.button) ? rt(item.button) : '📖 👀' }}
               </button>
             </div>
           </div>
@@ -43,22 +43,16 @@
 </template>
 
 <script lang="ts" setup>
-const { timeline, flare } = defineProps({
-  timeline: {
-    type: Array as () => {
-      year: number
-      title: string
-      content: string
-      content_full?: string
-      button?: string
-    }[],
-    default: () => [],
-  },
-  flare: {
-    type: Boolean,
-    default: true,
-  },
-})
-</script>
+const { rt } = useI18n()
 
-<style lang="scss"></style>
+const { timeline, flare = true } = defineProps<{
+  timeline: {
+    year: number
+    title: string
+    content: string
+    content_full?: string
+    button?: string
+  }[]
+  flare?: boolean
+}>()
+</script>

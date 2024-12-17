@@ -19,8 +19,8 @@
               <NuxtLink :href="`#${section.id}`" :title="section.id">
                 <Icon
                   :name="
-                    $t(`sections.${section.id}`).includes(':')
-                      ? $t(`sections.${section.id}`)
+                    t(`sections.${section.id}`).includes(':')
+                      ? t(`sections.${section.id}`)
                       : 'line-md:question-circle'
                   "
                   class="size-8 opacity-80 hover:opacity-100"
@@ -39,6 +39,7 @@
 </template>
 
 <script lang="ts" setup>
+const { t } = useI18n()
 const { y } = useWindowScroll({ behavior: 'smooth' })
 const { largestSection, sections } = usePageSections()
 </script>

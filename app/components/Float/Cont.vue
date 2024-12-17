@@ -1,21 +1,14 @@
 <template>
-  <component :is="tag" class="FloatCont" :class="preset ?? ''">
+  <component :is="tag" class="FloatCont" :class="preset">
     <slot />
   </component>
 </template>
 
 <script lang="ts" setup>
-const { tag, preset } = defineProps({
-  tag: {
-    type: String,
-    default: 'div',
-  },
-  preset: {
-    type: String,
-    value: 'bg' || '...',
-    default: '',
-  },
-})
+const { tag = 'div', preset = 'bg' } = defineProps<{
+  tag?: string
+  preset?: 'bg'
+}>()
 </script>
 
 <style lang="scss">

@@ -3,12 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-const { color } = defineProps({
-  color: {
-    type: String,
-    default: '#ffffff22',
-  },
-})
+const { color = '#ffffff22' } = defineProps<{ color?: string }>()
 </script>
 
 <style lang="scss">

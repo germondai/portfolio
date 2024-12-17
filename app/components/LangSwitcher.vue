@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-start gap-1">
-    <sub class="font-bold">{{ $t('welcome.swap_language') }}</sub>
+    <sub class="font-bold">{{ t('welcome.swap_language') }}</sub>
     <button
       v-for="langLocale in availableLocales"
       :key="langLocale.code"
@@ -13,11 +13,9 @@
 </template>
 
 <script lang="ts" setup>
-const { locale, locales, setLocale } = useI18n()
+const { t, locale, locales, setLocale } = useI18n()
 
 const availableLocales = computed(() => {
   return locales.value.filter((i) => i.code !== locale.value)
 })
 </script>
-
-<style lang="scss" scoped></style>

@@ -17,18 +17,10 @@
 </template>
 
 <script lang="ts" setup>
-const { condition, styled } = defineProps({
-  condition: {
-    type: Boolean,
-    default: true,
-  },
-  styled: {
-    type: Boolean,
-    default: false,
-  },
-})
-
 const { y } = useWindowScroll({ behavior: 'smooth' })
-</script>
 
-<style lang="scss" scoped></style>
+const { condition = true, styled = false } = defineProps<{
+  condition?: boolean
+  styled?: boolean
+}>()
+</script>

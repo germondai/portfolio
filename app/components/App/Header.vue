@@ -16,23 +16,23 @@
         class="max-lg:order-2 w-full flex items-center justify-between gap-4 max-sm:gap-2 max-sm:absolute top-14 left-0 max-sm:bg-[#1f2023cc] max-sm:h-14 max-sm:px-4 backdrop-blur-sm"
       >
         <li
-          v-for="(link, index) in $tm('header')"
+          v-for="(link, index) in tm('header')"
           :key="index"
           class="max-xs:first:hidden max-sm:first:flex max-md:first:hidden flex"
         >
           <NuxtLink
-            :href="$rt(link.href)"
+            :href="rt(link.href)"
             class="relative px-2 py-1 opacity-50 hover:opacity-100 transition-opacity"
             @click="toggleUls(false)"
           >
-            {{ $rt(link.name) }}
+            {{ rt(link.name) }}
           </NuxtLink>
         </li>
       </ul>
       <NuxtLink
         href="./"
         class="max-lg:order-1 flex items-center justify-center h-[76px] z-20"
-        :title="$t('mainpagelink')"
+        :title="t('mainpagelink')"
       >
         <NuxtImg
           src="skull.ico"
@@ -47,15 +47,15 @@
         :class="[icons ? '' : 'max-lg:hidden']"
         class="w-full flex items-center justify-between max-sm:justify-between max-lg:justify-around gap-4 max-sm:gap-2 max-sm:top-28 max-lg:top-14 left-0 max-lg:bg-[#1f2023cc] max-lg:absolute max-lg:h-14 max-lg:px-4 max-lg:rounded-b-3xl backdrop-blur-sm"
       >
-        <li v-for="(social, index) in $tm('socials')" :key="index" class="flex">
+        <li v-for="(social, index) in tm('socials')" :key="index" class="flex">
           <NuxtLink
-            :href="$rt(social.href)"
+            :href="rt(social.href)"
             target="blank"
-            :title="$rt(social.name)"
+            :title="rt(social.name)"
             class="relative px-2 py-1 opacity-50 hover:opacity-100 transition-opacity"
             @click="toggleUls(false)"
           >
-            <Icon :name="$rt(social.icon)" color="white" class="size-9" />
+            <Icon :name="rt(social.icon)" color="white" class="size-9" />
           </NuxtLink>
         </li>
       </ul>
@@ -77,6 +77,8 @@
 
 <script lang="ts" setup>
 // const { largestSection } = usePageSections()
+const { t, tm, rt } = useI18n()
+
 const { width } = useWindowSize()
 
 const menu = ref()
