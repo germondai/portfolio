@@ -25,7 +25,7 @@ const {
   elementY: elY,
   elementWidth: elW,
   elementHeight: elH,
-} = useSharedMouseInElement({ options: { type: 'client' } })
+} = useSharedMouseInElement({ target: float })
 
 const parallaxStyle = computed(() => {
   const x = !isMobile
