@@ -38,22 +38,10 @@ export const useSharedMouseInElement = ({
         const el = unrefElement(targetRef)
         if (!el || !(el instanceof Element)) return
 
-        const scrollOffsetX = type === 'page' ? window.scrollX : 0
-        const scrollOffsetY = type === 'page' ? window.scrollY : 0
-
         const { left, top, width, height } = el.getBoundingClientRect()
 
-        elementPositionX.value = left + scrollOffsetX
-        elementPositionY.value = top + scrollOffsetY
-
-        if (
-          Math.abs(elementPositionX.value) >
-            Math.abs((window.innerWidth + scrollOffsetX) * 0.9) ||
-          Math.abs(elementPositionY.value) >
-            Math.abs((window.innerHeight + scrollOffsetY) * 0.9) ||
-          window.innerWidth <= 768
-        )
-          return
+        elementPositionX.value = left + (type === 'page' ? window.scrollX : 0)
+        elementPositionY.value = top + (type === 'page' ? window.scrollY : 0)
 
         elementHeight.value = height
         elementWidth.value = width
