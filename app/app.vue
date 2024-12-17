@@ -8,6 +8,6 @@
 
 <script lang="ts" setup>
 useSeoMeta({
-  ogImage: '/img/portfolio-germondai.webp',
+  ogImage: '/portfolio-germondai.webp',
 })
 </script>

@@ -15,7 +15,7 @@
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write --list-different .",
-    "generate:pwa-icons": "npx pwa-asset-generator public/img/skull.ico public/img/pwa/ --opaque false"
+    "generate:pwa-icons": "npx pwa-asset-generator public/skull.ico public/pwa/ --opaque false"
   },
   "dependencies": {
     "@nuxt/fonts": "^0.10.3",

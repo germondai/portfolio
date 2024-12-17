@@ -13,7 +13,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      link: [{ rel: 'icon', type: 'image/ico', href: '/img/skull.ico' }],
+      link: [{ rel: 'icon', type: 'image/ico', href: '/skull.ico' }],
       meta: [
         {
           name: 'description',
@@ -74,9 +74,8 @@ export default defineNuxtConfig({
   },
 
   image: {
-    // quality: 85,
-    // format: ['webp'],
-    dir: '~~/public/img/',
+    quality: 85,
+    format: ['webp'],
   },
 
   i18n: {
@@ -133,25 +132,25 @@ export default defineNuxtConfig({
         start_url: '/',
         icons: [
           {
-            src: 'img/pwa/manifest-icon-192.maskable.png',
+            src: '/pwa/manifest-icon-192.maskable.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any',
           },
           {
-            src: 'img/pwa/manifest-icon-192.maskable.png',
+            src: '/pwa/manifest-icon-192.maskable.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'maskable',
           },
           {
-            src: 'img/pwa/manifest-icon-512.maskable.png',
+            src: '/pwa/manifest-icon-512.maskable.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any',
           },
           {
-            src: 'img/pwa/manifest-icon-512.maskable.png',
+            src: '/pwa/manifest-icon-512.maskable.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',

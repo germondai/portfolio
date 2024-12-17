@@ -36,13 +36,13 @@
         class="relative max-md:3/5 w-2/5 h-[90%] py-12 flex items-center justify-center anim-bottom animate-[float_2s_infinite_ease-in-out]"
       >
         <NuxtImg
-          src="3D-rocket.webp"
+          src="/3D-rocket.webp"
           alt="3D Rocket"
           class="absolute max-h-[90%] max-w-[528px] flex py-4 blur-[8px] opacity-30"
           sizes="xs:112px sm:128px md:144px lg:160px xl:176px"
         />
         <NuxtImg
-          src="germond-model.webp"
+          src="/germond-model.webp"
           alt="Germond Model"
           class="max-h-[90%] max-w-[40%] drop-shadow-custom z-10"
           sizes="xs:40px sm:56px md:64px lg:112px xl:128px"

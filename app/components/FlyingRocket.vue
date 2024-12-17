@@ -2,7 +2,7 @@
   <div v-if="!$device.isMobile" id="flyingRocket" class="-z-[999]">
     <div class="wrapz">
       <NuxtImg
-        src="3D-rocket.webp"
+        src="/3D-rocket.webp"
         alt="3D Rocket"
         loading="lazy"
         class="aspect-square"

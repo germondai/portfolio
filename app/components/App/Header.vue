@@ -35,7 +35,7 @@
         :title="t('mainpagelink')"
       >
         <NuxtImg
-          src="skull.ico"
+          src="/skull.ico"
           alt="Skull Icon"
           class="max-w-max h-full hover:animate-[shake_.3s] anim"
           width="76px"
