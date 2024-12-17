@@ -6,12 +6,13 @@
       class="group relative w-[7px] mx-auto bg-[#251e39] max-lg:pt-6 pt-12 first:rounded-t-2xl last:rounded-b-2xl max-lg:ml-2.5"
     >
       <div
-        v-motion
-        :initial="{
-          opacity: 0,
-          x: $device.isMobile ? 0 : i % 2 ? -100 : 100,
+        v-motion="{
+          initial: {
+            opacity: 0,
+            x: $device.isMobile ? 0 : i % 2 ? -100 : 100,
+          },
+          visibleOnce: { opacity: 1, x: 0 },
         }"
-        :visible-once="{ opacity: 1, x: 0 }"
         class="relative max-lg:w-[85vw] max-lg:left-8 bottom-0 lg:group-odd:left-[50px] lg:group-even:-left-[495px] w-[450px] rounded-xl bg-[#ffffff1a] box-shadow-custom z-20"
       >
         <FlareItem :is="flare ? 'FlareItem' : 'div'" class="rounded-xl p-0.5">

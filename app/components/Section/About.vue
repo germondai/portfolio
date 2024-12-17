@@ -4,9 +4,10 @@
       class="max-md:w-[95%] w-4/5 mx-auto h-full flex flex-col items-center justify-center gap-12"
     >
       <div
-        v-motion
-        :initial="{ opacity: 0, y: $device.isMobile ? 0 : -100 }"
-        :visible-once="{ y: 0, opacity: 1 }"
+        v-motion="{
+          initial: { opacity: 0, y: $device.isMobile ? 0 : -100 },
+          visibleOnce: { y: 0, opacity: 1 },
+        }"
         class="w-full flex flex-col anim-bottom text-justify"
       >
         <sub>{{ t('about.sub') }}</sub>
@@ -19,10 +20,11 @@
         <div
           v-for="(skill, index) in tm('skills')"
           :key="index"
-          v-motion
-          :initial="{ opacity: 0, x: $device.isMobile ? 0 : -100 }"
-          :visible-once="{ x: 0, opacity: 1 }"
-          :delay="index * ($device.isMobile ? 0 : 50)"
+          v-motion="{
+            initial: { opacity: 0, x: $device.isMobile ? 0 : -100 },
+            visibleOnce: { x: 0, opacity: 1 },
+            delay: index * ($device.isMobile ? 0 : 50),
+          }"
           class="flex flex-col items-center gap-2 anim-left"
         >
           <HoloTilt :scale="1.1" class="flex items-center justify-center">
