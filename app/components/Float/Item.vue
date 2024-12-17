@@ -35,7 +35,7 @@ const parallaxStyle = computed(() => {
     ? Math.round(((elY.value - elH.value / 10) * velocity) / 200)
     : 0
 
-  return `translate(${x}px, ${y}px)`
+  return `transform: translate(${x}px, ${y}px);`
 })
 </script>
 

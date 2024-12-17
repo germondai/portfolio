@@ -34,5 +34,3 @@
     </FloatItem>
   </FloatCont>
 </template>
-
-<script lang="ts" setup></script>

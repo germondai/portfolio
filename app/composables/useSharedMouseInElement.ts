@@ -4,24 +4,21 @@ import {
   defaultWindow,
 } from '@vueuse/core'
 
-export interface useSharedMouseInElementProps {
+export interface UseSharedMouseInElementProps {
   target?: MaybeElementRef
   options?: MouseInElementOptions
 }
 
 export const useSharedMouseInElement = ({
   target,
-  options: { handleOutside, window, ...options } = {
-    handleOutside: true,
-    window: defaultWindow,
-  },
-}: useSharedMouseInElementProps) => {
+  options: { handleOutside = true, window = defaultWindow, ...options } = {},
+}: UseSharedMouseInElementProps) => {
   const type = options.type || 'page'
 
   const { x, y, sourceType } = useMouse(options)
 
   const targetRef = ref(
-    target != null ? target : window == null ? void 0 : window.document.body,
+    target && target !== null ? target : window?.document.body,
   )
 
   const elementX = ref<number>(0)
