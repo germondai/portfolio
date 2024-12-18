@@ -38,7 +38,7 @@ Additionally, there's a **contact form** connected to an **API**, that stores **
 
 **Technologies**
 
-- <a href="https://nuxt.com/" target="_blank">Nuxt 3</a>
+- <a href="https://nuxt.com/" target="_blank">Nuxt 4</a>
 - <a href="https://vuejs.org/" target="_blank">Vue 3</a>
 - <a href="https://vitejs.dev/" target="_blank">Vite</a>
 - <a href="https://nodejs.org/" target="_blank">Node.js</a>
