@@ -1,7 +1,6 @@
 <template>
   <main>
     <SectionWork />
-    <LangSwitcher />
   </main>
 </template>
 
