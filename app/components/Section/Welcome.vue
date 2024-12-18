@@ -40,14 +40,15 @@
         <NuxtImg
           src="/3D-rocket.webp"
           alt="3D Rocket"
-          class="absolute max-h-[90%] max-w-[528px] flex py-4 blur-[8px] opacity-30"
-          sizes="xs:112px sm:128px md:144px lg:160px xl:176px"
+          class="absolute max-w-[528px] min-h-[50%] max-h-[90%] flex py-4 blur-[8px] opacity-30"
+          sizes="xs:96px sm:128px md:144px lg:160px xl:176px"
+          :quality="1"
         />
         <NuxtImg
           src="/germond-model.webp"
           alt="Germond Model"
           class="max-h-[90%] max-w-[40%] drop-shadow-custom z-10"
-          sizes="xs:40px sm:56px md:64px lg:112px xl:128px"
+          sizes="40px xs:48px sm:56px md:64px lg:112px xl:128px"
         />
       </div>
     </div>

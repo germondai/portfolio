@@ -1,15 +1,18 @@
 <template>
   <div v-if="!$device.isMobile" id="flyingRocket" class="-z-[999]">
     <div class="wrapz">
-      <NuxtImg
-        src="/3D-rocket.webp"
-        alt="3D Rocket"
-        loading="lazy"
-        class="aspect-square"
-        width="192px"
-        height="192px"
-      />
-      <div class="flame"></div>
+      <div class="size-[192px] aspect-square">
+        <NuxtImg
+          src="/3D-rocket.webp"
+          alt="3D Rocket"
+          class="size-full"
+          width="16px"
+          height="16px"
+          loading="lazy"
+          :quality="1"
+        />
+      </div>
+      <div class="flame" />
     </div>
   </div>
 </template>

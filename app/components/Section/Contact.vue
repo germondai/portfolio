@@ -26,46 +26,14 @@
               v-if="result"
               class="w-full h-full p-8 mt-2 flex flex-col items-center justify-center gap-4"
             >
-              <Icon
-                :name="
-                  result?.pending
-                    ? 'eos-icons:three-dots-loading'
-                    : result?.data?.insert
-                      ? 'ooui:success'
-                      : 'ooui:error'
-                "
-                :class="
-                  result?.pending
-                    ? ''
-                    : result?.data?.insert
-                      ? 'text-green-600'
-                      : 'text-red-600'
-                "
-                class="size-24"
-              />
-              <b>{{
-                result?.pending
-                  ? ''
-                  : result?.data?.insert
-                    ? t('contact.success')
-                    : t('contact.fail')
-              }}</b>
+              <Icon :name="resultIcon" :class="resultColor" class="size-24" />
+              <b>{{ resultMessage }}</b>
               <button
-                v-if="
-                  (!result?.pending && result?.status == 'error') ||
-                  (!result?.pending && result?.data?.insert == false) ||
-                  (result.pending && canCancel && !result?.data?.insert)
-                "
+                v-if="shouldShowRetryButton"
                 class="px-8 py-2 rounded-2xl text-center text-inherit bg-[#3B3B3B] hover:bg-[#26272ccc] shadow-2xl transition-colors"
-                @click="result.pending && canCancel ? cancel() : retry()"
+                @click="pending && canCancel ? cancel() : retry()"
               >
-                {{
-                  !result?.pending && !result?.data?.insert
-                    ? t('contact.retry')
-                    : canCancel
-                      ? t('contact.cancel')
-                      : ''
-                }}
+                {{ retryButtonText }}
               </button>
             </div>
             <template v-else>
@@ -98,7 +66,7 @@
                   id="message"
                   as="textarea"
                   name="message"
-                  autocomplete="false"
+                  autocomplete="off"
                   :placeholder="t('contact.message.label')"
                   required
                 ></Field>
@@ -126,16 +94,15 @@
         <NuxtImg
           src="/3D-envelope.webp"
           alt="Envelope Mail"
-          loading="lazy"
-          class="absolute max-w-[528px] max-h-[90%] flex py-4 opacity-30 blur animate-[float_2s_infinite_ease-in-out]"
-          sizes="sm:128px md:144px lg:160px xl:176px"
+          class="absolute max-w-[528px] min-h-[50%] max-h-[90%] flex py-4 opacity-30 blur animate-[float_2s_infinite_ease-in-out]"
+          sizes="xs:96px sm:128px md:144px lg:160px xl:176px"
+          :quality="1"
         />
         <NuxtImg
           src="/3D-devices.webp"
           alt="Devices"
-          loading="lazy"
           class="max-w-full max-h-[90%] drop-shadow-custom animate-[float_2s_infinite_ease-in-out]"
-          sizes="xs:96px sm:128px md:144px lg:160px xl:176px"
+          sizes="40px xs:48px sm:56px md:64px lg:112px xl:128px"
         />
       </div>
     </div>
@@ -145,45 +112,91 @@
 
 <script lang="ts" setup>
 import * as Yup from 'yup'
+import { p } from '~~/analyze/dist/_nuxt/CC9mbKam'
 
 const { t } = useI18n()
 
-const schema = computed(() => {
-  return Yup.object({
+const schema = computed(() =>
+  Yup.object({
     name: Yup.string().max(64).required(t('contact.name.required')),
     email: Yup.string()
       .email(t('contact.email.error'))
       .max(128)
       .required(t('contact.email.required')),
-    message: Yup.string().min(4).max(256).required(t('contact.email.required')),
-  })
-})
+    message: Yup.string()
+      .min(4)
+      .max(256)
+      .required(t('contact.message.required')),
+  }),
+)
 
+const pending = ref<boolean>(false)
+const error = ref<boolean>(false)
+const canCancel = ref<boolean>(false)
+const insertStatus = ref<boolean>(false)
 const result = ref()
-const canCancel = ref(false)
 
 const onSubmit = getSubmitFn(schema.value, async (values) => {
+  pending.value = true
   setTimeout(() => (canCancel.value = true), 5000)
-  result.value = await {
-    ...useAsyncData('contact', () =>
-      $fetch('https://api.germondai.com/contact/insert', {
-        method: 'post',
-        body: values,
-      }),
-    ),
+  try {
+    result.value = await $fetch('https://api.germondai.com/contact/insert', {
+      method: 'post',
+      body: values,
+    })
+  } catch {
+    result.value = true
+    error.value = true
+  } finally {
+    pending.value = false
   }
 })
 
 const retry = () => {
-  result.value?.refresh()
+  pending.value = false
   canCancel.value = false
-  result.value.data.insert = undefined
+  insertStatus.value = false
+  result.value = undefined
   setTimeout(() => (canCancel.value = true), 5000)
 }
 
 const cancel = () => {
   canCancel.value = false
-  result.value?.clear()
   result.value = undefined
 }
+
+const resultIcon = computed(() =>
+  pending.value
+    ? 'eos-icons:three-dots-loading'
+    : insertStatus.value
+      ? 'ooui:success'
+      : 'ooui:error',
+)
+
+const resultColor = computed(() =>
+  pending.value ? '' : insertStatus.value ? 'text-green-600' : 'text-red-600',
+)
+
+const resultMessage = computed(() =>
+  pending.value
+    ? ''
+    : insertStatus.value
+      ? t('contact.success')
+      : t('contact.fail'),
+)
+
+const shouldShowRetryButton = computed(
+  () =>
+    (!pending.value && error.value) ||
+    (!pending.value && insertStatus.value === false) ||
+    (pending.value && canCancel.value && !insertStatus.value),
+)
+
+const retryButtonText = computed(() =>
+  !pending.value && !insertStatus.value
+    ? t('contact.retry')
+    : canCancel.value
+      ? t('contact.cancel')
+      : '',
+)
 </script>

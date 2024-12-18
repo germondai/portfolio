@@ -1,7 +1,7 @@
 <template>
   <main>
     <SectionAbout />
-    <SectionTimeline />
+    <LazySectionTimeline />
   </main>
 </template>
 

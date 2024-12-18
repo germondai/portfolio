@@ -35,6 +35,8 @@
               v-if="project.src"
               :src="rt(project.src)"
               :alt="rt(project.alt)"
+              width="320"
+              height="180"
               loading="lazy"
               class="w-full rounded-lg aspect-video"
             />
