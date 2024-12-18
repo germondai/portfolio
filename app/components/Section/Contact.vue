@@ -97,12 +97,14 @@
           class="absolute max-w-[528px] min-h-[50%] max-h-[90%] flex py-4 opacity-30 blur animate-[float_2s_infinite_ease-in-out]"
           sizes="xs:96px sm:128px md:144px lg:160px xl:176px"
           :quality="1"
+          :lazy
         />
         <NuxtImg
           src="/3D-devices.webp"
           alt="Devices"
           class="max-w-full max-h-[90%] drop-shadow-custom animate-[float_2s_infinite_ease-in-out]"
           sizes="40px xs:48px sm:56px md:64px lg:112px xl:128px"
+          :lazy
         />
       </div>
     </div>
@@ -112,9 +114,10 @@
 
 <script lang="ts" setup>
 import * as Yup from 'yup'
-import { p } from '~~/analyze/dist/_nuxt/CC9mbKam'
 
 const { t } = useI18n()
+
+const { lazy } = defineProps<{ lazy?: boolean }>()
 
 const schema = computed(() =>
   Yup.object({

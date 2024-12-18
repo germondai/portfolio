@@ -4,7 +4,7 @@
     <LazySectionAbout />
     <LazySectionTimeline />
     <LazySectionWork />
-    <LazySectionContact />
+    <LazySectionContact lazy />
   </main>
 </template>
 
