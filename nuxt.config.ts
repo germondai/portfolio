@@ -117,15 +117,16 @@ export default defineNuxtConfig({
         navigateFallback: '/',
         globPatterns: [
           '**/*.{js,css,html}',
-          '_nuxt/**/*.{js,css,woff2}',
-          '_ipx/**/*.{webp,ico}',
+          '_fonts/**/*.{woff,woff2}',
+          '_nuxt/**/*.{js,css}',
+          '_ipx/**/*.{webp,png,jpg,jpeg,ico}',
         ],
       },
       manifest: {
         name: "Germond's Portfolio",
         short_name: 'Germond',
         description:
-          'An Aspiring Full-Stack Web Developer. Make sure to check out my creations!',
+          "Hi, I'm Germond, an aspiring Full-Stack Web Developer with expertise in Nuxt.js, PHP, MySQL and TailwindCSS. Check out my portfolio to explore modern web solutions and projects.",
         display: 'standalone',
         theme_color: '#121316',
         background_color: '#121316',
