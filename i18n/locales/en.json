@@ -21,18 +21,20 @@
   "welcome": {
     "sub": "Welcome",
     "title": "Hi, I'm",
-    "description": "An Aspiring Full-Stack Web Developer. Make sure to check out my creations!",
+    "description": "Hi, I'm Germond, an aspiring Full-Stack Web Developer with expertise in Nuxt.js, PHP, MySQL and TailwindCSS. Check out my portfolio to explore modern web solutions and projects.",
     "content": {
       "base": "An Aspiring",
       "typewriter": ["Full-Stack Web Developer", "Web Development Student"]
     },
-    "swap_language": "Swap Language"
+    "swap_language": "Swap Language",
+    "keywords": "Full-Stack Web Developer, Nuxt.js Developer, PHP Developer, Web Development Portfolio, TailwindCSS, Vue.js, MySQL, Web Developer for Hire, Custom Web Applications, Modern Web Solutions"
   },
   "about": {
     "sub": "About",
     "title": "Overview",
-    "description": "Overview about me, my skills, technologies I use and timeline of my programming career.",
-    "content": "I'm a <b>Full-Stack Web Developer</b> with experience in <b>PHP</b> and its <b>frameworks</b>, <b>MySQL</b> and <b>Node.js</b> as <b>backend</b> and <b>Nuxt.js</b>, <b>Vue.js</b> and <b>Tailwind CSS</b> as <b>frontend</b>. However, I'm always ready to expand my <b>skill set</b> and <b>learn</b> about new <b>technologies</b>. I'm a <b>quick learner</b> and I like to use my time <b>effectively</b> to seek <b>innovative solutions</b>. Let's work together to <b>bring your ideas to life!</b>"
+    "description": "Learn about my journey as a Full-Stack Web Developer with expertise in Nuxt.js, PHP, MySQL and TailwindCSS. Discover my skills, career timeline, and technologies I use.",
+    "content": "I'm a <b>Full-Stack Web Developer</b> with experience in <b>PHP</b> and its <b>frameworks</b>, <b>MySQL</b> and <b>Node.js</b> as <b>backend</b> and <b>Nuxt.js</b>, <b>Vue.js</b> and <b>Tailwind CSS</b> as <b>frontend</b>. However, I'm always ready to expand my <b>skill set</b> and <b>learn</b> about new <b>technologies</b>. I'm a <b>quick learner</b> and I like to use my time <b>effectively</b> to seek <b>innovative solutions</b>. Let's work together to <b>bring your ideas to life!</b>",
+    "keywords": "About Full-Stack Developer, Nuxt.js Developer, PHP and MySQL Expertise, TailwindCSS, Web Development Skills, Modern Frameworks, Professional Web Development Journey"
   },
   "timeline": [
     {
@@ -74,7 +76,7 @@
   "work": {
     "sub": "Work",
     "title": "Projects",
-    "description": "Showcase of my skills and experiences in handling real projects, including links to live demos.",
+    "description": "Explore my Full-Stack Web Development projects, showcasing skills in Nuxt.js, PHP, TailwindCSS, and MySQL. View live demos and code examples of custom-built web applications.",
     "content": "Following projects <b>showcase</b> my <b>skills</b> and <b>experiences</b> in handling <b>real projects</b>. Each of the listed projects below <b>includes</b> a link to <b>live demo</b> example where you can take a <b>detailed view</b>. Additionally, each project is <b>tagged</b> with <b>programming languages</b>, <b>frameworks</b> or <b>libraries</b> that were primarily used in their <b>development</b>.",
     "projects": [
       {
@@ -157,12 +159,13 @@
           "jQuery": "1"
         }
       }
-    ]
+    ],
+    "keywords": "Web Development Projects, Full-Stack Web Development Portfolio, Nuxt.js Portfolio, PHP Projects, TailwindCSS Projects, Real Projects Showcase, Custom Web Solutions, Nuxt.js Projects"
   },
   "contact": {
     "sub": "Contact",
     "title": "Get In Touch",
-    "description": "Reach out for collaboration where we can bring your ideas to life or just ping me with interesting business concepts.",
+    "description": "Looking to hire a Full-Stack Web Developer? Contact me for collaboration, project discussions, or custom web development services. Let's bring your ideas to life!",
     "name": {
       "label": "Your Name",
       "required": "Please enter your name",
@@ -182,6 +185,7 @@
     "success": "Successfully sent!",
     "fail": "Something went wrong!",
     "retry": "Try Again",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "keywords": "Contact Web Developer, Hire Full-Stack Developer, Collaboration Ideas, Nuxt.js Developer for Projects, PHP Developer Contact, Custom Web Development Services, Work with Me"
   }
 }

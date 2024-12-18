@@ -14,5 +14,7 @@ const { t } = useI18n()
 useSeoMeta({
   description: () => t('welcome.description'),
   ogDescription: () => t('welcome.description'),
+  twitterDescription: () => t('welcome.description'),
+  keywords: () => t('welcome.keywords'),
 })
 </script>

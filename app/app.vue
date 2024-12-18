@@ -7,7 +7,10 @@
 </template>
 
 <script lang="ts" setup>
+const img = '/portfolio-germondai.webp'
+
 useSeoMeta({
-  ogImage: '/portfolio-germondai.webp',
+  ogImage: img,
+  twitterImage: img,
 })
 </script>

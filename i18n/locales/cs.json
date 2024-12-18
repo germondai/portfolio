@@ -21,18 +21,20 @@
   "welcome": {
     "sub": "Úvod",
     "title": "Ahoj, já jsem",
-    "description": "Nadějný Full-Stack webový vývojář. Nezapomeňte si prohlédnout mou tvorbu!",
+    "description": "Ahoj, jsem Germond, začínající Full-Stack Web Developer s odborností v Nuxt.js, PHP, MySQL a TailwindCSS. Prozkoumejte mé portfolio a objevte moderní webová řešení a projekty.",
     "content": {
       "base": "Nadějný",
       "typewriter": ["Full-Stack webový vývojář", "Student webového vývoje"]
     },
-    "swap_language": "Vyberte jazyk"
+    "swap_language": "Vyberte jazyk",
+    "keywords": "Full-Stack Web Developer, Vývojář Nuxt.js, Vývojář PHP, Portfolio webového vývoje, TailwindCSS, Vue.js, MySQL, Web Developer k pronájmu, Vlastní webové aplikace, Moderní webová řešení"
   },
   "about": {
     "sub": "O mně",
     "title": "Přehled",
-    "description": "Přehled o mně, mých dovednostech, technologiích, které používám a časové ose mé programátorské kariéry.",
-    "content": "Jsem <b>Full-Stack Web Developer</b> s zkušenostmi v <b>PHP</b> a jeho <b>frameworky</b>, <b>MySQL</b> a <b>Node.js</b> jako <b>backend</b> a <b>Nuxt.js</b>, <b>Vue.js</b> a <b>Tailwind CSS</b> jako <b>frontend</b>. Nicméně jsem vždy připraven rozšířit mé <b>dovednosti</b> a naučit se novým <b>technologiím</b>. <b>Rychle se učím</b> a rád využívám čas <b>efektivně</b> k hledání <b>inovativních řešení</b>. Pojďme se spojit a společně pracovat na tom, abychom <b>přivedli vaše nápady k životu!</b>"
+    "description": "Zjistěte více o mé cestě jako Full-Stack Web Developer s odborností v Nuxt.js, PHP, MySQL a TailwindCSS. Objevte mé dovednosti, profesní cestu a používané technologie.",
+    "content": "Jsem <b>Full-Stack Web Developer</b> s zkušenostmi v <b>PHP</b> a jeho <b>frameworky</b>, <b>MySQL</b> a <b>Node.js</b> jako <b>backend</b> a <b>Nuxt.js</b>, <b>Vue.js</b> a <b>Tailwind CSS</b> jako <b>frontend</b>. Nicméně jsem vždy připraven rozšířit mé <b>dovednosti</b> a naučit se novým <b>technologiím</b>. <b>Rychle se učím</b> a rád využívám čas <b>efektivně</b> k hledání <b>inovativních řešení</b>. Pojďme se spojit a společně pracovat na tom, abychom <b>přivedli vaše nápady k životu!</b>",
+    "keywords": "O Full-Stack Developerovi, Vývojář Nuxt.js, Odbornost v PHP a MySQL, TailwindCSS, Dovednosti webového vývoje, Moderní frameworky, Profesionální cesta webového vývoje"
   },
   "timeline": [
     {
@@ -74,7 +76,7 @@
   "work": {
     "sub": "Práce",
     "title": "Projekty",
-    "description": "Ukázka mých dovedností a zkušeností při zpracovávání skutečných projektů, včetně odkazů na živé ukázky.",
+    "description": "Prozkoumejte mé projekty webového vývoje, které ukazují dovednosti v Nuxt.js, PHP, TailwindCSS a MySQL. Podívejte se na živá dema a příklady kódu vlastních webových aplikací.",
     "content": "Následující projekty ukazují mé <b>dovednosti</b> a <b>zkušenosti</b> ve zpracovávání <b>skutečných projektů</b>. Každý z níže uvedených projektů <b>obsahuje</b> odkaz na <b>živou demo</b> ukázku, kde si je můžete <b>detailněji</b> prohlédnout. Navíc jsou <b>označeny</b> <b>programovacími jazyky</b>, <b>frameworky</b>, nebo <b>knihovnami</b>, které byly primárně použity při jejich vývoji.",
     "projects": [
       {
@@ -157,12 +159,13 @@
           "jQuery": "1"
         }
       }
-    ]
+    ],
+    "keywords": "Projekty webového vývoje, Portfolio Full-Stack webového vývoje, Portfolio Nuxt.js, Projekty PHP, Projekty TailwindCSS, Představení reálných projektů, Vlastní webová řešení, Projekty Nuxt.js"
   },
   "contact": {
     "sub": "Kontakt",
     "title": "Spojme se!",
-    "description": "Spojte se se mnou pro spolupráci, kde můžeme přivést vaše nápady k životu, nebo mi jen napište zajímavé obchodní koncepty.",
+    "description": "Hledáte Full-Stack Web Developer? Kontaktujte mě pro spolupráci, diskuzi o projektech nebo vývoj vlastních webových služeb. Přiveďme vaše nápady k životu!",
     "name": {
       "label": "Vaše jméno",
       "required": "Prosím zadejte vaše jméno",
@@ -182,6 +185,7 @@
     "success": "Úspěšně odesláno!",
     "fail": "Něco se pokazilo!",
     "retry": "Zkusit znovu",
-    "cancel": "Zrušit"
+    "cancel": "Zrušit",
+    "keywords": "Kontakt na Web Developer, Najměte Full-Stack Developer, Nápady na spolupráci, Vývojář Nuxt.js pro projekty, Kontakt na PHP vývojáře, Služby vývoje vlastních webů, Práce se mnou"
   }
 }
