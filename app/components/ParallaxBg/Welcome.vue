@@ -1,6 +1,6 @@
 <template>
-  <FloatCont v-if="!$device.isMobile" :preset="`bg`" class="max-md:hidden">
-    <FloatItem :velocity="-2" :preset="`bg`">
+  <FloatCont v-if="!$device.isMobile" class="FloatCont max-md:hidden bg">
+    <FloatItem :velocity="-2" class="bg">
       <svg
         viewBox="0 0 1440 810"
         preserveAspectRatio="none"
@@ -12,7 +12,7 @@
         />
       </svg>
     </FloatItem>
-    <FloatItem :velocity="2" :preset="`bg`">
+    <FloatItem :velocity="2" class="bg">
       <svg
         viewBox="0 0 1440 810"
         preserveAspectRatio="none"
@@ -24,7 +24,7 @@
         />
       </svg>
     </FloatItem>
-    <FloatItem :velocity="4" :preset="`bg`">
+    <FloatItem :velocity="4" class="bg">
       <svg
         viewBox="0 0 1440 810"
         preserveAspectRatio="none"
@@ -36,7 +36,7 @@
         />
       </svg>
     </FloatItem>
-    <FloatItem :velocity="8" :preset="`bg`">
+    <FloatItem :velocity="8" class="bg">
       <svg
         viewBox="0 0 1440 810"
         preserveAspectRatio="none"

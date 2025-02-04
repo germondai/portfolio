@@ -39,6 +39,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    '@vuei/nuxt',
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/icon',
@@ -52,6 +53,8 @@ export default defineNuxtConfig({
     '@nuxtjs/device',
     '@vite-pwa/nuxt',
   ],
+
+  vuei: { prefix: '' },
 
   vite: { css: { preprocessorOptions: { scss: { api: 'modern' } } } },
 

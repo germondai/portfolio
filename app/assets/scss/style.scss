@@ -125,6 +125,18 @@ section {
   }
 }
 
+.FloatCont {
+  &.bg {
+    @apply absolute top-0 w-full h-full -z-[150];
+  }
+
+  .FloatItem {
+    &.bg {
+      @apply w-full h-full -z-[999];
+    }
+  }
+}
+
 #welcome .FloatCont svg {
   @apply -top-[5%] rotate-180;
 }
