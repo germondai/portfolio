@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   future: { compatibilityVersion: 4 },
   vue: { propsDestructure: true },
   eslint: { config: { typescript: true } },
+  nitro: { preset: 'bun' },
 
   site: {
     name: "Germond's Portfolio",
