@@ -114,7 +114,7 @@ export default defineNuxtConfig({
     pwa: {
       registerType: 'autoUpdate',
       workbox: {
-        navigateFallback: '/',
+        navigateFallback: undefined,
         globPatterns: [
           '**/*.{js,css,html}',
           '_fonts/**/*.{woff,woff2}',
@@ -131,30 +131,62 @@ export default defineNuxtConfig({
         theme_color: '#121316',
         background_color: '#121316',
         start_url: '/',
+        shortcuts: [
+          {
+            name: 'Welcome',
+            url: '/',
+          },
+          {
+            name: 'About',
+            url: '/about',
+          },
+          {
+            name: 'Work',
+            url: '/work',
+          },
+          {
+            name: 'Contact',
+            url: '/contact',
+          },
+        ],
         icons: [
           {
-            src: '/pwa/manifest-icon-192.maskable.png',
+            src: '/pwa/icons/manifest-icon-192.maskable.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any',
           },
           {
-            src: '/pwa/manifest-icon-192.maskable.png',
+            src: '/pwa/icons/manifest-icon-192.maskable.png',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'maskable',
           },
           {
-            src: '/pwa/manifest-icon-512.maskable.png',
+            src: '/pwa/icons/manifest-icon-512.maskable.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any',
           },
           {
-            src: '/pwa/manifest-icon-512.maskable.png',
+            src: '/pwa/icons/manifest-icon-512.maskable.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',
+          },
+        ],
+        screenshots: [
+          {
+            src: '/pwa/screenshots/germondai_com_narrow.webp',
+            type: 'image/webp',
+            sizes: '540x720',
+            form_factor: 'narrow',
+          },
+          {
+            src: '/pwa/screenshots/germondai_com_wide.webp',
+            type: 'image/webp',
+            sizes: '1024x768',
+            form_factor: 'wide',
           },
         ],
       },
