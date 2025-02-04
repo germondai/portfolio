@@ -3,22 +3,22 @@ name: germondai
 services:
   germondai:
     build: .
-    # labels:
-    #   - 'traefik.enable=true'
-    #   - 'traefik.http.routers.germondai.entrypoints=http'
-    #   - 'traefik.http.services.germondai.loadbalancer.server.port=3000'
-    #   - 'traefik.http.routers.germondai.rule=Host(`germondai.com`)'
-    #   - 'traefik.http.middlewares.germondai-https-redirect.redirectscheme.scheme=https'
-    #   - 'traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https'
-    #   - 'traefik.http.routers.germondai.middlewares=germondai-https-redirect'
-    #   - 'traefik.http.routers.germondai-secure.entrypoints=https'
-    #   - 'traefik.http.routers.germondai-secure.rule=Host(`germondai.com`)'
-    #   - 'traefik.http.routers.germondai-secure.tls=true'
-    #   - 'traefik.http.routers.germondai-secure.tls.certresolver=wedos'
-    #   - 'traefik.http.routers.germondai-secure.tls.domains[0].main=germondai.com'
-    #   - 'traefik.http.routers.germondai-secure.tls.domains[0].sans=*.germondai.com'
-    # networks:
-    #   - traefik
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.germondai.entrypoints=http'
+      - 'traefik.http.services.germondai.loadbalancer.server.port=3000'
+      - 'traefik.http.routers.germondai.rule=Host(`germondai.com`)'
+      - 'traefik.http.middlewares.germondai-https-redirect.redirectscheme.scheme=https'
+      - 'traefik.http.middlewares.sslheader.headers.customrequestheaders.X-Forwarded-Proto=https'
+      - 'traefik.http.routers.germondai.middlewares=germondai-https-redirect'
+      - 'traefik.http.routers.germondai-secure.entrypoints=https'
+      - 'traefik.http.routers.germondai-secure.rule=Host(`germondai.com`)'
+      - 'traefik.http.routers.germondai-secure.tls=true'
+      - 'traefik.http.routers.germondai-secure.tls.certresolver=wedos'
+      - 'traefik.http.routers.germondai-secure.tls.domains[0].main=germondai.com'
+      - 'traefik.http.routers.germondai-secure.tls.domains[0].sans=*.germondai.com'
+    networks:
+      - traefik
     restart: always
 
 networks:
