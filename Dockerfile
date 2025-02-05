@@ -18,14 +18,12 @@ COPY . .
 
 # zenstack:generate, prisma:deploy, format, build and compress
 ENV NODE_ENV=production
-RUN bun run build
-RUN bun compress
+RUN bun generate
 
 # copy production dependencies and source code into final image
-FROM base AS release
-COPY --from=prerelease /usr/src/app/.output .
+FROM nginx:stable-alpine AS release
+COPY --from=prerelease /usr/src/app/.output/public /usr/share/nginx/html
 
 # run the app
-USER bun
-EXPOSE 3000:3000
-ENTRYPOINT [ "bun", "server/index.mjs" ]
+EXPOSE 80:80
+CMD ["nginx", "-g", "daemon off;"]
