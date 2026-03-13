@@ -1,9 +1,8 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-12-17',
+  compatibilityDate: '2026-01-01',
+
   devtools: { enabled: true },
-  future: { compatibilityVersion: 4 },
-  vue: { propsDestructure: true },
+
   eslint: { config: { typescript: true } },
 
   site: {
@@ -55,8 +54,6 @@ export default defineNuxtConfig({
 
   vuei: { prefix: '' },
 
-  vite: { css: { preprocessorOptions: { scss: { api: 'modern' } } } },
-
   css: ['~/assets/scss/style.scss'],
 
   tailwindcss: {
@@ -82,7 +79,6 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    lazy: true,
     strategy: 'no_prefix',
     locales: [
       {
