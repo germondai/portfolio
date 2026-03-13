@@ -19,28 +19,28 @@
     "generate:pwa-icons": "npx pwa-asset-generator public/skull.ico public/pwa/ --opaque false"
   },
   "dependencies": {
-    "@nuxt/fonts": "^0.10.3",
-    "@nuxt/icon": "^1.10.3",
-    "@nuxt/image": "^1.9.0",
-    "@nuxtjs/device": "^3.2.4",
-    "@nuxtjs/i18n": "^9.1.5",
-    "@nuxtjs/seo": "^2.1.1",
-    "@vuei/nuxt": "^1.0.29",
-    "@vueuse/core": "^12.5.0",
-    "@vueuse/nuxt": "^12.5.0",
-    "nuxt": "^3.15.4",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "@nuxt/fonts": "^0.14.0",
+    "@nuxt/icon": "^2.2.1",
+    "@nuxt/image": "^2.0.0",
+    "@nuxtjs/device": "^4.0.0",
+    "@nuxtjs/i18n": "^10.2.3",
+    "@nuxtjs/seo": "^3.4.0",
+    "@vuei/nuxt": "^1.0.36",
+    "@vueuse/core": "^14.2.1",
+    "@vueuse/nuxt": "^14.2.1",
+    "nuxt": "^4.4.2",
+    "vue": "^3.5.30",
+    "vue-router": "^5.0.3"
   },
   "devDependencies": {
-    "@nuxt/eslint": "^1.0.0",
-    "@nuxtjs/tailwindcss": "^6.13.1",
-    "@vee-validate/nuxt": "^4.15.0",
-    "@vee-validate/yup": "^4.15.0",
-    "@vite-pwa/nuxt": "^0.10.6",
-    "@vueuse/motion": "^2.2.6",
-    "gzipper": "^8.2.0",
-    "prettier": "^3.4.2",
-    "sass": "^1.83.4"
+    "@nuxt/eslint": "^1.15.2",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@vee-validate/nuxt": "^4.15.1",
+    "@vee-validate/yup": "^4.15.1",
+    "@vite-pwa/nuxt": "^1.1.1",
+    "@vueuse/motion": "^3.0.3",
+    "gzipper": "^8.2.1",
+    "prettier": "^3.8.1",
+    "sass": "^1.98.0"
   }
 }
