@@ -1,7 +1,7 @@
 <template>
   <main>
     <SectionAbout />
-    <LazySectionTimeline />
+    <LazySectionTimeline hydrate-on-visible />
   </main>
 </template>
 

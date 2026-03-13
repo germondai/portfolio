@@ -81,9 +81,10 @@ const { t, tm, rt } = useI18n()
 
 const { width } = useWindowSize()
 
-const menu = ref()
-const links = ref(false)
-const icons = ref(false)
+const menu = useTemplateRef('menu')
+
+const links = shallowRef<boolean>(false)
+const icons = shallowRef<boolean>(false)
 
 const navStyles = computed(() => {
   return (width.value < 1024 && icons.value) ||

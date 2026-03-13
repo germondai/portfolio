@@ -1,7 +1,7 @@
 export const usePageSections = () => {
   const { height } = useWindowSize()
 
-  const largestSection = ref<string>('')
+  const largestSection = shallowRef<string>('')
   const sections = ref<{ id: string; y: number }[]>()
 
   const updateSectionsArray = () => {

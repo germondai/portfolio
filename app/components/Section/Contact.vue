@@ -133,10 +133,10 @@ const schema = computed(() =>
   }),
 )
 
-const pending = ref<boolean>(false)
-const error = ref<boolean>(false)
-const canCancel = ref<boolean>(false)
-const insertStatus = ref<boolean>(false)
+const pending = shallowRef<boolean>(false)
+const error = shallowRef<boolean>(false)
+const canCancel = shallowRef<boolean>(false)
+const insertStatus = shallowRef<boolean>(false)
 const result = ref()
 
 const onSubmit = getSubmitFn(schema.value, async (values) => {

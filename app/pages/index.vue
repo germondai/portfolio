@@ -2,9 +2,9 @@
   <main>
     <SectionWelcome />
     <LazySectionAbout />
-    <LazySectionTimeline />
-    <LazySectionWork />
-    <LazySectionContact lazy />
+    <LazySectionTimeline hydrate-on-visible />
+    <LazySectionWork hydrate-on-visible />
+    <LazySectionContact lazy hydrate-on-interaction />
   </main>
 </template>
 
