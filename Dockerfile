@@ -16,6 +16,9 @@ FROM base AS prerelease
 COPY --from=install /temp/node_modules node_modules
 COPY . .
 
+ARG NUXT_PUBLIC_SCRIPTS_GOOGLE_ANALYTICS_ID
+ENV NUXT_PUBLIC_SCRIPTS_GOOGLE_ANALYTICS_ID=${NUXT_PUBLIC_SCRIPTS_GOOGLE_ANALYTICS_ID}
+
 # zenstack:generate, prisma:deploy, format, build and compress
 ENV NODE_ENV=production
 RUN bun --bun generate
