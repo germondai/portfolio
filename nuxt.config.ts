@@ -50,6 +50,7 @@ export default defineNuxtConfig({
     '@vee-validate/nuxt',
     '@nuxtjs/device',
     '@vite-pwa/nuxt',
+    '@nuxt/scripts',
   ],
 
   vuei: { prefix: '' },
@@ -110,6 +111,12 @@ export default defineNuxtConfig({
   },
 
   $production: {
+    scripts: {
+      registry: {
+        googleAnalytics: true,
+      },
+    },
+
     pwa: {
       registerType: 'autoUpdate',
       workbox: {
