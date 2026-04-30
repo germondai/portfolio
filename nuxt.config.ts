@@ -113,8 +113,8 @@ export default defineNuxtConfig({
   $production: {
     scripts: {
       registry: {
-        googleAnalytics: true,
-        googleTagManager: true,
+        googleAnalytics: { trigger: 'onNuxtReady', proxy: false },
+        googleTagManager: { trigger: 'onNuxtReady', proxy: false },
       },
     },
 

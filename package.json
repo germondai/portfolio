@@ -22,7 +22,7 @@
     "@nuxt/fonts": "^0.14.0",
     "@nuxt/icon": "^2.2.1",
     "@nuxt/image": "^2.0.0",
-    "@nuxt/scripts": "^1.0.0-beta.32",
+    "@nuxt/scripts": "^1.0.4",
     "@nuxtjs/device": "^4.0.0",
     "@nuxtjs/i18n": "^10.2.4",
     "@nuxtjs/seo": "^4.0.2",
