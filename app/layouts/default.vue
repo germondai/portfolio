@@ -1,13 +1,12 @@
 <template>
   <div>
-    <BtnScrollToTop />
-    <FlyingRocket />
-
     <AppHeader />
 
     <AppAside />
 
-    <slot />
+    <UMain>
+      <slot />
+    </UMain>
 
     <AppFooter />
   </div>

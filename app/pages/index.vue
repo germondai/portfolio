@@ -1,20 +1,18 @@
-<template>
-  <main>
-    <SectionWelcome />
-    <LazySectionAbout />
-    <LazySectionTimeline hydrate-on-visible />
-    <LazySectionWork hydrate-on-visible />
-    <LazySectionContact lazy hydrate-on-interaction />
-  </main>
-</template>
-
 <script lang="ts" setup>
-const { t } = useI18n()
+const title = "Germond's Portfolio"
+const description = "An Aspiring Full-Stack Web Developer"
 
-useSeoMeta({
-  description: () => t("welcome.description"),
-  ogDescription: () => t("welcome.description"),
-  twitterDescription: () => t("welcome.description"),
-  keywords: () => t("welcome.keywords"),
-})
+useSeoMeta({ title, description })
 </script>
+
+<template>
+  <UPageHero :title :description>
+    <template #top>
+      <div
+        class="absolute rounded-full dark:bg-primary blur-[300px] size-60 sm:size-80 transform -translate-x-1/2 left-1/2 -translate-y-80"
+      />
+
+      <LazyBgStars hydrateOnIdle />
+    </template>
+  </UPageHero>
+</template>
