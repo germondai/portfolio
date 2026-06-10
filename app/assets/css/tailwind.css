@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+:root {
+  interpolate-size: allow-keywords;
+  transition-behavior: allow-discrete;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+@theme static {
+  --font-sans: "Poppins", sans-serif;
+
+  --breakpoint-3xs: 20rem;
+  --breakpoint-2xs: 26.25rem;
+  --breakpoint-xs: 30rem;
+  --breakpoint-3xl: 120rem;
+}
+
+#__nuxt {
+  @apply min-h-screen flex flex-col;
+}
+
+main {
+  @apply grow;
+}
