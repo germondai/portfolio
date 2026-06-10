@@ -3,136 +3,211 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  features: { inlineStyles: true },
+
   future: { compatibilityVersion: 5 },
 
-  site: {
-    name: "Germond's Portfolio",
-    url: "https://germondai.com",
+  experimental: {
+    asyncContext: true,
+    inlineRouteRules: true,
+    typescriptPlugin: true,
   },
 
-  app: {
-    head: {
-      link: [{ rel: "icon", type: "image/ico", href: "/skull.ico" }],
-      meta: [
-        {
-          name: "description",
-          content: "Germond's personal portfolio website. Make sure to check out my creations!",
-        },
-        {
-          name: "keywords",
-          content:
-            "web developer portfolio, website creations, web development services, custom websites, create website, website creation, website, web, germondai, germond, @germondai, @germond",
-        },
-        {
-          name: "author",
-          content: "@germondai",
-        },
-        {
-          name: "theme-color",
-          content: "#121316",
-        },
-      ],
+  vitalizer: { disableStylesheets: "entry" },
+
+  typescript: {
+    tsConfig: {
+      include: ["../types/**/*.d.ts"],
+    },
+  },
+
+  $development: {
+    typescript: {
+      typeCheck: true,
+      strict: true,
+    },
+
+    site: {
+      url: "http://localhost:3000",
+    },
+  },
+
+  nitro: {
+    preset: "bun",
+    compressPublicAssets: true,
+    routeRules: {
+      "/_ipx/**": { headers: { "cache-control": "public, max-age=31536000, immutable" } },
+      "/_nuxt/**": { headers: { "cache-control": "public, max-age=31536000, immutable" } },
+      "/_fonts/**": { headers: { "cache-control": "public, max-age=31536000, immutable" } },
+      "/_scripts/**": { headers: { "cache-control": "public, max-age=31536000, immutable" } },
     },
   },
 
   vite: {
     optimizeDeps: {
-      include: ["@unhead/schema-org/vue", "@vue/devtools-core", "@vue/devtools-kit", "yup"],
+      include: ["@unhead/schema-org/vue", "@vue/devtools-core", "@vue/devtools-kit"],
     },
-  },
 
-  modules: [
-    "@vuei/nuxt",
-    "@nuxt/image",
-    "@nuxt/icon",
-    "@vueuse/nuxt",
-    "@vueuse/motion/nuxt",
-    "@nuxtjs/tailwindcss",
-    "@nuxt/fonts",
-    "@nuxtjs/i18n",
-    "@nuxtjs/seo",
-    "@vee-validate/nuxt",
-    "@nuxtjs/device",
-    "@vite-pwa/nuxt",
-    "@nuxt/scripts",
-  ],
+    build: {
+      cssCodeSplit: true,
+      cssMinify: "lightningcss",
+      minify: "terser",
+    },
 
-  vuei: { prefix: "" },
+    $client: {
+      build: {
+        sourcemap: false,
+        minify: "terser",
+      },
+    },
 
-  css: ["~/assets/scss/style.scss"],
-
-  tailwindcss: {
-    exposeConfig: true,
-    config: {
-      theme: {
-        screens: {
-          "2xs": "320px",
-          xs: "480px",
-          sm: "640px",
-          md: "768px",
-          lg: "1024px",
-          xl: "1280px",
-          "2xl": "1536px",
+    $server: {
+      build: {
+        rollupOptions: {
+          output: {
+            preserveModules: true,
+          },
         },
       },
     },
   },
 
+  app: {
+    head: {
+      link: [{ rel: "icon", type: "image/ico", href: "/favicon.ico" }],
+      meta: [{ name: "author", content: "@germondai" }],
+    },
+  },
+
+  modules: [
+    "@nuxt/a11y",
+    "@nuxt/hints",
+    "@nuxt/image",
+    "@nuxt/scripts",
+    "@nuxt/ui",
+    "@nuxtjs/i18n",
+    "@nuxtjs/seo",
+    "@vite-pwa/nuxt",
+    "@vueuse/motion/nuxt",
+    "@vueuse/nuxt",
+    "nuxt-security",
+    "nuxt-vitalizer",
+  ],
+
+  appConfig: {
+    ui: {
+      colors: {
+        primary: "indigo",
+        neutral: "neutral",
+      },
+    },
+  },
+
+  ui: {
+    experimental: {
+      componentDetection: true,
+    },
+  },
+
+  colorMode: {
+    preference: "dark",
+    fallback: "dark",
+  },
+
+  icon: {
+    clientBundle: {
+      scan: true,
+    },
+  },
+
+  css: ["~/assets/css/tailwind.css"],
+
   image: {
     quality: 85,
-    format: ["webp"],
+    format: ["webp", "avif"],
+    screens: {
+      "3xs": 320,
+      "2xs": 420,
+      xs: 480,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      "2xl": 1536,
+      "3xl": 1920,
+    },
+  },
+
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy: "unsafe-none",
+      contentSecurityPolicy: {
+        "img-src": ["'self'", "data:"],
+        "script-src": ["'self'", "https:", "'unsafe-inline'", "'nonce-{{nonce}}'", "'unsafe-eval'"],
+        "script-src-attr": ["'unsafe-inline'"],
+      },
+    },
+  },
+
+  site: {
+    name: "Germond's Portfolio",
+    url: "https://germondai.com",
+    description: "Germond's personal portfolio website. Make sure to check out my creations!",
+    trailingSlash: false,
+  },
+
+  seo: {
+    meta: {
+      description:
+        "Mentorize is a complete AI learning platform with AI Mentor, structured courses, real-time chat, cloud Drive, and collaborative Docs — powered by all major AI providers.",
+      applicationName: "Mentorize",
+      author: "Mentorize",
+      twitterCard: "summary_large_image",
+      colorScheme: "dark",
+      themeColor: "#121316",
+    },
+  },
+
+  robots: { blockNonSeoBots: true },
+
+  schemaOrg: {
+    identity: {
+      type: "Person",
+      name: "Germond",
+      logo: "/favicon.ico",
+      sameAs: ["https://github.com/germondai"],
+    },
   },
 
   i18n: {
-    strategy: "no_prefix",
-    locales: [
-      {
-        icon: "twemoji:flag-for-flag-united-kingdom",
-        code: "en",
-        language: "en",
-        name: "English",
-        files: ["en.json", "common.json"],
-      },
-      {
-        icon: "twemoji:flag-czechia",
-        code: "cs",
-        language: "cs",
-        name: "Česky",
-        files: ["cs.json", "common.json"],
-      },
-    ],
     defaultLocale: "en",
+    customRoutes: "config",
+    strategy: "prefix_except_default",
+    locales: [
+      { code: "en", iso: "en-US", name: "English", file: "en.json", dir: "ltr" },
+      { code: "cs", iso: "cs-CZ", name: "Čeština", file: "cs.json", dir: "ltr" },
+      { code: "sk", iso: "sk-SK", name: "Slovenčina", file: "sk.json", dir: "ltr" },
+      { code: "pl", iso: "pl-PL", name: "Polski", file: "pl.json", dir: "ltr" },
+    ],
+    pages: { index: { en: "/", cs: "/", sk: "/", pl: "/" } },
     detectBrowserLanguage: {
       useCookie: true,
+      cookieKey: "i18n_redirected",
       redirectOn: "root",
-      fallbackLocale: "en",
     },
-    compilation: {
-      strictMessage: false,
-      escapeHtml: false,
+  },
+
+  scripts: {
+    registry: {
+      googleAnalytics: { trigger: "onNuxtReady", proxy: false },
+      googleTagManager: { trigger: "onNuxtReady", proxy: false },
     },
-    experimental: { typedOptionsAndMessages: "default" },
   },
 
   $production: {
-    scripts: {
-      registry: {
-        googleAnalytics: { trigger: "onNuxtReady", proxy: false },
-        googleTagManager: { trigger: "onNuxtReady", proxy: false },
-      },
-    },
-
     pwa: {
+      strategies: "generateSW",
       registerType: "autoUpdate",
-      workbox: {
-        navigateFallback: undefined,
-        globPatterns: [
-          "**/*.{js,css,html}",
-          "_fonts/**/*.{woff,woff2}",
-          "_nuxt/**/*.{js,css}",
-          "_ipx/**/*.{webp,png,jpg,jpeg,ico}",
-        ],
-      },
       manifest: {
         name: "Germond's Portfolio",
         short_name: "Germond",
@@ -143,22 +218,10 @@ export default defineNuxtConfig({
         background_color: "#121316",
         start_url: "/",
         shortcuts: [
-          {
-            name: "Welcome",
-            url: "/",
-          },
-          {
-            name: "About",
-            url: "/about",
-          },
-          {
-            name: "Work",
-            url: "/work",
-          },
-          {
-            name: "Contact",
-            url: "/contact",
-          },
+          { name: "Welcome", url: "/" },
+          { name: "About", url: "/about" },
+          { name: "Work", url: "/work" },
+          { name: "Contact", url: "/contact" },
         ],
         icons: [
           {
@@ -201,6 +264,54 @@ export default defineNuxtConfig({
           },
         ],
       },
+      workbox: {
+        navigateFallback: undefined,
+        globPatterns: ["*.{ico,png,webp,avif,svg}", "**/*.{js,css}", "**/*.woff2"],
+        runtimeCaching: [
+          {
+            urlPattern: /^\/_ipx\/.*/i,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "ipx-images",
+              expiration: { maxEntries: 50, maxAgeSeconds: 2592000 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+          {
+            urlPattern: /\.webp$/i,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "static-images",
+              expiration: { maxEntries: 30, maxAgeSeconds: 604800 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+          {
+            urlPattern: ({ request }) => request.destination === "document",
+            handler: "NetworkFirst",
+            options: {
+              cacheName: "pages",
+              networkTimeoutSeconds: 1,
+              expiration: { maxEntries: 25, maxAgeSeconds: 86400 },
+              cacheableResponse: { statuses: [0, 200] },
+            },
+          },
+          {
+            urlPattern: ({ request }) =>
+              request.destination === "script" ||
+              request.destination === "style" ||
+              request.url.includes("manifest.webmanifest"),
+            handler: "StaleWhileRevalidate",
+            options: {
+              cacheName: "assets",
+              expiration: { maxEntries: 100 },
+            },
+          },
+        ],
+        maximumFileSizeToCacheInBytes: 3 * 1024 * 1024,
+        cleanupOutdatedCaches: true,
+      },
+      client: { installPrompt: true },
     },
   },
 })
