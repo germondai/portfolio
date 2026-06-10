@@ -1,6 +1,6 @@
 # use the official Bun image
 # see all versions at https://hub.docker.com/r/oven/bun/tags
-FROM oven/bun:1.3.10-slim AS base
+FROM oven/bun:1.3.14-slim AS base
 WORKDIR /usr/src/app
 
 # install dependencies into temp directory
@@ -16,13 +16,17 @@ FROM base AS prerelease
 COPY --from=install /temp/node_modules node_modules
 COPY . .
 
+# set environment variables from build args
 ARG NUXT_PUBLIC_SCRIPTS_GOOGLE_ANALYTICS_ID
 ENV NUXT_PUBLIC_SCRIPTS_GOOGLE_ANALYTICS_ID=${NUXT_PUBLIC_SCRIPTS_GOOGLE_ANALYTICS_ID}
 
 ARG NUXT_PUBLIC_SCRIPTS_GOOGLE_TAG_MANAGER_ID
 ENV NUXT_PUBLIC_SCRIPTS_GOOGLE_TAG_MANAGER_ID=${NUXT_PUBLIC_SCRIPTS_GOOGLE_TAG_MANAGER_ID}
 
-# zenstack:generate, prisma:deploy, format, build and compress
+ARG NUXT_OG_IMAGE_SECRET
+ENV NUXT_OG_IMAGE_SECRET=${NUXT_OG_IMAGE_SECRET}
+
+# build for production
 ENV NODE_ENV=production
 RUN bun --bun generate
 
