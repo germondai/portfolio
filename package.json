@@ -2,11 +2,15 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Germond - An Aspiring Full-Stack Web Developer",
+  "license": "MIT",
   "homepage": "https://germondai.com",
   "author": "germondai",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/germondai/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/germondai/portfolio/issues"
   },
   "private": true,
   "type": "module",
