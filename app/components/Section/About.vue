@@ -1,8 +1,6 @@
 <template>
   <section id="about">
-    <div
-      class="max-md:w-[95%] w-4/5 mx-auto h-full flex flex-col items-center justify-center gap-12"
-    >
+    <div class="max-md:w-[95%] w-4/5 mx-auto h-full flex flex-col items-center justify-center gap-12">
       <div
         v-motion="{
           initial: { opacity: 0, y: $device.isMobile ? 0 : -100 },
@@ -28,10 +26,7 @@
           class="flex flex-col items-center gap-2 anim-left"
         >
           <HoloTilt :scale="1.1" class="flex items-center justify-center">
-            <Icon
-              :name="rt(skill.icon)"
-              class="max-md:size-12 max-lg:size-16 size-24"
-            />
+            <Icon :name="rt(skill.icon)" class="max-md:size-12 max-lg:size-16 size-24" />
           </HoloTilt>
           <b class="max-sm:text-md max-md:text-lg text-2xl truncate">
             {{ rt(skill.name) }}

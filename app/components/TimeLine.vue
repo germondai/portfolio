@@ -19,9 +19,7 @@
           <div
             class="max-lg:before:-left-4 max-lg:before:border-r-[16px] lg:group-odd:before:-left-4 lg:group-odd:before:border-r-[16px] lg:group-even:before:-right-4 lg:group-even:before:border-l-[16px] before:absolute before:top-2.5 before:border-y-8 before:border-[transparent_#ffffff1a] box rounded-xl z-10 bg-[#0d0d0faa]"
           >
-            <b
-              class="rounded-t-xl flex items-center gap-4 py-4 px-2.5 bg-[#251E39aa] whitespace-nowrap"
-            >
+            <b class="rounded-t-xl flex items-center gap-4 py-4 px-2.5 bg-[#251E39aa] whitespace-nowrap">
               <span class="px-4 py-1 bg-white text-black rounded-xl">
                 <CountUp :number="item.year" />
               </span>
@@ -31,6 +29,7 @@
               <p class="text-justify" v-html="rt(item.content)"></p>
               <button
                 v-if="rt(item.content_full)"
+                type="button"
                 class="p-2 rounded-xl shadow bg-[#2B2242] hover:bg-[#36275e] transition-colors"
               >
                 {{ rt(item.button) ? rt(item.button) : '📖 👀' }}

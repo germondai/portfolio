@@ -1,8 +1,6 @@
 <template>
   <section id="work">
-    <div
-      class="max-lg:w-[95%] w-4/5 h-full mx-auto flex flex-col items-center justify-center gap-6"
-    >
+    <div class="max-lg:w-[95%] w-4/5 h-full mx-auto flex flex-col items-center justify-center gap-6">
       <div
         v-motion="{
           initial: { opacity: 0, y: $device.isMobile ? 0 : -50 },
@@ -14,9 +12,7 @@
         <h1>{{ t('work.title') }}</h1>
         <p class="text-justify" v-html="t('work.content')"></p>
       </div>
-      <div
-        class="w-full grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4"
-      >
+      <div class="w-full grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-4">
         <CardProject
           v-for="(project, i) in tm('work.projects')"
           :key="i"

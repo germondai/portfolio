@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-const img = '/portfolio-germondai.webp'
+const img = "/portfolio-germondai.webp"
 
 useSeoMeta({
   ogImage: img,

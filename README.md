@@ -74,18 +74,6 @@ pnpm generate
 pnpm build
 ```
 
-## 🧹 Linting
-
-This project utilizes Prettier and ESLint for code formatting and style consistency
-
-```bash
-# Check for linting errors and warnings
-pnpm lint
-
-# Automatically fix linting errors and warnings
-pnpm lintfix
-```
-
 ---
 
 <p align="center">

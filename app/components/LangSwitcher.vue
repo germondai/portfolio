@@ -5,6 +5,7 @@
       v-for="langLocale in availableLocales"
       :key="langLocale.code"
       :title="langLocale.name"
+      type="button"
       @click.prevent.stop="setLocale(langLocale.code)"
     >
       <Icon :name="langLocale.icon" class="size-12" />
@@ -15,7 +16,5 @@
 <script lang="ts" setup>
 const { t, locale, locales, setLocale } = useI18n()
 
-const availableLocales = computed(() =>
-  locales.value.filter((i) => i.code !== locale.value),
-)
+const availableLocales = computed(() => locales.value.filter((i) => i.code !== locale.value))
 </script>

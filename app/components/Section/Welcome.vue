@@ -1,8 +1,6 @@
 <template>
   <section id="welcome">
-    <div
-      class="w-4/5 h-full mx-auto flex max-md:flex-col max-md:gap-4 gap-8 items-center justify-center"
-    >
+    <div class="w-4/5 h-full mx-auto flex max-md:flex-col max-md:gap-4 gap-8 items-center justify-center">
       <div
         v-motion="{
           initial: { opacity: 0, x: $device.isMobile ? 0 : -100 },
@@ -26,9 +24,7 @@
             />
           </b>
         </div>
-        <LangSwitcher
-          class="max-md:mt-6 mt-12 max-md:items-center max-md:gap-2"
-        />
+        <LangSwitcher class="max-md:mt-6 mt-12 max-md:items-center max-md:gap-2" />
       </div>
       <div
         v-motion="{

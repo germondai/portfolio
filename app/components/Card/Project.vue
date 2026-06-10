@@ -17,10 +17,7 @@
               :title="rt(lKey)"
               class="size-8 bg-[#121316be] backdrop-blur flex items-center justify-center rounded-full overflow-hidden outline outline-1 aspect-square"
             >
-              <Icon
-                :name="`akar-icons:${rt(lKey)}-${rt(lKey) == 'link' ? 'chain' : 'fill'}`"
-                class="size-6"
-              />
+              <Icon :name="`akar-icons:${rt(lKey)}-${rt(lKey) == 'link' ? 'chain' : 'fill'}`" class="size-6" />
             </NuxtLink>
           </template>
         </div>
@@ -45,11 +42,7 @@
           <p class="text-justify line-clamp-6" v-html="rt(project.content)"></p>
           <div v-if="project.tags" class="flex items-center gap-x-2 truncate">
             <template v-for="(tag, tKey, k) in project.tags" :key="k">
-              <sub
-                v-if="rt(tag) == 1"
-                :class="`tag-${rt(tKey).toLowerCase()} last:truncate`"
-                >#{{ rt(tKey) }}</sub
-              >
+              <sub v-if="rt(tag) == 1" :class="`tag-${rt(tKey).toLowerCase()} last:truncate`">#{{ rt(tKey) }}</sub>
             </template>
           </div>
         </NuxtLink>

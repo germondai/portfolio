@@ -44,7 +44,7 @@
 
 <script lang="ts" setup>
 const { t } = useI18n()
-const { y } = useWindowScroll({ behavior: 'smooth' })
+const { y } = useWindowScroll({ behavior: "smooth" })
 const { largestSection, sections } = usePageSections()
 </script>
 

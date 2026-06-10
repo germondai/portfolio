@@ -1,7 +1,5 @@
 <template>
-  <header
-    class="fixed top-0 w-full h-[76px] flex items-end justify-center z-40"
-  >
+  <header class="fixed top-0 w-full h-[76px] flex items-end justify-center z-40">
     <nav
       ref="menu"
       :class="
@@ -63,13 +61,10 @@
       <button
         class="lg:hidden h-4/5 flex flex-col items-center justify-around mx-2 order-3 cursor-pointer bg-transparent"
         title="Menu"
+        type="button"
         @click="toggleUls()"
       >
-        <span
-          v-for="index in 3"
-          :key="index"
-          class="block bg-white w-12 h-1.5 rounded-[4px]"
-        ></span>
+        <span v-for="index in 3" :key="index" class="block bg-white w-12 h-1.5 rounded-[4px]"></span>
       </button>
     </nav>
   </header>
@@ -81,16 +76,13 @@ const { t, tm, rt } = useI18n()
 
 const { width } = useWindowSize()
 
-const menu = useTemplateRef('menu')
+const menu = useTemplateRef("menu")
 
 const links = shallowRef<boolean>(false)
 const icons = shallowRef<boolean>(false)
 
 const navStyles = computed(() => {
-  return (width.value < 1024 && icons.value) ||
-    (width.value < 640 && links.value)
-    ? 'max-lg:rounded-b-none'
-    : ''
+  return (width.value < 1024 && icons.value) || (width.value < 640 && links.value) ? "max-lg:rounded-b-none" : ""
 })
 
 const toggleUls = (val?: boolean) => {
@@ -107,7 +99,7 @@ const handleResize = () => {
 }
 
 onClickOutside(menu, () => toggleUls(false))
-useEventListener(window, 'resize', handleResize)
+useEventListener(window, "resize", handleResize)
 </script>
 
 <style lang="scss" scoped>
