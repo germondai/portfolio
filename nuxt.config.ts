@@ -3,6 +3,8 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  future: { compatibilityVersion: 5 },
+
   eslint: { config: { typescript: true } },
 
   site: {
@@ -32,6 +34,17 @@ export default defineNuxtConfig({
           name: 'theme-color',
           content: '#121316',
         },
+      ],
+    },
+  },
+
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@unhead/schema-org/vue',
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+        'yup',
       ],
     },
   },
