@@ -9,6 +9,8 @@ const { t } = useI18n()
 
 const { locale } = useI18n()
 
+const { toaster } = useAppConfig()
+
 const direction: Direction = "ltr"
 
 useSeoMeta({
@@ -19,7 +21,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <UApp :locale="uiLocales[locale]" :dir="direction">
+  <UApp :locale="uiLocales[locale]" :dir="direction" :toaster>
     <NuxtPwaAssets />
     <NuxtRouteAnnouncer />
     <NuxtLoadingIndicator color="var(--ui-primary)" />

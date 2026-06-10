@@ -94,15 +94,6 @@ export default defineNuxtConfig({
     "nuxt-vitalizer",
   ],
 
-  appConfig: {
-    ui: {
-      colors: {
-        primary: "indigo",
-        neutral: "neutral",
-      },
-    },
-  },
-
   ui: {
     experimental: {
       componentDetection: true,
@@ -266,7 +257,12 @@ export default defineNuxtConfig({
       },
       workbox: {
         navigateFallback: undefined,
-        globPatterns: ["*.{ico,png,webp,avif,svg}", "**/*.{js,css}", "**/*.woff2"],
+        globPatterns: [
+          "*.{ico,png,webp,avif,svg}",
+          // "*._payload.json",
+          "**/*.{js,css}",
+          "**/*.woff2",
+        ],
         runtimeCaching: [
           {
             urlPattern: /^\/_ipx\/.*/i,
