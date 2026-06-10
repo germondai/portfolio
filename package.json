@@ -1,8 +1,13 @@
 {
   "name": "portfolio",
-  "description": "Germond's Portfolio in Nuxt 3 (Vue.js)",
+  "version": "1.0.0",
+  "description": "Germond - An Aspiring Full-Stack Web Developer",
   "homepage": "https://germondai.com",
   "author": "germondai",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/germondai/portfolio.git"
+  },
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,34 +16,36 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck",
     "lint": "biome lint --write .",
-    "format": "biome format --write .",
-    "compress": "gzipper compress .output",
-    "generate:pwa-icons": "npx pwa-asset-generator public/skull.ico public/pwa/ --opaque false"
+    "format": "biome format --write ."
   },
   "dependencies": {
-    "@nuxt/fonts": "^0.14.0",
-    "@nuxt/icon": "^2.2.3",
+    "@nuxt/a11y": "^1.0.0-alpha.1",
+    "@nuxt/hints": "^1.1.2",
     "@nuxt/image": "^2.0.0",
     "@nuxt/scripts": "^1.2.1",
-    "@nuxtjs/device": "^4.0.0",
+    "@nuxt/ui": "^4.8.2",
     "@nuxtjs/i18n": "^10.4.0",
     "@nuxtjs/seo": "^5.2.1",
     "@takumi-rs/core": "^1.8.1",
-    "@vuei/nuxt": "^1.0.36",
+    "@vite-pwa/nuxt": "^1.1.1",
     "@vueuse/core": "^14.3.0",
+    "@vueuse/motion": "^3.0.3",
     "@vueuse/nuxt": "^14.3.0",
     "nuxt": "^4.4.8",
+    "nuxt-security": "^2.6.0",
+    "nuxt-vitalizer": "^2.0.0",
     "vue": "^3.5.35",
     "vue-router": "^5.1.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.14.0",
-    "@vee-validate/nuxt": "^4.15.1",
-    "@vee-validate/yup": "^4.15.1",
-    "@vite-pwa/nuxt": "^1.1.1",
-    "@vueuse/motion": "^3.0.3",
-    "gzipper": "^8.2.1",
-    "sass": "^1.100.0"
+    "@iconify-json/lucide": "^1.2.111",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.4"
+  },
+  "overrides": {
+    "nuxt-schema-org": "6.1.3"
   }
 }
